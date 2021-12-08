@@ -9,7 +9,7 @@ import Business.InsuranceCustomer.InsuranceCustomer;
 
 /**
  *
- * @author Pooja
+ * @author bunty
  */
 public class Patient {
 

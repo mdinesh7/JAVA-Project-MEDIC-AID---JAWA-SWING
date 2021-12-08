@@ -6,7 +6,7 @@ package Business.Employee;
 
 /**
  *
- * @author 
+ * @author bunty
  */
 public class Employee {
     

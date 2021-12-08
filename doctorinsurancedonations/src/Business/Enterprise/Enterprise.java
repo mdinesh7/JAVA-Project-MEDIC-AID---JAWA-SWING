@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author 
+ * @author bunty
  */
 public abstract class Enterprise extends Organization {
 

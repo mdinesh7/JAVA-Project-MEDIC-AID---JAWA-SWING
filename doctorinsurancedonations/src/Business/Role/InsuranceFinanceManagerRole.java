@@ -17,7 +17,7 @@ import userinterface.InsuranceFinanceRole.InsuranceFinanceWorkAreaJPanel;
 
 /**
  *
- * @author Vaishnavi
+ * @author bunty
  */
 public class InsuranceFinanceManagerRole extends Role{
 

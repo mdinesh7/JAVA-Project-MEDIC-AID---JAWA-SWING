@@ -16,7 +16,7 @@ import userinterface.GovernmentTreasurerRole.TreasurerWorkAreaJPanel;
 
 /**
  *
- * @author 
+ * @author bunty
  */
 public class GovernmentTreasurer extends Role{
 

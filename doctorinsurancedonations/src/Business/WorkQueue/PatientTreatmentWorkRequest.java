@@ -10,7 +10,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author Pooja
+ * @author dineshmurugesan
  */
 public class PatientTreatmentWorkRequest extends WorkRequest {
 

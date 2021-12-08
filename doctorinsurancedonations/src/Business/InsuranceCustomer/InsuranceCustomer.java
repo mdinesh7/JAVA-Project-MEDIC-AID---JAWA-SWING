@@ -7,7 +7,7 @@ package Business.InsuranceCustomer;
 
 /**
  *
- * @author Vaishnavi
+ * @author dineshmurugesan
  */
 
 import Business.Insurance.Insurance;

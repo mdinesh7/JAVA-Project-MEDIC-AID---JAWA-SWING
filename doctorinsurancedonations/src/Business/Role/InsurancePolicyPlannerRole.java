@@ -16,7 +16,7 @@ import userinterface.InsurancePolicyPlannerRole.InsurancePolicyPlannerWorkAreaJP
 
 /**
  *
- * @author Vaishnavi
+ * @author bunty
  */
 public class InsurancePolicyPlannerRole extends Role{
 

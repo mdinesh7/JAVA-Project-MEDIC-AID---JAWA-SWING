@@ -16,7 +16,7 @@ import userinterface.GovernmentSecretaryRole.SecretaryWorkAreaJPanel;
 
 /**
  *
- * @author 
+ * @author bunty
  */
 public class GovernmentSecretaries extends Role{
 
