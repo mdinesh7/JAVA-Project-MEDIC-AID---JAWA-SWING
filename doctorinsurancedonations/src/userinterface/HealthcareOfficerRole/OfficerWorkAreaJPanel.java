@@ -19,7 +19,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author
+ * @author rajes
  */
 public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -42,6 +42,7 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
 
         populateTable();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
