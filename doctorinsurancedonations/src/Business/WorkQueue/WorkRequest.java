@@ -15,6 +15,15 @@ public abstract class WorkRequest {
     private String status;
     private Date requestDate;
     private Date resolveDate;
+    private String testType = " ";
+
+    public String getTestType() {
+        return testType;
+    }
+
+    public void setTestType(String bloodTestType) {
+        this.testType = bloodTestType;
+    }
 
     public WorkRequest() {
         requestDate = new Date();

@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author bunty
+ * @author rajesh
  */
 public class PatientDirectory {
     

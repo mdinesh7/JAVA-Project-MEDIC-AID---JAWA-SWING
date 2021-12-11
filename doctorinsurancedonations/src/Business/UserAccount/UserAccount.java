@@ -9,9 +9,8 @@ import Business.Role.Role;
 import Business.WorkQueue.WorkQueue;
 import java.util.List;
 
-
 public class UserAccount {
-    
+
     private String username;
     private String password;
     private Employee employee;
@@ -30,9 +29,7 @@ public class UserAccount {
     public UserAccount() {
         workQueue = new WorkQueue();
     }
-    
-    
-    
+
     public String getUsername() {
         return username;
     }
@@ -69,13 +66,9 @@ public class UserAccount {
         return workQueue;
     }
 
-    
-    
     @Override
     public String toString() {
         return username;
     }
-    
-    
-    
+
 }

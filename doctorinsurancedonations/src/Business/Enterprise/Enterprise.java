@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author bunty
+ * @author dineshmurugesan
  */
 public abstract class Enterprise extends Organization {
 
@@ -26,7 +26,8 @@ public abstract class Enterprise extends Organization {
 
         HealthCenter("HealthCenter"),
         InsuranceCompany("InsuranceCompany"),
-        Government("Government");
+        Government("Government"),
+        NGO("NGO");
 
         private String value;
 

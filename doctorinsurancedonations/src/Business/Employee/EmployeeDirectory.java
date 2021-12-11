@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author bunty
+ * @author dineshmurugesan
  */
 public class EmployeeDirectory {
 

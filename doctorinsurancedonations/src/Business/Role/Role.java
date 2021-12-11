@@ -23,7 +23,10 @@ public abstract class Role {
         InsuranceFinanceManager("Insurance Finance Manager"),
         GovernmentHealthOfficer("Government Health Officer"),
         GovernmentTreasurer("Government Treasure"),
-        GovernmentSecretaries("Government Secretaries");
+        GovernmentSecretaries("Government Secretaries"),
+        BloodBankManager("Blood Bank Manager"),
+        NGOAdministrator("NGO Administrator"),
+        NGODirector("NGO Director");
 
         private String value;
 
@@ -49,6 +52,7 @@ public abstract class Role {
 
     @Override
     public String toString() {
+
         return this.getClass().getName();
     }
 

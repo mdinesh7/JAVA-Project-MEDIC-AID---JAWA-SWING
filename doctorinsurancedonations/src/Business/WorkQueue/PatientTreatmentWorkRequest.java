@@ -10,7 +10,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author dineshmurugesan
+ * @author rajesh
  */
 public class PatientTreatmentWorkRequest extends WorkRequest {
 
@@ -24,6 +24,33 @@ public class PatientTreatmentWorkRequest extends WorkRequest {
     private String prescription;
     private double billAmount;
     private UserAccount assignedDoctor;
+    private int bloodUnits;
+    private String bloodBankMessage;
+    private UserAccount bloodBankManager;
+
+    public UserAccount getBloodBankManager() {
+        return bloodBankManager;
+    }
+
+    public void setBloodBankManager(UserAccount bloodBankManager) {
+        this.bloodBankManager = bloodBankManager;
+    }
+
+    public int getBloodUnits() {
+        return bloodUnits;
+    }
+
+    public void setBloodUnits(int bloodUnits) {
+        this.bloodUnits = bloodUnits;
+    }
+
+    public String getBloodBankMessage() {
+        return bloodBankMessage;
+    }
+
+    public void setBloodBankMessage(String bloodBankMessage) {
+        this.bloodBankMessage = bloodBankMessage;
+    }
 
     public PatientTreatmentWorkRequest(String Date, String reasonForVisit, Patient patient) {
         this.registrationDate = Date;
