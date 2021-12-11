@@ -4,24 +4,24 @@
  */
 package Business.Organization;
 
-import Business.Role.DoctorRole;
+import Business.Role.NGOAdminRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 
 /**
  *
- * @author bunty
+ * @author dineshmurugesan
  */
-public class DoctorOrganization extends Organization{
+public class NGOAdminOrganization extends Organization{
 
-    public DoctorOrganization() {
-        super(Organization.Type.Doctor.getValue());
+    public NGOAdminOrganization() {
+        super(Organization.Type.NGOAdministrator.getValue());
     }
     
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new DoctorRole());
+        roles.add(new NGOAdminRole());
         return roles;
     }
      

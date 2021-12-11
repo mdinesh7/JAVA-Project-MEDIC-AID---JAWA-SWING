@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author rajesh
+ * @author bunty
  */
 public class TreasurerOrganization extends Organization {
 

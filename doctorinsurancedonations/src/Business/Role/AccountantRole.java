@@ -16,7 +16,7 @@ import userinterface.HealthcareAccountantRole.AccountantWorkAreaJPanel;
 
 /**
  *
- * @author bunty
+ * @author rajesh
  */
 public class AccountantRole extends Role{
 

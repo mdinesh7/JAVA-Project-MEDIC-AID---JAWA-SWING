@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  *
- * @author bunty
+ * @author dineshmurugesan
  */
 public class HealthCenterEnterprise extends Enterprise {
 
@@ -33,9 +33,8 @@ public class HealthCenterEnterprise extends Enterprise {
         List<Organization.Type> orgTypes = new ArrayList<>();
         orgTypes.add(Organization.Type.Doctor);
         orgTypes.add(Organization.Type.Lab);
-        //orgTypes.add(Organization.Type.Patient);
         orgTypes.add(Organization.Type.Accountant);
-
+        orgTypes.add(Organization.Type.BloodBank);
         return orgTypes;
 
     }

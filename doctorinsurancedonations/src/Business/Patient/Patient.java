@@ -9,7 +9,7 @@ import Business.InsuranceCustomer.InsuranceCustomer;
 
 /**
  *
- * @author bunty
+ * @author rajesh
  */
 public class Patient {
 
@@ -52,8 +52,6 @@ public class Patient {
         return patientLastName;
     }
 
-   
-    
     public void setSocialSecurityNumber(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
     }
@@ -101,7 +99,7 @@ public class Patient {
     public void setGender(String gender) {
         this.gender = gender;
     }
-    
+
     public void setPatientFirstName(String patientFirstName) {
         this.patientFirstName = patientFirstName;
     }
@@ -109,8 +107,6 @@ public class Patient {
     public String getSocialSecurityNumber() {
         return socialSecurityNumber;
     }
-
-    
 
     @Override
     public String toString() {
@@ -136,8 +132,8 @@ public class Patient {
     public void setAppointmentDate(String appointmentDate) {
         this.appointmentDate = appointmentDate;
     }
-    
-     public void setPatientLastName(String patientLastName) {
+
+    public void setPatientLastName(String patientLastName) {
         this.patientLastName = patientLastName;
     }
 
@@ -147,6 +143,4 @@ public class Patient {
 
     }
 
-
-    
 }

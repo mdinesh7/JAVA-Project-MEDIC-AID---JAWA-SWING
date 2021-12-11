@@ -9,7 +9,7 @@ import Business.InsuranceCustomer.InsuranceCustomer;
 
 /**
  *
- * @author dineshmurugesan
+ * @author rajesh
  */
 public class InsuranceWorkRequest extends WorkRequest {
 
