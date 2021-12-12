@@ -56,30 +56,30 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        processRequestBtn = new javax.swing.JButton();
+        prcsReqBtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        btnAssignToMe = new javax.swing.JButton();
+        wrkReqJTable = new javax.swing.JTable();
+        asgnToMeBtn = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblInsurance = new javax.swing.JTable();
+        insrTbl = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        processRequestBtn.setBackground(new java.awt.Color(0, 153, 255));
-        processRequestBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        processRequestBtn.setText("Process Request");
-        processRequestBtn.addActionListener(new java.awt.event.ActionListener() {
+        prcsReqBtn.setBackground(new java.awt.Color(0, 153, 255));
+        prcsReqBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        prcsReqBtn.setText("Process Request");
+        prcsReqBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processRequestBtnActionPerformed(evt);
+                prcsReqBtnActionPerformed(evt);
             }
         });
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        wrkReqJTable.setBackground(new java.awt.Color(0, 153, 255));
+        wrkReqJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -119,14 +119,14 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(wrkReqJTable);
 
-        btnAssignToMe.setBackground(new java.awt.Color(0, 153, 255));
-        btnAssignToMe.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnAssignToMe.setText("AssignToMe");
-        btnAssignToMe.addActionListener(new java.awt.event.ActionListener() {
+        asgnToMeBtn.setBackground(new java.awt.Color(0, 153, 255));
+        asgnToMeBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        asgnToMeBtn.setText("AssignToMe");
+        asgnToMeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignToMeActionPerformed(evt);
+                asgnToMeBtnActionPerformed(evt);
             }
         });
 
@@ -142,8 +142,8 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Receptionist: Patient Billing Area");
 
-        tblInsurance.setBackground(new java.awt.Color(0, 153, 255));
-        tblInsurance.setModel(new javax.swing.table.DefaultTableModel(
+        insrTbl.setBackground(new java.awt.Color(0, 153, 255));
+        insrTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -183,7 +183,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(tblInsurance);
+        jScrollPane2.setViewportView(insrTbl);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Insurance Claim Status Table");
@@ -209,9 +209,9 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                                 .addComponent(jLabel3))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(274, 274, 274)
-                                .addComponent(btnAssignToMe)
+                                .addComponent(asgnToMeBtn)
                                 .addGap(69, 69, 69)
-                                .addComponent(processRequestBtn)))
+                                .addComponent(prcsReqBtn)))
                         .addGap(0, 255, Short.MAX_VALUE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2))
@@ -237,8 +237,8 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnAssignToMe, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                    .addComponent(processRequestBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(asgnToMeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                    .addComponent(prcsReqBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -247,16 +247,16 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void processRequestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processRequestBtnActionPerformed
+    private void prcsReqBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prcsReqBtnActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = wrkReqJTable.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row !");
             return;
         } else {
 
-            AccountantBillingRequest accountBillingRequest = (AccountantBillingRequest) workRequestJTable.getValueAt(selectedRow, 5);
+            AccountantBillingRequest accountBillingRequest = (AccountantBillingRequest) wrkReqJTable.getValueAt(selectedRow, 5);
 
             if (accountBillingRequest.getReceiver() != null) {
                 if (accountBillingRequest.getReceiver().equals(userAccount)) {
@@ -276,16 +276,16 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
             }
         }
 //        }
-    }//GEN-LAST:event_processRequestBtnActionPerformed
+    }//GEN-LAST:event_prcsReqBtnActionPerformed
 
-    private void btnAssignToMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignToMeActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+    private void asgnToMeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asgnToMeBtnActionPerformed
+        int selectedRow = wrkReqJTable.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row !");
             return;
         } else {
-            WorkRequest request = (AccountantBillingRequest) workRequestJTable.getValueAt(selectedRow, 5);
+            WorkRequest request = (AccountantBillingRequest) wrkReqJTable.getValueAt(selectedRow, 5);
             if (request.getReceiver() == null) {
 
                 request.setReceiver(userAccount);
@@ -295,7 +295,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "The request is already assigned ");
             }
         }
-    }//GEN-LAST:event_btnAssignToMeActionPerformed
+    }//GEN-LAST:event_asgnToMeBtnActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
@@ -306,20 +306,20 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton asgnToMeBtn;
     private javax.swing.JButton backJButton;
-    private javax.swing.JButton btnAssignToMe;
+    private javax.swing.JTable insrTbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JButton processRequestBtn;
-    private javax.swing.JTable tblInsurance;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JButton prcsReqBtn;
+    private javax.swing.JTable wrkReqJTable;
     // End of variables declaration//GEN-END:variables
 
     public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) wrkReqJTable.getModel();
 
         model.setRowCount(0);
 
@@ -342,7 +342,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
         }
         
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        workRequestJTable.setRowSorter(sorter);
+        wrkReqJTable.setRowSorter(sorter);
 
     }
 
@@ -355,7 +355,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
             }
         }
 
-        DefaultTableModel model = (DefaultTableModel) tblInsurance.getModel();
+        DefaultTableModel model = (DefaultTableModel) insrTbl.getModel();
 
         model.setRowCount(0);
         for (InsuranceWorkRequest insuranceWorkRequest : insuranceWorkRequests) {
@@ -370,6 +370,6 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
 
         }
          TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        tblInsurance.setRowSorter(sorter);
+        insrTbl.setRowSorter(sorter);
     }
 }

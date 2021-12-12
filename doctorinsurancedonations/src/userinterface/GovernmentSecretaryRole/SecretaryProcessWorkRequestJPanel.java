@@ -242,7 +242,7 @@ public class SecretaryProcessWorkRequestJPanel extends javax.swing.JPanel {
         Component[] componentArray = jPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         SecretaryWorkAreaJPanel swjp = (SecretaryWorkAreaJPanel) component;
-        swjp.populateTable();
+        swjp.ppltTbl();
         CardLayout layout = (CardLayout) jPanel.getLayout();
         layout.previous(jPanel);
     }//GEN-LAST:event_backBtnActionPerformed

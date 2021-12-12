@@ -27,18 +27,18 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
      * Creates new form SecretaryWorkAreaJPanel
      */
     private JPanel jPanel;
-    private UserAccount userAccount;
-    private SecretaryOrganization secretaryOrganization;
-    private Enterprise enterprise;
+    private UserAccount usrAcnt;
+    private SecretaryOrganization secOrg;
+    private Enterprise entrpz;
 
     public SecretaryWorkAreaJPanel(JPanel jpanel, UserAccount userAccount, Organization organization, Enterprise enterprise) {
         initComponents();
-        this.enterprise = enterprise;
+        this.entrpz = enterprise;
         this.jPanel = jpanel;
-        this.secretaryOrganization = (SecretaryOrganization) organization;
-        this.userAccount = userAccount;
+        this.secOrg = (SecretaryOrganization) organization;
+        this.usrAcnt = userAccount;
 
-        populateTable();
+        ppltTbl();
     }
 
     /**
@@ -51,15 +51,15 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        btnAssign = new javax.swing.JButton();
-        processRequestBtn = new javax.swing.JButton();
+        wrkReJqTable = new javax.swing.JTable();
+        asgnBtn = new javax.swing.JButton();
+        prcsReqBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        wrkReJqTable.setBackground(new java.awt.Color(0, 153, 255));
+        wrkReJqTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -85,23 +85,23 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(wrkReJqTable);
 
-        btnAssign.setBackground(new java.awt.Color(0, 153, 255));
-        btnAssign.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnAssign.setText("Assign To Me");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        asgnBtn.setBackground(new java.awt.Color(0, 153, 255));
+        asgnBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        asgnBtn.setText("Assign To Me");
+        asgnBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                asgnBtnActionPerformed(evt);
             }
         });
 
-        processRequestBtn.setBackground(new java.awt.Color(0, 153, 255));
-        processRequestBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        processRequestBtn.setText("Process Request");
-        processRequestBtn.addActionListener(new java.awt.event.ActionListener() {
+        prcsReqBtn.setBackground(new java.awt.Color(0, 153, 255));
+        prcsReqBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        prcsReqBtn.setText("Process Request");
+        prcsReqBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processRequestBtnActionPerformed(evt);
+                prcsReqBtnActionPerformed(evt);
             }
         });
 
@@ -122,9 +122,9 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(213, 213, 213)
-                        .addComponent(btnAssign)
+                        .addComponent(asgnBtn)
                         .addGap(38, 38, 38)
-                        .addComponent(processRequestBtn)))
+                        .addComponent(prcsReqBtn)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -136,100 +136,100 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(processRequestBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(asgnBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prcsReqBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(160, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+    private void asgnBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asgnBtnActionPerformed
+        int selectedRow = wrkReJqTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
             return;
         } else {
-            WorkRequest request = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
-            if (request.getStatus().equals("Sent to Secretary")) {
-                request.setReceiver(userAccount);
-                request.setStatus("Pending on " + request.getReceiver().getEmp().getEmpName());
-                populateTable();
+            WorkRequest req = (GovernmentFundRequest) wrkReJqTable.getValueAt(selectedRow, 0);
+            if (req.getStatus().equals("Sent to Secretary")) {
+                req.setReceiver(usrAcnt);
+                req.setStatus("Pending on " + req.getReceiver().getEmp().getEmpName());
+                ppltTbl();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
             } else {
-                JOptionPane.showMessageDialog(null, "Can't assign this work request, as the work request is in " + request.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Can't assign this work request, as the work request is in " + req.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_asgnBtnActionPerformed
 
-    private void processRequestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processRequestBtnActionPerformed
+    private void prcsReqBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prcsReqBtnActionPerformed
         // TODO add your handling code here:
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = wrkReJqTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
             return;
         } else {
-            GovernmentFundRequest fundRequest = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
-            if (fundRequest.getStatus().equals("Rejected")) {
+            GovernmentFundRequest fundReq = (GovernmentFundRequest) wrkReJqTable.getValueAt(selectedRow, 0);
+            if (fundReq.getStatus().equals("Rejected")) {
                 JOptionPane.showMessageDialog(null, "Cannot process a Rejected Request", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
             
-            if (fundRequest.getStatus().equalsIgnoreCase("Sent to Treasurer")) {
+            if (fundReq.getStatus().equalsIgnoreCase("Sent to Treasurer")) {
                 JOptionPane.showMessageDialog(null, "Request already processed" , "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (fundRequest.getStatus().equalsIgnoreCase("Sent to Secretary")) {
+            if (fundReq.getStatus().equalsIgnoreCase("Sent to Secretary")) {
                 JOptionPane.showMessageDialog(null, "Please assign selected request first");
                 return;
             }
-             if(!userAccount.equals(fundRequest.getReceiver())){
+             if(!usrAcnt.equals(fundReq.getReceiver())){
              JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (!userAccount.getEmp().equals(fundRequest.getReceiver().getEmp())) {
+            if (!usrAcnt.getEmp().equals(fundReq.getReceiver().getEmp())) {
                 JOptionPane.showMessageDialog(null, "Request assigned to other Officer", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
             
             
-            SecretaryProcessWorkRequestJPanel panel = new SecretaryProcessWorkRequestJPanel(jPanel, userAccount, fundRequest, enterprise);
-            jPanel.add("secretaryProcessWorkRequestJPanel", panel);
+            SecretaryProcessWorkRequestJPanel secPrcWrkreqJPanel = new SecretaryProcessWorkRequestJPanel(jPanel, usrAcnt, fundReq, entrpz);
+            jPanel.add("secretaryProcessWorkRequestJPanel", secPrcWrkreqJPanel);
             CardLayout layout = (CardLayout) jPanel.getLayout();
             layout.next(jPanel);
 
         }
-    }//GEN-LAST:event_processRequestBtnActionPerformed
+    }//GEN-LAST:event_prcsReqBtnActionPerformed
 
-    public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+    public void ppltTbl() {
+        DefaultTableModel model = (DefaultTableModel) wrkReJqTable.getModel();
 
         model.setRowCount(0);
 
-        for (WorkRequest request : secretaryOrganization.getWrkQ().getWorkRequests()) {
-            String status = request.getStatus();
+        for (WorkRequest req : secOrg.getWrkQ().getWorkRequests()) {
+            String status = req.getStatus();
             Object[] row = new Object[6];
-            row[0] = ((GovernmentFundRequest) request);
-            row[1] = request.getSender().getEmp().getEmpName();
+            row[0] = ((GovernmentFundRequest) req);
+            row[1] = req.getSender().getEmp().getEmpName();
             if (status.equalsIgnoreCase("Sent to Treasurer") || status.equalsIgnoreCase("Sent to Secretary")) {
                 row[2] = null;
             } else {
-                row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmp().getEmpName();
+                row[2] = req.getReceiver() == null ? null : req.getReceiver().getEmp().getEmpName();
             }
             row[3] = status;
-            row[4] = ((GovernmentFundRequest) request).getReqAmt();
-            row[5] = ((GovernmentFundRequest) request).getWrMsg();
+            row[4] = ((GovernmentFundRequest) req).getReqAmt();
+            row[5] = ((GovernmentFundRequest) req).getWrMsg();
 
             model.addRow(row);
         }
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        workRequestJTable.setRowSorter(sorter);
+        wrkReJqTable.setRowSorter(sorter);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
+    private javax.swing.JButton asgnBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processRequestBtn;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JButton prcsReqBtn;
+    private javax.swing.JTable wrkReJqTable;
     // End of variables declaration//GEN-END:variables
 }

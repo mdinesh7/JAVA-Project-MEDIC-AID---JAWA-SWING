@@ -30,9 +30,9 @@
                   </Group>
                   <Component id="jScrollPane1" alignment="1" min="-2" pref="734" max="-2" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="btnAssign" min="-2" max="-2" attributes="0"/>
+                      <Component id="asgnBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                      <Component id="requestGovSecretaryBtn" min="-2" max="-2" attributes="0"/>
+                      <Component id="reqGovtSecBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -49,8 +49,8 @@
               <Component id="jScrollPane1" min="-2" pref="96" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnAssign" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                  <Component id="requestGovSecretaryBtn" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="asgnBtn" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="reqGovtSecBtn" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="187" max="32767" attributes="0"/>
           </Group>
@@ -73,7 +73,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="workRequestJTable">
+        <Component class="javax.swing.JTable" name="wrkReqJPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -129,7 +129,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnAssign">
+    <Component class="javax.swing.JButton" name="asgnBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -140,10 +140,10 @@
         <Property name="text" type="java.lang.String" value="Assign To Me"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAssignActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asgnBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="requestGovSecretaryBtn">
+    <Component class="javax.swing.JButton" name="reqGovtSecBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -154,7 +154,7 @@
         <Property name="text" type="java.lang.String" value="Process Request"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="requestGovSecretaryBtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reqGovtSecBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

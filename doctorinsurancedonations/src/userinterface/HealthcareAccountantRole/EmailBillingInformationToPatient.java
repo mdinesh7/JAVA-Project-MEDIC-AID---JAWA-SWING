@@ -28,8 +28,8 @@ import javax.swing.JPanel;
  */
 public class EmailBillingInformationToPatient extends javax.swing.JPanel {
 
-    JPanel userPrcessContainer;
-    private AccountantBillingRequest accountBillingRequest;
+    JPanel jPanel;
+    private AccountantBillingRequest acntBillingReq;
 
     /**
      * Creates new form EmailBillingInformationToPatient
@@ -39,8 +39,8 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
 //    }
     EmailBillingInformationToPatient(JPanel userProcessContainer, AccountantBillingRequest accountBillingRequest) {
         initComponents();
-        this.userPrcessContainer = userProcessContainer;
-        this.accountBillingRequest = accountBillingRequest;
+        this.jPanel = userProcessContainer;
+        this.acntBillingReq = accountBillingRequest;
     }
 
     /**
@@ -141,12 +141,12 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
             return;
         }
         try {
-            SendMail(accountBillingRequest.getPatient().getPatmail(), text);
+            SendMail(acntBillingReq.getPatient().getPatmail(), text);
         } catch (MessagingException ex) {
             Logger.getLogger(EmailBillingInformationToPatient.class.getName()).log(Level.SEVERE, null, ex);
         }
-        JOptionPane.showMessageDialog(null, "Billing information sent to " + accountBillingRequest.getPatient().getPatFrstNm());
-        accountBillingRequest.setStatus("Patient Transaction Completed");
+        JOptionPane.showMessageDialog(null, "Billing information sent to " + acntBillingReq.getPatient().getPatFrstNm());
+        acntBillingReq.setStatus("Patient Transaction Completed");
     }//GEN-LAST:event_btnSendEmailActionPerformed
 
     private void btnClearTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearTextActionPerformed
@@ -154,9 +154,9 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
     }//GEN-LAST:event_btnClearTextActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        userPrcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userPrcessContainer.getLayout();
-        layout.previous(userPrcessContainer);
+        jPanel.remove(this);
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.previous(jPanel);
     }//GEN-LAST:event_btnBackActionPerformed
     private void SendMail(String toMail, String text) throws MessagingException {
         Properties properties = new Properties();

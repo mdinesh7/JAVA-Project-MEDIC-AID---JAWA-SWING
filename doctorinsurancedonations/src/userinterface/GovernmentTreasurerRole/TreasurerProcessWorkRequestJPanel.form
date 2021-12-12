@@ -25,9 +25,9 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
-                      <Component id="submitJButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="sbmtJButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnReject" min="-2" pref="116" max="-2" attributes="0"/>
+                      <Component id="rejBtn" min="-2" pref="116" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
@@ -39,10 +39,10 @@
                       </Group>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="messageTxt" min="-2" pref="116" max="-2" attributes="0"/>
-                          <Component id="populationTxt" min="-2" pref="116" max="-2" attributes="0"/>
-                          <Component id="locationTxt" min="-2" pref="116" max="-2" attributes="0"/>
-                          <Component id="amountTxt" min="-2" pref="116" max="-2" attributes="0"/>
+                          <Component id="msgTxt" min="-2" pref="116" max="-2" attributes="0"/>
+                          <Component id="popuTxt" min="-2" pref="116" max="-2" attributes="0"/>
+                          <Component id="locTxt" min="-2" pref="116" max="-2" attributes="0"/>
+                          <Component id="amntTxt" min="-2" pref="116" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
@@ -77,27 +77,27 @@
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="locationTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="locTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="amountTxt" min="-2" max="-2" attributes="0"/>
+                          <Component id="amntTxt" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="populationTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="popuTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="messageTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="msgTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnReject" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                          <Component id="submitJButton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="rejBtn" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="sbmtJButton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -111,7 +111,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="submitJButton">
+    <Component class="javax.swing.JButton" name="sbmtJButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -122,7 +122,7 @@
         <Property name="text" type="java.lang.String" value="Disburse Amount"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitJButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sbmtJButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="backJButton">
@@ -139,7 +139,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backJButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnReject">
+    <Component class="javax.swing.JButton" name="rejBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -150,7 +150,7 @@
         <Property name="text" type="java.lang.String" value="Reject"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRejectActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rejBtnActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -161,7 +161,7 @@
         <Property name="text" type="java.lang.String" value="Message"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="messageTxt">
+    <Component class="javax.swing.JTextField" name="msgTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -171,12 +171,12 @@
         <Property name="text" type="java.lang.String" value="Location"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="locationTxt">
+    <Component class="javax.swing.JTextField" name="locTxt">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="populationTxt">
+    <Component class="javax.swing.JTextField" name="popuTxt">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -189,7 +189,7 @@
         <Property name="text" type="java.lang.String" value="Population"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="amountTxt">
+    <Component class="javax.swing.JTextField" name="amntTxt">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>

@@ -25,9 +25,9 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
-                      <Component id="sendRequestToSecretaryBtn" min="-2" max="-2" attributes="0"/>
+                      <Component id="sndReqToSec" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnReject" min="-2" pref="101" max="-2" attributes="0"/>
+                      <Component id="rejBtn" min="-2" pref="101" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -42,8 +42,8 @@
                                   </Group>
                                   <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="amountTxt" min="-2" pref="116" max="-2" attributes="0"/>
-                                      <Component id="locationTxt" min="-2" pref="116" max="-2" attributes="0"/>
+                                      <Component id="amntTxt" min="-2" pref="116" max="-2" attributes="0"/>
+                                      <Component id="locTxt" min="-2" pref="116" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -52,9 +52,9 @@
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
-                                  <Component id="populationTxt" min="-2" pref="116" max="-2" attributes="0"/>
+                                  <Component id="popTxt" min="-2" pref="116" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="messageTxt" alignment="1" min="-2" pref="116" max="-2" attributes="0"/>
+                              <Component id="msgTxt" alignment="1" min="-2" pref="116" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -80,27 +80,27 @@
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <Component id="locationTxt" min="-2" max="-2" attributes="0"/>
+                  <Component id="locTxt" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="amountTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="amntTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="populationTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="popTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="messageTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="msgTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="sendRequestToSecretaryBtn" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="btnReject" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="sndReqToSec" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="rejBtn" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="109" max="32767" attributes="0"/>
           </Group>
@@ -108,7 +108,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="amountTxt">
+    <Component class="javax.swing.JTextField" name="amntTxt">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -129,7 +129,7 @@
         <Property name="text" type="java.lang.String" value="Message"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="messageTxt">
+    <Component class="javax.swing.JTextField" name="msgTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -139,7 +139,7 @@
         <Property name="text" type="java.lang.String" value="Officer Request Process area "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="sendRequestToSecretaryBtn">
+    <Component class="javax.swing.JButton" name="sndReqToSec">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -150,7 +150,7 @@
         <Property name="text" type="java.lang.String" value="Send Request to Secretary to approve"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sendRequestToSecretaryBtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sndReqToSecActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="backBtn">
@@ -175,12 +175,12 @@
         <Property name="text" type="java.lang.String" value="Location"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="locationTxt">
+    <Component class="javax.swing.JTextField" name="locTxt">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="populationTxt">
+    <Component class="javax.swing.JTextField" name="popTxt">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -193,7 +193,7 @@
         <Property name="text" type="java.lang.String" value="Population"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnReject">
+    <Component class="javax.swing.JButton" name="rejBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -204,7 +204,7 @@
         <Property name="text" type="java.lang.String" value="Reject"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRejectActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rejBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

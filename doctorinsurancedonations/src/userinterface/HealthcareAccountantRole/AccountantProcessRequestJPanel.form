@@ -37,8 +37,8 @@
                       </Group>
                       <EmptySpace min="52" pref="52" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtInsurancePolicyName" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="txtPolicyNumber" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="InsrPlcyNumTxt" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="plcyNumTxt" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -52,11 +52,11 @@
                       <EmptySpace min="52" pref="52" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="txtFirstName" min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="txtLastName" min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="txtBillAmount" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="frstNmTxt" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lstNmTxt" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="billAmntTxt" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="txtSSN" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="ssnTxt" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -68,19 +68,19 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="52" pref="52" max="-2" attributes="0"/>
-                                      <Component id="txtPayableAmount" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="pyblAmntTxt" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                      <Component id="txtInsuranceClaimAmount" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="insrClmAmntTxt" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="btnSendRequestForInsurance" min="-2" max="-2" attributes="0"/>
+                              <Component id="sndReqFrInsrbtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="btnCOllectCash" min="-2" max="-2" attributes="0"/>
+                              <Component id="clctAmntBtn" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -104,48 +104,48 @@
               </Group>
               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtPolicyNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="plcyNumTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtInsurancePolicyName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="InsrPlcyNumTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtSSN" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ssnTxt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="frstNmTxt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtLastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lstNmTxt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBillAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="billAmntTxt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtInsuranceClaimAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="insrClmAmntTxt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtPayableAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="pyblAmntTxt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnSendRequestForInsurance" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                  <Component id="btnCOllectCash" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="sndReqFrInsrbtn" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="clctAmntBtn" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="93" max="32767" attributes="0"/>
           </Group>
@@ -230,7 +230,7 @@
         <Property name="text" type="java.lang.String" value="Payable Amount"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnSendRequestForInsurance">
+    <Component class="javax.swing.JButton" name="sndReqFrInsrbtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -241,40 +241,40 @@
         <Property name="text" type="java.lang.String" value="Receive Amount / Send request for Insurance Claim"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSendRequestForInsuranceActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sndReqFrInsrbtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtSSN">
+    <Component class="javax.swing.JTextField" name="ssnTxt">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtInsurancePolicyName">
+    <Component class="javax.swing.JTextField" name="InsrPlcyNumTxt">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPayableAmount">
+    <Component class="javax.swing.JTextField" name="pyblAmntTxt">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtFirstName">
+    <Component class="javax.swing.JTextField" name="frstNmTxt">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtBillAmount">
+    <Component class="javax.swing.JTextField" name="billAmntTxt">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtLastName">
+    <Component class="javax.swing.JTextField" name="lstNmTxt">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPolicyNumber">
+    <Component class="javax.swing.JTextField" name="plcyNumTxt">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
@@ -301,7 +301,7 @@
         <Property name="text" type="java.lang.String" value="Insurance Claim Amount"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtInsuranceClaimAmount">
+    <Component class="javax.swing.JTextField" name="insrClmAmntTxt">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
@@ -320,7 +320,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backJButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnCOllectCash">
+    <Component class="javax.swing.JButton" name="clctAmntBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -331,7 +331,7 @@
         <Property name="text" type="java.lang.String" value="Receive complete amount from patient"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCOllectCashActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clctAmntBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
