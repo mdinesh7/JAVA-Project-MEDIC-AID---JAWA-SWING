@@ -215,7 +215,7 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
                 ngoFundRequest.setStatus("Sent to Director");
 
                 Organization org = null;
-                for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+                for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
                     if (organization instanceof NGODirectorOrganization) {
                         org = organization;
                         break;

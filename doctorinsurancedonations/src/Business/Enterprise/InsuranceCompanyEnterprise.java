@@ -24,7 +24,7 @@ public class InsuranceCompanyEnterprise extends Enterprise {
     private InsurancePolicyDirectory insurancePolicyDirectory;
 
     public InsuranceCompanyEnterprise(String name) {
-        super(name, EnterpriseType.InsuranceCompany);
+        super(name, EntType.InsuranceCompany);
         insuranceCustomerDirectory = new InsuranceCustomerDirectory();
         insurancePolicyDirectory = new InsurancePolicyDirectory();
 

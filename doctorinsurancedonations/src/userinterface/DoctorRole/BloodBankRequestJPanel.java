@@ -148,7 +148,7 @@ public class BloodBankRequestJPanel extends javax.swing.JPanel {
 //        bloodBankWorkRequest.setReceiver(null);
 
         Organization org = null;
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+        for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
             if (organization instanceof BloodBankManagerOrganization) {
                 org = organization;
                 break;

@@ -212,7 +212,7 @@ public class OfficerProcessWorkRequestJPanel extends javax.swing.JPanel {
                 governmentFundRequest.setStatus("Sent to Secretary");
 
                 Organization org = null;
-                for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+                for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
                     if (organization instanceof SecretaryOrganization) {
                         org = organization;
                         break;

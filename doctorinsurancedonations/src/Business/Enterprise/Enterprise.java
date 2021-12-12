@@ -15,14 +15,14 @@ import java.util.List;
  */
 public abstract class Enterprise extends Organization {
 
-    private EnterpriseType enterpriseType;
-    private OrganizationDirectory organizationDirectory;
+    private EntType entType;
+    private OrganizationDirectory orgDir;
 
-    public OrganizationDirectory getOrganizationDirectory() {
-        return organizationDirectory;
+    public OrganizationDirectory getOrgDir() {
+        return orgDir;
     }
 
-    public enum EnterpriseType {
+    public enum EntType {
 
         HealthCenter("HealthCenter"),
         InsuranceCompany("InsuranceCompany"),
@@ -31,7 +31,7 @@ public abstract class Enterprise extends Organization {
 
         private String value;
 
-        private EnterpriseType(String value) {
+        private EntType(String value) {
             this.value = value;
         }
 
@@ -45,18 +45,18 @@ public abstract class Enterprise extends Organization {
         }
     }
 
-    public EnterpriseType getEnterpriseType() {
-        return enterpriseType;
+    public EntType getEntType() {
+        return entType;
     }
 
-    public void setEnterpriseType(EnterpriseType enterpriseType) {
-        this.enterpriseType = enterpriseType;
+    public void setEntType(EntType entType) {
+        this.entType = entType;
     }
 
-    public Enterprise(String name, EnterpriseType type) {
+    public Enterprise(String name, EntType type) {
         super(name);
-        this.enterpriseType = type;
-        organizationDirectory = new OrganizationDirectory();
+        this.entType = type;
+        orgDir = new OrganizationDirectory();
     }
     
     public abstract List<Organization.Type> getAllOrganizationTypes();

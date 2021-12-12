@@ -247,7 +247,7 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
 
         List<Insurance> policies = insuranceCompanyEnterprise.getInsurancePolicyDirectory().getPolicies();
         for (Insurance insurance : policies) {
-            if (policyName.equalsIgnoreCase(insurance.getPolicyName())) {
+            if (policyName.equalsIgnoreCase(insurance.getPlcyNm())) {
                 JOptionPane.showMessageDialog(null, "Policy already exists, please provide some other policy name");
                 return;
             }

@@ -11,24 +11,24 @@ package Business.Insurance;
  */
 public class Insurance {
 
-    private String policyName;
+    private String plcyNm;
     private String InsuranceCompany;
     private double coverage;
     private String policyTC;
     private double monthlyPremium;
 
     public Insurance(String policyName, String InsuranceCompany, double coverage) {
-        this.policyName = policyName;
+        this.plcyNm = policyName;
         this.InsuranceCompany = InsuranceCompany;
         this.coverage = coverage;
     }
 
-    public String getPolicyName() {
-        return policyName;
+    public String getPlcyNm() {
+        return plcyNm;
     }
 
-    public void setPolicyName(String policyType) {
-        this.policyName = policyType;
+    public void setPlcyNm(String policyType) {
+        this.plcyNm = policyType;
     }
 
     public double getMonthlyPremium() {
@@ -65,7 +65,7 @@ public class Insurance {
 
     @Override
     public String toString() {
-        return policyName;
+        return plcyNm;
     }
 
 }

@@ -61,7 +61,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                     row[0] = enterprise.getName();
                     row[1] = network.getName();
                     row[2] = userAccount.getUsername();
-                    row[3] = enterprise.getEnterpriseType().getValue();
+                    row[3] = enterprise.getEntType().getValue();
 
                     model.addRow(row);
                 }

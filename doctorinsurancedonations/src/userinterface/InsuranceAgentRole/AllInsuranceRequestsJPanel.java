@@ -233,7 +233,7 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
             InsuranceWorkRequest insuranceWorkRequest = (InsuranceWorkRequest) tblInsuranceWorkTable.getValueAt(selectedRow, 0);
             if (insuranceWorkRequest.getStatus().equals("Sent")) {
                 insuranceWorkRequest.setReceiver(userAccount);
-                insuranceWorkRequest.setStatus("Pending on Agent: " + userAccount.getEmployee().getName());
+                insuranceWorkRequest.setStatus("Pending on Agent: " + userAccount.getEmployee().getEmpName());
                 populateTable();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
             } else {
@@ -270,7 +270,7 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
             row[1] = ((InsuranceWorkRequest) request).getInsuranceCustomer().getCustomerFirstName() + " " + ((InsuranceWorkRequest) request).getInsuranceCustomer().getCustomerLastName();
             row[2] = ((InsuranceWorkRequest) request).getHealthCenter();
 
-            row[3] = request.getSender().getEmployee().getName();
+            row[3] = request.getSender().getEmployee().getEmpName();
             row[4] = request.getReceiver();
 
             row[5] = ((InsuranceWorkRequest) request).getBillAmount();

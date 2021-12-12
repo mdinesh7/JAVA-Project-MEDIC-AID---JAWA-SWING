@@ -20,7 +20,7 @@ public class HealthCenterEnterprise extends Enterprise {
     private PatientDirectory patientDirectory;
 
     public HealthCenterEnterprise(String name) {
-        super(name, EnterpriseType.HealthCenter);
+        super(name, EntType.HealthCenter);
         patientDirectory = new PatientDirectory();
     }
 

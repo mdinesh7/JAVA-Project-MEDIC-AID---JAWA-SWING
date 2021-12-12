@@ -16,7 +16,7 @@ import java.util.List;
 public class NGOEnterprise extends Enterprise{
 
     public NGOEnterprise(String name) {
-        super(name, Enterprise.EnterpriseType.NGO);
+        super(name, Enterprise.EntType.NGO);
     }
     
      @Override

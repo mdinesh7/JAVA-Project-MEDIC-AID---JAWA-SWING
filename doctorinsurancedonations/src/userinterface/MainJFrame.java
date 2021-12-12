@@ -222,7 +222,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     userAccount=enterprise.getUserAccountDirectory().authenticateUser(userName, password);
                     if(userAccount==null){
                         //Step 3:check against each organization for each enterprise
-                        for(Organization organization:enterprise.getOrganizationDirectory().getOrganizations()){
+                        for(Organization organization:enterprise.getOrgDir().getOrganizations()){
                             userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
                             if(userAccount!=null){
                                 inEnterprise=enterprise;
