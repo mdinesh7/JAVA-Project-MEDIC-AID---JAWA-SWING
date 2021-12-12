@@ -45,21 +45,21 @@
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="btnViewPatient" min="-2" max="-2" attributes="0"/>
+                              <Component id="ViewPntBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="btnAssignToMe" min="-2" max="-2" attributes="0"/>
+                              <Component id="AsngToMeBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="requestTestJButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="reqTestJButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="btnProvidePrescription" min="-2" max="-2" attributes="0"/>
+                              <Component id="prvdPrescrptnBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnComplete" min="-2" max="-2" attributes="0"/>
+                              <Component id="cmpltBtn" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="384" max="-2" attributes="0"/>
-                      <Component id="bloodBankRequestJButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="bloodBankReqJButton" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="252" max="32767" attributes="0"/>
@@ -82,14 +82,14 @@
               <Component id="jScrollPane1" min="-2" pref="187" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnAssignToMe" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="btnProvidePrescription" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="requestTestJButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="btnViewPatient" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="btnComplete" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="AsngToMeBtn" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="prvdPrescrptnBtn" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="reqTestJButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="ViewPntBtn" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="cmpltBtn" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="bloodBankRequestJButton" min="-2" pref="32" max="-2" attributes="0"/>
+              <Component id="bloodBankReqJButton" min="-2" pref="32" max="-2" attributes="0"/>
               <EmptySpace pref="494" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -103,7 +103,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="workRequestJTable">
+        <Component class="javax.swing.JTable" name="wrkReqJTable">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -171,7 +171,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="requestTestJButton">
+    <Component class="javax.swing.JButton" name="reqTestJButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -182,7 +182,7 @@
         <Property name="text" type="java.lang.String" value="Request Lab Test"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="requestTestJButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reqTestJButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="enterpriseLabel">
@@ -209,7 +209,7 @@
         <Property name="text" type="java.lang.String" value="Medical Test Work Queue"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAssignToMe">
+    <Component class="javax.swing.JButton" name="AsngToMeBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -220,10 +220,10 @@
         <Property name="text" type="java.lang.String" value="Assign To Me"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAssignToMeActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AsngToMeBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnProvidePrescription">
+    <Component class="javax.swing.JButton" name="prvdPrescrptnBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -234,10 +234,10 @@
         <Property name="text" type="java.lang.String" value="Provide Prescription"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProvidePrescriptionActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="prvdPrescrptnBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnComplete">
+    <Component class="javax.swing.JButton" name="cmpltBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -248,10 +248,10 @@
         <Property name="text" type="java.lang.String" value="Complete Treatment"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCompleteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmpltBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnViewPatient">
+    <Component class="javax.swing.JButton" name="ViewPntBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -262,7 +262,7 @@
         <Property name="text" type="java.lang.String" value="View Patient"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewPatientActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewPntBtnActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -273,7 +273,7 @@
         <Property name="text" type="java.lang.String" value="Doctor Work Area"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="bloodBankRequestJButton">
+    <Component class="javax.swing.JButton" name="bloodBankReqJButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -284,7 +284,7 @@
         <Property name="text" type="java.lang.String" value="Blood Bank Request"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bloodBankRequestJButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bloodBankReqJButtonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

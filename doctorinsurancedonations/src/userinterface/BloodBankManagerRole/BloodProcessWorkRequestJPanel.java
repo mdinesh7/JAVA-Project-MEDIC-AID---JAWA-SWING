@@ -18,16 +18,16 @@ import userinterface.BloodBankManagerRole.BloodBankManagerWorkAreaJPanel;
  */
 public class BloodProcessWorkRequestJPanel extends javax.swing.JPanel {
 
-    JPanel userProcessContainer;
-    PatientTreatmentWorkRequest patientTreatmentWorkRequest;
+    JPanel jPanel;
+    PatientTreatmentWorkRequest ptTrWrReq;
 
     /**
      * Creates new form ProcessWorkRequestJPanel
      */
     public BloodProcessWorkRequestJPanel(JPanel userProcessContainer, PatientTreatmentWorkRequest patientTreatmentWorkRequest) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.patientTreatmentWorkRequest = patientTreatmentWorkRequest;
+        this.jPanel = userProcessContainer;
+        this.ptTrWrReq = patientTreatmentWorkRequest;
     }
 
     /**
@@ -39,9 +39,9 @@ public class BloodProcessWorkRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        submitJButton = new javax.swing.JButton();
+        sbmtJButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        resultJTextField = new javax.swing.JTextField();
+        rsltMsgJTextField = new javax.swing.JTextField();
         backJButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -49,35 +49,35 @@ public class BloodProcessWorkRequestJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        submitJButton.setBackground(new java.awt.Color(0, 153, 255));
-        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        submitJButton.setText("Submit Result");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        sbmtJButton.setBackground(new java.awt.Color(0, 153, 255));
+        sbmtJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        sbmtJButton.setText("Submit Result");
+        sbmtJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                sbmtJButtonActionPerformed(evt);
             }
         });
-        add(submitJButton);
-        submitJButton.setBounds(270, 170, 122, 36);
+        add(sbmtJButton);
+        sbmtJButton.setBounds(270, 170, 122, 36);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Message");
         add(jLabel1);
         jLabel1.setBounds(172, 135, 60, 15);
-        add(resultJTextField);
-        resultJTextField.setBounds(242, 128, 160, 30);
+        add(rsltMsgJTextField);
+        rsltMsgJTextField.setBounds(242, 128, 160, 30);
 
         backJButton.setBackground(new java.awt.Color(0, 153, 255));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backJButton.setText("<< Back");
+        backJButton.setText(" Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
         add(backJButton);
-        backJButton.setBounds(10, 11, 93, 29);
+        backJButton.setBounds(10, 11, 75, 29);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Blood Bank");
@@ -92,41 +92,41 @@ public class BloodProcessWorkRequestJPanel extends javax.swing.JPanel {
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
+        jPanel.remove(this);
+        Component[] componentArray = jPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         BloodBankManagerWorkAreaJPanel dwjp = (BloodBankManagerWorkAreaJPanel) component;
-        dwjp.populateTable();
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        dwjp.pplTbl();
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.previous(jPanel);
     }//GEN-LAST:event_backJButtonActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-        String bloodBankMessage = resultJTextField.getText().trim();
+    private void sbmtJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sbmtJButtonActionPerformed
+        String bloodBankMessage = rsltMsgJTextField.getText().trim();
         if (bloodBankMessage.equals("")) {
             JOptionPane.showMessageDialog(null, "Result is mandatory");
             return;
         } else {
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             if (dialogResult == JOptionPane.YES_OPTION) {
-                patientTreatmentWorkRequest.setBloodBankMessage(bloodBankMessage);
-                patientTreatmentWorkRequest.setStatus("Blood Bank Request Completed");
+                ptTrWrReq.setBloodBankMessage(bloodBankMessage);
+                ptTrWrReq.setStatus("Blood Bank Request Completed");
                 JOptionPane.showMessageDialog(null, "Result submitted successfully");
-                resultJTextField.setText("");
-                submitJButton.setEnabled(false);
+                rsltMsgJTextField.setText("");
+                sbmtJButton.setEnabled(false);
             }
 
         }
 
 
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_sbmtJButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField resultJTextField;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JTextField rsltMsgJTextField;
+    private javax.swing.JButton sbmtJButton;
     // End of variables declaration//GEN-END:variables
 }

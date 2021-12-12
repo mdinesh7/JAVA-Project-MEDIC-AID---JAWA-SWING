@@ -19,21 +19,21 @@ import javax.swing.JPanel;
  */
 public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private UserAccount userAccount;
-    private Enterprise enterprise;
-    private PatientTreatmentWorkRequest request;
+    private JPanel jPanel;
+    private UserAccount usrAcnt;
+    private Enterprise entrpz;
+    private PatientTreatmentWorkRequest req;
 
     /**
      * Creates new form ProvidePrescriptionJPanel
      */
     public ProvidePrescriptionJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise, PatientTreatmentWorkRequest workRequest) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.userAccount = userAccount;
-        this.enterprise = enterprise;
-        this.request = workRequest;
-        populateTable();
+        this.jPanel = userProcessContainer;
+        this.usrAcnt = userAccount;
+        this.entrpz = enterprise;
+        this.req = workRequest;
+        pplTbl();
     }
 
     /**
@@ -47,20 +47,20 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txtFirstName = new javax.swing.JTextField();
+        fstNmTxt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        txtLastName = new javax.swing.JTextField();
+        lstNmTxt = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        txtAge = new javax.swing.JTextField();
+        ageTxt = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtPrescription = new javax.swing.JTextArea();
+        prscrptnTxt = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
-        txtMedicalCondition = new javax.swing.JTextField();
-        txtAssignedDoctor = new javax.swing.JTextField();
-        btnSubmit = new javax.swing.JButton();
+        medCondTxt = new javax.swing.JTextField();
+        asgndDocTxt = new javax.swing.JTextField();
+        sbmtBtn = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -78,51 +78,51 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
         add(jLabel6);
         jLabel6.setBounds(361, 113, 146, 15);
 
-        txtFirstName.setEditable(false);
-        add(txtFirstName);
-        txtFirstName.setBounds(244, 146, 131, 23);
+        fstNmTxt.setEditable(false);
+        add(fstNmTxt);
+        fstNmTxt.setBounds(244, 146, 131, 23);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("First Name :");
         add(jLabel7);
-        jLabel7.setBounds(169, 148, 71, 15);
+        jLabel7.setBounds(169, 148, 73, 15);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("Last Name :");
         add(jLabel10);
         jLabel10.setBounds(425, 148, 71, 15);
 
-        txtLastName.setEditable(false);
-        add(txtLastName);
-        txtLastName.setBounds(500, 146, 131, 23);
+        lstNmTxt.setEditable(false);
+        add(lstNmTxt);
+        lstNmTxt.setBounds(500, 146, 131, 23);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Assigned Doctor Information :");
         add(jLabel8);
-        jLabel8.setBounds(53, 224, 187, 15);
+        jLabel8.setBounds(53, 224, 183, 15);
 
-        txtAge.setEditable(false);
-        txtAge.addActionListener(new java.awt.event.ActionListener() {
+        ageTxt.setEditable(false);
+        ageTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAgeActionPerformed(evt);
+                ageTxtActionPerformed(evt);
             }
         });
-        add(txtAge);
-        txtAge.setBounds(500, 184, 131, 23);
+        add(ageTxt);
+        ageTxt.setBounds(500, 184, 131, 23);
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel27.setText("Age :");
         add(jLabel27);
-        jLabel27.setBounds(464, 186, 32, 15);
+        jLabel27.setBounds(464, 186, 31, 15);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("PRESCRIPTION");
         add(jLabel3);
-        jLabel3.setBounds(141, 260, 91, 15);
+        jLabel3.setBounds(141, 260, 94, 15);
 
-        txtPrescription.setColumns(20);
-        txtPrescription.setRows(5);
-        jScrollPane1.setViewportView(txtPrescription);
+        prscrptnTxt.setColumns(20);
+        prscrptnTxt.setRows(5);
+        jScrollPane1.setViewportView(prscrptnTxt);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(250, 260, 400, 86);
@@ -132,24 +132,24 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
         add(jLabel4);
         jLabel4.setBounds(75, 186, 166, 15);
 
-        txtMedicalCondition.setEditable(false);
-        add(txtMedicalCondition);
-        txtMedicalCondition.setBounds(245, 184, 130, 23);
+        medCondTxt.setEditable(false);
+        add(medCondTxt);
+        medCondTxt.setBounds(245, 184, 130, 23);
 
-        txtAssignedDoctor.setEditable(false);
-        add(txtAssignedDoctor);
-        txtAssignedDoctor.setBounds(244, 222, 131, 23);
+        asgndDocTxt.setEditable(false);
+        add(asgndDocTxt);
+        asgndDocTxt.setBounds(244, 222, 131, 23);
 
-        btnSubmit.setBackground(new java.awt.Color(0, 153, 255));
-        btnSubmit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnSubmit.setText("Submit");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        sbmtBtn.setBackground(new java.awt.Color(0, 153, 255));
+        sbmtBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        sbmtBtn.setText("Submit");
+        sbmtBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
+                sbmtBtnActionPerformed(evt);
             }
         });
-        add(btnSubmit);
-        btnSubmit.setBounds(250, 364, 80, 23);
+        add(sbmtBtn);
+        sbmtBtn.setBounds(250, 364, 80, 29);
 
         backJButton.setBackground(new java.awt.Color(0, 153, 255));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -160,7 +160,7 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(29, 11, 90, 23);
+        backJButton.setBounds(29, 11, 90, 29);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doctor2.gif"))); // NOI18N
@@ -168,41 +168,43 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
         jLabel2.setBounds(610, -100, 360, 1020);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
+    private void ageTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAgeActionPerformed
+    }//GEN-LAST:event_ageTxtActionPerformed
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        String prescription = txtPrescription.getText();
+    private void sbmtBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sbmtBtnActionPerformed
+        String prescription = prscrptnTxt.getText();
         if (prescription.equals("")) {
             JOptionPane.showMessageDialog(null, "Prescription is mandatory");
             return;
         } else {
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             if (dialogResult == JOptionPane.YES_OPTION) {
-                request.setPrescription(prescription);
-                request.setStatus("Prescription Provided");
+                req.setPrescription(prescription);
+                req.setStatus("Prescription Provided");
                 JOptionPane.showMessageDialog(null, "Prescription submitted successfully");
-                btnSubmit.setEnabled(false);
+                sbmtBtn.setEnabled(false);
             }
         }        
-    }//GEN-LAST:event_btnSubmitActionPerformed
+    }//GEN-LAST:event_sbmtBtnActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
+        jPanel.remove(this);
+        Component[] componentArray = jPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         DoctorWorkAreaJPanel dwjp = (DoctorWorkAreaJPanel) component;
-        dwjp.populateRequestTable();
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        dwjp.pplReqTbl();
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.previous(jPanel);
     }//GEN-LAST:event_backJButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ageTxt;
+    private javax.swing.JTextField asgndDocTxt;
     private javax.swing.JButton backJButton;
-    private javax.swing.JButton btnSubmit;
+    private javax.swing.JTextField fstNmTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -213,21 +215,19 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtAge;
-    private javax.swing.JTextField txtAssignedDoctor;
-    private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtMedicalCondition;
-    private javax.swing.JTextArea txtPrescription;
+    private javax.swing.JTextField lstNmTxt;
+    private javax.swing.JTextField medCondTxt;
+    private javax.swing.JTextArea prscrptnTxt;
+    private javax.swing.JButton sbmtBtn;
     // End of variables declaration//GEN-END:variables
 
-    private void populateTable() {
-        txtFirstName.setText(request.getPatient().getPatientFirstName());
-        txtLastName.setText(request.getPatient().getPatientLastName());
+    private void pplTbl() {
+        fstNmTxt.setText(req.getPatient().getPatientFirstName());
+        lstNmTxt.setText(req.getPatient().getPatientLastName());
        // txtBirthDate1.setText(String.valueOf(request.getPatient().getDateOfBirth()));
-        txtAge.setText(String.valueOf(request.getPatient().getPatientAge()));
-        txtMedicalCondition.setText(request.getReasonForVisit());
-        txtAssignedDoctor.setText(request.getAssignedDoctor().getEmployee().getName());
+        ageTxt.setText(String.valueOf(req.getPatient().getPatientAge()));
+        medCondTxt.setText(req.getReasonForVisit());
+        asgndDocTxt.setText(req.getAssignedDoctor().getEmployee().getName());
 
     }
 }

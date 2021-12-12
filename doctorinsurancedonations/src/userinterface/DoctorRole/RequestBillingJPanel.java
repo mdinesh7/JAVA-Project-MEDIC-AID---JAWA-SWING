@@ -23,23 +23,23 @@ import javax.swing.JPanel;
  */
 public class RequestBillingJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private UserAccount userAccount;
-    private Enterprise enterprise;
-    private PatientTreatmentWorkRequest patientTreatmentWorkRequest;
+    private JPanel jPanel;
+    private UserAccount usrAcnt;
+    private Enterprise entrpz;
+    private PatientTreatmentWorkRequest pntTrtmntWrkReq;
     private EcoSystem ecoSystem;
-    private double consultationCharges = 50;
+    private double cnsltChrg = 50;
 
     /**
      * Creates new form RequestBillingJPanel
      */
     RequestBillingJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise, PatientTreatmentWorkRequest workRequest) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.userAccount = userAccount;
-        this.enterprise = enterprise;
-        this.patientTreatmentWorkRequest = workRequest;
-        populateTable();
+        this.jPanel = userProcessContainer;
+        this.usrAcnt = userAccount;
+        this.entrpz = enterprise;
+        this.pntTrtmntWrkReq = workRequest;
+        pplTbl();
 
     }
 
@@ -54,24 +54,24 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txtFirstName = new javax.swing.JTextField();
+        fstNmTxt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        txtLastName = new javax.swing.JTextField();
+        lstNmTxt = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        txtAssignedDoctor = new javax.swing.JTextField();
+        asgndDocTxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        txtPatientId = new javax.swing.JTextField();
+        pntIdTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtConsultationCharges = new javax.swing.JTextField();
+        consChrgTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        txtMedicationCharges = new javax.swing.JTextField();
+        medChrgTxt = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        txtLabCharges = new javax.swing.JTextField();
+        labChrgTxt = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        txtMiscellaneousCharges = new javax.swing.JTextField();
-        btnSendBillingRequest = new javax.swing.JButton();
+        miscChrgTxt = new javax.swing.JTextField();
+        sndBillReqBtn = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
@@ -88,97 +88,97 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         add(jLabel6);
         jLabel6.setBounds(269, 89, 146, 15);
 
-        txtFirstName.setEditable(false);
-        add(txtFirstName);
-        txtFirstName.setBounds(200, 122, 131, 23);
+        fstNmTxt.setEditable(false);
+        add(fstNmTxt);
+        fstNmTxt.setBounds(200, 122, 131, 23);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("First Name :");
         add(jLabel7);
-        jLabel7.setBounds(124, 124, 71, 15);
+        jLabel7.setBounds(124, 124, 73, 15);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("Last Name :");
         add(jLabel10);
         jLabel10.setBounds(365, 124, 71, 15);
 
-        txtLastName.setEditable(false);
-        add(txtLastName);
-        txtLastName.setBounds(440, 122, 131, 23);
+        lstNmTxt.setEditable(false);
+        add(lstNmTxt);
+        lstNmTxt.setBounds(440, 122, 131, 23);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Assigned Doctor :");
         add(jLabel8);
-        jLabel8.setBounds(87, 162, 109, 15);
+        jLabel8.setBounds(87, 162, 106, 15);
 
-        txtAssignedDoctor.setEditable(false);
-        add(txtAssignedDoctor);
-        txtAssignedDoctor.setBounds(200, 160, 130, 23);
+        asgndDocTxt.setEditable(false);
+        add(asgndDocTxt);
+        asgndDocTxt.setBounds(200, 160, 130, 23);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Patient Id:");
         add(jLabel2);
         jLabel2.setBounds(371, 162, 66, 15);
 
-        txtPatientId.setEditable(false);
-        add(txtPatientId);
-        txtPatientId.setBounds(440, 160, 131, 23);
+        pntIdTxt.setEditable(false);
+        add(pntIdTxt);
+        pntIdTxt.setBounds(440, 160, 131, 23);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("BILLING INFORMATION");
         add(jLabel3);
-        jLabel3.setBounds(273, 225, 138, 15);
+        jLabel3.setBounds(273, 225, 146, 15);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Consultaion Charges (USD) :");
         add(jLabel4);
         jLabel4.setBounds(205, 258, 173, 21);
 
-        txtConsultationCharges.addActionListener(new java.awt.event.ActionListener() {
+        consChrgTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtConsultationChargesActionPerformed(evt);
+                consChrgTxtActionPerformed(evt);
             }
         });
-        add(txtConsultationCharges);
-        txtConsultationCharges.setBounds(388, 258, 82, 23);
+        add(consChrgTxt);
+        consChrgTxt.setBounds(388, 258, 82, 23);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Medication Charges (USD):");
         add(jLabel5);
-        jLabel5.setBounds(215, 325, 163, 21);
-        add(txtMedicationCharges);
-        txtMedicationCharges.setBounds(388, 323, 82, 23);
+        jLabel5.setBounds(215, 325, 164, 21);
+        add(medChrgTxt);
+        medChrgTxt.setBounds(388, 323, 82, 23);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel11.setText("Lab Test Charges (USD) :");
         add(jLabel11);
         jLabel11.setBounds(220, 290, 152, 21);
 
-        txtLabCharges.addActionListener(new java.awt.event.ActionListener() {
+        labChrgTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLabChargesActionPerformed(evt);
+                labChrgTxtActionPerformed(evt);
             }
         });
-        add(txtLabCharges);
-        txtLabCharges.setBounds(388, 290, 82, 23);
+        add(labChrgTxt);
+        labChrgTxt.setBounds(388, 290, 82, 23);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel12.setText("Miscellaneous Charges (USD):");
         add(jLabel12);
-        jLabel12.setBounds(199, 361, 179, 17);
-        add(txtMiscellaneousCharges);
-        txtMiscellaneousCharges.setBounds(388, 359, 82, 23);
+        jLabel12.setBounds(199, 361, 182, 17);
+        add(miscChrgTxt);
+        miscChrgTxt.setBounds(388, 359, 82, 23);
 
-        btnSendBillingRequest.setBackground(new java.awt.Color(0, 153, 255));
-        btnSendBillingRequest.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnSendBillingRequest.setText("Send Billing Request");
-        btnSendBillingRequest.addActionListener(new java.awt.event.ActionListener() {
+        sndBillReqBtn.setBackground(new java.awt.Color(0, 153, 255));
+        sndBillReqBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        sndBillReqBtn.setText("Send Billing Request");
+        sndBillReqBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSendBillingRequestActionPerformed(evt);
+                sndBillReqBtnActionPerformed(evt);
             }
         });
-        add(btnSendBillingRequest);
-        btnSendBillingRequest.setBounds(277, 410, 147, 32);
+        add(sndBillReqBtn);
+        sndBillReqBtn.setBounds(277, 410, 159, 32);
 
         backBtn.setBackground(new java.awt.Color(0, 153, 255));
         backBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -189,7 +189,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
             }
         });
         add(backBtn);
-        backBtn.setBounds(45, 25, 77, 23);
+        backBtn.setBounds(45, 25, 90, 29);
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/billing6.gif"))); // NOI18N
@@ -199,19 +199,19 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         jLabel9.setBounds(158, 5, 560, 490);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtLabChargesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLabChargesActionPerformed
+    private void labChrgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_labChrgTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtLabChargesActionPerformed
+    }//GEN-LAST:event_labChrgTxtActionPerformed
 
-    private void txtConsultationChargesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConsultationChargesActionPerformed
+    private void consChrgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consChrgTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtConsultationChargesActionPerformed
+    }//GEN-LAST:event_consChrgTxtActionPerformed
 
-    private void btnSendBillingRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendBillingRequestActionPerformed
-        String consultationCharge = txtConsultationCharges.getText().trim();
-        String labChargesStr = txtLabCharges.getText();
-        String miscellaneouschargesStr = txtMiscellaneousCharges.getText();
-        String medicationChargesStr = txtMedicationCharges.getText();
+    private void sndBillReqBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sndBillReqBtnActionPerformed
+        String consultationCharge = consChrgTxt.getText().trim();
+        String labChargesStr = labChrgTxt.getText();
+        String miscellaneouschargesStr = miscChrgTxt.getText();
+        String medicationChargesStr = medChrgTxt.getText();
         if (consultationCharge.equals("") || labChargesStr.equals("") || miscellaneouschargesStr.equals("") || medicationChargesStr.equals("")) {
             JOptionPane.showMessageDialog(null, "All fields are mandatory");
         } else {
@@ -244,23 +244,23 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
             double labCharges = Double.parseDouble(labChargesStr);
             double miscellaneouscharges = Double.parseDouble(miscellaneouschargesStr);
             double medicationCharges = Double.parseDouble(medicationChargesStr);
-            double billingAmount = labCharges + consultationCharges + medicationCharges + miscellaneouscharges;
+            double billingAmount = labCharges + cnsltChrg + medicationCharges + miscellaneouscharges;
             //request.setBillAmount(billingAmount);
 
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             if (dialogResult == JOptionPane.YES_OPTION) {
-                patientTreatmentWorkRequest.setStatus("Consultation Completed");
+                pntTrtmntWrkReq.setStatus("Consultation Completed");
 
                 AccountantBillingRequest accountantBillingRequest = new AccountantBillingRequest();
                 accountantBillingRequest.setBillingAmount(billingAmount);
                 //  accountantBillingRequest.setPatientId(Integer.parseInt(txtPatientId.getText()));
 
-                accountantBillingRequest.setSender(userAccount);
+                accountantBillingRequest.setSender(usrAcnt);
                 accountantBillingRequest.setStatus("Sent");
-                accountantBillingRequest.setPatient(patientTreatmentWorkRequest.getPatient());
+                accountantBillingRequest.setPatient(pntTrtmntWrkReq.getPatient());
 
                 Organization org = null;
-                for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+                for (Organization organization : entrpz.getOrganizationDirectory().getOrganizations()) {
                     if (organization instanceof AccountantOrganization) {
                         org = organization;
                         break;
@@ -268,31 +268,33 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
                 }
                 if (org != null) {
                     org.getWorkQueue().getWorkRequests().add(accountantBillingRequest);
-                    userAccount.getWorkQueue().getWorkRequests().add(accountantBillingRequest);
+                    usrAcnt.getWorkQueue().getWorkRequests().add(accountantBillingRequest);
                 }
 
                 JOptionPane.showMessageDialog(null, "Prescription submitted successfully");
-                btnSendBillingRequest.setEnabled(false);
+                sndBillReqBtn.setEnabled(false);
             }
         }
 
-    }//GEN-LAST:event_btnSendBillingRequestActionPerformed
+    }//GEN-LAST:event_sndBillReqBtnActionPerformed
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
+        jPanel.remove(this);
+        Component[] componentArray = jPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         DoctorWorkAreaJPanel dwjp = (DoctorWorkAreaJPanel) component;
-        dwjp.populateRequestTable();
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        dwjp.pplReqTbl();
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.previous(jPanel);
     }//GEN-LAST:event_backBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField asgndDocTxt;
     private javax.swing.JButton backBtn;
-    private javax.swing.JButton btnSendBillingRequest;
+    private javax.swing.JTextField consChrgTxt;
+    private javax.swing.JTextField fstNmTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -305,23 +307,21 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txtAssignedDoctor;
-    private javax.swing.JTextField txtConsultationCharges;
-    private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtLabCharges;
-    private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtMedicationCharges;
-    private javax.swing.JTextField txtMiscellaneousCharges;
-    private javax.swing.JTextField txtPatientId;
+    private javax.swing.JTextField labChrgTxt;
+    private javax.swing.JTextField lstNmTxt;
+    private javax.swing.JTextField medChrgTxt;
+    private javax.swing.JTextField miscChrgTxt;
+    private javax.swing.JTextField pntIdTxt;
+    private javax.swing.JButton sndBillReqBtn;
     // End of variables declaration//GEN-END:variables
 
-    private void populateTable() {
+    private void pplTbl() {
 
-        txtFirstName.setText(patientTreatmentWorkRequest.getPatient().getPatientFirstName());
-        txtLastName.setText(patientTreatmentWorkRequest.getPatient().getPatientLastName());
-        txtPatientId.setText(String.valueOf(patientTreatmentWorkRequest.getPatient().getPatientId()));
-        txtAssignedDoctor.setText(patientTreatmentWorkRequest.getAssignedDoctor().getEmployee().getName());
-        txtConsultationCharges.setText(String.valueOf(consultationCharges));
+        fstNmTxt.setText(pntTrtmntWrkReq.getPatient().getPatientFirstName());
+        lstNmTxt.setText(pntTrtmntWrkReq.getPatient().getPatientLastName());
+        pntIdTxt.setText(String.valueOf(pntTrtmntWrkReq.getPatient().getPatientId()));
+        asgndDocTxt.setText(pntTrtmntWrkReq.getAssignedDoctor().getEmployee().getName());
+        consChrgTxt.setText(String.valueOf(cnsltChrg));
 
     }
 }

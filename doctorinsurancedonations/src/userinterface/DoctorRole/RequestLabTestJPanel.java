@@ -20,10 +20,10 @@ import javax.swing.JPanel;
  */
 public class RequestLabTestJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private Enterprise enterprise;
-    private UserAccount userAccount;
-    private PatientTreatmentWorkRequest patientTreatmentWorkRequest;
+    private JPanel jPanel;
+    private Enterprise entrpz;
+    private UserAccount usrAcnt;
+    private PatientTreatmentWorkRequest pntTrmntWrReq;
 
     /**
      * Creates new form RequestLabTestJPanel
@@ -31,10 +31,10 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     public RequestLabTestJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, PatientTreatmentWorkRequest patientTreatmentWorkRequest) {
         initComponents();
 
-        this.userProcessContainer = userProcessContainer;
-        this.enterprise = enterprise;
-        this.userAccount = account;
-        this.patientTreatmentWorkRequest = patientTreatmentWorkRequest;
+        this.jPanel = userProcessContainer;
+        this.entrpz = enterprise;
+        this.usrAcnt = account;
+        this.pntTrmntWrReq = patientTreatmentWorkRequest;
         valueLabel.setText(enterprise.getName());
         requestTestJButton.setEnabled(true);
     }
@@ -123,21 +123,21 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             return;
         }
 
-        patientTreatmentWorkRequest.setLabTestMessage(message);
-        patientTreatmentWorkRequest.setSender(userAccount);
-        patientTreatmentWorkRequest.setStatus("SentToLab");
-        patientTreatmentWorkRequest.setReceiver(null);
+        pntTrmntWrReq.setLabTestMessage(message);
+        pntTrmntWrReq.setSender(usrAcnt);
+        pntTrmntWrReq.setStatus("SentToLab");
+        pntTrmntWrReq.setReceiver(null);
 
         Organization org = null;
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+        for (Organization organization : entrpz.getOrganizationDirectory().getOrganizations()) {
             if (organization instanceof LabOrganization) {
                 org = organization;
                 break;
             }
         }
         if (org != null) {
-            org.getWorkQueue().getWorkRequests().add(patientTreatmentWorkRequest);
-            userAccount.getWorkQueue().getWorkRequests().add(patientTreatmentWorkRequest);
+            org.getWorkQueue().getWorkRequests().add(pntTrmntWrReq);
+            usrAcnt.getWorkQueue().getWorkRequests().add(pntTrmntWrReq);
             JOptionPane.showMessageDialog(null, "Lab request sent");
             txtLabMessage.setText("");
             txtLabType.setText("");
@@ -148,13 +148,13 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
+        jPanel.remove(this);
+        Component[] componentArray = jPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         DoctorWorkAreaJPanel dwjp = (DoctorWorkAreaJPanel) component;
-        dwjp.populateRequestTable();
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        dwjp.pplReqTbl();
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.previous(jPanel);
 
     }//GEN-LAST:event_backJButtonActionPerformed
 
