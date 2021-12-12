@@ -85,7 +85,7 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("First Name :");
         add(jLabel7);
-        jLabel7.setBounds(169, 148, 73, 15);
+        jLabel7.setBounds(169, 148, 71, 15);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("Last Name :");
@@ -99,7 +99,7 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Assigned Doctor Information :");
         add(jLabel8);
-        jLabel8.setBounds(53, 224, 183, 15);
+        jLabel8.setBounds(53, 224, 187, 15);
 
         ageTxt.setEditable(false);
         ageTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -113,12 +113,12 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel27.setText("Age :");
         add(jLabel27);
-        jLabel27.setBounds(464, 186, 31, 15);
+        jLabel27.setBounds(464, 186, 32, 15);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("PRESCRIPTION");
         add(jLabel3);
-        jLabel3.setBounds(141, 260, 94, 15);
+        jLabel3.setBounds(141, 260, 91, 15);
 
         prscrptnTxt.setColumns(20);
         prscrptnTxt.setRows(5);
@@ -149,7 +149,7 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
             }
         });
         add(sbmtBtn);
-        sbmtBtn.setBounds(250, 364, 80, 29);
+        sbmtBtn.setBounds(250, 364, 80, 23);
 
         backJButton.setBackground(new java.awt.Color(0, 153, 255));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -160,12 +160,12 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(29, 11, 90, 29);
+        backJButton.setBounds(29, 11, 90, 23);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doctor2.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doctor prescription.gif"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(610, -100, 360, 1020);
+        jLabel2.setBounds(680, -100, 840, 710);
     }// </editor-fold>//GEN-END:initComponents
 
     private void ageTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageTxtActionPerformed

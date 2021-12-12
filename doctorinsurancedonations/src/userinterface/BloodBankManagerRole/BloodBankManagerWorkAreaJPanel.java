@@ -137,9 +137,9 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
         add(prcsJButton);
         prcsJButton.setBounds(600, 130, 140, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blood bank request.gif"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(10, 180, 740, 360);
+        jLabel2.setBounds(340, 190, 630, 400);
     }// </editor-fold>//GEN-END:initComponents
 
     private void asgnJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asgnJButtonActionPerformed

@@ -149,7 +149,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Network");
         add(jLabel1);
-        jLabel1.setBounds(88, 168, 51, 15);
+        jLabel1.setBounds(88, 168, 52, 15);
 
         netwrkJCmboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         netwrkJCmboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -158,12 +158,12 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(netwrkJCmboBox);
-        netwrkJCmboBox.setBounds(182, 166, 136, 27);
+        netwrkJCmboBox.setBounds(182, 166, 136, 22);
 
         usernameJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         usernameJLabel.setText("Username");
         add(usernameJLabel);
-        usernameJLabel.setBounds(81, 232, 60, 15);
+        usernameJLabel.setBounds(81, 232, 59, 15);
         add(unmJTxtField);
         unmJTxtField.setBounds(182, 228, 136, 25);
 
@@ -174,7 +174,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
         entJCmboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(entJCmboBox);
-        entJCmboBox.setBounds(182, 197, 136, 27);
+        entJCmboBox.setBounds(182, 197, 136, 22);
 
         submitJBtn.setBackground(new java.awt.Color(0, 153, 255));
         submitJBtn.setText("Submit");
@@ -184,19 +184,19 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(submitJBtn);
-        submitJBtn.setBounds(182, 375, 80, 29);
+        submitJBtn.setBounds(182, 375, 80, 25);
 
         passwordJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         passwordJLabel.setText("Password");
         add(passwordJLabel);
-        passwordJLabel.setBounds(84, 268, 58, 15);
+        passwordJLabel.setBounds(84, 268, 59, 15);
         add(nmJTxtField);
         nmJTxtField.setBounds(182, 341, 136, 28);
 
         nameJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         nameJLabel.setText("Name");
         add(nameJLabel);
-        nameJLabel.setBounds(110, 347, 34, 15);
+        nameJLabel.setBounds(110, 347, 33, 15);
         add(entpwdJPwdField);
         entpwdJPwdField.setBounds(182, 264, 136, 25);
 
@@ -208,14 +208,14 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(10, 11, 97, 29);
+        backJButton.setBounds(10, 11, 81, 25);
         add(rePwdJPwdField);
         rePwdJPwdField.setBounds(182, 300, 136, 29);
 
         rePasswordJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         rePasswordJLabel.setText("re-enter Password");
         add(rePasswordJLabel);
-        rePasswordJLabel.setBounds(30, 306, 111, 15);
+        rePasswordJLabel.setBounds(30, 306, 113, 15);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Manage Enterprise Admin");
@@ -223,9 +223,9 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel2.setBounds(205, 27, 305, 29);
 
         entuname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        entuname.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin4.gif"))); // NOI18N
+        entuname.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/emp2.gif"))); // NOI18N
         add(entuname);
-        entuname.setBounds(20, 160, 680, 310);
+        entuname.setBounds(20, 160, 1060, 560);
     }// </editor-fold>//GEN-END:initComponents
 
     private void netwrkJCmboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_netwrkJCmboBoxActionPerformed

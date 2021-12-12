@@ -40,7 +40,7 @@
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="99" red="0" type="rgb"/>
+              <Color blue="0" green="0" red="80" type="rgb"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
@@ -115,7 +115,7 @@
                       <Component id="loginJButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="logoutJButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="871" max="32767" attributes="0"/>
+                      <EmptySpace pref="868" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -206,7 +206,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/healthcare logo2.png"/>
+                  <Image iconType="3" name="/Images/heart.jpg"/>
                 </Property>
               </Properties>
             </Component>
@@ -236,7 +236,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/ezgif.com-resize.gif"/>
+                  <Image iconType="3" name="/Images/7BZb.gif"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>

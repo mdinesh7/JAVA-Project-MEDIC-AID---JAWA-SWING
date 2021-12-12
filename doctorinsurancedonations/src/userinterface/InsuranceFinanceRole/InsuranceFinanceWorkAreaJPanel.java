@@ -50,17 +50,21 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
+
         financJTable = new javax.swing.JTable();
         asgnToMeBtn = new javax.swing.JButton();
         prcsBtn = new javax.swing.JButton();
+
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Insurance Finance Work Area");
 
+
         financJTable.setBackground(new java.awt.Color(0, 153, 255));
         financJTable.setModel(new javax.swing.table.DefaultTableModel(
+
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -79,25 +83,31 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+
         jScrollPane1.setViewportView(financJTable);
 
         asgnToMeBtn.setBackground(new java.awt.Color(0, 153, 255));
         asgnToMeBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         asgnToMeBtn.setText("Assign To Me");
         asgnToMeBtn.addActionListener(new java.awt.event.ActionListener() {
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 asgnToMeBtnActionPerformed(evt);
             }
         });
 
+
         prcsBtn.setBackground(new java.awt.Color(0, 153, 255));
         prcsBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         prcsBtn.setText("Process Request");
         prcsBtn.addActionListener(new java.awt.event.ActionListener() {
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prcsBtnActionPerformed(evt);
             }
         });
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/treasurer.gif"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -106,6 +116,7 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(202, 202, 202)
@@ -116,10 +127,13 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addComponent(prcsBtn)))
                         .addGap(0, 303, Short.MAX_VALUE))
+
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1)))
                 .addContainerGap())
+
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,10 +143,12 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
                 .addGap(36, 36, 36)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(prcsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(asgnToMeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(268, Short.MAX_VALUE))
+
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -198,6 +214,7 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton asgnToMeBtn;
     private javax.swing.JTable financJTable;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton prcsBtn;
     // End of variables declaration//GEN-END:variables

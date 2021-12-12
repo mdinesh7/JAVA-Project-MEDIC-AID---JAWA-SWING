@@ -95,7 +95,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("First Name :");
         add(jLabel7);
-        jLabel7.setBounds(124, 124, 73, 15);
+        jLabel7.setBounds(124, 124, 71, 15);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("Last Name :");
@@ -109,7 +109,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Assigned Doctor :");
         add(jLabel8);
-        jLabel8.setBounds(87, 162, 106, 15);
+        jLabel8.setBounds(87, 162, 109, 15);
 
         asgndDocTxt.setEditable(false);
         add(asgndDocTxt);
@@ -127,7 +127,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("BILLING INFORMATION");
         add(jLabel3);
-        jLabel3.setBounds(273, 225, 146, 15);
+        jLabel3.setBounds(273, 225, 138, 15);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Consultaion Charges (USD) :");
@@ -145,7 +145,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Medication Charges (USD):");
         add(jLabel5);
-        jLabel5.setBounds(215, 325, 164, 21);
+        jLabel5.setBounds(215, 325, 163, 21);
         add(medChrgTxt);
         medChrgTxt.setBounds(388, 323, 82, 23);
 
@@ -165,7 +165,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel12.setText("Miscellaneous Charges (USD):");
         add(jLabel12);
-        jLabel12.setBounds(199, 361, 182, 17);
+        jLabel12.setBounds(199, 361, 179, 17);
         add(miscChrgTxt);
         miscChrgTxt.setBounds(388, 359, 82, 23);
 
@@ -178,7 +178,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
             }
         });
         add(sndBillReqBtn);
-        sndBillReqBtn.setBounds(277, 410, 159, 32);
+        sndBillReqBtn.setBounds(277, 410, 147, 32);
 
         backBtn.setBackground(new java.awt.Color(0, 153, 255));
         backBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -189,14 +189,14 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
             }
         });
         add(backBtn);
-        backBtn.setBounds(45, 25, 90, 29);
+        backBtn.setBounds(45, 25, 77, 23);
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/billing6.gif"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doctor bill.gif"))); // NOI18N
         jLabel9.setToolTipText("");
         jLabel9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel9);
-        jLabel9.setBounds(158, 5, 560, 490);
+        jLabel9.setBounds(38, 5, 1460, 810);
     }// </editor-fold>//GEN-END:initComponents
 
     private void labChrgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_labChrgTxtActionPerformed

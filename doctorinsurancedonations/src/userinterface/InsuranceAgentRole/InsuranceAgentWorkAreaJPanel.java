@@ -45,21 +45,26 @@ public class InsuranceAgentWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+
         addNewUsrBtn = new javax.swing.JButton();
         prcsInsrReqBtn = new javax.swing.JButton();
+
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
+
         addNewUsrBtn.setBackground(new java.awt.Color(0, 153, 255));
         addNewUsrBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         addNewUsrBtn.setText("Add New Customer");
         addNewUsrBtn.addActionListener(new java.awt.event.ActionListener() {
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addNewUsrBtnActionPerformed(evt);
             }
         });
+
         add(addNewUsrBtn);
         addNewUsrBtn.setBounds(0, 10, 184, 41);
 
@@ -67,16 +72,21 @@ public class InsuranceAgentWorkAreaJPanel extends javax.swing.JPanel {
         prcsInsrReqBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         prcsInsrReqBtn.setText("Process Insurance Requests");
         prcsInsrReqBtn.addActionListener(new java.awt.event.ActionListener() {
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prcsInsrReqBtnActionPerformed(evt);
             }
         });
+
         add(prcsInsrReqBtn);
         prcsInsrReqBtn.setBounds(490, 380, 200, 39);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/health insurance.gif"))); // NOI18N
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/policy planner.web.gif"))); // NOI18N
         add(jLabel2);
+
         jLabel2.setBounds(1, 5, 690, 430);
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void addNewUsrBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNewUsrBtnActionPerformed
@@ -96,8 +106,10 @@ public class InsuranceAgentWorkAreaJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private javax.swing.JButton addNewUsrBtn;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton prcsInsrReqBtn;
+
     // End of variables declaration//GEN-END:variables
 }

@@ -57,7 +57,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
         add(submitJBtn);
-        submitJBtn.setBounds(270, 170, 122, 36);
+        submitJBtn.setBounds(270, 170, 111, 36);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -76,7 +76,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(10, 11, 93, 29);
+        backJButton.setBounds(10, 11, 81, 23);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Lab Test Results");
@@ -84,9 +84,9 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel2.setBounds(230, 20, 195, 29);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab2.gif"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab test results.jpg"))); // NOI18N
         add(jLabel3);
-        jLabel3.setBounds(-10, 0, 740, 450);
+        jLabel3.setBounds(-10, 0, 1010, 490);
     }// </editor-fold>//GEN-END:initComponents
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
