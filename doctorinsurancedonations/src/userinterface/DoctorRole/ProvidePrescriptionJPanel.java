@@ -221,6 +221,7 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
     private javax.swing.JButton sbmtBtn;
     // End of variables declaration//GEN-END:variables
 
+
     private void pplTbl() {
         fstNmTxt.setText(req.getPatient().getPatientFirstName());
         lstNmTxt.setText(req.getPatient().getPatientLastName());
@@ -228,6 +229,7 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
         ageTxt.setText(String.valueOf(req.getPatient().getPatientAge()));
         medCondTxt.setText(req.getReasonForVisit());
         asgndDocTxt.setText(req.getAssignedDoctor().getEmployee().getName());
+
 
     }
 }

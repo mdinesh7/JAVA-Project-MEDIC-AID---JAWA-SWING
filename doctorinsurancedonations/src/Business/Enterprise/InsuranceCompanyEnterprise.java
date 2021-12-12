@@ -19,14 +19,14 @@ import java.util.List;
  */
 public class InsuranceCompanyEnterprise extends Enterprise {
 
-    private InsuranceCustomerDirectory insuranceCustomerDirectory;
+    private InsuranceCustomerDirectory insCustDir;
 
-    private InsurancePolicyDirectory insurancePolicyDirectory;
+    private InsurancePolicyDirectory insPlcyDir;
 
     public InsuranceCompanyEnterprise(String name) {
-        super(name, EnterpriseType.InsuranceCompany);
-        insuranceCustomerDirectory = new InsuranceCustomerDirectory();
-        insurancePolicyDirectory = new InsurancePolicyDirectory();
+        super(name, EntType.InsuranceCompany);
+        insCustDir = new InsuranceCustomerDirectory();
+        insPlcyDir = new InsurancePolicyDirectory();
 
     }
 
@@ -45,20 +45,20 @@ public class InsuranceCompanyEnterprise extends Enterprise {
         return orgTypes;
     }
 
-    public InsuranceCustomerDirectory getInsuranceCustomerDirectory() {
-        return insuranceCustomerDirectory;
+    public InsuranceCustomerDirectory getInsCustDir() {
+        return insCustDir;
     }
 
-    public void setInsuranceCustomerDirectory(InsuranceCustomerDirectory insuranceCustomerDirectory) {
-        this.insuranceCustomerDirectory = insuranceCustomerDirectory;
+    public void setInsCustDir(InsuranceCustomerDirectory insCustDir) {
+        this.insCustDir = insCustDir;
     }
 
-    public InsurancePolicyDirectory getInsurancePolicyDirectory() {
-        return insurancePolicyDirectory;
+    public InsurancePolicyDirectory getInsPlcyDir() {
+        return insPlcyDir;
     }
 
-    public void setInsurancePolicyDirectory(InsurancePolicyDirectory insurancePolicyDirectory) {
-        this.insurancePolicyDirectory = insurancePolicyDirectory;
+    public void setInsPlcyDir(InsurancePolicyDirectory insPlcyDir) {
+        this.insPlcyDir = insPlcyDir;
     }
 
 }

@@ -123,6 +123,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             return;
         }
 
+
         pntTrmntWrReq.setLabTestMessage(message);
         pntTrmntWrReq.setSender(usrAcnt);
         pntTrmntWrReq.setStatus("SentToLab");
@@ -130,14 +131,17 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
 
         Organization org = null;
         for (Organization organization : entrpz.getOrganizationDirectory().getOrganizations()) {
+
             if (organization instanceof LabOrganization) {
                 org = organization;
                 break;
             }
         }
         if (org != null) {
+
             org.getWorkQueue().getWorkRequests().add(pntTrmntWrReq);
             usrAcnt.getWorkQueue().getWorkRequests().add(pntTrmntWrReq);
+
             JOptionPane.showMessageDialog(null, "Lab request sent");
             txtLabMessage.setText("");
             txtLabType.setText("");

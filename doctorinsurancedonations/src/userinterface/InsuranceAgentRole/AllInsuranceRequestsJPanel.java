@@ -233,7 +233,7 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
             InsuranceWorkRequest insuranceWorkRequest = (InsuranceWorkRequest) tblInsuranceWorkTable.getValueAt(selectedRow, 0);
             if (insuranceWorkRequest.getStatus().equals("Sent")) {
                 insuranceWorkRequest.setReceiver(userAccount);
-                insuranceWorkRequest.setStatus("Pending on Agent: " + userAccount.getEmployee().getName());
+                insuranceWorkRequest.setStatus("Pending on Agent: " + userAccount.getEmp().getEmpName());
                 populateTable();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
             } else {
@@ -263,19 +263,19 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (WorkRequest request : insuranceAgentOrganization.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : insuranceAgentOrganization.getWrkQ().getWorkRequests()) {
             Object[] row = new Object[8];
             String status = request.getStatus();
             row[0] = ((InsuranceWorkRequest) request);
-            row[1] = ((InsuranceWorkRequest) request).getInsuranceCustomer().getCustomerFirstName() + " " + ((InsuranceWorkRequest) request).getInsuranceCustomer().getCustomerLastName();
-            row[2] = ((InsuranceWorkRequest) request).getHealthCenter();
+            row[1] = ((InsuranceWorkRequest) request).getInsCust().getCustFrstNm() + " " + ((InsuranceWorkRequest) request).getInsCust().getCustLstNme();
+            row[2] = ((InsuranceWorkRequest) request).getHealthCtr();
 
-            row[3] = request.getSender().getEmployee().getName();
+            row[3] = request.getSender().getEmp().getEmpName();
             row[4] = request.getReceiver();
 
-            row[5] = ((InsuranceWorkRequest) request).getBillAmount();
+            row[5] = ((InsuranceWorkRequest) request).getBillAmt();
 
-            row[6] = ((InsuranceWorkRequest) request).getClaimAmount();
+            row[6] = ((InsuranceWorkRequest) request).getClaimAmt();
             row[7] = request.getStatus();
 
             model.addRow(row);

@@ -33,12 +33,12 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.userAccount = userAccount;
         this.insuranceWorkRequest = insuranceWorkRequest;
-        txtPolicyNumber.setText(insuranceWorkRequest.getPolicyNumber());
+        txtPolicyNumber.setText(insuranceWorkRequest.getPlcyNo());
         txtSSN.setText(insuranceWorkRequest.getSsn());
-        txtPolicyName.setText(insuranceWorkRequest.getPolicyName());
-        txtClaimAmount.setText(String.valueOf(insuranceWorkRequest.getClaimAmount()));
-        txtBillingAmount.setText(String.valueOf(insuranceWorkRequest.getBillAmount()));
-        txtCoverage.setText(String.valueOf(insuranceWorkRequest.getInsuranceCustomer().getInsurance().getCoverage()));
+        txtPolicyName.setText(insuranceWorkRequest.getPlcyNm());
+        txtClaimAmount.setText(String.valueOf(insuranceWorkRequest.getClaimAmt()));
+        txtBillingAmount.setText(String.valueOf(insuranceWorkRequest.getBillAmt()));
+        txtCoverage.setText(String.valueOf(insuranceWorkRequest.getInsCust().getIns().getCvrg()));
     }
 
     /**

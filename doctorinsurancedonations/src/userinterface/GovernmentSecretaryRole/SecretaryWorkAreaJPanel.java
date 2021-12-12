@@ -151,7 +151,7 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
             WorkRequest request = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
             if (request.getStatus().equals("Sent to Secretary")) {
                 request.setReceiver(userAccount);
-                request.setStatus("Pending on " + request.getReceiver().getEmployee().getName());
+                request.setStatus("Pending on " + request.getReceiver().getEmp().getEmpName());
                 populateTable();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
             } else {
@@ -186,7 +186,7 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
              JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (!userAccount.getEmployee().equals(fundRequest.getReceiver().getEmployee())) {
+            if (!userAccount.getEmp().equals(fundRequest.getReceiver().getEmp())) {
                 JOptionPane.showMessageDialog(null, "Request assigned to other Officer", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
@@ -205,19 +205,19 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (WorkRequest request : secretaryOrganization.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : secretaryOrganization.getWrkQ().getWorkRequests()) {
             String status = request.getStatus();
             Object[] row = new Object[6];
             row[0] = ((GovernmentFundRequest) request);
-            row[1] = request.getSender().getEmployee().getName();
+            row[1] = request.getSender().getEmp().getEmpName();
             if (status.equalsIgnoreCase("Sent to Treasurer") || status.equalsIgnoreCase("Sent to Secretary")) {
                 row[2] = null;
             } else {
-                row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
+                row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmp().getEmpName();
             }
             row[3] = status;
-            row[4] = ((GovernmentFundRequest) request).getRequestAmount();
-            row[5] = ((GovernmentFundRequest) request).getMessage();
+            row[4] = ((GovernmentFundRequest) request).getReqAmt();
+            row[5] = ((GovernmentFundRequest) request).getWrMsg();
 
             model.addRow(row);
         }

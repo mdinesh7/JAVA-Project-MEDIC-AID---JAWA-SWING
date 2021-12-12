@@ -9,7 +9,7 @@ import java.util.Date;
 
 public abstract class WorkRequest {
 
-    private String message;
+    private String wrMsg;
     private UserAccount sender;
     private UserAccount receiver;
     private String status;
@@ -29,12 +29,12 @@ public abstract class WorkRequest {
         requestDate = new Date();
     }
 
-    public String getMessage() {
-        return message;
+    public String getWrMsg() {
+        return wrMsg;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setWrMsg(String wrMsg) {
+        this.wrMsg = wrMsg;
     }
 
     public UserAccount getSender() {

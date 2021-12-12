@@ -203,9 +203,9 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
         List<Patient> underTreatmentPatients = new ArrayList<>();
         List<Patient> treatedPatients = new ArrayList<>();
         DefaultPieDataset defaultPieDataset = new DefaultPieDataset();
-        List<Patient> patients = ((HealthCenterEnterprise) enterprise).getPatientDirectory().getPatients();
+        List<Patient> patients = ((HealthCenterEnterprise) enterprise).getPatientDir().getPatients();
         for (Patient patient : patients) {
-            if (patient.isIsTreatmentFinished()) {
+            if (patient.isIsTrtmntdone()) {
                 treatedPatients.add(patient);
             } else {
                 underTreatmentPatients.add(patient);
@@ -232,19 +232,19 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     public void populateAllPatientsTable() {
-        List<Patient> patients = ((HealthCenterEnterprise) enterprise).getPatientDirectory().getPatients();
+        List<Patient> patients = ((HealthCenterEnterprise) enterprise).getPatientDir().getPatients();
         DefaultTableModel dtm = (DefaultTableModel) tblAllPatients.getModel();
         dtm.setRowCount(0);
         for (Patient patient : patients) {
             Object[] row = new Object[7];
 
             row[0] = patient;
-            row[1] = patient.getPatientFirstName() + " " + patient.getPatientLastName();
-            row[2] = patient.getContactNumber();
+            row[1] = patient.getPatFrstNm() + " " + patient.getPatLstNm();
+            row[2] = patient.getCntctNo();
             row[3] = patient.getAddress();
-            row[4] = patient.isIsTreatmentFinished() ? "Treatment Complete" : "Treatment In Progress";
-            row[5] = patient.getAppointmentDate();
-            row[6] = patient.getDoctorType();
+            row[4] = patient.isIsTrtmntdone() ? "Treatment Complete" : "Treatment In Progress";
+            row[5] = patient.getAptDt();
+            row[6] = patient.getDocType();
             dtm.addRow(row);
         }
         

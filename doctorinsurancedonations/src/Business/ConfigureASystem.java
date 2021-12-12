@@ -18,9 +18,9 @@ public class ConfigureASystem {
         //create user account
         
         
-        Employee employee = ecosystem.getEmployeeDirectory().createEmployee("sysadmin");
+        Employee employee = ecosystem.getEmpDir().createEmployee("sysadmin");
         
-        UserAccount userAccount = ecosystem.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole());
+        UserAccount userAccount = ecosystem.getUsrAccDir().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole());
         
         return ecosystem;
     }

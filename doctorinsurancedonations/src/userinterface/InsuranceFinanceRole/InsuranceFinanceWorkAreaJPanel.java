@@ -155,7 +155,7 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
             WorkRequest request = (InsuranceWorkRequest) tblFinance.getValueAt(selectedRow, 0);
             if (request.getStatus().equals("Sent To Finance Department")) {
                 request.setReceiver(userAccount);
-                request.setStatus("Pending on " + request.getReceiver().getEmployee().getName());
+                request.setStatus("Pending on " + request.getReceiver().getEmp().getEmpName());
                 populateTable();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you");
             } else {
@@ -185,7 +185,7 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (!userAccount.getEmployee().equals(insuranceWorkRequest.getReceiver().getEmployee())) {
+            if (!userAccount.getEmp().equals(insuranceWorkRequest.getReceiver().getEmp())) {
                 JOptionPane.showMessageDialog(null, "Request assigned to other Officer", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
@@ -217,17 +217,17 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblFinance.getModel();
         model.setRowCount(0);
 
-        for (WorkRequest workRequest : insuranceFinanceOrganization.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest workRequest : insuranceFinanceOrganization.getWrkQ().getWorkRequests()) {
             InsuranceWorkRequest insuranceworkRequest = ((InsuranceWorkRequest) workRequest);
             Object[] row = new Object[8];
             row[0] = insuranceworkRequest;
-            row[1] = insuranceworkRequest.getPolicyName();
-            row[2] = insuranceworkRequest.getInsuranceCustomer().getInsurance().getCoverage();
-            row[3] = insuranceworkRequest.getClaimAmount();
-            row[4] = insuranceworkRequest.getBillAmount();
+            row[1] = insuranceworkRequest.getPlcyNm();
+            row[2] = insuranceworkRequest.getInsCust().getIns().getCvrg();
+            row[3] = insuranceworkRequest.getClaimAmt();
+            row[4] = insuranceworkRequest.getBillAmt();
             row[5] = insuranceworkRequest.getStatus();
-            row[6] = insuranceworkRequest.getInsuranceCompany();
-            row[7] = insuranceworkRequest.getReceiver() == null ? "" : insuranceworkRequest.getReceiver().getEmployee().getName();
+            row[6] = insuranceworkRequest.getInsCmpny();
+            row[7] = insuranceworkRequest.getReceiver() == null ? "" : insuranceworkRequest.getReceiver().getEmp().getEmpName();
 
             model.addRow(row);
         }

@@ -252,23 +252,27 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
                 pntTrtmntWrkReq.setStatus("Consultation Completed");
 
                 AccountantBillingRequest accountantBillingRequest = new AccountantBillingRequest();
-                accountantBillingRequest.setBillingAmount(billingAmount);
+                accountantBillingRequest.setBillingAmt(billingAmount);
                 //  accountantBillingRequest.setPatientId(Integer.parseInt(txtPatientId.getText()));
 
                 accountantBillingRequest.setSender(usrAcnt);
                 accountantBillingRequest.setStatus("Sent");
+
                 accountantBillingRequest.setPatient(pntTrtmntWrkReq.getPatient());
 
                 Organization org = null;
                 for (Organization organization : entrpz.getOrganizationDirectory().getOrganizations()) {
+
                     if (organization instanceof AccountantOrganization) {
                         org = organization;
                         break;
                     }
                 }
                 if (org != null) {
+
                     org.getWorkQueue().getWorkRequests().add(accountantBillingRequest);
                     usrAcnt.getWorkQueue().getWorkRequests().add(accountantBillingRequest);
+
                 }
 
                 JOptionPane.showMessageDialog(null, "Prescription submitted successfully");
@@ -317,11 +321,13 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
 
     private void pplTbl() {
 
+
         fstNmTxt.setText(pntTrtmntWrkReq.getPatient().getPatientFirstName());
         lstNmTxt.setText(pntTrtmntWrkReq.getPatient().getPatientLastName());
         pntIdTxt.setText(String.valueOf(pntTrtmntWrkReq.getPatient().getPatientId()));
         asgndDocTxt.setText(pntTrtmntWrkReq.getAssignedDoctor().getEmployee().getName());
         consChrgTxt.setText(String.valueOf(cnsltChrg));
+
 
     }
 }

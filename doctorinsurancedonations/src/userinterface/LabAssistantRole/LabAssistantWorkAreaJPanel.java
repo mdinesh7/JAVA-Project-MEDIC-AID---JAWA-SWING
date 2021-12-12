@@ -38,27 +38,27 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         this.business = business;
         this.labOrganization = (LabOrganization) organization;
 
-        populateTable();
+        popLabAsstTbl();
     }
 
-    public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+    public void popLabAsstTbl() {
+        DefaultTableModel model = (DefaultTableModel) wrkReqJTbl.getModel();
 
         model.setRowCount(0);
 
-        for (WorkRequest request : labOrganization.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : labOrganization.getWrkQ().getWorkRequests()) {
             Object[] row = new Object[7];
             row[0] = request;
-            row[1] = request.getSender().getEmployee().getName();
-            row[2] = ((PatientTreatmentWorkRequest) request).getLabAssistant();
+            row[1] = request.getSender().getEmp().getEmpName();
+            row[2] = ((PatientTreatmentWorkRequest) request).getLabAst();
             row[3] = request.getStatus();
-            row[4] = ((PatientTreatmentWorkRequest) request).getPatient().getPatientFirstName() + " " + ((PatientTreatmentWorkRequest) request).getPatient().getPatientLastName();
-            row[5] = ((PatientTreatmentWorkRequest) request).getPatient().getPatientId();
+            row[4] = ((PatientTreatmentWorkRequest) request).getPat().getPatFrstNm() + " " + ((PatientTreatmentWorkRequest) request).getPat().getPatLstNm();
+            row[5] = ((PatientTreatmentWorkRequest) request).getPat().getPatId();
             row[6] = ((PatientTreatmentWorkRequest) request).getTestType();
             model.addRow(row);
         }
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        workRequestJTable.setRowSorter(sorter);
+        wrkReqJTbl.setRowSorter(sorter);
     }
 
     /**
@@ -71,19 +71,19 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        assignJButton = new javax.swing.JButton();
-        processJButton = new javax.swing.JButton();
+        wrkReqJTbl = new javax.swing.JTable();
+        assignJBtn = new javax.swing.JButton();
+        prcssJBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        assignJButton2 = new javax.swing.JButton();
-        assignJButton1 = new javax.swing.JButton();
-        assignJButton3 = new javax.swing.JButton();
+        assignJBtn2 = new javax.swing.JButton();
+        assignJBtn1 = new javax.swing.JButton();
+        assignJBtn3 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        wrkReqJTbl.setBackground(new java.awt.Color(0, 153, 255));
+        wrkReqJTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -109,87 +109,87 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(wrkReqJTbl);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(10, 20, 730, 90);
 
-        assignJButton.setBackground(new java.awt.Color(0, 153, 255));
-        assignJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        assignJButton.setText("Assign to me");
-        assignJButton.addActionListener(new java.awt.event.ActionListener() {
+        assignJBtn.setBackground(new java.awt.Color(0, 153, 255));
+        assignJBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        assignJBtn.setText("Assign to me");
+        assignJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButtonActionPerformed(evt);
+                assignJBtnActionPerformed(evt);
             }
         });
-        add(assignJButton);
-        assignJButton.setBounds(10, 130, 140, 40);
+        add(assignJBtn);
+        assignJBtn.setBounds(10, 130, 140, 40);
 
-        processJButton.setBackground(new java.awt.Color(0, 153, 255));
-        processJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        processJButton.setText("Process");
-        processJButton.addActionListener(new java.awt.event.ActionListener() {
+        prcssJBtn.setBackground(new java.awt.Color(0, 153, 255));
+        prcssJBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        prcssJBtn.setText("Process");
+        prcssJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processJButtonActionPerformed(evt);
+                prcssJBtnActionPerformed(evt);
             }
         });
-        add(processJButton);
-        processJButton.setBounds(600, 130, 140, 40);
+        add(prcssJBtn);
+        prcssJBtn.setBounds(600, 130, 140, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab.gif"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(10, 180, 740, 360);
 
-        assignJButton2.setBackground(new java.awt.Color(0, 153, 255));
-        assignJButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        assignJButton2.setText("Blood Test");
-        assignJButton2.addActionListener(new java.awt.event.ActionListener() {
+        assignJBtn2.setBackground(new java.awt.Color(0, 153, 255));
+        assignJBtn2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        assignJBtn2.setText("Blood Test");
+        assignJBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButton2ActionPerformed(evt);
+                assignJBtn2ActionPerformed(evt);
             }
         });
-        add(assignJButton2);
-        assignJButton2.setBounds(150, 130, 140, 40);
+        add(assignJBtn2);
+        assignJBtn2.setBounds(150, 130, 140, 40);
 
-        assignJButton1.setBackground(new java.awt.Color(0, 153, 255));
-        assignJButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        assignJButton1.setText("MRI scan");
-        assignJButton1.addActionListener(new java.awt.event.ActionListener() {
+        assignJBtn1.setBackground(new java.awt.Color(0, 153, 255));
+        assignJBtn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        assignJBtn1.setText("MRI scan");
+        assignJBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButton1ActionPerformed(evt);
+                assignJBtn1ActionPerformed(evt);
             }
         });
-        add(assignJButton1);
-        assignJButton1.setBounds(450, 130, 140, 40);
+        add(assignJBtn1);
+        assignJBtn1.setBounds(450, 130, 140, 40);
 
-        assignJButton3.setBackground(new java.awt.Color(0, 153, 255));
-        assignJButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        assignJButton3.setText("X Ray");
-        assignJButton3.addActionListener(new java.awt.event.ActionListener() {
+        assignJBtn3.setBackground(new java.awt.Color(0, 153, 255));
+        assignJBtn3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        assignJBtn3.setText("X Ray");
+        assignJBtn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButton3ActionPerformed(evt);
+                assignJBtn3ActionPerformed(evt);
             }
         });
-        add(assignJButton3);
-        assignJButton3.setBounds(290, 130, 140, 40);
+        add(assignJBtn3);
+        assignJBtn3.setBounds(290, 130, 140, 40);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
+    private void assignJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJBtnActionPerformed
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = wrkReqJTbl.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null,"Please select a row first");
             return;
         }
 
-        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
-        if (request.getLabAssistant() == null) {
+        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) wrkReqJTbl.getValueAt(selectedRow, 0);
+        if (request.getLabAst() == null) {
             if (request.getStatus().equalsIgnoreCase("SentToLab")) {
-                request.setLabAssistant(userAccount);
+                request.setLabAst(userAccount);
                 request.setStatus("Pending on Lab Assistant");
                 //  request.setReceiver(userAccount);
-                populateTable();
+                popLabAsstTbl();
                 JOptionPane.showMessageDialog(null, "The request is assigned to You!");
             } else {
                 JOptionPane.showMessageDialog(null, "Cannot assign this lab request as the current status is: " + request.getStatus());
@@ -197,7 +197,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         }
         else
         {
-            if(userAccount.equals(request.getLabAssistant()))
+            if(userAccount.equals(request.getLabAst()))
             {
                 JOptionPane.showMessageDialog(null,"Request is already assigned to you");
             }
@@ -207,23 +207,23 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
             }
         }
 
-    }//GEN-LAST:event_assignJButtonActionPerformed
+    }//GEN-LAST:event_assignJBtnActionPerformed
 
-    private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
+    private void prcssJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prcssJBtnActionPerformed
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = wrkReqJTbl.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row");
             return;
         }
 
-        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
+        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) wrkReqJTbl.getValueAt(selectedRow, 0);
 
        // request.setStatus("Processing");
         ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, request);
-        if (request.getLabAssistant() != null) {
-            if (userAccount.equals(request.getLabAssistant())) {
+        if (request.getLabAst() != null) {
+            if (userAccount.equals(request.getLabAst())) {
                 if (request.getStatus().equalsIgnoreCase("Pending on Lab Assistant")) {
 
                     userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
@@ -240,19 +240,19 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please assign the request first");
         }
-    }//GEN-LAST:event_processJButtonActionPerformed
+    }//GEN-LAST:event_prcssJBtnActionPerformed
 
-    private void assignJButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButton2ActionPerformed
+    private void assignJBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJBtn2ActionPerformed
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = wrkReqJTbl.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null,"Please select a row first");
             return;
         }
 
-        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
-        if(userAccount.equals(request.getLabAssistant()))
+        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) wrkReqJTbl.getValueAt(selectedRow, 0);
+        if(userAccount.equals(request.getLabAst()))
             {   
                 if(request.getStatus().equalsIgnoreCase("Pending on Lab Assistant")){
                     request.setTestType("Blood Test");
@@ -264,20 +264,20 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Lab assistant is not assigned cannot modify the type of test");
         }
         // TODO add your handling code here:
-    }//GEN-LAST:event_assignJButton2ActionPerformed
+    }//GEN-LAST:event_assignJBtn2ActionPerformed
 
-    private void assignJButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButton1ActionPerformed
+    private void assignJBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJBtn1ActionPerformed
         // TODO add your handling code here:
         
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = wrkReqJTbl.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null,"Please select a row first");
             return;
         }
 
-        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
-        if(userAccount.equals(request.getLabAssistant()))
+        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) wrkReqJTbl.getValueAt(selectedRow, 0);
+        if(userAccount.equals(request.getLabAst()))
             {   
                 if(request.getStatus().equalsIgnoreCase("Pending on Lab Assistant")){
                     request.setTestType("MRI Scan");
@@ -288,20 +288,20 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
             }else{
             JOptionPane.showMessageDialog(null, "Lab assistant is not assigned cannot modify the type of blood test");
         }
-    }//GEN-LAST:event_assignJButton1ActionPerformed
+    }//GEN-LAST:event_assignJBtn1ActionPerformed
 
-    private void assignJButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButton3ActionPerformed
+    private void assignJBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJBtn3ActionPerformed
         // TODO add your handling code here:
         
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = wrkReqJTbl.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null,"Please select a row first");
             return;
         }
 
-        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
-        if(userAccount.equals(request.getLabAssistant()))
+        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) wrkReqJTbl.getValueAt(selectedRow, 0);
+        if(userAccount.equals(request.getLabAst()))
             {   
                 if(request.getStatus().equalsIgnoreCase("Pending on Lab Assistant")){
                     request.setTestType("X Ray");
@@ -312,16 +312,16 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
             }else{
             JOptionPane.showMessageDialog(null, "Lab assistant is not assigned cannot modify the type of blood test");
         }
-    }//GEN-LAST:event_assignJButton3ActionPerformed
+    }//GEN-LAST:event_assignJBtn3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignJButton;
-    private javax.swing.JButton assignJButton1;
-    private javax.swing.JButton assignJButton2;
-    private javax.swing.JButton assignJButton3;
+    private javax.swing.JButton assignJBtn;
+    private javax.swing.JButton assignJBtn1;
+    private javax.swing.JButton assignJBtn2;
+    private javax.swing.JButton assignJBtn3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processJButton;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JButton prcssJBtn;
+    private javax.swing.JTable wrkReqJTbl;
     // End of variables declaration//GEN-END:variables
 }

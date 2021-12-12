@@ -48,7 +48,7 @@ public class EcoSystem extends Organization{
     }
     
     public boolean checkIfUserIsUnique(String userName){
-        if(!this.getUserAccountDirectory().checkIfUsernameIsUnique(userName)){
+        if(!this.getUsrAccDir().checkIfUsernameIsUnique(userName)){
             return false;
         }
         for(Network network:networks){

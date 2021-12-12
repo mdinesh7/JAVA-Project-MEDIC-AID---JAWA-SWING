@@ -209,7 +209,7 @@ public class MainJFrame extends javax.swing.JFrame {
         String password = String.valueOf(passwordCharArray);
 
         //Step1: Check in the system admin user account directory if you have the user
-        UserAccount userAccount=ecosystem.getUserAccountDirectory().authenticateUser(userName, password);
+        UserAccount userAccount=ecosystem.getUsrAccDir().authenticateUser(userName, password);
 
         Enterprise inEnterprise=null;
         Organization inOrganization=null;
@@ -218,12 +218,12 @@ public class MainJFrame extends javax.swing.JFrame {
             //Step 2: Go inside each network and check each enterprise
             for(Network network:ecosystem.getNetworks()){
                 //Step 2.a: check against each enterprise
-                for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
-                    userAccount=enterprise.getUserAccountDirectory().authenticateUser(userName, password);
+                for(Enterprise enterprise:network.getEntDir().getEntList()){
+                    userAccount=enterprise.getUsrAccDir().authenticateUser(userName, password);
                     if(userAccount==null){
                         //Step 3:check against each organization for each enterprise
-                        for(Organization organization:enterprise.getOrganizationDirectory().getOrganizations()){
-                            userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
+                        for(Organization organization:enterprise.getOrgDir().getOrganizations()){
+                            userAccount=organization.getUsrAccDir().authenticateUser(userName, password);
                             if(userAccount!=null){
                                 inEnterprise=enterprise;
                                 inOrganization=organization;

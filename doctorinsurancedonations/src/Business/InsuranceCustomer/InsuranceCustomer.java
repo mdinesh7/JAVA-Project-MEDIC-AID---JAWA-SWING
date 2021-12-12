@@ -15,39 +15,39 @@ import Business.Insurance.Insurance;
 
 public class InsuranceCustomer {
 
-    private String customerLastName;
-    private String customerFirstName;
+    private String custLstNme;
+    private String custFrstNm;
     private String ssn;
-    private String dateOfBirth;
+    private String dob;
     private int age;
-    private String phoneNumber;
+    private String phNo;
     private String address;
     private String gender;
-    private String policyStartDate;
-    private String policyEndDate;
+    private String plcyStrtDt;
+    private String plcyEdDt;
 
-    private Insurance insurance;
-    private String insurancePolicyNumber;
+    private Insurance ins;
+    private String insPlcyNo;
 
     public InsuranceCustomer(Insurance insurance, String policyNumber)
     {
-        this.insurance = insurance;
-        this.insurancePolicyNumber = policyNumber;
+        this.ins = insurance;
+        this.insPlcyNo = policyNumber;
     }
-    public String getCustomerLastName() {
-        return customerLastName;
-    }
-
-    public void setCustomerLastName(String customerLastName) {
-        this.customerLastName = customerLastName;
+    public String getCustLstNme() {
+        return custLstNme;
     }
 
-    public String getCustomerFirstName() {
-        return customerFirstName;
+    public void setCustLstNme(String custLstNme) {
+        this.custLstNme = custLstNme;
     }
 
-    public void setCustomerFirstName(String customerFirstName) {
-        this.customerFirstName = customerFirstName;
+    public String getCustFrstNm() {
+        return custFrstNm;
+    }
+
+    public void setCustFrstNm(String custFrstNm) {
+        this.custFrstNm = custFrstNm;
     }
 
     public String getSsn() {
@@ -58,12 +58,12 @@ public class InsuranceCustomer {
         this.ssn = ssn;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
+    public String getDob() {
+        return dob;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
     public int getAge() {
@@ -74,12 +74,12 @@ public class InsuranceCustomer {
         this.age = age;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhNo() {
+        return phNo;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhNo(String phNo) {
+        this.phNo = phNo;
     }
 
     public String getAddress() {
@@ -105,41 +105,41 @@ public class InsuranceCustomer {
 //    public void setInsuranceType(String insuranceType) {
 //        this.insuranceType = insuranceType;
 //    }
-    public String getPolicyStartDate() {
-        return policyStartDate;
+    public String getPlcyStrtDt() {
+        return plcyStrtDt;
     }
 
-    public void setPolicyStartDate(String policyStartDate) {
-        this.policyStartDate = policyStartDate;
+    public void setPlcyStrtDt(String plcyStrtDt) {
+        this.plcyStrtDt = plcyStrtDt;
     }
 
-    public String getPolicyEndDate() {
-        return policyEndDate;
+    public String getPlcyEdDt() {
+        return plcyEdDt;
     }
 
-    public void setPolicyEndDate(String policyEndDate) {
-        this.policyEndDate = policyEndDate;
+    public void setPlcyEdDt(String plcyEdDt) {
+        this.plcyEdDt = plcyEdDt;
     }
 
-    public Insurance getInsurance() {
-        return insurance;
+    public Insurance getIns() {
+        return ins;
     }
 
-    public void setInsurance(Insurance insurance) {
-        this.insurance = insurance;
+    public void setIns(Insurance ins) {
+        this.ins = ins;
     }
 
-    public String getInsurancePolicyNumber() {
-        return insurancePolicyNumber;
+    public String getInsPlcyNo() {
+        return insPlcyNo;
     }
 
-    public void setInsurancePolicyNumber(String insurancePolicyNumber) {
-        this.insurancePolicyNumber = insurancePolicyNumber;
+    public void setInsPlcyNo(String insPlcyNo) {
+        this.insPlcyNo = insPlcyNo;
     }
 
     @Override
     public String toString() {
-        return insurancePolicyNumber;
+        return insPlcyNo;
     }
 
 }

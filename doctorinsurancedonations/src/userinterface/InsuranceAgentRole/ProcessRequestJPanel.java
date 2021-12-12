@@ -164,12 +164,12 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-            insuranceWorkRequest.setMessage(message);
+            insuranceWorkRequest.setWrMsg(message);
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
 
             if (dialogResult == JOptionPane.YES_OPTION) {
                 Organization org = null;
-                for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+                for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
                     if (organization instanceof InsuranceFinanceOrganization) {
                         org = organization;
                         break;
@@ -177,13 +177,13 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
                 }
 
                 if (org != null) {
-                    org.getWorkQueue().getWorkRequests().add(insuranceWorkRequest);
-                    account.getWorkQueue().getWorkRequests().add(insuranceWorkRequest);
+                    org.getWrkQ().getWorkRequests().add(insuranceWorkRequest);
+                    account.getWrkQ().getWorkRequests().add(insuranceWorkRequest);
                 }
 
                 JOptionPane.showMessageDialog(null, "Request Approved and Sent To Finance Department");
                 insuranceWorkRequest.setStatus("Sent To Finance Department");
-                insuranceWorkRequest.setAgent(account.getEmployee().getName());
+                insuranceWorkRequest.setAgent(account.getEmp().getEmpName());
                 insuranceWorkRequest.setReceiver(null);
 
                 txtMessage.setText("");
@@ -214,14 +214,14 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-            insuranceWorkRequest.setMessage(message);
+            insuranceWorkRequest.setWrMsg(message);
 
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             if (dialogResult == JOptionPane.YES_OPTION) {
 
                 insuranceWorkRequest.setStatus("Rejected");
-                insuranceWorkRequest.setMessage(txtMessage.getText().trim());
-                insuranceWorkRequest.setAgent(account.getEmployee().getName());
+                insuranceWorkRequest.setWrMsg(txtMessage.getText().trim());
+                insuranceWorkRequest.setAgent(account.getEmp().getEmpName());
                 txtMessage.setText("");
                 btnReject.setEnabled(false);
                 btnAccept.setEnabled(false);
@@ -250,10 +250,10 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
 
     private void populateFields() {
 
-        txtPolicyNumber.setText(insuranceWorkRequest.getPolicyNumber());
-        txtCustomerName.setText(insuranceWorkRequest.getInsuranceCustomer().getCustomerFirstName() + " " + insuranceWorkRequest.getInsuranceCustomer().getCustomerLastName());
-        txtBillAmount.setText(String.valueOf(insuranceWorkRequest.getBillAmount()));
-        txtClaimAmount.setText(String.valueOf(insuranceWorkRequest.getClaimAmount()));
+        txtPolicyNumber.setText(insuranceWorkRequest.getPlcyNo());
+        txtCustomerName.setText(insuranceWorkRequest.getInsCust().getCustFrstNm() + " " + insuranceWorkRequest.getInsCust().getCustLstNme());
+        txtBillAmount.setText(String.valueOf(insuranceWorkRequest.getBillAmt()));
+        txtClaimAmount.setText(String.valueOf(insuranceWorkRequest.getClaimAmt()));
 
     }
 }
