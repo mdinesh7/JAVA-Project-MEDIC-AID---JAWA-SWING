@@ -165,6 +165,7 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.socketFactory.port", "465");
         properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+        properties.put("mail.smtp.ssl.protocols", "TLSv1.2");
 
         String to = toMail;
         final String from = "saimanithkomuravelli@gmail.com";

@@ -199,7 +199,6 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
 
     private void btnRequestFundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestFundsActionPerformed
-
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("RequestFundsJPanel", new RequestFundsJPanel(userProcessContainer, enterprise, userAccount, ecoSystem));
         layout.next(userProcessContainer);
