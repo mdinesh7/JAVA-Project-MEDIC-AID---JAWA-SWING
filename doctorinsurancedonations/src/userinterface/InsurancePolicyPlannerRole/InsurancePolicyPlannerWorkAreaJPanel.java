@@ -22,22 +22,22 @@ import javax.swing.table.TableRowSorter;
  */
 public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private UserAccount userAccount;
-    private InsurancePolicyPlannerOrganization insurancePolicyPlannerOrganization;
-    private InsuranceCompanyEnterprise insuranceCompanyEnterprise;
+    private JPanel jPanel;
+    private UserAccount usrAcnt;
+    private InsurancePolicyPlannerOrganization insrPlcyPlnrOrg;
+    private InsuranceCompanyEnterprise insrCmpEnt;
 
     /**
      * Creates new form InsurancePolicyPlannerJPanel
      */
     public InsurancePolicyPlannerWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, InsurancePolicyPlannerOrganization insurancePolicyPlannerOrganization, Enterprise enterprise) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.userAccount = userAccount;
-        this.insurancePolicyPlannerOrganization = insurancePolicyPlannerOrganization;
-        this.insuranceCompanyEnterprise = (InsuranceCompanyEnterprise) enterprise;
+        this.jPanel = userProcessContainer;
+        this.usrAcnt = usrAcnt;
+        this.insrPlcyPlnrOrg = insurancePolicyPlannerOrganization;
+        this.insrCmpEnt = (InsuranceCompanyEnterprise) enterprise;
 
-        populateTable();
+        pplTbl();
     }
 
     /**
@@ -51,18 +51,18 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtPolicyName = new javax.swing.JTextField();
-        txtPolicyCoverage = new javax.swing.JTextField();
+        plcyNmTxt = new javax.swing.JTextField();
+        plcyCvgTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtPolicyTC = new javax.swing.JTextField();
+        plcyTCTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblPolicies = new javax.swing.JTable();
-        btnCreatePolicy = new javax.swing.JButton();
+        plcysJTable = new javax.swing.JTable();
+        crtPlcyBtn = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        txtMonthlyPrem = new javax.swing.JTextField();
+        mnthPrmTxt = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -86,8 +86,8 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setText("Policy Planner Work Area");
 
-        tblPolicies.setBackground(new java.awt.Color(0, 153, 255));
-        tblPolicies.setModel(new javax.swing.table.DefaultTableModel(
+        plcysJTable.setBackground(new java.awt.Color(0, 153, 255));
+        plcysJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -106,14 +106,14 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblPolicies);
+        jScrollPane1.setViewportView(plcysJTable);
 
-        btnCreatePolicy.setBackground(new java.awt.Color(0, 153, 255));
-        btnCreatePolicy.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnCreatePolicy.setText("Create Policy");
-        btnCreatePolicy.addActionListener(new java.awt.event.ActionListener() {
+        crtPlcyBtn.setBackground(new java.awt.Color(0, 153, 255));
+        crtPlcyBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        crtPlcyBtn.setText("Create Policy");
+        crtPlcyBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreatePolicyActionPerformed(evt);
+                crtPlcyBtnActionPerformed(evt);
             }
         });
 
@@ -139,24 +139,24 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txtPolicyName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(plcyNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel3)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txtPolicyCoverage, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(plcyCvgTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txtMonthlyPrem, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(mnthPrmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txtPolicyTC, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(plcyTCTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel5))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(172, 172, 172)
-                                .addComponent(btnCreatePolicy))))
+                                .addComponent(crtPlcyBtn))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,31 +184,31 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtPolicyName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(plcyNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtPolicyCoverage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(plcyCvgTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtMonthlyPrem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mnthPrmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtPolicyTC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(plcyTCTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnCreatePolicy)
+                .addComponent(crtPlcyBtn)
                 .addContainerGap(136, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCreatePolicyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePolicyActionPerformed
-        String policyName = txtPolicyName.getText().trim();
-        String poliCoverageTxt = txtPolicyCoverage.getText().trim();
-        String monthlyPremiumTxt = txtMonthlyPrem.getText().trim();
-        String policyTC = txtPolicyTC.getText().trim();
+    private void crtPlcyBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crtPlcyBtnActionPerformed
+        String policyName = plcyNmTxt.getText().trim();
+        String poliCoverageTxt = plcyCvgTxt.getText().trim();
+        String monthlyPremiumTxt = mnthPrmTxt.getText().trim();
+        String policyTC = plcyTCTxt.getText().trim();
         if (policyName.equals("")) {
             JOptionPane.showMessageDialog(null, "Policy Name is mandatory");
             return;
@@ -245,32 +245,32 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter numeric values for monthly premium");
         }
 
-        List<Insurance> policies = insuranceCompanyEnterprise.getInsPlcyDir().getPolicies();
-        for (Insurance insurance : policies) {
+        List<Insurance> plcys = insrCmpEnt.getInsPlcyDir().getPolicies();
+        for (Insurance insurance : plcys) {
             if (policyName.equalsIgnoreCase(insurance.getPlcyNm())) {
                 JOptionPane.showMessageDialog(null, "Policy already exists, please provide some other policy name");
                 return;
             }
         }
-        Insurance insurance = new Insurance(policyName, insuranceCompanyEnterprise.getName(), policyCoverage);
-        insurance.setPlcyTC(policyTC);
-        insurance.setMonthlyPrm(monthlyPremium);
+        Insurance insr = new Insurance(policyName, insrCmpEnt.getName(), policyCoverage);
+        insr.setPlcyTC(policyTC);
+        insr.setMonthlyPrm(monthlyPremium);
 
         // InsuranceCompanyEnterprise insuranceCompanyEnterprise = insuranceCompanyEnterprise;
-        insuranceCompanyEnterprise.getInsPlcyDir().getPolicies().add(insurance);
+        insrCmpEnt.getInsPlcyDir().getPolicies().add(insr);
         JOptionPane.showMessageDialog(null, "Policy Added Successfully");
-        System.out.println("Policy Added Successfully:" + insuranceCompanyEnterprise.getInsPlcyDir().getPolicies());
-        populateTable();
-        txtPolicyName.setText("");
-        txtMonthlyPrem.setText("");
-        txtPolicyCoverage.setText("");
-        txtPolicyTC.setText("");
+        System.out.println("Policy Added Successfully:" + insrCmpEnt.getInsPlcyDir().getPolicies());
+        pplTbl();
+        plcyNmTxt.setText("");
+        mnthPrmTxt.setText("");
+        plcyCvgTxt.setText("");
+        plcyTCTxt.setText("");
 
-    }//GEN-LAST:event_btnCreatePolicyActionPerformed
+    }//GEN-LAST:event_crtPlcyBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCreatePolicy;
+    private javax.swing.JButton crtPlcyBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -280,20 +280,20 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblPolicies;
-    private javax.swing.JTextField txtMonthlyPrem;
-    private javax.swing.JTextField txtPolicyCoverage;
-    private javax.swing.JTextField txtPolicyName;
-    private javax.swing.JTextField txtPolicyTC;
+    private javax.swing.JTextField mnthPrmTxt;
+    private javax.swing.JTextField plcyCvgTxt;
+    private javax.swing.JTextField plcyNmTxt;
+    private javax.swing.JTextField plcyTCTxt;
+    private javax.swing.JTable plcysJTable;
     // End of variables declaration//GEN-END:variables
 
-    private void populateTable() {
+    private void pplTbl() {
 //        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
 
-        DefaultTableModel model = (DefaultTableModel) tblPolicies.getModel();
+        DefaultTableModel model = (DefaultTableModel) plcysJTable.getModel();
         model.setRowCount(0);
-        List<Insurance> policies = insuranceCompanyEnterprise.getInsPlcyDir().getPolicies();
-        for (Insurance insurancePolicy : policies) {
+        List<Insurance> plcys = insrCmpEnt.getInsPlcyDir().getPolicies();
+        for (Insurance insurancePolicy : plcys) {
             Object[] row = new Object[4];
             row[0] = insurancePolicy;
             row[1] = insurancePolicy.getCvrg();
@@ -302,6 +302,6 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        tblPolicies.setRowSorter(sorter);
+        plcysJTable.setRowSorter(sorter);
     }
 }
