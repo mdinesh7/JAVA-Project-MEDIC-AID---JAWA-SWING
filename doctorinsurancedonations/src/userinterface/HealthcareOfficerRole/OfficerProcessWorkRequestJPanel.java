@@ -25,21 +25,21 @@ public class OfficerProcessWorkRequestJPanel extends javax.swing.JPanel {
      * Creates new form ProcessWorkRequestJPanel
      */
     private JPanel jPanel;
-    private Enterprise enterprise;
-    private UserAccount userAccount;
-    private GovernmentFundRequest governmentFundRequest;
-    private OfficerWorkAreaJPanel officerWorkAreaJPanel;
+    private Enterprise entrpz;
+    private UserAccount usrAcnt;
+    private GovernmentFundRequest govtFndReq;
+    private OfficerWorkAreaJPanel ofcrWrAreaJPanel;
 
     public OfficerProcessWorkRequestJPanel(JPanel jPanel, UserAccount userAccount, GovernmentFundRequest fundRequest, Enterprise enterprise) {
         initComponents();
 
         this.jPanel = jPanel;
-        this.enterprise = enterprise;
-        this.userAccount = userAccount;
-        this.governmentFundRequest = fundRequest;
-        amountTxt.setText(String.valueOf(governmentFundRequest.getReqAmt()));
-        locationTxt.setText(governmentFundRequest.getLocation());
-        populationTxt.setText(String.valueOf(governmentFundRequest.getPop()));
+        this.entrpz = enterprise;
+        this.usrAcnt = userAccount;
+        this.govtFndReq = fundRequest;
+        amntTxt.setText(String.valueOf(govtFndReq.getReqAmt()));
+        locTxt.setText(govtFndReq.getLocation());
+        popTxt.setText(String.valueOf(govtFndReq.getPop()));
     }
 
     /**
@@ -51,22 +51,22 @@ public class OfficerProcessWorkRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        amountTxt = new javax.swing.JTextField();
+        amntTxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        messageTxt = new javax.swing.JTextField();
+        msgTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        sendRequestToSecretaryBtn = new javax.swing.JButton();
+        sndReqToSec = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        locationTxt = new javax.swing.JTextField();
-        populationTxt = new javax.swing.JTextField();
+        locTxt = new javax.swing.JTextField();
+        popTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        btnReject = new javax.swing.JButton();
+        rejBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        amountTxt.setEnabled(false);
+        amntTxt.setEnabled(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Amount");
@@ -77,12 +77,12 @@ public class OfficerProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setText("Officer Request Process area ");
 
-        sendRequestToSecretaryBtn.setBackground(new java.awt.Color(0, 153, 255));
-        sendRequestToSecretaryBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        sendRequestToSecretaryBtn.setText("Send Request to Secretary to approve");
-        sendRequestToSecretaryBtn.addActionListener(new java.awt.event.ActionListener() {
+        sndReqToSec.setBackground(new java.awt.Color(0, 153, 255));
+        sndReqToSec.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        sndReqToSec.setText("Send Request to Secretary to approve");
+        sndReqToSec.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sendRequestToSecretaryBtnActionPerformed(evt);
+                sndReqToSecActionPerformed(evt);
             }
         });
 
@@ -98,19 +98,19 @@ public class OfficerProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Location");
 
-        locationTxt.setEnabled(false);
+        locTxt.setEnabled(false);
 
-        populationTxt.setEnabled(false);
+        popTxt.setEnabled(false);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Population");
 
-        btnReject.setBackground(new java.awt.Color(0, 153, 255));
-        btnReject.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnReject.setText("Reject");
-        btnReject.addActionListener(new java.awt.event.ActionListener() {
+        rejBtn.setBackground(new java.awt.Color(0, 153, 255));
+        rejBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        rejBtn.setText("Reject");
+        rejBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRejectActionPerformed(evt);
+                rejBtnActionPerformed(evt);
             }
         });
 
@@ -122,9 +122,9 @@ public class OfficerProcessWorkRequestJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(113, 113, 113)
-                        .addComponent(sendRequestToSecretaryBtn)
+                        .addComponent(sndReqToSec)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(rejBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(backBtn)
@@ -137,15 +137,15 @@ public class OfficerProcessWorkRequestJPanel extends javax.swing.JPanel {
                                         .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                                     .addGap(38, 38, 38)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(amountTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(locationTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(amntTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(locTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jLabel2)
                                         .addComponent(jLabel5))
                                     .addGap(38, 38, 38)
-                                    .addComponent(populationTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(messageTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(popTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(msgTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel3))))
                 .addContainerGap(73, Short.MAX_VALUE))
         );
@@ -162,23 +162,23 @@ public class OfficerProcessWorkRequestJPanel extends javax.swing.JPanel {
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
-                    .addComponent(locationTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(locTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(amountTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(amntTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(populationTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(popTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(messageTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(msgTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sendRequestToSecretaryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(sndReqToSec, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rejBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(109, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -189,82 +189,82 @@ public class OfficerProcessWorkRequestJPanel extends javax.swing.JPanel {
         Component[] componentArray = jPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         OfficerWorkAreaJPanel owjp = (OfficerWorkAreaJPanel) component;
-        owjp.populateTable();
+        owjp.pplTbl();
         CardLayout layout = (CardLayout) jPanel.getLayout();
         layout.previous(jPanel);
     }//GEN-LAST:event_backBtnActionPerformed
 
-    private void sendRequestToSecretaryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendRequestToSecretaryBtnActionPerformed
+    private void sndReqToSecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sndReqToSecActionPerformed
         // TODO add your handling code here:
 
-        String message = messageTxt.getText();
-        if (message.equals("")) {
+        String msg = msgTxt.getText();
+        if (msg.equals("")) {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-            governmentFundRequest.setWrMsg(message);
+            govtFndReq.setWrMsg(msg);
 
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
 
             if (dialogResult == JOptionPane.YES_OPTION) {
 
-                governmentFundRequest.setSender(userAccount);
-                governmentFundRequest.setStatus("Sent to Secretary");
+                govtFndReq.setSender(usrAcnt);
+                govtFndReq.setStatus("Sent to Secretary");
 
                 Organization org = null;
-                for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
+                for (Organization organization : entrpz.getOrgDir().getOrganizations()) {
                     if (organization instanceof SecretaryOrganization) {
                         org = organization;
                         break;
                     }
                 }
                 if (org != null) {
-                    org.getWrkQ().getWorkRequests().add(governmentFundRequest);
-                    userAccount.getWrkQ().getWorkRequests().add(governmentFundRequest);
+                    org.getWrkQ().getWorkRequests().add(govtFndReq);
+                    usrAcnt.getWrkQ().getWorkRequests().add(govtFndReq);
                 }
                 JOptionPane.showMessageDialog(null, "Request to Secretary Successful!!!");
-                messageTxt.setText("");
-                btnReject.setEnabled(false);
-                sendRequestToSecretaryBtn.setEnabled(false);
+                msgTxt.setText("");
+                rejBtn.setEnabled(false);
+                sndReqToSec.setEnabled(false);
             }
-            messageTxt.setText("");
+            msgTxt.setText("");
         }
 
-    }//GEN-LAST:event_sendRequestToSecretaryBtnActionPerformed
+    }//GEN-LAST:event_sndReqToSecActionPerformed
 
-    private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
-        String message = messageTxt.getText();
-        if (message.equals("")) {
+    private void rejBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejBtnActionPerformed
+        String msg = msgTxt.getText();
+        if (msg.equals("")) {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-            governmentFundRequest.setWrMsg(message);
+            govtFndReq.setWrMsg(msg);
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
 
             if (dialogResult == JOptionPane.YES_OPTION) {
-                governmentFundRequest.setStatus("Rejected");
-                messageTxt.setText("");
-                btnReject.setEnabled(false);
-                sendRequestToSecretaryBtn.setEnabled(false);
+                govtFndReq.setStatus("Rejected");
+                msgTxt.setText("");
+                rejBtn.setEnabled(false);
+                sndReqToSec.setEnabled(false);
             }
 
-            messageTxt.setText("");
+            msgTxt.setText("");
         }
-    }//GEN-LAST:event_btnRejectActionPerformed
+    }//GEN-LAST:event_rejBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField amountTxt;
+    private javax.swing.JTextField amntTxt;
     private javax.swing.JButton backBtn;
-    private javax.swing.JButton btnReject;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField locationTxt;
-    private javax.swing.JTextField messageTxt;
-    private javax.swing.JTextField populationTxt;
-    private javax.swing.JButton sendRequestToSecretaryBtn;
+    private javax.swing.JTextField locTxt;
+    private javax.swing.JTextField msgTxt;
+    private javax.swing.JTextField popTxt;
+    private javax.swing.JButton rejBtn;
+    private javax.swing.JButton sndReqToSec;
     // End of variables declaration//GEN-END:variables
 }
