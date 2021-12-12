@@ -258,10 +258,10 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
                 accountantBillingRequest.setSender(usrAcnt);
                 accountantBillingRequest.setStatus("Sent");
 
-                accountantBillingRequest.setPatient(pntTrtmntWrkReq.getPatient());
+                accountantBillingRequest.setPatient(pntTrtmntWrkReq.getPat());
 
                 Organization org = null;
-                for (Organization organization : entrpz.getOrganizationDirectory().getOrganizations()) {
+                for (Organization organization : entrpz.getOrgDir().getOrganizations()) {
 
                     if (organization instanceof AccountantOrganization) {
                         org = organization;
@@ -270,8 +270,8 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
                 }
                 if (org != null) {
 
-                    org.getWorkQueue().getWorkRequests().add(accountantBillingRequest);
-                    usrAcnt.getWorkQueue().getWorkRequests().add(accountantBillingRequest);
+                    org.getWrkQ().getWorkRequests().add(accountantBillingRequest);
+                    usrAcnt.getWrkQ().getWorkRequests().add(accountantBillingRequest);
 
                 }
 
@@ -322,10 +322,10 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
     private void pplTbl() {
 
 
-        fstNmTxt.setText(pntTrtmntWrkReq.getPatient().getPatientFirstName());
-        lstNmTxt.setText(pntTrtmntWrkReq.getPatient().getPatientLastName());
-        pntIdTxt.setText(String.valueOf(pntTrtmntWrkReq.getPatient().getPatientId()));
-        asgndDocTxt.setText(pntTrtmntWrkReq.getAssignedDoctor().getEmployee().getName());
+        fstNmTxt.setText(pntTrtmntWrkReq.getPat().getPatFrstNm());
+        lstNmTxt.setText(pntTrtmntWrkReq.getPat().getPatLstNm());
+        pntIdTxt.setText(String.valueOf(pntTrtmntWrkReq.getPat().getPatId()));
+        asgndDocTxt.setText(pntTrtmntWrkReq.getAssignedDoc().getEmp().getEmpName());
         consChrgTxt.setText(String.valueOf(cnsltChrg));
 
 

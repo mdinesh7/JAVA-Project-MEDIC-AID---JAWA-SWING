@@ -223,12 +223,12 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
 
 
     private void pplTbl() {
-        fstNmTxt.setText(req.getPatient().getPatientFirstName());
-        lstNmTxt.setText(req.getPatient().getPatientLastName());
+        fstNmTxt.setText(req.getPat().getPatFrstNm());
+        lstNmTxt.setText(req.getPat().getPatLstNm());
        // txtBirthDate1.setText(String.valueOf(request.getPatient().getDateOfBirth()));
-        ageTxt.setText(String.valueOf(req.getPatient().getPatientAge()));
+        ageTxt.setText(String.valueOf(req.getPat().getPatAge()));
         medCondTxt.setText(req.getReasonForVisit());
-        asgndDocTxt.setText(req.getAssignedDoctor().getEmployee().getName());
+        asgndDocTxt.setText(req.getAssignedDoc().getEmp().getEmpName());
 
 
     }

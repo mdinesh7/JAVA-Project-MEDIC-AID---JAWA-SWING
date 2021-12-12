@@ -149,7 +149,7 @@ public class BloodBankRequestJPanel extends javax.swing.JPanel {
 
         Organization org = null;
 
-        for (Organization organization : entrpz.getOrganizationDirectory().getOrganizations()) {
+        for (Organization organization : entrpz.getOrgDir().getOrganizations()) {
 
             if (organization instanceof BloodBankManagerOrganization) {
                 org = organization;
@@ -158,8 +158,8 @@ public class BloodBankRequestJPanel extends javax.swing.JPanel {
         }
         if (org != null) {
 
-            org.getWorkQueue().getWorkRequests().add(pntTrWrkReq);
-            usrAcnt.getWorkQueue().getWorkRequests().add(pntTrWrkReq);
+            org.getWrkQ().getWorkRequests().add(pntTrWrkReq);
+            usrAcnt.getWrkQ().getWorkRequests().add(pntTrWrkReq);
 
             JOptionPane.showMessageDialog(null, "Blood Bank request sent");
             txtLabMessage.setText("");

@@ -66,10 +66,10 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
 
       
-        for (Employee emp : organization.getEmployeeDirectory().getEmployeeList()) {
+        for (Employee emp : organization.getEmpDir().getEmpList()) {
             Object[] row = new Object[2];
-            row[0] = emp.getId();
-            row[1] = emp.getName();
+            row[0] = emp.getEmpId();
+            row[1] = emp.getEmpName();
 
             model.addRow(row);
         }
@@ -257,7 +257,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             return;
         }
 
-        organization.getEmployeeDirectory().createEmployee(name);
+        organization.getEmpDir().createEmployee(name);
         pplTbl(organization);
 
         nameJTextField.setText("");

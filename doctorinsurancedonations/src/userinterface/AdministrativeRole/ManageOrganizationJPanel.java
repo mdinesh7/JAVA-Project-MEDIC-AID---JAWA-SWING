@@ -272,7 +272,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         } else {
             Organization organization = (Organization) organizationJTable.getValueAt(selectedRow, 1);
 
-            entrpz.getOrganizationDirectory().getOrganizations().remove(organization);
+            entrpz.getOrgDir().getOrganizations().remove(organization);
             pplTbl();
 
         }

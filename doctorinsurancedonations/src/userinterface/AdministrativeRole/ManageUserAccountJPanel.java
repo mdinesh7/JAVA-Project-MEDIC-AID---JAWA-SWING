@@ -48,7 +48,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         organizationJComboBox.removeAllItems();
 
 
-        for (Organization organization : entrpz.getOrganizationDirectory().getOrganizations()) {
+        for (Organization organization : entrpz.getOrgDir().getOrganizations()) {
 
             if (!(organization instanceof PatientOrganization)) {
                 organizationJComboBox.addItem(organization);
@@ -79,8 +79,8 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
 
 
-        for (Organization organization : entrpz.getOrganizationDirectory().getOrganizations()) {
-            for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
+        for (Organization organization : entrpz.getOrgDir().getOrganizations()) {
+            for (UserAccount ua : organization.getUsrAccDir().getUsrAccList()) {
 
                 Object row[] = new Object[2];
                 row[0] = ua;
