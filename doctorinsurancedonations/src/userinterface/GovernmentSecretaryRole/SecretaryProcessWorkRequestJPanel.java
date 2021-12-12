@@ -216,7 +216,7 @@ public class SecretaryProcessWorkRequestJPanel extends javax.swing.JPanel {
         governmentFundRequest.setStatus("Sent to Treasurer");
 
         Organization org = null;
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+        for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
             if (organization instanceof TreasurerOrganization) {
                 org = organization;
                 break;

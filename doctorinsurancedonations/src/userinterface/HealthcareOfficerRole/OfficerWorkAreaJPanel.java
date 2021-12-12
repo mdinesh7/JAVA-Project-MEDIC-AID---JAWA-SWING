@@ -166,7 +166,7 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
             WorkRequest request = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
             if (request.getStatus().equals("Sent")) {
                 request.setReceiver(userAccount);
-                request.setStatus("Pending on " + request.getReceiver().getEmployee().getName());
+                request.setStatus("Pending on " + request.getReceiver().getEmployee().getEmpName());
                 populateTable();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
             } else {
@@ -242,11 +242,11 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
             Object[] row = new Object[5];
             String status = request.getStatus();
             row[0] = ((GovernmentFundRequest) request);
-            row[1] = request.getSender().getEmployee().getName();
+            row[1] = request.getSender().getEmployee().getEmpName();
             if (status.equalsIgnoreCase("Sent to Treasurer") || status.equalsIgnoreCase("Sent to Secretary")) {
                 row[2] = null;
             } else {
-                row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
+                row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getEmpName();
             }
             row[3] = request.getStatus();
             row[4] = ((GovernmentFundRequest) request).getRequestAmount();

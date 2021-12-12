@@ -238,7 +238,7 @@ public class NGORequestFundsJPanel extends javax.swing.JPanel {
 
                 List<Enterprise> enterprises = network.getEnterpriseDirectory().getEnterpriseList();
                 for (Enterprise enterprise : enterprises) {
-                    List<Organization> organizations = enterprise.getOrganizationDirectory().getOrganizations();
+                    List<Organization> organizations = enterprise.getOrgDir().getOrganizations();
                     for (Organization organization : organizations) {
                         if (organization instanceof NGOAdminOrganization) {
                             org = organization;

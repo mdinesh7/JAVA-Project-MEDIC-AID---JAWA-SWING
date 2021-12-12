@@ -623,7 +623,7 @@ public class AddNewPolicyHolderJPanel extends javax.swing.JPanel {
             Object[] row = new Object[4];
             row[0] = customer.getCustomerFirstName() + " " + customer.getCustomerLastName();
             row[1] = customer;
-            row[2] = customer.getInsurance().getPolicyName();
+            row[2] = customer.getInsurance().getPlcyNm();
             row[3] = customer.getInsurance().getCoverage();
 
             dtm.addRow(row);

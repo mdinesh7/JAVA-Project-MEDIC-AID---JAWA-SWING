@@ -271,7 +271,7 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
     private void btnSendRequestForInsuranceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendRequestForInsuranceActionPerformed
         String policyNumber = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurancePolicyNumber();
         String ssn = accountBillingRequest.getPatient().getSocialSecurityNumber();
-        String policyName = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getPolicyName();
+        String policyName = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getPlcyNm();
         String insuranceCompany = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getInsuranceCompany();
         double claimAmount = Double.parseDouble(txtInsuranceClaimAmount.getText());
         double billAmount = accountBillingRequest.getBillingAmount();
@@ -311,7 +311,7 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
             }
         }
 
-        for (Organization organization : matchedInsuranceCompany.getOrganizationDirectory().getOrganizations()) {
+        for (Organization organization : matchedInsuranceCompany.getOrgDir().getOrganizations()) {
             if (organization instanceof InsuranceAgentOrganization) {
                 org = organization;
                 break;
@@ -377,7 +377,7 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
         double coverage = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getCoverage();
         double billAmount = accountBillingRequest.getBillingAmount();
         String ssn = accountBillingRequest.getPatient().getSocialSecurityNumber();
-        String policyName = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getPolicyName();
+        String policyName = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getPlcyNm();
         String insuranceCompany = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getInsuranceCompany();
         double claimAmount = (coverage * billAmount) / 100;
         payableAmount = billAmount - claimAmount;

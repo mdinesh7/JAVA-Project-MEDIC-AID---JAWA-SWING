@@ -49,7 +49,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         for (WorkRequest request : labOrganization.getWorkQueue().getWorkRequests()) {
             Object[] row = new Object[7];
             row[0] = request;
-            row[1] = request.getSender().getEmployee().getName();
+            row[1] = request.getSender().getEmployee().getEmpName();
             row[2] = ((PatientTreatmentWorkRequest) request).getLabAssistant();
             row[3] = request.getStatus();
             row[4] = ((PatientTreatmentWorkRequest) request).getPatient().getPatientFirstName() + " " + ((PatientTreatmentWorkRequest) request).getPatient().getPatientLastName();

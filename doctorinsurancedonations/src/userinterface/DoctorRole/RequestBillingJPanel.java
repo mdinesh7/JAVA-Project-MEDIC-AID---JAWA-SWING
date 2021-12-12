@@ -260,7 +260,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
                 accountantBillingRequest.setPatient(patientTreatmentWorkRequest.getPatient());
 
                 Organization org = null;
-                for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+                for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
                     if (organization instanceof AccountantOrganization) {
                         org = organization;
                         break;
@@ -320,7 +320,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         txtFirstName.setText(patientTreatmentWorkRequest.getPatient().getPatientFirstName());
         txtLastName.setText(patientTreatmentWorkRequest.getPatient().getPatientLastName());
         txtPatientId.setText(String.valueOf(patientTreatmentWorkRequest.getPatient().getPatientId()));
-        txtAssignedDoctor.setText(patientTreatmentWorkRequest.getAssignedDoctor().getEmployee().getName());
+        txtAssignedDoctor.setText(patientTreatmentWorkRequest.getAssignedDoctor().getEmployee().getEmpName());
         txtConsultationCharges.setText(String.valueOf(consultationCharges));
 
     }

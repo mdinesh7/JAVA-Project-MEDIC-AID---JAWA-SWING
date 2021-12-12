@@ -28,28 +28,28 @@ public class EnterpriseDirectory {
     }
     
     //Create enterprise
-    public Enterprise createAndAddEnterprise(String name,Enterprise.EnterpriseType type){
+    public Enterprise createAndAddEnterprise(String name,Enterprise.EntType type){
         Enterprise enterprise=null;
-        if(type==Enterprise.EnterpriseType.HealthCenter){
+        if(type==Enterprise.EntType.HealthCenter){
             enterprise=new HealthCenterEnterprise(name);
             enterpriseList.add(enterprise);
         }
         
-        else if(type == Enterprise.EnterpriseType.Government)
+        else if(type == Enterprise.EntType.Government)
         {
             enterprise =  new GovernmentEnterprise(name);
             enterpriseList.add(enterprise);
             
         }
         
-        else if(type == Enterprise.EnterpriseType.InsuranceCompany)
+        else if(type == Enterprise.EntType.InsuranceCompany)
         {
             enterprise = new InsuranceCompanyEnterprise(name);
             enterpriseList.add(enterprise);
             
             
         }
-        else if(type == Enterprise.EnterpriseType.NGO)
+        else if(type == Enterprise.EntType.NGO)
         {
             enterprise = new NGOEnterprise(name);
             enterpriseList.add(enterprise);

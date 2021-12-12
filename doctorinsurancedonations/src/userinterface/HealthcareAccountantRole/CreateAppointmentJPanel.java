@@ -723,7 +723,7 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
             //   patientTreatmentWorkRequest.setSender(userAccount);
 
             Organization org = null;
-            for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+            for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
                 if (organization instanceof DoctorOrganization) {
                     org = organization;
                     break;
@@ -807,7 +807,7 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
         
         if (matchedCustomer != null) {
             txtInsuranceCompany.setText(matchedCustomer.getInsurance().getInsuranceCompany());
-            txtPolicyName.setText(matchedCustomer.getInsurance().getPolicyName());
+            txtPolicyName.setText(matchedCustomer.getInsurance().getPlcyNm());
             //  txtPolicyNo.setText(matchedCustomer.getInsurancePolicyNumber());
             txtCoverage.setText(String.valueOf(matchedCustomer.getInsurance().getCoverage()));
             txtPolicyNum.setEnabled(false);

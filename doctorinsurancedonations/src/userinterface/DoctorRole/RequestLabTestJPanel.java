@@ -129,7 +129,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         patientTreatmentWorkRequest.setReceiver(null);
 
         Organization org = null;
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+        for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
             if (organization instanceof LabOrganization) {
                 org = organization;
                 break;

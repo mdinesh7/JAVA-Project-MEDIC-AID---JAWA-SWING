@@ -153,7 +153,7 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
             WorkRequest request = (NGOFundRequest) workRequestJTable.getValueAt(selectedRow, 5);
             if (request.getStatus().equals("Sent to Director")) {
                 request.setReceiver(userAccount);
-                request.setStatus("Pending on " + request.getReceiver().getEmployee().getName());
+                request.setStatus("Pending on " + request.getReceiver().getEmployee().getEmpName());
                 populateTable();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
             } else {
@@ -210,11 +210,11 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
         for (WorkRequest request : ngoDirectorOrganization.getWorkQueue().getWorkRequests()) {
             String status = request.getStatus();
             Object[] row = new Object[6];
-            row[0] = request.getSender().getEmployee().getName();
+            row[0] = request.getSender().getEmployee().getEmpName();
             if (status.equalsIgnoreCase("Sent to Director") ) {
                 row[1] = null;
             } else {
-                row[1] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
+                row[1] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getEmpName();
             }
 
             row[2] = status;

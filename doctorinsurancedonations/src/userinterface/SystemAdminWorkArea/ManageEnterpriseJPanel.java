@@ -42,7 +42,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
                 Object[] row = new Object[3];
                 row[0] = enterprise;
                 row[1] = network;
-                row[2] = enterprise.getEnterpriseType().getValue();
+                row[2] = enterprise.getEntType().getValue();
 
                 model.addRow(row);
             }
@@ -59,7 +59,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             networkJComboBox.addItem(network);
         }
 
-        for (Enterprise.EnterpriseType type : Enterprise.EnterpriseType.values()) {
+        for (Enterprise.EntType type : Enterprise.EntType.values()) {
             enterpriseTypeJComboBox.addItem(type);
         }
 
@@ -239,7 +239,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
 
         Network network = (Network) networkJComboBox.getSelectedItem();
-        Enterprise.EnterpriseType type = (Enterprise.EnterpriseType) enterpriseTypeJComboBox.getSelectedItem();
+        Enterprise.EntType type = (Enterprise.EntType) enterpriseTypeJComboBox.getSelectedItem();
 
         if (network == null || type == null) {
             JOptionPane.showMessageDialog(null, "Invalid Input!");

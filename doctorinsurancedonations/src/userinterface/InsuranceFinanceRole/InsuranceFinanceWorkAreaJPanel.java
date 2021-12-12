@@ -155,7 +155,7 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
             WorkRequest request = (InsuranceWorkRequest) tblFinance.getValueAt(selectedRow, 0);
             if (request.getStatus().equals("Sent To Finance Department")) {
                 request.setReceiver(userAccount);
-                request.setStatus("Pending on " + request.getReceiver().getEmployee().getName());
+                request.setStatus("Pending on " + request.getReceiver().getEmployee().getEmpName());
                 populateTable();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you");
             } else {
@@ -227,7 +227,7 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
             row[4] = insuranceworkRequest.getBillAmount();
             row[5] = insuranceworkRequest.getStatus();
             row[6] = insuranceworkRequest.getInsuranceCompany();
-            row[7] = insuranceworkRequest.getReceiver() == null ? "" : insuranceworkRequest.getReceiver().getEmployee().getName();
+            row[7] = insuranceworkRequest.getReceiver() == null ? "" : insuranceworkRequest.getReceiver().getEmployee().getEmpName();
 
             model.addRow(row);
         }
