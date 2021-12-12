@@ -22,7 +22,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author rajesh
+ * @author bunty
  */
 public class RequestFundsJPanel extends javax.swing.JPanel {
 
