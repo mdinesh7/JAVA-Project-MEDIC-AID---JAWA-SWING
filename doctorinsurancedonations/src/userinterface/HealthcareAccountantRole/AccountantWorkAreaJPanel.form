@@ -23,11 +23,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="btnCreateAppointment" min="-2" pref="162" max="-2" attributes="0"/>
+              <Component id="createAppmnt" min="-2" pref="162" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
-              <Component id="btnReport" min="-2" max="-2" attributes="0"/>
+              <Component id="reportBtn" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
-              <Component id="btnProcessMedicalBillings" min="-2" max="-2" attributes="0"/>
+              <Component id="prcsMedclBillingsBtn" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
@@ -56,9 +56,9 @@
               <Component id="jScrollPane1" min="-2" pref="183" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnReport" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="btnProcessMedicalBillings" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="btnCreateAppointment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="reportBtn" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="prcsMedclBillingsBtn" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="createAppmnt" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -80,7 +80,7 @@
         <Property name="text" type="java.lang.String" value="Patient Details"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnCreateAppointment">
+    <Component class="javax.swing.JButton" name="createAppmnt">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -91,10 +91,10 @@
         <Property name="text" type="java.lang.String" value="Create Appointment"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateAppointmentActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createAppmntActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnProcessMedicalBillings">
+    <Component class="javax.swing.JButton" name="prcsMedclBillingsBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -105,7 +105,7 @@
         <Property name="text" type="java.lang.String" value="Process Medical Billings"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProcessMedicalBillingsActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="prcsMedclBillingsBtnActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -115,7 +115,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tblAllPatients">
+        <Component class="javax.swing.JTable" name="allPntsTbl">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -177,7 +177,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnReport">
+    <Component class="javax.swing.JButton" name="reportBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -188,7 +188,7 @@
         <Property name="text" type="java.lang.String" value="Show Patient Report"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReportActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportBtnActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">

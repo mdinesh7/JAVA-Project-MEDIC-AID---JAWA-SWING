@@ -37,9 +37,9 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="274" max="-2" attributes="0"/>
-                              <Component id="btnAssignToMe" min="-2" max="-2" attributes="0"/>
+                              <Component id="asgnToMeBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                              <Component id="processRequestBtn" min="-2" max="-2" attributes="0"/>
+                              <Component id="prcsReqBtn" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="255" max="32767" attributes="0"/>
@@ -75,8 +75,8 @@
               <Component id="jScrollPane1" min="-2" pref="156" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btnAssignToMe" pref="37" max="32767" attributes="0"/>
-                  <Component id="processRequestBtn" max="32767" attributes="0"/>
+                  <Component id="asgnToMeBtn" pref="37" max="32767" attributes="0"/>
+                  <Component id="prcsReqBtn" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -88,7 +88,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="processRequestBtn">
+    <Component class="javax.swing.JButton" name="prcsReqBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -99,7 +99,7 @@
         <Property name="text" type="java.lang.String" value="Process Request"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="processRequestBtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="prcsReqBtnActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -109,7 +109,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="workRequestJTable">
+        <Component class="javax.swing.JTable" name="wrkReqJTable">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -165,7 +165,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnAssignToMe">
+    <Component class="javax.swing.JButton" name="asgnToMeBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -176,7 +176,7 @@
         <Property name="text" type="java.lang.String" value="AssignToMe"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAssignToMeActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asgnToMeBtnActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="backJButton">
@@ -208,7 +208,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tblInsurance">
+        <Component class="javax.swing.JTable" name="insrTbl">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="0" type="rgb"/>
