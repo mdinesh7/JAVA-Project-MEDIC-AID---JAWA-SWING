@@ -24,10 +24,10 @@ import javax.swing.table.TableRowSorter;
  */
 public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private EcoSystem business;
-    private UserAccount userAccount;
-    private BloodBankManagerOrganization bloodBankManagerOrganization;
+    private JPanel jPanel;
+    private EcoSystem ecosystem;
+    private UserAccount usrAcnt;
+    private BloodBankManagerOrganization bloodBankMngrOrg;
 
     /**
      * Creates new form LabAssistantWorkAreaJPanel
@@ -35,20 +35,22 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
     public BloodBankManagerWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, EcoSystem business) {
         initComponents();
 
-        this.userProcessContainer = userProcessContainer;
-        this.userAccount = account;
-        this.business = business;
-        this.bloodBankManagerOrganization = (BloodBankManagerOrganization) organization;
+        this.jPanel = userProcessContainer;
+        this.usrAcnt = account;
+        this.ecosystem = business;
+        this.bloodBankMngrOrg = (BloodBankManagerOrganization) organization;
 
-        populateTable();
+        pplTbl();
     }
 
-    public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+    public void pplTbl() {
+        DefaultTableModel model = (DefaultTableModel) wrkReqJTable.getModel();
 
         model.setRowCount(0);
 
-        for (WorkRequest request : bloodBankManagerOrganization.getWrkQ().getWorkRequests()) {
+
+        for (WorkRequest request : bloodBankMngrOrg.getWorkQueue().getWorkRequests()) {
+
             Object[] row = new Object[7];
             row[0] = request;
             row[1] = request.getSender().getEmp().getEmpName();
@@ -60,7 +62,7 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        workRequestJTable.setRowSorter(sorter);
+        wrkReqJTable.setRowSorter(sorter);
     }
 
     /**
@@ -73,16 +75,16 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        assignJButton = new javax.swing.JButton();
-        processJButton = new javax.swing.JButton();
+        wrkReqJTable = new javax.swing.JTable();
+        asgnJButton = new javax.swing.JButton();
+        prcsJButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        wrkReqJTable.setBackground(new java.awt.Color(0, 153, 255));
+        wrkReqJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -108,54 +110,54 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(wrkReqJTable);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(10, 20, 730, 90);
 
-        assignJButton.setBackground(new java.awt.Color(0, 153, 255));
-        assignJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        assignJButton.setText("Assign to me");
-        assignJButton.addActionListener(new java.awt.event.ActionListener() {
+        asgnJButton.setBackground(new java.awt.Color(0, 153, 255));
+        asgnJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        asgnJButton.setText("Assign to me");
+        asgnJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButtonActionPerformed(evt);
+                asgnJButtonActionPerformed(evt);
             }
         });
-        add(assignJButton);
-        assignJButton.setBounds(10, 130, 140, 40);
+        add(asgnJButton);
+        asgnJButton.setBounds(10, 130, 140, 40);
 
-        processJButton.setBackground(new java.awt.Color(0, 153, 255));
-        processJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        processJButton.setText("Process");
-        processJButton.addActionListener(new java.awt.event.ActionListener() {
+        prcsJButton.setBackground(new java.awt.Color(0, 153, 255));
+        prcsJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        prcsJButton.setText("Process");
+        prcsJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processJButtonActionPerformed(evt);
+                prcsJButtonActionPerformed(evt);
             }
         });
-        add(processJButton);
-        processJButton.setBounds(600, 130, 140, 40);
+        add(prcsJButton);
+        prcsJButton.setBounds(600, 130, 140, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab.gif"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(10, 180, 740, 360);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
+    private void asgnJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asgnJButtonActionPerformed
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = wrkReqJTable.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null,"Please select a row first");
             return;
         }
 
-        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
+        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) wrkReqJTable.getValueAt(selectedRow, 0);
         if (request.getBloodBankManager() == null) {
             if (request.getStatus().equalsIgnoreCase("SentToBloodBank")) {
-                request.setBloodBankManager(userAccount);
+                request.setBloodBankManager(usrAcnt);
                 request.setStatus("Pending on Blood Bank");
                 //  request.setReceiver(userAccount);
-                populateTable();
+                pplTbl();
                 JOptionPane.showMessageDialog(null, "The request is assigned to You!");
             } else {
                 JOptionPane.showMessageDialog(null, "Cannot assign this lab request as the current status is: " + request.getStatus());
@@ -163,7 +165,9 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
         }
         else
         {
-            if(userAccount.equals(request.getLabAst()))
+
+            if(usrAcnt.equals(request.getLabAssistant()))
+
             {
                 JOptionPane.showMessageDialog(null,"Request is already assigned to you");
             }
@@ -173,28 +177,28 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
             }
         }
 
-    }//GEN-LAST:event_assignJButtonActionPerformed
+    }//GEN-LAST:event_asgnJButtonActionPerformed
 
-    private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
+    private void prcsJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prcsJButtonActionPerformed
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = wrkReqJTable.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row");
             return;
         }
 
-        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
+        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) wrkReqJTable.getValueAt(selectedRow, 0);
 
        // request.setStatus("Processing");
-        BloodProcessWorkRequestJPanel processWorkRequestJPanel = new BloodProcessWorkRequestJPanel(userProcessContainer, request);
+        BloodProcessWorkRequestJPanel processWorkRequestJPanel = new BloodProcessWorkRequestJPanel(jPanel, request);
         if (request.getBloodBankManager() != null) {
-            if (userAccount.equals(request.getBloodBankManager())) {
+            if (usrAcnt.equals(request.getBloodBankManager())) {
                 if (request.getStatus().equalsIgnoreCase("Pending on Blood Bank")) {
 
-                    userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
-                    CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-                    layout.next(userProcessContainer);
+                    jPanel.add("processWorkRequestJPanel", processWorkRequestJPanel);
+                    CardLayout layout = (CardLayout) jPanel.getLayout();
+                    layout.next(jPanel);
                 } else {
                     JOptionPane.showMessageDialog(null, "Cannot process the request as the status is: " + request.getStatus());
                 }
@@ -206,13 +210,13 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please assign the request first");
         }
-    }//GEN-LAST:event_processJButtonActionPerformed
+    }//GEN-LAST:event_prcsJButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignJButton;
+    private javax.swing.JButton asgnJButton;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processJButton;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JButton prcsJButton;
+    private javax.swing.JTable wrkReqJTable;
     // End of variables declaration//GEN-END:variables
 }

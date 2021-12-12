@@ -17,7 +17,7 @@ import javax.swing.JPanel;
  */
 public class ViewPatientJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
+    private JPanel jPanel;
     private UserAccount userAccount;
     private Enterprise enterprise;
     private PatientTreatmentWorkRequest request;
@@ -28,7 +28,7 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
 
     ViewPatientJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise, PatientTreatmentWorkRequest workRequest) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
+        this.jPanel = userProcessContainer;
         this.userAccount = userAccount;
         this.enterprise = enterprise;
         this.request = workRequest;
@@ -45,34 +45,34 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtHomePhone = new javax.swing.JTextField();
+        hmPhNoTxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        txtFirstName = new javax.swing.JTextField();
+        fstNmTxt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtAddress = new javax.swing.JTextArea();
+        adrsTxt = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        txtLastName = new javax.swing.JTextField();
-        txtAge = new javax.swing.JTextField();
+        lstNmTxt = new javax.swing.JTextField();
+        ageTxt = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        txtPrescription = new javax.swing.JTextArea();
-        txtPatientId = new javax.swing.JTextField();
+        prescptnTxt = new javax.swing.JTextArea();
+        pntIdTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         txtMedicalCondition = new javax.swing.JTextField();
         backJButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        txtHomePhone.setEditable(false);
-        txtHomePhone.addActionListener(new java.awt.event.ActionListener() {
+        hmPhNoTxt.setEditable(false);
+        hmPhNoTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHomePhoneActionPerformed(evt);
+                hmPhNoTxtActionPerformed(evt);
             }
         });
 
@@ -82,17 +82,17 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel18.setText("Home phone No :");
 
-        txtFirstName.setEditable(false);
+        fstNmTxt.setEditable(false);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("First Name :");
 
         jScrollPane1.setEnabled(false);
 
-        txtAddress.setEditable(false);
-        txtAddress.setColumns(20);
-        txtAddress.setRows(5);
-        jScrollPane1.setViewportView(txtAddress);
+        adrsTxt.setEditable(false);
+        adrsTxt.setColumns(20);
+        adrsTxt.setRows(5);
+        jScrollPane1.setViewportView(adrsTxt);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Address :");
@@ -103,12 +103,12 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("Last Name :");
 
-        txtLastName.setEditable(false);
+        lstNmTxt.setEditable(false);
 
-        txtAge.setEditable(false);
-        txtAge.addActionListener(new java.awt.event.ActionListener() {
+        ageTxt.setEditable(false);
+        ageTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAgeActionPerformed(evt);
+                ageTxtActionPerformed(evt);
             }
         });
 
@@ -121,12 +121,12 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Prescription :");
 
-        txtPrescription.setEditable(false);
-        txtPrescription.setColumns(20);
-        txtPrescription.setRows(5);
-        jScrollPane2.setViewportView(txtPrescription);
+        prescptnTxt.setEditable(false);
+        prescptnTxt.setColumns(20);
+        prescptnTxt.setRows(5);
+        jScrollPane2.setViewportView(prescptnTxt);
 
-        txtPatientId.setEditable(false);
+        pntIdTxt.setEditable(false);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Patient ID :");
@@ -175,27 +175,27 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
                                     .addComponent(jScrollPane1)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtHomePhone, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(hmPhNoTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(jLabel4)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(pntIdTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(jLabel7)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtFirstName))))
+                                            .addComponent(fstNmTxt))))
                                 .addGap(53, 53, 53)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel10)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(lstNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(37, 37, 37)
                                         .addComponent(jLabel24)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtAge))))))
+                                        .addComponent(ageTxt))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(105, 105, 105)
                         .addComponent(jLabel18)))
@@ -216,19 +216,19 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fstNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
-                    .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lstNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pntIdTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel24)
-                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ageTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
-                    .addComponent(txtHomePhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(hmPhNoTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
@@ -248,24 +248,28 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtHomePhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHomePhoneActionPerformed
+    private void hmPhNoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hmPhNoTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtHomePhoneActionPerformed
+    }//GEN-LAST:event_hmPhNoTxtActionPerformed
 
-    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
+    private void ageTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAgeActionPerformed
+    }//GEN-LAST:event_ageTxtActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        jPanel.remove(this);
+        CardLayout layout = (CardLayout)jPanel.getLayout();
+        layout.previous(jPanel);
     }//GEN-LAST:event_backJButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea adrsTxt;
+    private javax.swing.JTextField ageTxt;
     private javax.swing.JButton backJButton;
+    private javax.swing.JTextField fstNmTxt;
+    private javax.swing.JTextField hmPhNoTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel18;
@@ -278,25 +282,23 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea txtAddress;
-    private javax.swing.JTextField txtAge;
-    private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtHomePhone;
-    private javax.swing.JTextField txtLastName;
+    private javax.swing.JTextField lstNmTxt;
+    private javax.swing.JTextField pntIdTxt;
+    private javax.swing.JTextArea prescptnTxt;
     private javax.swing.JTextField txtMedicalCondition;
-    private javax.swing.JTextField txtPatientId;
-    private javax.swing.JTextArea txtPrescription;
     // End of variables declaration//GEN-END:variables
 
     private void populate() {
 
-        txtFirstName.setText(request.getPat().getPatFrstNm());
-        txtLastName.setText(request.getPat().getPatLstNm());
-        txtPatientId.setText(String.valueOf(request.getPat().getPatId()));
-        txtAddress.setText(request.getPat().getAddress());
-        txtHomePhone.setText(request.getPat().getCntctNo());
-        txtAge.setText(String.valueOf(request.getPat().getPatAge()));
+
+        fstNmTxt.setText(request.getPatient().getPatientFirstName());
+        lstNmTxt.setText(request.getPatient().getPatientLastName());
+        pntIdTxt.setText(String.valueOf(request.getPatient().getPatientId()));
+        adrsTxt.setText(request.getPatient().getAddress());
+        hmPhNoTxt.setText(request.getPatient().getContactNumber());
+        ageTxt.setText(String.valueOf(request.getPatient().getPatientAge()));
+
         txtMedicalCondition.setText(request.getReasonForVisit());
-        txtPrescription.setText(request.getPrescription());
+        prescptnTxt.setText(request.getPrescription());
     }
 }
