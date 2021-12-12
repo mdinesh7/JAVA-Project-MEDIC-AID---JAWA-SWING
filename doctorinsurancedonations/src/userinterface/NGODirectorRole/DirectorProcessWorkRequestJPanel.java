@@ -19,19 +19,19 @@ import javax.swing.JPanel;
  */
 public class DirectorProcessWorkRequestJPanel extends javax.swing.JPanel {
 
-    private JPanel jPanel;
-    private NGOFundRequest ngoFundRequest;
+    private JPanel jPnl;
+    private NGOFundRequest ngoFndReq;
 
     /**
      * Creates new form ProcessWorkRequestJPanel
      */
     public DirectorProcessWorkRequestJPanel(JPanel jPanel, NGOFundRequest fundRequest) {
         initComponents();
-        this.jPanel = jPanel;
-        this.ngoFundRequest = fundRequest;
-        amountRequiredTxt.setText(String.valueOf(ngoFundRequest.getNeededamtreq()));
-        hospitalNameTxt.setText(ngoFundRequest.getHospaddress());
-        hospitalAddressTxt.setText(String.valueOf(ngoFundRequest.getHospname()));
+        this.jPnl = jPanel;
+        this.ngoFndReq = fundRequest;
+        amntReqTxt.setText(String.valueOf(ngoFndReq.getNeededamtreq()));
+        hsptlNmTxt.setText(ngoFndReq.getHospaddress());
+        hsptlAddTxt.setText(String.valueOf(ngoFndReq.getHospname()));
 
     }
 
@@ -44,28 +44,28 @@ public class DirectorProcessWorkRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        submitJButton = new javax.swing.JButton();
+        sbmtJBtn = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
-        btnReject = new javax.swing.JButton();
+        btnRjct = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        messageTxt = new javax.swing.JTextField();
+        msgTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        hospitalNameTxt = new javax.swing.JTextField();
-        hospitalAddressTxt = new javax.swing.JTextField();
+        hsptlNmTxt = new javax.swing.JTextField();
+        hsptlAddTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        amountRequiredTxt = new javax.swing.JTextField();
+        amntReqTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        submitJButton.setBackground(new java.awt.Color(0, 153, 255));
-        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        submitJButton.setText("Disburse Amount");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        sbmtJBtn.setBackground(new java.awt.Color(0, 153, 255));
+        sbmtJBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        sbmtJBtn.setText("Disburse Amount");
+        sbmtJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                sbmtJBtnActionPerformed(evt);
             }
         });
 
@@ -78,12 +78,12 @@ public class DirectorProcessWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnReject.setBackground(new java.awt.Color(0, 153, 255));
-        btnReject.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnReject.setText("Reject");
-        btnReject.addActionListener(new java.awt.event.ActionListener() {
+        btnRjct.setBackground(new java.awt.Color(0, 153, 255));
+        btnRjct.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnRjct.setText("Reject");
+        btnRjct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRejectActionPerformed(evt);
+                btnRjctActionPerformed(evt);
             }
         });
 
@@ -93,14 +93,14 @@ public class DirectorProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Hospital Name:");
 
-        hospitalNameTxt.setEnabled(false);
+        hsptlNmTxt.setEnabled(false);
 
-        hospitalAddressTxt.setEnabled(false);
+        hsptlAddTxt.setEnabled(false);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Hospital Address:");
 
-        amountRequiredTxt.setEnabled(false);
+        amntReqTxt.setEnabled(false);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Amount Required:");
@@ -119,9 +119,9 @@ public class DirectorProcessWorkRequestJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(198, 198, 198)
-                        .addComponent(submitJButton)
+                        .addComponent(sbmtJBtn)
                         .addGap(18, 18, 18)
-                        .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnRjct, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(215, 215, 215)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,10 +131,10 @@ public class DirectorProcessWorkRequestJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel2))
                         .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(messageTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hospitalAddressTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hospitalNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(amountRequiredTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(msgTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hsptlAddTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hsptlNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(amntReqTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(22, 22, 22))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
@@ -160,23 +160,23 @@ public class DirectorProcessWorkRequestJPanel extends javax.swing.JPanel {
                         .addGap(49, 49, 49)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(hospitalNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(hsptlNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(amountRequiredTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(amntReqTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(hospitalAddressTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hsptlAddTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(messageTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(msgTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGap(55, 55, 55)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(submitJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnRjct, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sbmtJBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -184,74 +184,74 @@ public class DirectorProcessWorkRequestJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-        submitJButton.setEnabled(true);
-        String message = messageTxt.getText();
+    private void sbmtJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sbmtJBtnActionPerformed
+        sbmtJBtn.setEnabled(true);
+        String message = msgTxt.getText();
         if (message.equals("")) {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         }
         else
         {
-        ngoFundRequest.setWrMsg(message);
+        ngoFndReq.setWrMsg(message);
          int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
          if (dialogResult == JOptionPane.YES_OPTION) {
-        ngoFundRequest.setStatus("Accepted");
+        ngoFndReq.setStatus("Accepted");
         JOptionPane.showMessageDialog(null, "Funds Disbursed Successfully!!!");
-        submitJButton.setEnabled(false);
-        messageTxt.setText("");
-        btnReject.setEnabled(false);
+        sbmtJBtn.setEnabled(false);
+        msgTxt.setText("");
+        btnRjct.setEnabled(false);
         }
-         messageTxt.setText("");
+         msgTxt.setText("");
         }
 
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_sbmtJBtnActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
-        jPanel.remove(this);
-        Component[] componentArray = jPanel.getComponents();
+        jPnl.remove(this);
+        Component[] componentArray = jPnl.getComponents();
         Component component = componentArray[componentArray.length - 1];
         DirectorWorkAreaJPanel dwjp = (DirectorWorkAreaJPanel) component;
         dwjp.populateTable();
-        CardLayout layout = (CardLayout) jPanel.getLayout();
-        layout.previous(jPanel);
+        CardLayout layout = (CardLayout) jPnl.getLayout();
+        layout.previous(jPnl);
     }//GEN-LAST:event_backJButtonActionPerformed
 
-    private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
-        String message = messageTxt.getText();
+    private void btnRjctActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRjctActionPerformed
+        String message = msgTxt.getText();
         if (message.equals("")) {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-        ngoFundRequest.setWrMsg(message);
+        ngoFndReq.setWrMsg(message);
         int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             
             
             if (dialogResult == JOptionPane.YES_OPTION) {
-        ngoFundRequest.setStatus("Rejected");
-         messageTxt.setText("");
-            btnReject.setEnabled(false);
-            submitJButton.setEnabled(false);
+        ngoFndReq.setStatus("Rejected");
+         msgTxt.setText("");
+            btnRjct.setEnabled(false);
+            sbmtJBtn.setEnabled(false);
         }
-         messageTxt.setText("");   
+         msgTxt.setText("");   
         }
-    }//GEN-LAST:event_btnRejectActionPerformed
+    }//GEN-LAST:event_btnRjctActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField amountRequiredTxt;
+    private javax.swing.JTextField amntReqTxt;
     private javax.swing.JButton backJButton;
-    private javax.swing.JButton btnReject;
-    private javax.swing.JTextField hospitalAddressTxt;
-    private javax.swing.JTextField hospitalNameTxt;
+    private javax.swing.JButton btnRjct;
+    private javax.swing.JTextField hsptlAddTxt;
+    private javax.swing.JTextField hsptlNmTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField messageTxt;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JTextField msgTxt;
+    private javax.swing.JButton sbmtJBtn;
     // End of variables declaration//GEN-END:variables
 }
