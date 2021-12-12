@@ -15,7 +15,11 @@ import javax.swing.JPanel;
 
 /**
  *
+<<<<<<< HEAD
  * @author dineshmuurgesan
+=======
+ * @author bunty
+>>>>>>> aef6537 (added insurance agent)
  */
 public class InsuranceAgentWorkAreaJPanel extends javax.swing.JPanel {
 
