@@ -24,23 +24,23 @@ import javax.swing.table.TableRowSorter;
 public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel jPanel;
-    private UserAccount userAccount;
-    private HealthCareOfficerOrganization healthCareOfficerOrganization;
-    private Enterprise enterprise;
+    private UserAccount usrAcnt;
+    private HealthCareOfficerOrganization hlthCrOfcrJPanel;
+    private Enterprise entrpz;
 
     /**
      * Creates new form OfficerWorkAreaJPanel1
      */
     public OfficerWorkAreaJPanel(JPanel jpanel, UserAccount userAccount, Organization organization, Enterprise enterprise) {
         initComponents();
-        this.enterprise = enterprise;
+        this.entrpz = enterprise;
 
         this.jPanel = jpanel;
 
-        this.healthCareOfficerOrganization = (HealthCareOfficerOrganization) organization;
-        this.userAccount = userAccount;
+        this.hlthCrOfcrJPanel = (HealthCareOfficerOrganization) organization;
+        this.usrAcnt = userAccount;
 
-        populateTable();
+        pplTbl();
     }
 
     /**
@@ -163,26 +163,26 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
             return;
         } else {
-            WorkRequest request = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
-            if (request.getStatus().equals("Sent")) {
-                request.setReceiver(userAccount);
-                request.setStatus("Pending on " + request.getReceiver().getEmp().getEmpName());
-                populateTable();
+            WorkRequest req = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
+            if (req.getStatus().equals("Sent")) {
+                req.setReceiver(usrAcnt);
+                req.setStatus("Pending on " + req.getReceiver().getEmp().getEmpName());
+                pplTbl();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
             } else {
-                JOptionPane.showMessageDialog(null, "Can't assign this work request, as the work request is in " + request.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Can't assign this work request, as the work request is in " + req.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
             }
         }
     }
     private void processRequestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processRequestBtnActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
-        if (selectedRow < 0) {
+        int slRow = workRequestJTable.getSelectedRow();
+        if (slRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
             return;
         } else {
 
-            GovernmentFundRequest request = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
+            GovernmentFundRequest request = (GovernmentFundRequest) workRequestJTable.getValueAt(slRow, 0);
 
             if (request.getStatus().equals("Rejected")) {
                 JOptionPane.showMessageDialog(null, "Cannot process a Rejected Request", "Warning!", JOptionPane.WARNING_MESSAGE);
@@ -196,17 +196,17 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Assign the request first");
                 return;
             }
-            if (!userAccount.equals(request.getReceiver())) {
+            if (!usrAcnt.equals(request.getReceiver())) {
                 JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
 
-            if (!userAccount.getEmp().equals(request.getReceiver().getEmp())) {
+            if (!usrAcnt.getEmp().equals(request.getReceiver().getEmp())) {
                 JOptionPane.showMessageDialog(null, "Request assigned to other Officer", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             } else {
 
-                OfficerProcessWorkRequestJPanel panel = new OfficerProcessWorkRequestJPanel(jPanel, userAccount, request, enterprise);
+                OfficerProcessWorkRequestJPanel panel = new OfficerProcessWorkRequestJPanel(jPanel, usrAcnt, request, entrpz);
                 jPanel.add("OfficerProcessWorkRequestJPanel", panel);
                 CardLayout layout = (CardLayout) jPanel.getLayout();
                 layout.next(jPanel);
@@ -233,23 +233,23 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JTable workRequestJTable;
     // End of variables declaration//GEN-END:variables
 
-    public void populateTable() {
+    public void pplTbl() {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
 
         model.setRowCount(0);
 
-        for (WorkRequest request : healthCareOfficerOrganization.getWrkQ().getWorkRequests()) {
+        for (WorkRequest req : hlthCrOfcrJPanel.getWrkQ().getWorkRequests()) {
             Object[] row = new Object[5];
-            String status = request.getStatus();
-            row[0] = ((GovernmentFundRequest) request);
-            row[1] = request.getSender().getEmp().getEmpName();
+            String status = req.getStatus();
+            row[0] = ((GovernmentFundRequest) req);
+            row[1] = req.getSender().getEmp().getEmpName();
             if (status.equalsIgnoreCase("Sent to Treasurer") || status.equalsIgnoreCase("Sent to Secretary")) {
                 row[2] = null;
             } else {
-                row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmp().getEmpName();
+                row[2] = req.getReceiver() == null ? null : req.getReceiver().getEmp().getEmpName();
             }
-            row[3] = request.getStatus();
-            row[4] = ((GovernmentFundRequest) request).getReqAmt();
+            row[3] = req.getStatus();
+            row[4] = ((GovernmentFundRequest) req).getReqAmt();
 
             model.addRow(row);
         }
