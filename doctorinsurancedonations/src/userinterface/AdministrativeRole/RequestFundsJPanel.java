@@ -22,13 +22,13 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author rajesh
+ * @author bunty
  */
 public class RequestFundsJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private Enterprise enterprise;
-    private UserAccount userAccount;
+    private JPanel jPanel;
+    private Enterprise entrpz;
+    private UserAccount usrAc;
     private EcoSystem ecoSystem;
 
     /**
@@ -36,18 +36,20 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
      */
     public RequestFundsJPanel(JPanel jPanel, Enterprise enterprise, UserAccount userAccount, EcoSystem ecoSystem) {
         initComponents();
-        this.userProcessContainer = jPanel;
-        this.enterprise = enterprise;
-        this.userAccount = userAccount;
+        this.jPanel = jPanel;
+        this.entrpz = enterprise;
+        this.usrAc = userAccount;
         this.ecoSystem = ecoSystem;
-        populateRequestTable();
+        pplTbl();
     }
 
-    public void populateRequestTable() {
+    public void pplTbl() {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
         double totalFunds = 0;
         model.setRowCount(0);
-        for (WorkRequest request : userAccount.getWrkQ().getWorkRequests()) {
+
+        for (WorkRequest request : usrAc.getWorkQueue().getWorkRequests()) {
+
             if(request instanceof GovernmentFundRequest){
             Object[] row = new Object[4];
             row[0] = String.valueOf(((GovernmentFundRequest) request).getLocation());
@@ -244,7 +246,7 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
                 return;
             }
             GovernmentFundRequest governmentFundRequest = new GovernmentFundRequest(location, Integer.parseInt(population), Double.parseDouble(amount));
-            governmentFundRequest.setSender(userAccount);
+            governmentFundRequest.setSender(usrAc);
             governmentFundRequest.setStatus("Sent");
 
             Organization org = null;
@@ -266,17 +268,19 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
             }
 
             if (org != null) {
-                org.getWrkQ().getWorkRequests().add(governmentFundRequest);
-                userAccount.getWrkQ().getWorkRequests().add(governmentFundRequest);
+
+                org.getWorkQueue().getWorkRequests().add(governmentFundRequest);
+                usrAc.getWorkQueue().getWorkRequests().add(governmentFundRequest);
+
             }
-            populateRequestTable();
+            pplTbl();
         }
     }//GEN-LAST:event_btnSendFundRequestActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        jPanel.remove(this);
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.previous(jPanel);
     }//GEN-LAST:event_backJButtonActionPerformed
 
 

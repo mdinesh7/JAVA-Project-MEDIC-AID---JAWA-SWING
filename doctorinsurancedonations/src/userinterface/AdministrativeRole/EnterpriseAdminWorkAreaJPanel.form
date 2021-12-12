@@ -36,11 +36,11 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="userJButton" alignment="0" max="32767" attributes="0"/>
-                          <Component id="manageEmployeeJButton" alignment="0" max="32767" attributes="0"/>
-                          <Component id="manageOrganizationJButton" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btnRequestFunds" alignment="1" max="32767" attributes="0"/>
-                          <Component id="btnRequestFunds1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="mnguserJButton" alignment="0" max="32767" attributes="0"/>
+                          <Component id="mngEmpJButton" alignment="0" max="32767" attributes="0"/>
+                          <Component id="mngOrgJButton" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnGovtFundReq" alignment="1" max="32767" attributes="0"/>
+                          <Component id="btnNGOFundReq" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel2" pref="0" max="32767" attributes="0"/>
@@ -62,15 +62,15 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="manageOrganizationJButton" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="mngOrgJButton" min="-2" pref="41" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="manageEmployeeJButton" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="mngEmpJButton" min="-2" pref="35" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="userJButton" min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="mnguserJButton" min="-2" pref="38" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnRequestFunds" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="btnGovtFundReq" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="btnRequestFunds1" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="btnNGOFundReq" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
@@ -91,7 +91,7 @@
         <Property name="text" type="java.lang.String" value="My Work Area -Adminstrative Role"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="userJButton">
+    <Component class="javax.swing.JButton" name="mnguserJButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -102,10 +102,10 @@
         <Property name="text" type="java.lang.String" value="Manage User"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userJButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnguserJButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="manageEmployeeJButton">
+    <Component class="javax.swing.JButton" name="mngEmpJButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -116,10 +116,10 @@
         <Property name="text" type="java.lang.String" value="Manage Employee"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageEmployeeJButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mngEmpJButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="manageOrganizationJButton">
+    <Component class="javax.swing.JButton" name="mngOrgJButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -130,7 +130,7 @@
         <Property name="text" type="java.lang.String" value="Manage Organization"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageOrganizationJButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mngOrgJButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="enterpriseLabel">
@@ -148,7 +148,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnRequestFunds">
+    <Component class="javax.swing.JButton" name="btnGovtFundReq">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -159,7 +159,7 @@
         <Property name="text" type="java.lang.String" value="Request Funds from Government"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRequestFundsActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGovtFundReqActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -169,7 +169,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnRequestFunds1">
+    <Component class="javax.swing.JButton" name="btnNGOFundReq">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -180,7 +180,7 @@
         <Property name="text" type="java.lang.String" value="Request Funds from NGO"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRequestFunds1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNGOFundReqActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
