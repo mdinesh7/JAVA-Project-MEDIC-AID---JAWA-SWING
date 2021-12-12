@@ -16,6 +16,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
+
+/**
+ *
+ * @author bunty
+ */
+
 public class ProcessRequestJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;

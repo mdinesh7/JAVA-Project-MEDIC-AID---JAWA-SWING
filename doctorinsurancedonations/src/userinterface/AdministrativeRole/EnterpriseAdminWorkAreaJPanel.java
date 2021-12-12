@@ -183,7 +183,7 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void mngEmpJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngEmpJButtonActionPerformed
 
 
-        ManageEmployeeJPanel manageEmployeeJPanel = new ManageEmployeeJPanel(jPanel, entrpz.getOrganizationDirectory());
+        ManageEmployeeJPanel manageEmployeeJPanel = new ManageEmployeeJPanel(jPanel, entrpz.getOrgDir());
         jPanel.add("manageEmployeeJPanel", manageEmployeeJPanel);
 
 
@@ -195,7 +195,7 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void mngOrgJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngOrgJButtonActionPerformed
 
 
-        ManageOrganizationJPanel manageOrganizationJPanel = new ManageOrganizationJPanel(jPanel, entrpz.getOrganizationDirectory(), entrpz);
+        ManageOrganizationJPanel manageOrganizationJPanel = new ManageOrganizationJPanel(jPanel, entrpz.getOrgDir(), entrpz);
         jPanel.add("manageOrganizationJPanel", manageOrganizationJPanel);
         CardLayout layout = (CardLayout) jPanel.getLayout();
         layout.next(jPanel);

@@ -48,7 +48,7 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         double totalFunds = 0;
         model.setRowCount(0);
 
-        for (WorkRequest request : usrAc.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : usrAc.getWrkQ().getWorkRequests()) {
 
             if(request instanceof GovernmentFundRequest){
             Object[] row = new Object[4];
@@ -269,8 +269,8 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
 
             if (org != null) {
 
-                org.getWorkQueue().getWorkRequests().add(governmentFundRequest);
-                usrAc.getWorkQueue().getWorkRequests().add(governmentFundRequest);
+                org.getWrkQ().getWorkRequests().add(governmentFundRequest);
+                usrAc.getWrkQ().getWorkRequests().add(governmentFundRequest);
 
             }
             pplTbl();

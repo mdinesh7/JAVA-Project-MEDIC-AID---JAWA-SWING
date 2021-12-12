@@ -49,7 +49,7 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
 
 
-        for (WorkRequest request : bloodBankMngrOrg.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : bloodBankMngrOrg.getWrkQ().getWorkRequests()) {
 
             Object[] row = new Object[7];
             row[0] = request;
@@ -166,7 +166,7 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
         else
         {
 
-            if(usrAcnt.equals(request.getLabAssistant()))
+            if(usrAcnt.equals(request.getLabAst()))
 
             {
                 JOptionPane.showMessageDialog(null,"Request is already assigned to you");

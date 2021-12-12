@@ -28,7 +28,11 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
+<<<<<<< HEAD
  * @author dineshmurugesan
+=======
+ * @author bunty
+>>>>>>> aef6537 (added insurance agent)
  */
 
 public class AddNewPolicyHolderJPanel extends javax.swing.JPanel {
