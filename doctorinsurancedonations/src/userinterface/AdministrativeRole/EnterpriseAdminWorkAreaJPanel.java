@@ -107,7 +107,7 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin2.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hospital.gif"))); // NOI18N
 
         btnRequestFunds1.setBackground(new java.awt.Color(0, 153, 255));
         btnRequestFunds1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
