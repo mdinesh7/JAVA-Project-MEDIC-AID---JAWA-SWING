@@ -36,9 +36,9 @@ public class SecretaryProcessWorkRequestJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.userAccount = userAccount;
         this.governmentFundRequest = fundRequest;
-        amountTxt.setText(String.valueOf(governmentFundRequest.getRequestAmount()));
+        amountTxt.setText(String.valueOf(governmentFundRequest.getReqAmt()));
         locationTxt.setText(governmentFundRequest.getLocation());
-        populationTxt.setText(String.valueOf(governmentFundRequest.getPopulation()));
+        populationTxt.setText(String.valueOf(governmentFundRequest.getPop()));
 
     }
 
@@ -207,7 +207,7 @@ public class SecretaryProcessWorkRequestJPanel extends javax.swing.JPanel {
             return;
         }
         else{
-        governmentFundRequest.setMessage(message);
+        governmentFundRequest.setWrMsg(message);
         
         int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             
@@ -216,15 +216,15 @@ public class SecretaryProcessWorkRequestJPanel extends javax.swing.JPanel {
         governmentFundRequest.setStatus("Sent to Treasurer");
 
         Organization org = null;
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+        for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
             if (organization instanceof TreasurerOrganization) {
                 org = organization;
                 break;
             }
         }
         if (org != null) {
-            org.getWorkQueue().getWorkRequests().add(governmentFundRequest);
-            userAccount.getWorkQueue().getWorkRequests().add(governmentFundRequest);
+            org.getWrkQ().getWorkRequests().add(governmentFundRequest);
+            userAccount.getWrkQ().getWorkRequests().add(governmentFundRequest);
         }
         JOptionPane.showMessageDialog(null, "Request to Treasurer Successful!!!");
         messageTxt.setText("");
@@ -257,7 +257,7 @@ public class SecretaryProcessWorkRequestJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-        governmentFundRequest.setMessage(message);
+        governmentFundRequest.setWrMsg(message);
         
          int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             if (dialogResult == JOptionPane.YES_OPTION) {

@@ -47,7 +47,9 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
     public void popOrgCmbx() {
         organizationJComboBox.removeAllItems();
 
+
         for (Organization organization : entrpz.getOrganizationDirectory().getOrganizations()) {
+
             if (!(organization instanceof PatientOrganization)) {
                 organizationJComboBox.addItem(organization);
             }
@@ -57,7 +59,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
     public void pplEmpCmbx(Organization organization) {
         employeeJComboBox.removeAllItems();
 
-        for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()) {
+        for (Employee employee : organization.getEmpDir().getEmpList()) {
             employeeJComboBox.addItem(employee);
         }
     }
@@ -76,8 +78,10 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
+
         for (Organization organization : entrpz.getOrganizationDirectory().getOrganizations()) {
             for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
+
                 Object row[] = new Object[2];
                 row[0] = ua;
                 row[1] = ua.getRole();
@@ -374,9 +378,9 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             return;
         } else {
 
-            List<UserAccount> userAccountList = organization.getUserAccountDirectory().getUserAccountList();
+            List<UserAccount> userAccountList = organization.getUsrAccDir().getUsrAccList();
             for (UserAccount userAccount : userAccountList) {
-                if (userAccount.getUsername().equals(userName)) {
+                if (userAccount.getUname().equals(userName)) {
                     JOptionPane.showMessageDialog(null, "username already taken!!");
                     nameJTextField.setBorder(BorderFactory.createLineBorder(Color.RED));
                     return;
@@ -384,10 +388,10 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
             if (role instanceof DoctorRole) {
 
-                organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role,
+                organization.getUsrAccDir().createUserAccount(userName, password, employee, role,
                         doctorType);
             } else {
-                organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
+                organization.getUsrAccDir().createUserAccount(userName, password, employee, role);
             }
             popData();
             nameJTextField.setBorder(BorderFactory.createLineBorder(Color.BLACK));

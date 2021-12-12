@@ -57,7 +57,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
         for (Organization organization : dir.getOrganizations()) {
             Object[] row = new Object[2];
-            row[0] = organization.getOrganizationID();
+            row[0] = organization.getOrgID();
             row[1] = organization;
 
             model.addRow(row);
@@ -271,8 +271,10 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             return;
         } else {
             Organization organization = (Organization) organizationJTable.getValueAt(selectedRow, 1);
+
             entrpz.getOrganizationDirectory().getOrganizations().remove(organization);
             pplTbl();
+
         }
 
     }// GEN-LAST:event_btnDeleteOrgActionPerformed

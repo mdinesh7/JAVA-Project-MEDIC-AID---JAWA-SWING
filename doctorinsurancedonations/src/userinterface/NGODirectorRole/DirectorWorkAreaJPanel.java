@@ -153,7 +153,7 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
             WorkRequest request = (NGOFundRequest) workRequestJTable.getValueAt(selectedRow, 5);
             if (request.getStatus().equals("Sent to Director")) {
                 request.setReceiver(userAccount);
-                request.setStatus("Pending on " + request.getReceiver().getEmployee().getName());
+                request.setStatus("Pending on " + request.getReceiver().getEmp().getEmpName());
                 populateTable();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
             } else {
@@ -187,7 +187,7 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (!userAccount.getEmployee().equals(request.getReceiver().getEmployee())) {
+            if (!userAccount.getEmp().equals(request.getReceiver().getEmp())) {
                 JOptionPane.showMessageDialog(null, "Request assigned to other Officer", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
@@ -207,19 +207,19 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
         model.setRowCount(0);
 
-        for (WorkRequest request : ngoDirectorOrganization.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : ngoDirectorOrganization.getWrkQ().getWorkRequests()) {
             String status = request.getStatus();
             Object[] row = new Object[6];
-            row[0] = request.getSender().getEmployee().getName();
+            row[0] = request.getSender().getEmp().getEmpName();
             if (status.equalsIgnoreCase("Sent to Director") ) {
                 row[1] = null;
             } else {
-                row[1] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
+                row[1] = request.getReceiver() == null ? null : request.getReceiver().getEmp().getEmpName();
             }
 
             row[2] = status;
             row[3] = ((NGOFundRequest) request).getNeededamtreq();
-            row[4] = ((NGOFundRequest) request).getMessage();
+            row[4] = ((NGOFundRequest) request).getWrMsg();
             row[5] = request;
 
             model.addRow(row);

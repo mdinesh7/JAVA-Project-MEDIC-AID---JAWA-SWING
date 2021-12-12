@@ -16,19 +16,19 @@ import java.util.List;
 
 public class InsuranceCustomerDirectory {
 
-    private List<InsuranceCustomer> insuranceCustomers = new ArrayList<>();
+    private List<InsuranceCustomer> insCust = new ArrayList<>();
 
-    public List<InsuranceCustomer> getInsuranceCustomers() {
-        return insuranceCustomers;
+    public List<InsuranceCustomer> getInsCust() {
+        return insCust;
     }
 
-    public void setInsuranceCustomers(List<InsuranceCustomer> insuranceCustomers) {
-        this.insuranceCustomers = insuranceCustomers;
+    public void setInsCust(List<InsuranceCustomer> insCust) {
+        this.insCust = insCust;
     }
 
     @Override
     public String toString() {
-        return "InsuranceCustomerDirectory{" + "insuranceCustomers=" + insuranceCustomers + '}';
+        return "InsuranceCustomerDirectory{" + "insuranceCustomers=" + insCust + '}';
     }
 
 }

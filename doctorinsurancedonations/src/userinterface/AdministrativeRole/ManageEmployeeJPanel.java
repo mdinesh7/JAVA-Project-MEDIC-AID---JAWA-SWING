@@ -65,10 +65,12 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
+      
         for (Employee emp : organization.getEmployeeDirectory().getEmployeeList()) {
             Object[] row = new Object[2];
             row[0] = emp.getId();
             row[1] = emp.getName();
+
             model.addRow(row);
         }
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
@@ -254,8 +256,10 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Name Cannot be empty!");
             return;
         }
+
         organization.getEmployeeDirectory().createEmployee(name);
         pplTbl(organization);
+
         nameJTextField.setText("");
 
     }//GEN-LAST:event_addJButtonActionPerformed

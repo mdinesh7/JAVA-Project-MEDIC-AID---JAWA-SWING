@@ -475,19 +475,19 @@ public class AddNewPolicyHolderJPanel extends javax.swing.JPanel {
 
             InsuranceCustomer insuranceCustomer = new InsuranceCustomer(insurance, policyNumber);
 
-            insuranceCustomer.setCustomerFirstName(firstName);
-            insuranceCustomer.setCustomerLastName(lastName);
-            insuranceCustomer.setDateOfBirth(dateOfBirth);
+            insuranceCustomer.setCustFrstNm(firstName);
+            insuranceCustomer.setCustLstNme(lastName);
+            insuranceCustomer.setDob(dateOfBirth);
             insuranceCustomer.setGender(gender);
             insuranceCustomer.setSsn(ssn);
-            insuranceCustomer.setPhoneNumber(phone);
+            insuranceCustomer.setPhNo(phone);
             insuranceCustomer.setAddress(address);
 
-            insuranceCustomer.setInsurance(insurance);
+            insuranceCustomer.setIns(insurance);
 
-            insuranceCompanyEnterprise.getInsuranceCustomerDirectory().getInsuranceCustomers().add(insuranceCustomer);
+            insuranceCompanyEnterprise.getInsCustDir().getInsCust().add(insuranceCustomer);
 
-            insuranceCompanyEnterprise.getInsuranceCustomerDirectory().getInsuranceCustomers();
+            insuranceCompanyEnterprise.getInsCustDir().getInsCust();
 
             populateTable();
             refresh();
@@ -504,7 +504,7 @@ public class AddNewPolicyHolderJPanel extends javax.swing.JPanel {
     private void cmbInsuranceNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbInsuranceNameActionPerformed
 
         Insurance selectedPolicy = (Insurance) cmbInsuranceName.getSelectedItem();
-        txtInsuranceCoverage.setText(String.valueOf(selectedPolicy.getCoverage()));
+        txtInsuranceCoverage.setText(String.valueOf(selectedPolicy.getCvrg()));
     }//GEN-LAST:event_cmbInsuranceNameActionPerformed
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -595,7 +595,7 @@ public class AddNewPolicyHolderJPanel extends javax.swing.JPanel {
 
     private void populateFields() {
         txtPolicyNumber.setText(policyNumber);
-        List<Insurance> policies = insuranceCompanyEnterprise.getInsurancePolicyDirectory().getPolicies();
+        List<Insurance> policies = insuranceCompanyEnterprise.getInsPlcyDir().getPolicies();
 
         for (Insurance policy : policies) {
             cmbInsuranceName.addItem(policy);
@@ -605,7 +605,7 @@ public class AddNewPolicyHolderJPanel extends javax.swing.JPanel {
         
         if(selectedPolicy != null)
         {
-        txtInsuranceCoverage.setText(String.valueOf(selectedPolicy.getCoverage()));
+        txtInsuranceCoverage.setText(String.valueOf(selectedPolicy.getCvrg()));
         }
         else{
             JOptionPane.showMessageDialog(null , "No Existing policy!");
@@ -618,13 +618,13 @@ public class AddNewPolicyHolderJPanel extends javax.swing.JPanel {
         DefaultTableModel dtm = (DefaultTableModel) tblCustomer.getModel();
 
         dtm.setRowCount(0);
-        List<InsuranceCustomer> customers = insuranceCompanyEnterprise.getInsuranceCustomerDirectory().getInsuranceCustomers();
+        List<InsuranceCustomer> customers = insuranceCompanyEnterprise.getInsCustDir().getInsCust();
         for (InsuranceCustomer customer : customers) {
             Object[] row = new Object[4];
-            row[0] = customer.getCustomerFirstName() + " " + customer.getCustomerLastName();
+            row[0] = customer.getCustFrstNm() + " " + customer.getCustLstNme();
             row[1] = customer;
-            row[2] = customer.getInsurance().getPolicyName();
-            row[3] = customer.getInsurance().getCoverage();
+            row[2] = customer.getIns().getPlcyNm();
+            row[3] = customer.getIns().getCvrg();
 
             dtm.addRow(row);
         }

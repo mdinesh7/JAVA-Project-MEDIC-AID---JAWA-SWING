@@ -48,14 +48,14 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (WorkRequest request : bloodBankManagerOrganization.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : bloodBankManagerOrganization.getWrkQ().getWorkRequests()) {
             Object[] row = new Object[7];
             row[0] = request;
-            row[1] = request.getSender().getEmployee().getName();
+            row[1] = request.getSender().getEmp().getEmpName();
             row[2] = ((PatientTreatmentWorkRequest) request).getBloodBankManager();
             row[3] = request.getStatus();
-            row[4] = ((PatientTreatmentWorkRequest ) request).getPatient().getPatientFirstName() + " " + ((PatientTreatmentWorkRequest) request).getPatient().getPatientLastName();
-            row[5] = ((PatientTreatmentWorkRequest) request).getPatient().getPatientId();
+            row[4] = ((PatientTreatmentWorkRequest ) request).getPat().getPatFrstNm() + " " + ((PatientTreatmentWorkRequest) request).getPat().getPatLstNm();
+            row[5] = ((PatientTreatmentWorkRequest) request).getPat().getPatId();
             row[6]=((PatientTreatmentWorkRequest) request).getBloodUnits();
             model.addRow(row);
         }
@@ -163,7 +163,7 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
         }
         else
         {
-            if(userAccount.equals(request.getLabAssistant()))
+            if(userAccount.equals(request.getLabAst()))
             {
                 JOptionPane.showMessageDialog(null,"Request is already assigned to you");
             }

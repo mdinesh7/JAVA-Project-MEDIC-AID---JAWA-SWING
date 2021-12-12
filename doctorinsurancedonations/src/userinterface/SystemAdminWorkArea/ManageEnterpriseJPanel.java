@@ -38,11 +38,11 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
         for (Network network : ecosystem.getNetworks()) {
-            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+            for (Enterprise enterprise : network.getEntDir().getEntList()) {
                 Object[] row = new Object[3];
                 row[0] = enterprise;
                 row[1] = network;
-                row[2] = enterprise.getEnterpriseType().getValue();
+                row[2] = enterprise.getEntType().getValue();
 
                 model.addRow(row);
             }
@@ -59,7 +59,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             networkJComboBox.addItem(network);
         }
 
-        for (Enterprise.EnterpriseType type : Enterprise.EnterpriseType.values()) {
+        for (Enterprise.EntType type : Enterprise.EntType.values()) {
             enterpriseTypeJComboBox.addItem(type);
         }
 
@@ -239,14 +239,14 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
 
         Network network = (Network) networkJComboBox.getSelectedItem();
-        Enterprise.EnterpriseType type = (Enterprise.EnterpriseType) enterpriseTypeJComboBox.getSelectedItem();
+        Enterprise.EntType type = (Enterprise.EntType) enterpriseTypeJComboBox.getSelectedItem();
 
         if (network == null || type == null) {
             JOptionPane.showMessageDialog(null, "Invalid Input!");
             return;
         } else {
             String enterpriseName = nameJTextField.getText();
-            List<Enterprise> enterprises = network.getEnterpriseDirectory().getEnterpriseList();
+            List<Enterprise> enterprises = network.getEntDir().getEntList();
             List<String> names = new ArrayList<>();
             for (Enterprise enterprise : enterprises) {
                 names.add(enterprise.getName());
@@ -259,7 +259,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
                     JOptionPane.showMessageDialog(null, "Name cannot be empty!");
                     return;
                 } else {
-                    Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise(enterpriseName, type);
+                    Enterprise enterprise = network.getEntDir().crtAndAddEnt(enterpriseName, type);
 
                     populateTable();
                     JOptionPane.showMessageDialog(null, "Enterprise Added Successfully!!");
@@ -296,7 +296,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             if (dialogResult == JOptionPane.YES_OPTION) {
                 Network network = (Network) enterpriseJTable.getValueAt(selectedRow, 1);
-                network.getEnterpriseDirectory().getEnterpriseList().remove(enterprise);
+                network.getEntDir().getEntList().remove(enterprise);
                 populateTable();
                 JOptionPane.showMessageDialog(null, "Enterprise is deleted");
             }

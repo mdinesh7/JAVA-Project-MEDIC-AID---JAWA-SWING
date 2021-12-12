@@ -193,7 +193,7 @@ public class DirectorProcessWorkRequestJPanel extends javax.swing.JPanel {
         }
         else
         {
-        ngoFundRequest.setMessage(message);
+        ngoFundRequest.setWrMsg(message);
          int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
          if (dialogResult == JOptionPane.YES_OPTION) {
         ngoFundRequest.setStatus("Accepted");
@@ -224,7 +224,7 @@ public class DirectorProcessWorkRequestJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-        ngoFundRequest.setMessage(message);
+        ngoFundRequest.setWrMsg(message);
         int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             
             

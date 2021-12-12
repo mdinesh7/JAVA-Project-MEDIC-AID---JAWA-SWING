@@ -205,7 +205,7 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-            ngoFundRequest.setMessage(message);
+            ngoFundRequest.setWrMsg(message);
 
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
 
@@ -215,15 +215,15 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
                 ngoFundRequest.setStatus("Sent to Director");
 
                 Organization org = null;
-                for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+                for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
                     if (organization instanceof NGODirectorOrganization) {
                         org = organization;
                         break;
                     }
                 }
                 if (org != null) {
-                    org.getWorkQueue().getWorkRequests().add(ngoFundRequest);
-                    userAccount.getWorkQueue().getWorkRequests().add(ngoFundRequest);
+                    org.getWrkQ().getWorkRequests().add(ngoFundRequest);
+                    userAccount.getWrkQ().getWorkRequests().add(ngoFundRequest);
                 }
                 JOptionPane.showMessageDialog(null, "Request to Director Successful!!!");
                 messageTxt.setText("");
@@ -241,7 +241,7 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-            ngoFundRequest.setMessage(message);
+            ngoFundRequest.setWrMsg(message);
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
 
             if (dialogResult == JOptionPane.YES_OPTION) {

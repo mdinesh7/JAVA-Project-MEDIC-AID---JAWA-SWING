@@ -269,59 +269,59 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSendRequestForInsuranceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendRequestForInsuranceActionPerformed
-        String policyNumber = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurancePolicyNumber();
-        String ssn = accountBillingRequest.getPatient().getSocialSecurityNumber();
-        String policyName = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getPolicyName();
-        String insuranceCompany = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getInsuranceCompany();
+        String policyNumber = accountBillingRequest.getPatient().getInsuranceCustomer().getInsPlcyNo();
+        String ssn = accountBillingRequest.getPatient().getSsn();
+        String policyName = accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getPlcyNm();
+        String insuranceCompany = accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getInsCmpny();
         double claimAmount = Double.parseDouble(txtInsuranceClaimAmount.getText());
-        double billAmount = accountBillingRequest.getBillingAmount();
+        double billAmount = accountBillingRequest.getBillingAmt();
         if (("Patient Transaction Completed").equals(accountBillingRequest.getStatus())) {
             JOptionPane.showMessageDialog(null, "Insurance request sent for claim");
             return;
         }
         Insurance insurance = new Insurance(policyName, insuranceCompany, claimAmount);
-        insurance.setCoverage(accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getCoverage());
+        insurance.setCvrg(accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getCvrg());
         InsuranceCustomer insuranceCustomer = new InsuranceCustomer(insurance, policyNumber);
-        insuranceCustomer.setCustomerFirstName(txtFirstName.getText().trim());
-        insuranceCustomer.setCustomerLastName((txtLastName.getText().trim()));
+        insuranceCustomer.setCustFrstNm(txtFirstName.getText().trim());
+        insuranceCustomer.setCustLstNme((txtLastName.getText().trim()));
 
         InsuranceWorkRequest insuranceWorkRequest = new InsuranceWorkRequest();
-        insuranceWorkRequest.setInsuranceCompany(insuranceCompany);
-        insuranceWorkRequest.setPolicyNumber(policyNumber);
-        insuranceWorkRequest.setPolicyName(policyName);
+        insuranceWorkRequest.setInsCmpny(insuranceCompany);
+        insuranceWorkRequest.setPlcyNo(policyNumber);
+        insuranceWorkRequest.setPlcyNm(policyName);
         insuranceWorkRequest.setSsn(ssn);
-        insuranceWorkRequest.setClaimAmount(claimAmount);
-        insuranceWorkRequest.setBillAmount(billAmount);
-        insuranceWorkRequest.setHealthCenter(enterprise.getName());
+        insuranceWorkRequest.setClaimAmt(claimAmount);
+        insuranceWorkRequest.setBillAmt(billAmount);
+        insuranceWorkRequest.setHealthCtr(enterprise.getName());
 
         insuranceWorkRequest.setSender(userAccount);
         insuranceWorkRequest.setStatus("Sent");
-        insuranceWorkRequest.setInsuranceCustomer(insuranceCustomer);
+        insuranceWorkRequest.setInsCust(insuranceCustomer);
 
         Organization org = null;
         InsuranceCompanyEnterprise matchedInsuranceCompany = null;
 
         List<Network> networks = ecosystem.getNetworks();
         for (Network network : networks) {
-            List<Enterprise> enterprises = network.getEnterpriseDirectory().getEnterpriseList();
+            List<Enterprise> enterprises = network.getEntDir().getEntList();
             for (Enterprise enterprise : enterprises) {
-                if (enterprise.getName().equalsIgnoreCase(accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getInsuranceCompany())) {
+                if (enterprise.getName().equalsIgnoreCase(accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getInsCmpny())) {
                     matchedInsuranceCompany = (InsuranceCompanyEnterprise) enterprise;
                 }
             }
         }
 
-        for (Organization organization : matchedInsuranceCompany.getOrganizationDirectory().getOrganizations()) {
+        for (Organization organization : matchedInsuranceCompany.getOrgDir().getOrganizations()) {
             if (organization instanceof InsuranceAgentOrganization) {
                 org = organization;
                 break;
             }
         }
         if (org != null) {
-            org.getWorkQueue().getWorkRequests().add(insuranceWorkRequest);
-            userAccount.getWorkQueue().getWorkRequests().add(insuranceWorkRequest);
+            org.getWrkQ().getWorkRequests().add(insuranceWorkRequest);
+            userAccount.getWrkQ().getWorkRequests().add(insuranceWorkRequest);
             accountBillingRequest.setStatus("Patient Transaction Completed");
-            accountBillingRequest.getPatient().setIsTreatmentFinished(true);
+            accountBillingRequest.getPatient().setIsTrtmntdone(true);
             JOptionPane.showMessageDialog(null, "Money received from patient: " + String.format("%.2f", String.valueOf(payableAmount)) + ". Insurance Claim Request Raised Successfully for amount:" + claimAmount);
             btnSendRequestForInsurance.setEnabled(false);
         }
@@ -372,20 +372,20 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void populate() {
-        String policyNumber = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurancePolicyNumber();
+        String policyNumber = accountBillingRequest.getPatient().getInsuranceCustomer().getInsPlcyNo();
         DecimalFormat df2 = new DecimalFormat("#.##");
-        double coverage = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getCoverage();
-        double billAmount = accountBillingRequest.getBillingAmount();
-        String ssn = accountBillingRequest.getPatient().getSocialSecurityNumber();
-        String policyName = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getPolicyName();
-        String insuranceCompany = accountBillingRequest.getPatient().getInsuranceCustomer().getInsurance().getInsuranceCompany();
+        double coverage = accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getCvrg();
+        double billAmount = accountBillingRequest.getBillingAmt();
+        String ssn = accountBillingRequest.getPatient().getSsn();
+        String policyName = accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getPlcyNm();
+        String insuranceCompany = accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getInsCmpny();
         double claimAmount = (coverage * billAmount) / 100;
         payableAmount = billAmount - claimAmount;
 
         txtPolicyNumber.setText(policyNumber);
         txtSSN.setText(ssn);
-        txtFirstName.setText(accountBillingRequest.getPatient().getPatientFirstName());
-        txtLastName.setText(accountBillingRequest.getPatient().getPatientLastName());
+        txtFirstName.setText(accountBillingRequest.getPatient().getPatFrstNm());
+        txtLastName.setText(accountBillingRequest.getPatient().getPatLstNm());
         txtBillAmount.setText(String.valueOf(billAmount));
         txtInsurancePolicyName.setText(policyName);
         txtInsuranceClaimAmount.setText(String.valueOf(claimAmount));

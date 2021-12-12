@@ -252,23 +252,23 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
                 patientTreatmentWorkRequest.setStatus("Consultation Completed");
 
                 AccountantBillingRequest accountantBillingRequest = new AccountantBillingRequest();
-                accountantBillingRequest.setBillingAmount(billingAmount);
+                accountantBillingRequest.setBillingAmt(billingAmount);
                 //  accountantBillingRequest.setPatientId(Integer.parseInt(txtPatientId.getText()));
 
                 accountantBillingRequest.setSender(userAccount);
                 accountantBillingRequest.setStatus("Sent");
-                accountantBillingRequest.setPatient(patientTreatmentWorkRequest.getPatient());
+                accountantBillingRequest.setPatient(patientTreatmentWorkRequest.getPat());
 
                 Organization org = null;
-                for (Organization organization : enterprise.getOrganizationDirectory().getOrganizations()) {
+                for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
                     if (organization instanceof AccountantOrganization) {
                         org = organization;
                         break;
                     }
                 }
                 if (org != null) {
-                    org.getWorkQueue().getWorkRequests().add(accountantBillingRequest);
-                    userAccount.getWorkQueue().getWorkRequests().add(accountantBillingRequest);
+                    org.getWrkQ().getWorkRequests().add(accountantBillingRequest);
+                    userAccount.getWrkQ().getWorkRequests().add(accountantBillingRequest);
                 }
 
                 JOptionPane.showMessageDialog(null, "Prescription submitted successfully");
@@ -317,10 +317,10 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
 
     private void populateTable() {
 
-        txtFirstName.setText(patientTreatmentWorkRequest.getPatient().getPatientFirstName());
-        txtLastName.setText(patientTreatmentWorkRequest.getPatient().getPatientLastName());
-        txtPatientId.setText(String.valueOf(patientTreatmentWorkRequest.getPatient().getPatientId()));
-        txtAssignedDoctor.setText(patientTreatmentWorkRequest.getAssignedDoctor().getEmployee().getName());
+        txtFirstName.setText(patientTreatmentWorkRequest.getPat().getPatFrstNm());
+        txtLastName.setText(patientTreatmentWorkRequest.getPat().getPatLstNm());
+        txtPatientId.setText(String.valueOf(patientTreatmentWorkRequest.getPat().getPatId()));
+        txtAssignedDoctor.setText(patientTreatmentWorkRequest.getAssignedDoc().getEmp().getEmpName());
         txtConsultationCharges.setText(String.valueOf(consultationCharges));
 
     }
