@@ -10,14 +10,14 @@ import java.util.ArrayList;
 
 public class OrganizationDirectory {
 
-    private ArrayList<Organization> organizationList;
+    private ArrayList<Organization> orgList;
 
     public OrganizationDirectory() {
-        organizationList = new ArrayList();
+        orgList = new ArrayList();
     }
 
     public ArrayList<Organization> getOrganizations() {
-        return organizationList;
+        return orgList;
     }
 
     public Organization createOrganization(Type type) {
@@ -26,25 +26,25 @@ public class OrganizationDirectory {
         // Adding HealthCenter Organizations
         if (type.getValue().equals(Type.Doctor.getValue())) {
             organization = new DoctorOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
         } else if (type.getValue().equals(Type.Lab.getValue())) {
             organization = new LabOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
         }
 
         else if (type.getValue().equals(Type.Patient.getValue())) {
             organization = new PatientOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         }
 
         else if (type.getValue().equals(Type.Accountant.getValue())) {
             organization = new AccountantOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         } else if (type.getValue().equals(Type.BloodBank.getValue())) {
             organization = new BloodBankManagerOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         }
 
@@ -52,45 +52,45 @@ public class OrganizationDirectory {
 
         else if (type.getValue().equals(Type.HealthcareOfficer.getValue())) {
             organization = new HealthCareOfficerOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         }
 
         else if (type.getValue().equals(Type.Secretary.getValue())) {
             organization = new SecretaryOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         } else if (type.getValue().equals(Type.Treasurer.getValue())) {
             organization = new TreasurerOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         }
         // Adding Insurance Organizations
 
         else if (type.getValue().equals(Type.InsuranceAgent.getValue())) {
             organization = new InsuranceAgentOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         } else if (type.getValue().equals(Type.InsuranceFinanceOrganization.getValue())) {
             organization = new InsuranceFinanceOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         } else if (type.getValue().equals(Type.InsurancePolicyPlanner.getValue())) {
             organization = new InsurancePolicyPlannerOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         }
         // Adding NGO Organizations
 
         else if (type.getValue().equals(Type.NGOAdministrator.getValue())) {
             organization = new NGOAdminOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         }
 
         else if (type.getValue().equals(Type.Director.getValue())) {
             organization = new NGODirectorOrganization();
-            organizationList.add(organization);
+            orgList.add(organization);
 
         }
         return organization;

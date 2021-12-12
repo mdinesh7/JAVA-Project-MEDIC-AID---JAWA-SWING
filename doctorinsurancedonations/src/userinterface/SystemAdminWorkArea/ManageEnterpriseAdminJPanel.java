@@ -55,12 +55,12 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
         for (Network network : system.getNetworks()) {
-            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-                for (UserAccount userAccount : enterprise.getUserAccountDirectory().getUserAccountList()) {
+            for (Enterprise enterprise : network.getEntDir().getEntList()) {
+                for (UserAccount userAccount : enterprise.getUsrAccDir().getUsrAccList()) {
                     Object[] row = new Object[4];
                     row[0] = enterprise.getName();
-                    row[1] = network.getName();
-                    row[2] = userAccount.getUsername();
+                    row[1] = network.getNetwrkNm();
+                    row[2] = userAccount.getUname();
                     row[3] = enterprise.getEntType().getValue();
 
                     model.addRow(row);
@@ -84,7 +84,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     private void populateEnterpriseComboBox(Network network) {
         enterpriseJComboBox.removeAllItems();
 
-        for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+        for (Enterprise enterprise : network.getEntDir().getEntList()) {
             enterpriseJComboBox.addItem(enterprise);
         }
 
@@ -291,17 +291,17 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Name can't be empty");
             return;
         } else {
-            List<UserAccount> userAccountList = enterprise.getUserAccountDirectory().getUserAccountList();
+            List<UserAccount> userAccountList = enterprise.getUsrAccDir().getUsrAccList();
             for (UserAccount userAccount : userAccountList) {
-                if (userAccount.getUsername().equals(username)) {
+                if (userAccount.getUname().equals(username)) {
                     JOptionPane.showMessageDialog(null, "username already taken!!");
                     usernameJTextField.setBorder(BorderFactory.createLineBorder(Color.RED));
                     return;
                 }
             }
             
-            Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
-            UserAccount userAccount = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new EnterpriseAdminRole());
+            Employee employee = enterprise.getEmpDir().createEmployee(name);
+            UserAccount userAccount = enterprise.getUsrAccDir().createUserAccount(username, password, employee, new EnterpriseAdminRole());
             populateTable();
 
             passwordJLabel.setForeground(Color.BLACK);

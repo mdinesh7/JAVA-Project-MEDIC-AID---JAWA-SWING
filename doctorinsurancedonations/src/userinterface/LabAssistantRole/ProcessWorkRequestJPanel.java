@@ -108,7 +108,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         } else {
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             if (dialogResult == JOptionPane.YES_OPTION) {
-                patientTreatmentWorkRequest.setLabResult(labResult);
+                patientTreatmentWorkRequest.setLabRslt(labResult);
                 patientTreatmentWorkRequest.setStatus("Lab Test Completed");
                 JOptionPane.showMessageDialog(null, "Result submitted successfully");
                 resultJTextField.setText("");

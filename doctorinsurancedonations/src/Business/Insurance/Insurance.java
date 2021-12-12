@@ -12,15 +12,15 @@ package Business.Insurance;
 public class Insurance {
 
     private String plcyNm;
-    private String InsuranceCompany;
-    private double coverage;
-    private String policyTC;
-    private double monthlyPremium;
+    private String InsCmpny;
+    private double cvrg;
+    private String plcyTC;
+    private double monthlyPrm;
 
     public Insurance(String policyName, String InsuranceCompany, double coverage) {
         this.plcyNm = policyName;
-        this.InsuranceCompany = InsuranceCompany;
-        this.coverage = coverage;
+        this.InsCmpny = InsuranceCompany;
+        this.cvrg = coverage;
     }
 
     public String getPlcyNm() {
@@ -31,36 +31,36 @@ public class Insurance {
         this.plcyNm = policyType;
     }
 
-    public double getMonthlyPremium() {
-        return monthlyPremium;
+    public double getMonthlyPrm() {
+        return monthlyPrm;
     }
 
-    public void setMonthlyPremium(double monthlyPremium) {
-        this.monthlyPremium = monthlyPremium;
+    public void setMonthlyPrm(double monthlyPrm) {
+        this.monthlyPrm = monthlyPrm;
     }
 
-    public String getInsuranceCompany() {
-        return InsuranceCompany;
+    public String getInsCmpny() {
+        return InsCmpny;
     }
 
-    public void setInsuranceCompany(String InsuranceCompany) {
-        this.InsuranceCompany = InsuranceCompany;
+    public void setInsCmpny(String InsCmpny) {
+        this.InsCmpny = InsCmpny;
     }
 
-    public double getCoverage() {
-        return coverage;
+    public double getCvrg() {
+        return cvrg;
     }
 
-    public void setCoverage(double coverage) {
-        this.coverage = coverage;
+    public void setCvrg(double cvrg) {
+        this.cvrg = cvrg;
     }
 
-    public String getPolicyTC() {
-        return policyTC;
+    public String getPlcyTC() {
+        return plcyTC;
     }
 
-    public void setPolicyTC(String policyTC) {
-        this.policyTC = policyTC;
+    public void setPlcyTC(String plcyTC) {
+        this.plcyTC = plcyTC;
     }
 
     @Override

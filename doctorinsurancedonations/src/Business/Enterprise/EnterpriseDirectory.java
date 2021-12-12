@@ -12,47 +12,47 @@ import java.util.ArrayList;
  * @author dineshmurugesan
  */
 public class EnterpriseDirectory {
-    private ArrayList<Enterprise> enterpriseList;
+    private ArrayList<Enterprise> entList;
    
 
-    public ArrayList<Enterprise> getEnterpriseList() {
-        return enterpriseList;
+    public ArrayList<Enterprise> getEntList() {
+        return entList;
     }
 
-    public void setEnterpriseList(ArrayList<Enterprise> enterpriseList) {
-        this.enterpriseList = enterpriseList;
+    public void setEntList(ArrayList<Enterprise> entList) {
+        this.entList = entList;
     }
     
     public EnterpriseDirectory(){
-        enterpriseList=new ArrayList<Enterprise>();
+        entList=new ArrayList<Enterprise>();
     }
     
     //Create enterprise
-    public Enterprise createAndAddEnterprise(String name,Enterprise.EntType type){
+    public Enterprise crtAndAddEnt(String name,Enterprise.EntType type){
         Enterprise enterprise=null;
         if(type==Enterprise.EntType.HealthCenter){
             enterprise=new HealthCenterEnterprise(name);
-            enterpriseList.add(enterprise);
+            entList.add(enterprise);
         }
         
         else if(type == Enterprise.EntType.Government)
         {
             enterprise =  new GovernmentEnterprise(name);
-            enterpriseList.add(enterprise);
+            entList.add(enterprise);
             
         }
         
         else if(type == Enterprise.EntType.InsuranceCompany)
         {
             enterprise = new InsuranceCompanyEnterprise(name);
-            enterpriseList.add(enterprise);
+            entList.add(enterprise);
             
             
         }
         else if(type == Enterprise.EntType.NGO)
         {
             enterprise = new NGOEnterprise(name);
-            enterpriseList.add(enterprise);
+            entList.add(enterprise);
             
         }
         return enterprise;

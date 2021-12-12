@@ -14,16 +14,16 @@ import Business.UserAccount.UserAccount;
  */
 public class PatientTreatmentWorkRequest extends WorkRequest {
 
-    private String registrationDate;
+    private String regDt;
     private String reasonForVisit;
-    private Patient patient;
-    private String labTestType;
-    private String labResult;
-    private UserAccount labAssistant;
-    private String labTestMessage;
+    private Patient pat;
+    private String labTstType;
+    private String labRslt;
+    private UserAccount labAst;
+    private String labTstMsg;
     private String prescription;
-    private double billAmount;
-    private UserAccount assignedDoctor;
+    private double billAmt;
+    private UserAccount assignedDoc;
     private int bloodUnits;
     private String bloodBankMessage;
     private UserAccount bloodBankManager;
@@ -53,17 +53,17 @@ public class PatientTreatmentWorkRequest extends WorkRequest {
     }
 
     public PatientTreatmentWorkRequest(String Date, String reasonForVisit, Patient patient) {
-        this.registrationDate = Date;
+        this.regDt = Date;
         this.reasonForVisit = reasonForVisit;
-        this.patient = patient;
+        this.pat = patient;
     }
 
-    public String getRegistrationDate() {
-        return registrationDate;
+    public String getRegDt() {
+        return regDt;
     }
 
-    public void setRegistrationDate(String Date) {
-        this.registrationDate = Date;
+    public void setRegDt(String Date) {
+        this.regDt = Date;
     }
 
     public String getReasonForVisit() {
@@ -74,44 +74,44 @@ public class PatientTreatmentWorkRequest extends WorkRequest {
         this.reasonForVisit = reasonForVisit;
     }
 
-    public Patient getPatient() {
-        return patient;
+    public Patient getPat() {
+        return pat;
     }
 
-    public void setPatient(Patient patient) {
-        this.patient = patient;
+    public void setPat(Patient pat) {
+        this.pat = pat;
     }
 
-    public String getLabTestType() {
-        return labTestType;
+    public String getLabTstType() {
+        return labTstType;
     }
 
-    public void setLabTestType(String labTestType) {
-        this.labTestType = labTestType;
+    public void setLabTstType(String labTstType) {
+        this.labTstType = labTstType;
     }
 
-    public String getLabResult() {
-        return labResult;
+    public String getLabRslt() {
+        return labRslt;
     }
 
-    public void setLabResult(String labResult) {
-        this.labResult = labResult;
+    public void setLabRslt(String labRslt) {
+        this.labRslt = labRslt;
     }
 
-    public UserAccount getLabAssistant() {
-        return labAssistant;
+    public UserAccount getLabAst() {
+        return labAst;
     }
 
-    public void setLabAssistant(UserAccount labAssistant) {
-        this.labAssistant = labAssistant;
+    public void setLabAst(UserAccount labAst) {
+        this.labAst = labAst;
     }
 
-    public String getLabTestMessage() {
-        return labTestMessage;
+    public String getLabTstMsg() {
+        return labTstMsg;
     }
 
-    public void setLabTestMessage(String labTestMessage) {
-        this.labTestMessage = labTestMessage;
+    public void setLabTstMsg(String labTstMsg) {
+        this.labTstMsg = labTstMsg;
     }
 
     public String getPrescription() {
@@ -122,20 +122,20 @@ public class PatientTreatmentWorkRequest extends WorkRequest {
         this.prescription = prescription;
     }
 
-    public double getBillAmount() {
-        return billAmount;
+    public double getBillAmt() {
+        return billAmt;
     }
 
-    public void setBillAmount(double billAmount) {
-        this.billAmount = billAmount;
+    public void setBillAmt(double billAmt) {
+        this.billAmt = billAmt;
     }
 
-    public UserAccount getAssignedDoctor() {
-        return assignedDoctor;
+    public UserAccount getAssignedDoc() {
+        return assignedDoc;
     }
 
-    public void setAssignedDoctor(UserAccount assignedDoctor) {
-        this.assignedDoctor = assignedDoctor;
+    public void setAssignedDoc(UserAccount assignedDoc) {
+        this.assignedDoc = assignedDoc;
     }
 
     @Override

@@ -245,7 +245,7 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter numeric values for monthly premium");
         }
 
-        List<Insurance> policies = insuranceCompanyEnterprise.getInsurancePolicyDirectory().getPolicies();
+        List<Insurance> policies = insuranceCompanyEnterprise.getInsPlcyDir().getPolicies();
         for (Insurance insurance : policies) {
             if (policyName.equalsIgnoreCase(insurance.getPlcyNm())) {
                 JOptionPane.showMessageDialog(null, "Policy already exists, please provide some other policy name");
@@ -253,13 +253,13 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
             }
         }
         Insurance insurance = new Insurance(policyName, insuranceCompanyEnterprise.getName(), policyCoverage);
-        insurance.setPolicyTC(policyTC);
-        insurance.setMonthlyPremium(monthlyPremium);
+        insurance.setPlcyTC(policyTC);
+        insurance.setMonthlyPrm(monthlyPremium);
 
         // InsuranceCompanyEnterprise insuranceCompanyEnterprise = insuranceCompanyEnterprise;
-        insuranceCompanyEnterprise.getInsurancePolicyDirectory().getPolicies().add(insurance);
+        insuranceCompanyEnterprise.getInsPlcyDir().getPolicies().add(insurance);
         JOptionPane.showMessageDialog(null, "Policy Added Successfully");
-        System.out.println("Policy Added Successfully:" + insuranceCompanyEnterprise.getInsurancePolicyDirectory().getPolicies());
+        System.out.println("Policy Added Successfully:" + insuranceCompanyEnterprise.getInsPlcyDir().getPolicies());
         populateTable();
         txtPolicyName.setText("");
         txtMonthlyPrem.setText("");
@@ -292,13 +292,13 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
 
         DefaultTableModel model = (DefaultTableModel) tblPolicies.getModel();
         model.setRowCount(0);
-        List<Insurance> policies = insuranceCompanyEnterprise.getInsurancePolicyDirectory().getPolicies();
+        List<Insurance> policies = insuranceCompanyEnterprise.getInsPlcyDir().getPolicies();
         for (Insurance insurancePolicy : policies) {
             Object[] row = new Object[4];
             row[0] = insurancePolicy;
-            row[1] = insurancePolicy.getCoverage();
-            row[2] = insurancePolicy.getMonthlyPremium();
-            row[3] = insurancePolicy.getPolicyTC();
+            row[1] = insurancePolicy.getCvrg();
+            row[2] = insurancePolicy.getMonthlyPrm();
+            row[3] = insurancePolicy.getPlcyTC();
             model.addRow(row);
         }
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);

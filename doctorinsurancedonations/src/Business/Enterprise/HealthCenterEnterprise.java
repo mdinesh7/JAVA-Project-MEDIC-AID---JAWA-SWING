@@ -17,11 +17,11 @@ import java.util.List;
  */
 public class HealthCenterEnterprise extends Enterprise {
 
-    private PatientDirectory patientDirectory;
+    private PatientDirectory patientDir;
 
     public HealthCenterEnterprise(String name) {
         super(name, EntType.HealthCenter);
-        patientDirectory = new PatientDirectory();
+        patientDir = new PatientDirectory();
     }
 
     @Override
@@ -44,12 +44,12 @@ public class HealthCenterEnterprise extends Enterprise {
         return this.getName();
     }
 
-    public PatientDirectory getPatientDirectory() {
-        return patientDirectory;
+    public PatientDirectory getPatientDir() {
+        return patientDir;
     }
 
-    public void setPatientDirectory(PatientDirectory patientDirectory) {
-        this.patientDirectory = patientDirectory;
+    public void setPatientDir(PatientDirectory patientDir) {
+        this.patientDir = patientDir;
     }
 
 }

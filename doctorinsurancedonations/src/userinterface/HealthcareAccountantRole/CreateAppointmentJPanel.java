@@ -701,22 +701,22 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
             HealthCenterEnterprise healthCenterEnterprise = (HealthCenterEnterprise) enterprise;
             Patient patient = new Patient();
             
-            patient.setAppointmentDate(txtDate.getText());
-            patient.setPatientId(patientId);
-            patient.setPatientFirstName(firstName);
-            patient.setPatientLastName(lastName);
+            patient.setAptDt(txtDate.getText());
+            patient.setPatId(patientId);
+            patient.setPatFrstNm(firstName);
+            patient.setPatLstNm(lastName);
             patient.setGender(gender);
-            patient.setPatientEmail(txtPatientEmail.getText().trim());
+            patient.setPatmail(txtPatientEmail.getText().trim());
             
-            patient.setContactNumber(phoneNo);
-            patient.setPatientAge(age);
-            patient.setSocialSecurityNumber(ssn);
+            patient.setCntctNo(phoneNo);
+            patient.setPatAge(age);
+            patient.setSsn(ssn);
             patient.setAddress(address);
-            patient.setDoctorType(doctorTypeJComboBox1.getSelectedItem().toString());
+            patient.setDocType(doctorTypeJComboBox1.getSelectedItem().toString());
             
             patient.setInsuranceCustomer(insuranceCustomer);
             
-            healthCenterEnterprise.getPatientDirectory().getPatients().add(patient);
+            healthCenterEnterprise.getPatientDir().getPatients().add(patient);
             
             PatientTreatmentWorkRequest patientTreatmentWorkRequest = new PatientTreatmentWorkRequest(registrationDate, reasonForVisit, patient);
             patientTreatmentWorkRequest.setStatus("Waiting for Doctor");
@@ -730,8 +730,8 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
                 }
             }
             if (org != null) {
-                org.getWorkQueue().getWorkRequests().add(patientTreatmentWorkRequest);
-                userAccount.getWorkQueue().getWorkRequests().add(patientTreatmentWorkRequest);
+                org.getWrkQ().getWorkRequests().add(patientTreatmentWorkRequest);
+                userAccount.getWrkQ().getWorkRequests().add(patientTreatmentWorkRequest);
                 refresh();
                 JOptionPane.showMessageDialog(null, "Patient Registered Successfully");
             }
@@ -757,7 +757,7 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
         List<HealthCenterEnterprise> healthCenterEnterprises = new ArrayList<>();
         
         for (Network network : networks) {
-            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+            for (Enterprise enterprise : network.getEntDir().getEntList()) {
                 if (enterprise instanceof HealthCenterEnterprise) {
                     healthCenterEnterprises.add((HealthCenterEnterprise) enterprise);
                 }
@@ -765,9 +765,9 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
         }
         
         for (HealthCenterEnterprise healthCenterEnterprise : healthCenterEnterprises) {
-            List<Patient> patients = healthCenterEnterprise.getPatientDirectory().getPatients();
+            List<Patient> patients = healthCenterEnterprise.getPatientDir().getPatients();
             for (Patient patient : patients) {
-                if (ssn.equals(patient.getSocialSecurityNumber())) {
+                if (ssn.equals(patient.getSsn())) {
                     autopopulateFields(patient);
                     isPatientFound = true;
                 }
@@ -788,7 +788,7 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
         
         List<Network> networks = ecosystem.getNetworks();
         for (Network network : networks) {
-            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+            for (Enterprise enterprise : network.getEntDir().getEntList()) {
                 if (enterprise instanceof InsuranceCompanyEnterprise) {
                     insuranceEnterprises.add((InsuranceCompanyEnterprise) enterprise);
                 }
@@ -796,9 +796,9 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
         }
         
         for (InsuranceCompanyEnterprise insuranceCompanyEnterprise : insuranceEnterprises) {
-            List<InsuranceCustomer> insuranceCustomers = insuranceCompanyEnterprise.getInsuranceCustomerDirectory().getInsuranceCustomers();
+            List<InsuranceCustomer> insuranceCustomers = insuranceCompanyEnterprise.getInsCustDir().getInsCust();
             for (InsuranceCustomer insuranceCustomer : insuranceCustomers) {
-                if (insurancePolicyNumber.equals(insuranceCustomer.getInsurancePolicyNumber()) && ssn.equals(insuranceCustomer.getSsn())) {
+                if (insurancePolicyNumber.equals(insuranceCustomer.getInsPlcyNo()) && ssn.equals(insuranceCustomer.getSsn())) {
                     matchedCustomer = insuranceCustomer;
                     
                 }
@@ -806,10 +806,10 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
         }
         
         if (matchedCustomer != null) {
-            txtInsuranceCompany.setText(matchedCustomer.getInsurance().getInsuranceCompany());
-            txtPolicyName.setText(matchedCustomer.getInsurance().getPlcyNm());
+            txtInsuranceCompany.setText(matchedCustomer.getIns().getInsCmpny());
+            txtPolicyName.setText(matchedCustomer.getIns().getPlcyNm());
             //  txtPolicyNo.setText(matchedCustomer.getInsurancePolicyNumber());
-            txtCoverage.setText(String.valueOf(matchedCustomer.getInsurance().getCoverage()));
+            txtCoverage.setText(String.valueOf(matchedCustomer.getIns().getCvrg()));
             txtPolicyNum.setEnabled(false);
             txtSSN.setEnabled(false);
         } else {
@@ -962,14 +962,14 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
     }
     
     private void autopopulateFields(Patient patient) {
-        txtFirstName.setText(patient.getPatientFirstName());
-        txtLastName.setText(patient.getPatientLastName());
-        txtPatientIdentifier.setText(patient.getPatientId());
-        txtHomePhone.setText(patient.getContactNumber());
-        txtSSN.setText(patient.getSocialSecurityNumber());
-        txtAge.setText(patient.getPatientAge());
+        txtFirstName.setText(patient.getPatFrstNm());
+        txtLastName.setText(patient.getPatLstNm());
+        txtPatientIdentifier.setText(patient.getPatId());
+        txtHomePhone.setText(patient.getCntctNo());
+        txtSSN.setText(patient.getSsn());
+        txtAge.setText(patient.getPatAge());
         txtAddress.setText(patient.getAddress());
-        txtPatientEmail.setText(patient.getPatientEmail());
+        txtPatientEmail.setText(patient.getPatmail());
         
         String sex = patient.getGender();
         
@@ -998,7 +998,7 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
         List<HealthCenterEnterprise> healthCenterEnterprises = new ArrayList<>();
         
         for (Network network : networks) {
-            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+            for (Enterprise enterprise : network.getEntDir().getEntList()) {
                 if (enterprise instanceof HealthCenterEnterprise) {
                     healthCenterEnterprises.add((HealthCenterEnterprise) enterprise);
                 }
@@ -1006,9 +1006,9 @@ public class CreateAppointmentJPanel extends javax.swing.JPanel {
         }
         
         for (HealthCenterEnterprise healthCenterEnterprise : healthCenterEnterprises) {
-            List<Patient> patients = healthCenterEnterprise.getPatientDirectory().getPatients();
+            List<Patient> patients = healthCenterEnterprise.getPatientDir().getPatients();
             for (Patient patient : patients) {
-                if (patientEmail.equals(patient.getPatientEmail())) {
+                if (patientEmail.equals(patient.getPatmail())) {
                     isPatientFound = true;
                     break;
                 }

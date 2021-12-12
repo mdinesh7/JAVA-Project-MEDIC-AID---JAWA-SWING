@@ -123,7 +123,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             return;
         }
 
-        patientTreatmentWorkRequest.setLabTestMessage(message);
+        patientTreatmentWorkRequest.setLabTstMsg(message);
         patientTreatmentWorkRequest.setSender(userAccount);
         patientTreatmentWorkRequest.setStatus("SentToLab");
         patientTreatmentWorkRequest.setReceiver(null);
@@ -136,8 +136,8 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             }
         }
         if (org != null) {
-            org.getWorkQueue().getWorkRequests().add(patientTreatmentWorkRequest);
-            userAccount.getWorkQueue().getWorkRequests().add(patientTreatmentWorkRequest);
+            org.getWrkQ().getWorkRequests().add(patientTreatmentWorkRequest);
+            userAccount.getWrkQ().getWorkRequests().add(patientTreatmentWorkRequest);
             JOptionPane.showMessageDialog(null, "Lab request sent");
             txtLabMessage.setText("");
             txtLabType.setText("");

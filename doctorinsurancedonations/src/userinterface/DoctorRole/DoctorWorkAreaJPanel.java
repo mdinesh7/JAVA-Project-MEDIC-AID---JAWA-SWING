@@ -50,18 +50,18 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (WorkRequest request : doctorOrganization.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : doctorOrganization.getWrkQ().getWorkRequests()) {
             Object[] row = new Object[8];
             
-            if(((PatientTreatmentWorkRequest) request).getPatient().getDoctorType().equals(userAccount.getType())){
+            if(((PatientTreatmentWorkRequest) request).getPat().getDocType().equals(userAccount.getType())){
             
-            row[0] = ((PatientTreatmentWorkRequest) request).getRegistrationDate();
-            row[1] = String.valueOf(((PatientTreatmentWorkRequest) request).getPatient().getPatientId());
-            row[2] = ((PatientTreatmentWorkRequest) request).getPatient().getPatientFirstName() + " " + ((PatientTreatmentWorkRequest) request).getPatient().getPatientLastName();
+            row[0] = ((PatientTreatmentWorkRequest) request).getRegDt();
+            row[1] = String.valueOf(((PatientTreatmentWorkRequest) request).getPat().getPatId());
+            row[2] = ((PatientTreatmentWorkRequest) request).getPat().getPatFrstNm() + " " + ((PatientTreatmentWorkRequest) request).getPat().getPatLstNm();
             row[3] = ((PatientTreatmentWorkRequest) request);
-            row[4] = ((PatientTreatmentWorkRequest) request).getAssignedDoctor();
-            row[5] = ((PatientTreatmentWorkRequest) request).getLabAssistant();
-            row[6] = ((PatientTreatmentWorkRequest) request).getLabResult();
+            row[4] = ((PatientTreatmentWorkRequest) request).getAssignedDoc();
+            row[5] = ((PatientTreatmentWorkRequest) request).getLabAst();
+            row[6] = ((PatientTreatmentWorkRequest) request).getLabRslt();
             row[7] = request.getStatus();
 
             model.addRow(row);
@@ -263,8 +263,8 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             return;
         } else {
             workRequest = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 3);
-            if (workRequest.getAssignedDoctor() != null) {
-                if (userAccount.equals(workRequest.getAssignedDoctor())) {
+            if (workRequest.getAssignedDoc() != null) {
+                if (userAccount.equals(workRequest.getAssignedDoc())) {
                     if (workRequest.getStatus().equalsIgnoreCase("Under Consultation")) {
 
                         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -293,11 +293,11 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         } else {
 
             WorkRequest patientTreatmentWorkRequest = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 3);
-            if (((PatientTreatmentWorkRequest) patientTreatmentWorkRequest).getAssignedDoctor() == null) {
+            if (((PatientTreatmentWorkRequest) patientTreatmentWorkRequest).getAssignedDoc() == null) {
 
                 if (patientTreatmentWorkRequest.getStatus().equalsIgnoreCase("Waiting for Doctor")) {
                     //patientTreatmentWorkRequest.setReceiver(userAccount);
-                    ((PatientTreatmentWorkRequest) patientTreatmentWorkRequest).setAssignedDoctor(userAccount);
+                    ((PatientTreatmentWorkRequest) patientTreatmentWorkRequest).setAssignedDoc(userAccount);
                     patientTreatmentWorkRequest.setStatus("Under Consultation");
                     populateRequestTable();
                     JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
@@ -306,7 +306,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
                 }
 
             } else {
-                if(userAccount.equals(((PatientTreatmentWorkRequest) patientTreatmentWorkRequest).getAssignedDoctor())) {
+                if(userAccount.equals(((PatientTreatmentWorkRequest) patientTreatmentWorkRequest).getAssignedDoc())) {
                  JOptionPane.showMessageDialog(null, "Request is already assigned to you");
                 } else {
                     JOptionPane.showMessageDialog(null, "Not Authorized");
@@ -339,9 +339,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             return;
         } else {
             workRequest = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 3);
-            if(workRequest.getAssignedDoctor() != null)
+            if(workRequest.getAssignedDoc() != null)
             {
-            if (userAccount.equals(workRequest.getAssignedDoctor())) {
+            if (userAccount.equals(workRequest.getAssignedDoc())) {
                 if (workRequest.getStatus().equalsIgnoreCase("Lab Test Completed") || workRequest.getStatus().equalsIgnoreCase("Under Consultation")||workRequest.getStatus().equalsIgnoreCase("Blood Bank Request Completed")) {
 
                     CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -370,14 +370,14 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             return;
         } else {
             workRequest = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 3);
-            if(workRequest.getAssignedDoctor() != null)
+            if(workRequest.getAssignedDoc() != null)
             {
-            if (userAccount.equals(workRequest.getAssignedDoctor())) {
+            if (userAccount.equals(workRequest.getAssignedDoc())) {
                 if (workRequest.getStatus().equalsIgnoreCase("Prescription Provided")) {
 
                     CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                     userProcessContainer.add("RequestBillingJPanel", new RequestBillingJPanel(userProcessContainer, userAccount, enterprise, workRequest));
-                    workRequest.getPatient().setIsTreatmentFinished(true);
+                    workRequest.getPat().setIsTrtmntdone(true);
                     layout.next(userProcessContainer);
                 } else {
                     if(workRequest.getStatus().equalsIgnoreCase("Consultation Completed"))
@@ -413,8 +413,8 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         } else {
             workRequest = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 3);
            //request =(BloodBankWorkRequest) workRequestJTable.getValueAt(selectedRow, 3);
-            if (workRequest.getAssignedDoctor() != null) {
-                if (userAccount.equals(workRequest.getAssignedDoctor())) {
+            if (workRequest.getAssignedDoc() != null) {
+                if (userAccount.equals(workRequest.getAssignedDoc())) {
                     if (workRequest.getStatus().equalsIgnoreCase("Under Consultation")) {
 
                         CardLayout layout = (CardLayout) userProcessContainer.getLayout();

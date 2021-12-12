@@ -260,7 +260,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
 
             if (accountBillingRequest.getReceiver() != null) {
                 if (accountBillingRequest.getReceiver().equals(userAccount)) {
-                    if (accountBillingRequest.getStatus().equalsIgnoreCase("Pending on " + accountBillingRequest.getReceiver().getEmployee().getEmpName())) {
+                    if (accountBillingRequest.getStatus().equalsIgnoreCase("Pending on " + accountBillingRequest.getReceiver().getEmp().getEmpName())) {
                         AccountantProcessRequestJPanel panel = new AccountantProcessRequestJPanel(userProcessContainer, userAccount, accountBillingRequest, enterprise, ecoSystem);
                         userProcessContainer.add("AccountantProcessRequestJPanel", panel);
                         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -289,7 +289,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
             if (request.getReceiver() == null) {
 
                 request.setReceiver(userAccount);
-                request.setStatus("Pending on " + request.getReceiver().getEmployee().getEmpName());
+                request.setStatus("Pending on " + request.getReceiver().getEmp().getEmpName());
                 populateTable();
             } else {
                 JOptionPane.showMessageDialog(null, "The request is already assigned ");
@@ -323,16 +323,16 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (WorkRequest request : accountantOrganization.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : accountantOrganization.getWrkQ().getWorkRequests()) {
             Object[] row = new Object[6];
             String status = request.getStatus();
             row[0] = ((AccountantBillingRequest) request).getPatient();
-            row[1] = ((AccountantBillingRequest) request).getPatient().getPatientFirstName() + " " + ((AccountantBillingRequest) request).getPatient().getPatientLastName();
-            row[2] = request.getSender().getEmployee().getEmpName();
+            row[1] = ((AccountantBillingRequest) request).getPatient().getPatFrstNm() + " " + ((AccountantBillingRequest) request).getPatient().getPatLstNm();
+            row[2] = request.getSender().getEmp().getEmpName();
             if (status.equalsIgnoreCase("Sent to Treasurer") || status.equalsIgnoreCase("Sent to Secretary")) {
                 row[2] = null;
             } else {
-                row[3] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getEmpName();
+                row[3] = request.getReceiver() == null ? null : request.getReceiver().getEmp().getEmpName();
             }
             //row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
             row[4] = request.getStatus();
@@ -348,7 +348,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
 
     public void populateInsuranceClaimTable() {
         List<InsuranceWorkRequest> insuranceWorkRequests = new ArrayList<>();
-        ArrayList<WorkRequest> workRequests = userAccount.getWorkQueue().getWorkRequests();
+        ArrayList<WorkRequest> workRequests = userAccount.getWrkQ().getWorkRequests();
         for (WorkRequest workRequest : workRequests) {
             if (workRequest instanceof InsuranceWorkRequest) {
                 insuranceWorkRequests.add((InsuranceWorkRequest) workRequest);
@@ -361,10 +361,10 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
         for (InsuranceWorkRequest insuranceWorkRequest : insuranceWorkRequests) {
             Object[] row = new Object[6];
             row[0] = insuranceWorkRequest;
-            row[1] = userAccount.getEmployee().getEmpName();
-            row[2] = insuranceWorkRequest.getReceiver() == null ? "" : insuranceWorkRequest.getReceiver().getEmployee().getEmpName();
-            row[3] = insuranceWorkRequest.getBillAmount();
-            row[4] = insuranceWorkRequest.getClaimAmount();
+            row[1] = userAccount.getEmp().getEmpName();
+            row[2] = insuranceWorkRequest.getReceiver() == null ? "" : insuranceWorkRequest.getReceiver().getEmp().getEmpName();
+            row[3] = insuranceWorkRequest.getBillAmt();
+            row[4] = insuranceWorkRequest.getClaimAmt();
             row[5] = insuranceWorkRequest.getStatus();
             model.addRow(row);
 
