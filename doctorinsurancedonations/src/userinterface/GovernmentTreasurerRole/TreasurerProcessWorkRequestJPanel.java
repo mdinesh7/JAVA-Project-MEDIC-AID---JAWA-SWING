@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
 
     private JPanel jPanel;
-    private GovernmentFundRequest governmentFundRequest;
+    private GovernmentFundRequest govtFndRequest;
 
     /**
      * Creates new form ProcessWorkRequestJPanel
@@ -26,10 +26,10 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
     public TreasurerProcessWorkRequestJPanel(JPanel jPanel, GovernmentFundRequest fundRequest) {
         initComponents();
         this.jPanel = jPanel;
-        this.governmentFundRequest = fundRequest;
-        amountTxt.setText(String.valueOf(governmentFundRequest.getReqAmt()));
-        locationTxt.setText(governmentFundRequest.getLocation());
-        populationTxt.setText(String.valueOf(governmentFundRequest.getPop()));
+        this.govtFndRequest = fundRequest;
+        amntTxt.setText(String.valueOf(govtFndRequest.getReqAmt()));
+        locTxt.setText(govtFndRequest.getLocation());
+        popuTxt.setText(String.valueOf(govtFndRequest.getPop()));
 
     }
 
@@ -42,28 +42,28 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        submitJButton = new javax.swing.JButton();
+        sbmtJButton = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
-        btnReject = new javax.swing.JButton();
+        rejBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        messageTxt = new javax.swing.JTextField();
+        msgTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        locationTxt = new javax.swing.JTextField();
-        populationTxt = new javax.swing.JTextField();
+        locTxt = new javax.swing.JTextField();
+        popuTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        amountTxt = new javax.swing.JTextField();
+        amntTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        submitJButton.setBackground(new java.awt.Color(0, 153, 255));
-        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        submitJButton.setText("Disburse Amount");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        sbmtJButton.setBackground(new java.awt.Color(0, 153, 255));
+        sbmtJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        sbmtJButton.setText("Disburse Amount");
+        sbmtJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                sbmtJButtonActionPerformed(evt);
             }
         });
 
@@ -76,12 +76,12 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnReject.setBackground(new java.awt.Color(0, 153, 255));
-        btnReject.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnReject.setText("Reject");
-        btnReject.addActionListener(new java.awt.event.ActionListener() {
+        rejBtn.setBackground(new java.awt.Color(0, 153, 255));
+        rejBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        rejBtn.setText("Reject");
+        rejBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRejectActionPerformed(evt);
+                rejBtnActionPerformed(evt);
             }
         });
 
@@ -91,14 +91,14 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Location");
 
-        locationTxt.setEnabled(false);
+        locTxt.setEnabled(false);
 
-        populationTxt.setEnabled(false);
+        popuTxt.setEnabled(false);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Population");
 
-        amountTxt.setEnabled(false);
+        amntTxt.setEnabled(false);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Amount");
@@ -117,9 +117,9 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(198, 198, 198)
-                        .addComponent(submitJButton)
+                        .addComponent(sbmtJButton)
                         .addGap(18, 18, 18)
-                        .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(rejBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(215, 215, 215)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,10 +129,10 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel2))
                         .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(messageTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(populationTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(locationTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(amountTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(msgTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(popuTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(locTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(amntTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(22, 22, 22))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
@@ -158,23 +158,23 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
                         .addGap(49, 49, 49)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(locationTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(locTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(amountTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(amntTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(populationTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(popuTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(messageTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(msgTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGap(55, 55, 55)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(submitJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(rejBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sbmtJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -182,28 +182,28 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-        submitJButton.setEnabled(true);
-        String message = messageTxt.getText();
+    private void sbmtJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sbmtJButtonActionPerformed
+        sbmtJButton.setEnabled(true);
+        String message = msgTxt.getText();
         if (message.equals("")) {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         }
         else
         {
-        governmentFundRequest.setWrMsg(message);
+        govtFndRequest.setWrMsg(message);
          int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
          if (dialogResult == JOptionPane.YES_OPTION) {
-        governmentFundRequest.setStatus("Accepted");
+        govtFndRequest.setStatus("Accepted");
         JOptionPane.showMessageDialog(null, "Funds Disbursed Successfully!!!");
-        submitJButton.setEnabled(false);
-        messageTxt.setText("");
-        btnReject.setEnabled(false);
+        sbmtJButton.setEnabled(false);
+        msgTxt.setText("");
+        rejBtn.setEnabled(false);
         }
-         messageTxt.setText("");
+         msgTxt.setText("");
         }
 
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_sbmtJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
@@ -211,45 +211,45 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
         Component[] componentArray = jPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         TreasurerWorkAreaJPanel dwjp = (TreasurerWorkAreaJPanel) component;
-        dwjp.populateTable();
+        dwjp.pplTbl();
         CardLayout layout = (CardLayout) jPanel.getLayout();
         layout.previous(jPanel);
     }//GEN-LAST:event_backJButtonActionPerformed
 
-    private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
-        String message = messageTxt.getText();
+    private void rejBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejBtnActionPerformed
+        String message = msgTxt.getText();
         if (message.equals("")) {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-        governmentFundRequest.setWrMsg(message);
+        govtFndRequest.setWrMsg(message);
         int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             
             
             if (dialogResult == JOptionPane.YES_OPTION) {
-        governmentFundRequest.setStatus("Rejected");
-         messageTxt.setText("");
-            btnReject.setEnabled(false);
-            submitJButton.setEnabled(false);
+        govtFndRequest.setStatus("Rejected");
+         msgTxt.setText("");
+            rejBtn.setEnabled(false);
+            sbmtJButton.setEnabled(false);
         }
-         messageTxt.setText("");   
+         msgTxt.setText("");   
         }
-    }//GEN-LAST:event_btnRejectActionPerformed
+    }//GEN-LAST:event_rejBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField amountTxt;
+    private javax.swing.JTextField amntTxt;
     private javax.swing.JButton backJButton;
-    private javax.swing.JButton btnReject;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField locationTxt;
-    private javax.swing.JTextField messageTxt;
-    private javax.swing.JTextField populationTxt;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JTextField locTxt;
+    private javax.swing.JTextField msgTxt;
+    private javax.swing.JTextField popuTxt;
+    private javax.swing.JButton rejBtn;
+    private javax.swing.JButton sbmtJButton;
     // End of variables declaration//GEN-END:variables
 }

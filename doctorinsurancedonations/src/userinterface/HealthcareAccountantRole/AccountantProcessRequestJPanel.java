@@ -31,24 +31,24 @@ import javax.swing.JPanel;
  */
 public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private UserAccount userAccount;
-    private Enterprise enterprise;
-    private AccountantOrganization accountantOrganization;
-    private AccountantBillingRequest accountBillingRequest;
+    private JPanel jPanel;
+    private UserAccount usrAcnt;
+    private Enterprise entrpz;
+    private AccountantOrganization acntOrg;
+    private AccountantBillingRequest acntBillingReq;
     private EcoSystem ecosystem;
-    private double payableAmount;
+    private double pyblAmnt;
 
     /**
      * Creates new form AccountantWorkRequestJPanel
      */
     AccountantProcessRequestJPanel(JPanel userProcessContainer, UserAccount userAccount, AccountantBillingRequest request, Enterprise enterprise, EcoSystem ecoSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.userAccount = userAccount;
-        this.enterprise = enterprise;
-        this.accountantOrganization = accountantOrganization;
-        this.accountBillingRequest = request;
+        this.jPanel = userProcessContainer;
+        this.usrAcnt = userAccount;
+        this.entrpz = enterprise;
+        this.acntOrg = acntOrg;
+        this.acntBillingReq = request;
         this.ecosystem = ecoSystem;
         populate();
     }
@@ -69,19 +69,19 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        btnSendRequestForInsurance = new javax.swing.JButton();
-        txtSSN = new javax.swing.JTextField();
-        txtInsurancePolicyName = new javax.swing.JTextField();
-        txtPayableAmount = new javax.swing.JTextField();
-        txtFirstName = new javax.swing.JTextField();
-        txtBillAmount = new javax.swing.JTextField();
-        txtLastName = new javax.swing.JTextField();
-        txtPolicyNumber = new javax.swing.JTextField();
+        sndReqFrInsrbtn = new javax.swing.JButton();
+        ssnTxt = new javax.swing.JTextField();
+        InsrPlcyNumTxt = new javax.swing.JTextField();
+        pyblAmntTxt = new javax.swing.JTextField();
+        frstNmTxt = new javax.swing.JTextField();
+        billAmntTxt = new javax.swing.JTextField();
+        lstNmTxt = new javax.swing.JTextField();
+        plcyNumTxt = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        txtInsuranceClaimAmount = new javax.swing.JTextField();
+        insrClmAmntTxt = new javax.swing.JTextField();
         backJButton = new javax.swing.JButton();
-        btnCOllectCash = new javax.swing.JButton();
+        clctAmntBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -113,28 +113,28 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("Payable Amount");
 
-        btnSendRequestForInsurance.setBackground(new java.awt.Color(0, 153, 255));
-        btnSendRequestForInsurance.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnSendRequestForInsurance.setText("Receive Amount / Send request for Insurance Claim");
-        btnSendRequestForInsurance.addActionListener(new java.awt.event.ActionListener() {
+        sndReqFrInsrbtn.setBackground(new java.awt.Color(0, 153, 255));
+        sndReqFrInsrbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        sndReqFrInsrbtn.setText("Receive Amount / Send request for Insurance Claim");
+        sndReqFrInsrbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSendRequestForInsuranceActionPerformed(evt);
+                sndReqFrInsrbtnActionPerformed(evt);
             }
         });
 
-        txtSSN.setEditable(false);
+        ssnTxt.setEditable(false);
 
-        txtInsurancePolicyName.setEditable(false);
+        InsrPlcyNumTxt.setEditable(false);
 
-        txtPayableAmount.setEditable(false);
+        pyblAmntTxt.setEditable(false);
 
-        txtFirstName.setEditable(false);
+        frstNmTxt.setEditable(false);
 
-        txtBillAmount.setEditable(false);
+        billAmntTxt.setEditable(false);
 
-        txtLastName.setEditable(false);
+        lstNmTxt.setEditable(false);
 
-        txtPolicyNumber.setEditable(false);
+        plcyNumTxt.setEditable(false);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -144,7 +144,7 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("Insurance Claim Amount");
 
-        txtInsuranceClaimAmount.setEditable(false);
+        insrClmAmntTxt.setEditable(false);
 
         backJButton.setBackground(new java.awt.Color(0, 153, 255));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -155,12 +155,12 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnCOllectCash.setBackground(new java.awt.Color(0, 153, 255));
-        btnCOllectCash.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnCOllectCash.setText("Receive complete amount from patient");
-        btnCOllectCash.addActionListener(new java.awt.event.ActionListener() {
+        clctAmntBtn.setBackground(new java.awt.Color(0, 153, 255));
+        clctAmntBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        clctAmntBtn.setText("Receive complete amount from patient");
+        clctAmntBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCOllectCashActionPerformed(evt);
+                clctAmntBtnActionPerformed(evt);
             }
         });
 
@@ -182,8 +182,8 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel6))
                         .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtInsurancePolicyName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPolicyNumber, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(InsrPlcyNumTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(plcyNumTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(255, 255, 255)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -194,10 +194,10 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
                         .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtBillAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txtSSN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(frstNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lstNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(billAmntTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ssnTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(86, 86, 86)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,15 +207,15 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel7)
                                         .addGap(52, 52, 52)
-                                        .addComponent(txtPayableAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(pyblAmntTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel9)
                                         .addGap(52, 52, 52)
-                                        .addComponent(txtInsuranceClaimAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(insrClmAmntTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnSendRequestForInsurance)
+                                .addComponent(sndReqFrInsrbtn)
                                 .addGap(32, 32, 32)
-                                .addComponent(btnCOllectCash)))))
+                                .addComponent(clctAmntBtn)))))
                 .addContainerGap(108, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -230,73 +230,73 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
                         .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPolicyNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(plcyNumTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtInsurancePolicyName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(InsrPlcyNumTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtSSN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ssnTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(frstNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lstNmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtBillAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(billAmntTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(txtInsuranceClaimAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(insrClmAmntTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtPayableAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pyblAmntTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSendRequestForInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCOllectCash, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(sndReqFrInsrbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clctAmntBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(93, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSendRequestForInsuranceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendRequestForInsuranceActionPerformed
-        String policyNumber = accountBillingRequest.getPatient().getInsuranceCustomer().getInsPlcyNo();
-        String ssn = accountBillingRequest.getPatient().getSsn();
-        String policyName = accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getPlcyNm();
-        String insuranceCompany = accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getInsCmpny();
-        double claimAmount = Double.parseDouble(txtInsuranceClaimAmount.getText());
-        double billAmount = accountBillingRequest.getBillingAmt();
-        if (("Patient Transaction Completed").equals(accountBillingRequest.getStatus())) {
+    private void sndReqFrInsrbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sndReqFrInsrbtnActionPerformed
+        String policyNumber = acntBillingReq.getPatient().getInsuranceCustomer().getInsPlcyNo();
+        String ssn = acntBillingReq.getPatient().getSsn();
+        String policyName = acntBillingReq.getPatient().getInsuranceCustomer().getIns().getPlcyNm();
+        String insuranceCompany = acntBillingReq.getPatient().getInsuranceCustomer().getIns().getInsCmpny();
+        double claimAmount = Double.parseDouble(insrClmAmntTxt.getText());
+        double billAmount = acntBillingReq.getBillingAmt();
+        if (("Patient Transaction Completed").equals(acntBillingReq.getStatus())) {
             JOptionPane.showMessageDialog(null, "Insurance request sent for claim");
             return;
         }
-        Insurance insurance = new Insurance(policyName, insuranceCompany, claimAmount);
-        insurance.setCvrg(accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getCvrg());
-        InsuranceCustomer insuranceCustomer = new InsuranceCustomer(insurance, policyNumber);
-        insuranceCustomer.setCustFrstNm(txtFirstName.getText().trim());
-        insuranceCustomer.setCustLstNme((txtLastName.getText().trim()));
+        Insurance insr = new Insurance(policyName, insuranceCompany, claimAmount);
+        insr.setCvrg(acntBillingReq.getPatient().getInsuranceCustomer().getIns().getCvrg());
+        InsuranceCustomer insrCus = new InsuranceCustomer(insr, policyNumber);
+        insrCus.setCustFrstNm(frstNmTxt.getText().trim());
+        insrCus.setCustLstNme((lstNmTxt.getText().trim()));
 
-        InsuranceWorkRequest insuranceWorkRequest = new InsuranceWorkRequest();
-        insuranceWorkRequest.setInsCmpny(insuranceCompany);
-        insuranceWorkRequest.setPlcyNo(policyNumber);
-        insuranceWorkRequest.setPlcyNm(policyName);
-        insuranceWorkRequest.setSsn(ssn);
-        insuranceWorkRequest.setClaimAmt(claimAmount);
-        insuranceWorkRequest.setBillAmt(billAmount);
-        insuranceWorkRequest.setHealthCtr(enterprise.getName());
+        InsuranceWorkRequest isnrWrkReq = new InsuranceWorkRequest();
+        isnrWrkReq.setInsCmpny(insuranceCompany);
+        isnrWrkReq.setPlcyNo(policyNumber);
+        isnrWrkReq.setPlcyNm(policyName);
+        isnrWrkReq.setSsn(ssn);
+        isnrWrkReq.setClaimAmt(claimAmount);
+        isnrWrkReq.setBillAmt(billAmount);
+        isnrWrkReq.setHealthCtr(entrpz.getName());
 
-        insuranceWorkRequest.setSender(userAccount);
-        insuranceWorkRequest.setStatus("Sent");
-        insuranceWorkRequest.setInsCust(insuranceCustomer);
+        isnrWrkReq.setSender(usrAcnt);
+        isnrWrkReq.setStatus("Sent");
+        isnrWrkReq.setInsCust(insrCus);
 
         Organization org = null;
         InsuranceCompanyEnterprise matchedInsuranceCompany = null;
@@ -305,7 +305,7 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
         for (Network network : networks) {
             List<Enterprise> enterprises = network.getEntDir().getEntList();
             for (Enterprise enterprise : enterprises) {
-                if (enterprise.getName().equalsIgnoreCase(accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getInsCmpny())) {
+                if (enterprise.getName().equalsIgnoreCase(acntBillingReq.getPatient().getInsuranceCustomer().getIns().getInsCmpny())) {
                     matchedInsuranceCompany = (InsuranceCompanyEnterprise) enterprise;
                 }
             }
@@ -318,40 +318,43 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
             }
         }
         if (org != null) {
-            org.getWrkQ().getWorkRequests().add(insuranceWorkRequest);
-            userAccount.getWrkQ().getWorkRequests().add(insuranceWorkRequest);
-            accountBillingRequest.setStatus("Patient Transaction Completed");
-            accountBillingRequest.getPatient().setIsTrtmntdone(true);
-            JOptionPane.showMessageDialog(null, "Money received from patient: " + String.format("%.2f", String.valueOf(payableAmount)) + ". Insurance Claim Request Raised Successfully for amount:" + claimAmount);
-            btnSendRequestForInsurance.setEnabled(false);
+            org.getWrkQ().getWorkRequests().add(isnrWrkReq);
+            usrAcnt.getWrkQ().getWorkRequests().add(isnrWrkReq);
+            acntBillingReq.setStatus("Patient Transaction Completed");
+            acntBillingReq.getPatient().setIsTrtmntdone(true);
+            JOptionPane.showMessageDialog(null, "Money received from patient: " + String.format("%.2f", String.valueOf(pyblAmnt)) + ". Insurance Claim Request Raised Successfully for amount:" + claimAmount);
+            sndReqFrInsrbtn.setEnabled(false);
         }
 
 
-    }//GEN-LAST:event_btnSendRequestForInsuranceActionPerformed
+    }//GEN-LAST:event_sndReqFrInsrbtnActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
+        jPanel.remove(this);
+        Component[] componentArray = jPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         ProcessMedicalBillingsJPanel pmbjp = (ProcessMedicalBillingsJPanel) component;
         pmbjp.populateTable();
         pmbjp.populateInsuranceClaimTable();
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.previous(jPanel);
     }//GEN-LAST:event_backJButtonActionPerformed
 
-    private void btnCOllectCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCOllectCashActionPerformed
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("EmailBillingInformationToPatient", new EmailBillingInformationToPatient(userProcessContainer, accountBillingRequest));
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnCOllectCashActionPerformed
+    private void clctAmntBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clctAmntBtnActionPerformed
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        jPanel.add("EmailBillingInformationToPatient", new EmailBillingInformationToPatient(jPanel, acntBillingReq));
+        layout.next(jPanel);
+    }//GEN-LAST:event_clctAmntBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField InsrPlcyNumTxt;
     private javax.swing.JButton backJButton;
-    private javax.swing.JButton btnCOllectCash;
-    private javax.swing.JButton btnSendRequestForInsurance;
+    private javax.swing.JTextField billAmntTxt;
+    private javax.swing.JButton clctAmntBtn;
+    private javax.swing.JTextField frstNmTxt;
+    private javax.swing.JTextField insrClmAmntTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -361,42 +364,39 @@ public class AccountantProcessRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txtBillAmount;
-    private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtInsuranceClaimAmount;
-    private javax.swing.JTextField txtInsurancePolicyName;
-    private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtPayableAmount;
-    private javax.swing.JTextField txtPolicyNumber;
-    private javax.swing.JTextField txtSSN;
+    private javax.swing.JTextField lstNmTxt;
+    private javax.swing.JTextField plcyNumTxt;
+    private javax.swing.JTextField pyblAmntTxt;
+    private javax.swing.JButton sndReqFrInsrbtn;
+    private javax.swing.JTextField ssnTxt;
     // End of variables declaration//GEN-END:variables
 
     private void populate() {
-        String policyNumber = accountBillingRequest.getPatient().getInsuranceCustomer().getInsPlcyNo();
+        String policyNumber = acntBillingReq.getPatient().getInsuranceCustomer().getInsPlcyNo();
         DecimalFormat df2 = new DecimalFormat("#.##");
-        double coverage = accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getCvrg();
-        double billAmount = accountBillingRequest.getBillingAmt();
-        String ssn = accountBillingRequest.getPatient().getSsn();
-        String policyName = accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getPlcyNm();
-        String insuranceCompany = accountBillingRequest.getPatient().getInsuranceCustomer().getIns().getInsCmpny();
+        double coverage = acntBillingReq.getPatient().getInsuranceCustomer().getIns().getCvrg();
+        double billAmount = acntBillingReq.getBillingAmt();
+        String ssn = acntBillingReq.getPatient().getSsn();
+        String policyName = acntBillingReq.getPatient().getInsuranceCustomer().getIns().getPlcyNm();
+        String insuranceCompany = acntBillingReq.getPatient().getInsuranceCustomer().getIns().getInsCmpny();
         double claimAmount = (coverage * billAmount) / 100;
-        payableAmount = billAmount - claimAmount;
+        pyblAmnt = billAmount - claimAmount;
 
-        txtPolicyNumber.setText(policyNumber);
-        txtSSN.setText(ssn);
-        txtFirstName.setText(accountBillingRequest.getPatient().getPatFrstNm());
-        txtLastName.setText(accountBillingRequest.getPatient().getPatLstNm());
-        txtBillAmount.setText(String.valueOf(billAmount));
-        txtInsurancePolicyName.setText(policyName);
-        txtInsuranceClaimAmount.setText(String.valueOf(claimAmount));
-        txtPayableAmount.setText(String.valueOf(df2.format(payableAmount)));
+        plcyNumTxt.setText(policyNumber);
+        ssnTxt.setText(ssn);
+        frstNmTxt.setText(acntBillingReq.getPatient().getPatFrstNm());
+        lstNmTxt.setText(acntBillingReq.getPatient().getPatLstNm());
+        billAmntTxt.setText(String.valueOf(billAmount));
+        InsrPlcyNumTxt.setText(policyName);
+        insrClmAmntTxt.setText(String.valueOf(claimAmount));
+        pyblAmntTxt.setText(String.valueOf(df2.format(pyblAmnt)));
 
         if (claimAmount > 0) {
-            btnSendRequestForInsurance.setEnabled(true);
-            btnCOllectCash.setEnabled(false);
+            sndReqFrInsrbtn.setEnabled(true);
+            clctAmntBtn.setEnabled(false);
         } else {
-            btnCOllectCash.setEnabled(true);
-            btnSendRequestForInsurance.setEnabled(false);
+            clctAmntBtn.setEnabled(true);
+            sndReqFrInsrbtn.setEnabled(false);
         }
 
     }

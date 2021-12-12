@@ -31,10 +31,10 @@ import org.jfree.data.general.DefaultPieDataset;
  */
 public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private UserAccount userAccount;
-    private AccountantOrganization accountantOrganization;
-    private Enterprise enterprise;
+    private JPanel JPanel;
+    private UserAccount usrAcnt;
+    private AccountantOrganization acntOrg;
+    private Enterprise entrpz;
     private EcoSystem ecoSystem;
 
     /**
@@ -42,13 +42,13 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
      */
     public AccountantWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, AccountantOrganization accountantOrganization, Enterprise enterprise, EcoSystem ecosystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.accountantOrganization = accountantOrganization;
-        this.userAccount = account;
-        this.enterprise = enterprise;
+        this.JPanel = userProcessContainer;
+        this.acntOrg = accountantOrganization;
+        this.usrAcnt = account;
+        this.entrpz = enterprise;
         this.ecoSystem = ecosystem;
 
-        populateAllPatientsTable();
+        pplAllPtntsTbl();
 
     }
 
@@ -62,11 +62,11 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        btnCreateAppointment = new javax.swing.JButton();
-        btnProcessMedicalBillings = new javax.swing.JButton();
+        createAppmnt = new javax.swing.JButton();
+        prcsMedclBillingsBtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblAllPatients = new javax.swing.JTable();
-        btnReport = new javax.swing.JButton();
+        allPntsTbl = new javax.swing.JTable();
+        reportBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -76,26 +76,26 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/reception.gif"))); // NOI18N
         jLabel1.setText("Patient Details");
 
-        btnCreateAppointment.setBackground(new java.awt.Color(0, 153, 255));
-        btnCreateAppointment.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnCreateAppointment.setText("Create Appointment");
-        btnCreateAppointment.addActionListener(new java.awt.event.ActionListener() {
+        createAppmnt.setBackground(new java.awt.Color(0, 153, 255));
+        createAppmnt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        createAppmnt.setText("Create Appointment");
+        createAppmnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateAppointmentActionPerformed(evt);
+                createAppmntActionPerformed(evt);
             }
         });
 
-        btnProcessMedicalBillings.setBackground(new java.awt.Color(0, 153, 255));
-        btnProcessMedicalBillings.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnProcessMedicalBillings.setText("Process Medical Billings");
-        btnProcessMedicalBillings.addActionListener(new java.awt.event.ActionListener() {
+        prcsMedclBillingsBtn.setBackground(new java.awt.Color(0, 153, 255));
+        prcsMedclBillingsBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        prcsMedclBillingsBtn.setText("Process Medical Billings");
+        prcsMedclBillingsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProcessMedicalBillingsActionPerformed(evt);
+                prcsMedclBillingsBtnActionPerformed(evt);
             }
         });
 
-        tblAllPatients.setBackground(new java.awt.Color(0, 153, 255));
-        tblAllPatients.setModel(new javax.swing.table.DefaultTableModel(
+        allPntsTbl.setBackground(new java.awt.Color(0, 153, 255));
+        allPntsTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -127,14 +127,14 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblAllPatients);
+        jScrollPane1.setViewportView(allPntsTbl);
 
-        btnReport.setBackground(new java.awt.Color(0, 153, 255));
-        btnReport.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnReport.setText("Show Patient Report");
-        btnReport.addActionListener(new java.awt.event.ActionListener() {
+        reportBtn.setBackground(new java.awt.Color(0, 153, 255));
+        reportBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        reportBtn.setText("Show Patient Report");
+        reportBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReportActionPerformed(evt);
+                reportBtnActionPerformed(evt);
             }
         });
 
@@ -147,20 +147,17 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnCreateAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(createAppmnt, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(142, 142, 142)
-                .addComponent(btnReport)
+                .addComponent(reportBtn)
                 .addGap(142, 142, 142)
-                .addComponent(btnProcessMedicalBillings)
+                .addComponent(prcsMedclBillingsBtn)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -178,32 +175,32 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnReport, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnProcessMedicalBillings, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCreateAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(reportBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prcsMedclBillingsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(createAppmnt, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCreateAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAppointmentActionPerformed
+    private void createAppmntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAppmntActionPerformed
 
         String patientId = UUID.randomUUID().toString().substring(0, 7);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("CreateAppointmentJPanel", new CreateAppointmentJPanel(userProcessContainer, userAccount, enterprise, ecoSystem, patientId));
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnCreateAppointmentActionPerformed
+        CardLayout layout = (CardLayout) JPanel.getLayout();
+        JPanel.add("CreateAppointmentJPanel", new CreateAppointmentJPanel(JPanel, usrAcnt, entrpz, ecoSystem, patientId));
+        layout.next(JPanel);
+    }//GEN-LAST:event_createAppmntActionPerformed
 
-    private void btnProcessMedicalBillingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessMedicalBillingsActionPerformed
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("ProcessMedicalBillingsJPanel", new ProcessMedicalBillingsJPanel(userProcessContainer, userAccount, enterprise, accountantOrganization, ecoSystem));
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnProcessMedicalBillingsActionPerformed
+    private void prcsMedclBillingsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prcsMedclBillingsBtnActionPerformed
+        CardLayout layout = (CardLayout) JPanel.getLayout();
+        JPanel.add("ProcessMedicalBillingsJPanel", new ProcessMedicalBillingsJPanel(JPanel, usrAcnt, entrpz, acntOrg, ecoSystem));
+        layout.next(JPanel);
+    }//GEN-LAST:event_prcsMedclBillingsBtnActionPerformed
 
-    private void btnReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportActionPerformed
+    private void reportBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportBtnActionPerformed
         List<Patient> underTreatmentPatients = new ArrayList<>();
         List<Patient> treatedPatients = new ArrayList<>();
         DefaultPieDataset defaultPieDataset = new DefaultPieDataset();
-        List<Patient> patients = ((HealthCenterEnterprise) enterprise).getPatientDir().getPatients();
+        List<Patient> patients = ((HealthCenterEnterprise) entrpz).getPatientDir().getPatients();
         for (Patient patient : patients) {
             if (patient.isIsTrtmntdone()) {
                 treatedPatients.add(patient);
@@ -218,37 +215,37 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
         ChartFrame frame = new ChartFrame("Patient Status Pie Chart", chart);
         frame.setVisible(true);
         frame.setSize(500,500);
-    }//GEN-LAST:event_btnReportActionPerformed
+    }//GEN-LAST:event_reportBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCreateAppointment;
-    private javax.swing.JButton btnProcessMedicalBillings;
-    private javax.swing.JButton btnReport;
+    private javax.swing.JTable allPntsTbl;
+    private javax.swing.JButton createAppmnt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblAllPatients;
+    private javax.swing.JButton prcsMedclBillingsBtn;
+    private javax.swing.JButton reportBtn;
     // End of variables declaration//GEN-END:variables
 
-    public void populateAllPatientsTable() {
-        List<Patient> patients = ((HealthCenterEnterprise) enterprise).getPatientDir().getPatients();
-        DefaultTableModel dtm = (DefaultTableModel) tblAllPatients.getModel();
+    public void pplAllPtntsTbl() {
+        List<Patient> patients = ((HealthCenterEnterprise) entrpz).getPatientDir().getPatients();
+        DefaultTableModel dtm = (DefaultTableModel) allPntsTbl.getModel();
         dtm.setRowCount(0);
-        for (Patient patient : patients) {
+        for (Patient ptnt : patients) {
             Object[] row = new Object[7];
 
-            row[0] = patient;
-            row[1] = patient.getPatFrstNm() + " " + patient.getPatLstNm();
-            row[2] = patient.getCntctNo();
-            row[3] = patient.getAddress();
-            row[4] = patient.isIsTrtmntdone() ? "Treatment Complete" : "Treatment In Progress";
-            row[5] = patient.getAptDt();
-            row[6] = patient.getDocType();
+            row[0] = ptnt;
+            row[1] = ptnt.getPatFrstNm() + " " + ptnt.getPatLstNm();
+            row[2] = ptnt.getCntctNo();
+            row[3] = ptnt.getAddress();
+            row[4] = ptnt.isIsTrtmntdone() ? "Treatment Complete" : "Treatment In Progress";
+            row[5] = ptnt.getAptDt();
+            row[6] = ptnt.getDocType();
             dtm.addRow(row);
         }
         
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(dtm);
-        tblAllPatients.setRowSorter(sorter);
+        allPntsTbl.setRowSorter(sorter);
     }
 }
