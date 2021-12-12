@@ -38,20 +38,20 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
      */
     public ManageEnterpriseAdminJPanel(JPanel userProcessContainer, EcoSystem system) {
         initComponents();
-        usernameJTextField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        reEnterPasswordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        nameJTextField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        unmJTxtField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        entpwdJPwdField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        rePwdJPwdField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        nmJTxtField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         
         this.userProcessContainer = userProcessContainer;
         this.system = system;
 
-        populateTable();
-        populateNetworkComboBox();
+        populatentTbl();
+        popNtwrkComboBox();
     }
 
-    private void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) enterpriseJTable.getModel();
+    private void populatentTbl() {
+        DefaultTableModel model = (DefaultTableModel) entJTable.getModel();
 
         model.setRowCount(0);
         for (Network network : system.getNetworks()) {
@@ -66,26 +66,26 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                     model.addRow(row);
                 }
                 TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        enterpriseJTable.setRowSorter(sorter);
+        entJTable.setRowSorter(sorter);
             }
         }
          TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        enterpriseJTable.setRowSorter(sorter);
+        entJTable.setRowSorter(sorter);
     }
 
-    private void populateNetworkComboBox() {
-        networkJComboBox.removeAllItems();
+    private void popNtwrkComboBox() {
+        netwrkJCmboBox.removeAllItems();
 
         for (Network network : system.getNetworks()) {
-            networkJComboBox.addItem(network);
+            netwrkJCmboBox.addItem(network);
         }
     }
 
     private void populateEnterpriseComboBox(Network network) {
-        enterpriseJComboBox.removeAllItems();
+        entJCmboBox.removeAllItems();
 
         for (Enterprise enterprise : network.getEntDir().getEntList()) {
-            enterpriseJComboBox.addItem(enterprise);
+            entJCmboBox.addItem(enterprise);
         }
 
     }
@@ -100,29 +100,29 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        enterpriseJTable = new javax.swing.JTable();
+        entJTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        networkJComboBox = new javax.swing.JComboBox();
+        netwrkJCmboBox = new javax.swing.JComboBox();
         usernameJLabel = new javax.swing.JLabel();
-        usernameJTextField = new javax.swing.JTextField();
+        unmJTxtField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        enterpriseJComboBox = new javax.swing.JComboBox();
-        submitJButton = new javax.swing.JButton();
+        entJCmboBox = new javax.swing.JComboBox();
+        submitJBtn = new javax.swing.JButton();
         passwordJLabel = new javax.swing.JLabel();
-        nameJTextField = new javax.swing.JTextField();
+        nmJTxtField = new javax.swing.JTextField();
         nameJLabel = new javax.swing.JLabel();
-        passwordJPasswordField = new javax.swing.JPasswordField();
+        entpwdJPwdField = new javax.swing.JPasswordField();
         backJButton = new javax.swing.JButton();
-        reEnterPasswordJPasswordField = new javax.swing.JPasswordField();
+        rePwdJPwdField = new javax.swing.JPasswordField();
         rePasswordJLabel = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        entuname = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        enterpriseJTable.setBackground(new java.awt.Color(0, 153, 255));
-        enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
+        entJTable.setBackground(new java.awt.Color(0, 153, 255));
+        entJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -141,7 +141,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(enterpriseJTable);
+        jScrollPane1.setViewportView(entJTable);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(26, 62, 671, 88);
@@ -149,56 +149,56 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Network");
         add(jLabel1);
-        jLabel1.setBounds(88, 168, 52, 15);
+        jLabel1.setBounds(88, 168, 51, 15);
 
-        networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        networkJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        netwrkJCmboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        netwrkJCmboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                networkJComboBoxActionPerformed(evt);
+                netwrkJCmboBoxActionPerformed(evt);
             }
         });
-        add(networkJComboBox);
-        networkJComboBox.setBounds(182, 166, 136, 20);
+        add(netwrkJCmboBox);
+        netwrkJCmboBox.setBounds(182, 166, 136, 27);
 
         usernameJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         usernameJLabel.setText("Username");
         add(usernameJLabel);
-        usernameJLabel.setBounds(81, 232, 59, 15);
-        add(usernameJTextField);
-        usernameJTextField.setBounds(182, 228, 136, 25);
+        usernameJLabel.setBounds(81, 232, 60, 15);
+        add(unmJTxtField);
+        unmJTxtField.setBounds(182, 228, 136, 25);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Enterprise");
         add(jLabel3);
         jLabel3.setBounds(81, 199, 62, 15);
 
-        enterpriseJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(enterpriseJComboBox);
-        enterpriseJComboBox.setBounds(182, 197, 136, 20);
+        entJCmboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(entJCmboBox);
+        entJCmboBox.setBounds(182, 197, 136, 27);
 
-        submitJButton.setBackground(new java.awt.Color(0, 153, 255));
-        submitJButton.setText("Submit");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        submitJBtn.setBackground(new java.awt.Color(0, 153, 255));
+        submitJBtn.setText("Submit");
+        submitJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                submitJBtnActionPerformed(evt);
             }
         });
-        add(submitJButton);
-        submitJButton.setBounds(182, 375, 80, 23);
+        add(submitJBtn);
+        submitJBtn.setBounds(182, 375, 80, 29);
 
         passwordJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         passwordJLabel.setText("Password");
         add(passwordJLabel);
-        passwordJLabel.setBounds(84, 268, 59, 15);
-        add(nameJTextField);
-        nameJTextField.setBounds(182, 341, 136, 28);
+        passwordJLabel.setBounds(84, 268, 58, 15);
+        add(nmJTxtField);
+        nmJTxtField.setBounds(182, 341, 136, 28);
 
         nameJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         nameJLabel.setText("Name");
         add(nameJLabel);
-        nameJLabel.setBounds(110, 347, 33, 15);
-        add(passwordJPasswordField);
-        passwordJPasswordField.setBounds(182, 264, 136, 25);
+        nameJLabel.setBounds(110, 347, 34, 15);
+        add(entpwdJPwdField);
+        entpwdJPwdField.setBounds(182, 264, 136, 25);
 
         backJButton.setBackground(new java.awt.Color(0, 153, 255));
         backJButton.setText("<< Back");
@@ -208,56 +208,56 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(10, 11, 73, 23);
-        add(reEnterPasswordJPasswordField);
-        reEnterPasswordJPasswordField.setBounds(182, 300, 136, 29);
+        backJButton.setBounds(10, 11, 97, 29);
+        add(rePwdJPwdField);
+        rePwdJPwdField.setBounds(182, 300, 136, 29);
 
         rePasswordJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         rePasswordJLabel.setText("re-enter Password");
         add(rePasswordJLabel);
-        rePasswordJLabel.setBounds(30, 306, 113, 15);
+        rePasswordJLabel.setBounds(30, 306, 111, 15);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Manage Enterprise Admin");
         add(jLabel2);
         jLabel2.setBounds(205, 27, 305, 29);
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin4.gif"))); // NOI18N
-        add(jLabel4);
-        jLabel4.setBounds(20, 160, 680, 310);
+        entuname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        entuname.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin4.gif"))); // NOI18N
+        add(entuname);
+        entuname.setBounds(20, 160, 680, 310);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
+    private void netwrkJCmboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_netwrkJCmboBoxActionPerformed
 
-        Network network = (Network) networkJComboBox.getSelectedItem();
+        Network network = (Network) netwrkJCmboBox.getSelectedItem();
         if (network != null) {
             populateEnterpriseComboBox(network);
         }
 
 
-    }//GEN-LAST:event_networkJComboBoxActionPerformed
+    }//GEN-LAST:event_netwrkJCmboBoxActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+    private void submitJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJBtnActionPerformed
 
-        Enterprise enterprise = (Enterprise) enterpriseJComboBox.getSelectedItem();
+        Enterprise enterprise = (Enterprise) entJCmboBox.getSelectedItem();
 
-        String username = usernameJTextField.getText();
+        String username = unmJTxtField.getText();
         Role role = null;
-        String password = String.valueOf(passwordJPasswordField.getPassword());
-        String rePassword = String.valueOf(reEnterPasswordJPasswordField.getPassword());
-        String name = nameJTextField.getText();
+        String password = String.valueOf(entpwdJPwdField.getPassword());
+        String rePassword = String.valueOf(rePwdJPwdField.getPassword());
+        String name = nmJTxtField.getText();
 
         if (username == null || username.equals("")) {
-            usernameJTextField.setBorder(BorderFactory.createLineBorder(Color.RED));
+            unmJTxtField.setBorder(BorderFactory.createLineBorder(Color.RED));
             usernameJLabel.setForeground(Color.RED);
             JOptionPane.showMessageDialog(null, "Username can't be empty");
             return;
         }
         if (password == null || password.equals("")) {
-            usernameJTextField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            unmJTxtField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             usernameJLabel.setForeground(Color.BLACK);
-            passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.RED));
+            entpwdJPwdField.setBorder(BorderFactory.createLineBorder(Color.RED));
             passwordJLabel.setForeground(Color.RED);
             JOptionPane.showMessageDialog(null, "Password can't be empty");
             return;
@@ -267,26 +267,26 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Password should be at least 6 Characters "
                     + "digits and a combination of number , uppercase letter, "
                     + "lowercase letter and Special characters are not allowed other than $, +, _");
-            passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.RED));
+            entpwdJPwdField.setBorder(BorderFactory.createLineBorder(Color.RED));
             passwordJLabel.setForeground(Color.RED);
             return;
         }
 
         if (!password.equals(rePassword)) {
             JOptionPane.showMessageDialog(null, "Passwords don't match");
-            passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.RED));
-            reEnterPasswordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.RED));
+            entpwdJPwdField.setBorder(BorderFactory.createLineBorder(Color.RED));
+            rePwdJPwdField.setBorder(BorderFactory.createLineBorder(Color.RED));
             passwordJLabel.setForeground(Color.RED);
             rePasswordJLabel.setForeground(Color.RED);
             return;
         }
 
         if (name == null || name.equals("")) {
-            passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            reEnterPasswordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            entpwdJPwdField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            rePwdJPwdField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             passwordJLabel.setForeground(Color.BLACK);
             rePasswordJLabel.setForeground(Color.BLACK);
-            nameJTextField.setBorder(BorderFactory.createLineBorder(Color.RED));
+            nmJTxtField.setBorder(BorderFactory.createLineBorder(Color.RED));
             nameJLabel.setForeground(Color.RED);
             JOptionPane.showMessageDialog(null, "Name can't be empty");
             return;
@@ -295,32 +295,32 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             for (UserAccount userAccount : userAccountList) {
                 if (userAccount.getUname().equals(username)) {
                     JOptionPane.showMessageDialog(null, "username already taken!!");
-                    usernameJTextField.setBorder(BorderFactory.createLineBorder(Color.RED));
+                    unmJTxtField.setBorder(BorderFactory.createLineBorder(Color.RED));
                     return;
                 }
             }
             
             Employee employee = enterprise.getEmpDir().createEmployee(name);
             UserAccount userAccount = enterprise.getUsrAccDir().createUserAccount(username, password, employee, new EnterpriseAdminRole());
-            populateTable();
+            populatentTbl();
 
             passwordJLabel.setForeground(Color.BLACK);
             rePasswordJLabel.setForeground(Color.BLACK);
             nameJLabel.setForeground(Color.BLACK);
-            nameJTextField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            reEnterPasswordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            nameJTextField.setText("");
-            passwordJPasswordField.setText("");
-            reEnterPasswordJPasswordField.setText("");
-            usernameJTextField.setText("");
+            nmJTxtField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            entpwdJPwdField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            rePwdJPwdField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            nmJTxtField.setText("");
+            entpwdJPwdField.setText("");
+            rePwdJPwdField.setText("");
+            unmJTxtField.setText("");
         }
 
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_submitJBtnActionPerformed
 
     private boolean passwordPatternCorrect() {
         Pattern p = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$+_])(?=\\S+$).{6,}$");
-        Matcher m = p.matcher(String.valueOf(passwordJPasswordField.getPassword()));
+        Matcher m = p.matcher(String.valueOf(entpwdJPwdField.getPassword()));
         boolean b = m.matches();
         return b;
     }
@@ -338,22 +338,22 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
-    private javax.swing.JComboBox enterpriseJComboBox;
-    private javax.swing.JTable enterpriseJTable;
+    private javax.swing.JComboBox entJCmboBox;
+    private javax.swing.JTable entJTable;
+    private javax.swing.JPasswordField entpwdJPwdField;
+    private javax.swing.JLabel entuname;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel nameJLabel;
-    private javax.swing.JTextField nameJTextField;
-    private javax.swing.JComboBox networkJComboBox;
+    private javax.swing.JComboBox netwrkJCmboBox;
+    private javax.swing.JTextField nmJTxtField;
     private javax.swing.JLabel passwordJLabel;
-    private javax.swing.JPasswordField passwordJPasswordField;
-    private javax.swing.JPasswordField reEnterPasswordJPasswordField;
     private javax.swing.JLabel rePasswordJLabel;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JPasswordField rePwdJPwdField;
+    private javax.swing.JButton submitJBtn;
+    private javax.swing.JTextField unmJTxtField;
     private javax.swing.JLabel usernameJLabel;
-    private javax.swing.JTextField usernameJTextField;
     // End of variables declaration//GEN-END:variables
 }

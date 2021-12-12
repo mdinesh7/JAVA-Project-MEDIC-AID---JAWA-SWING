@@ -38,9 +38,9 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        submitJButton = new javax.swing.JButton();
+        submitJBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        resultJTextField = new javax.swing.JTextField();
+        rsltJTxtField = new javax.swing.JTextField();
         backJButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -48,24 +48,24 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        submitJButton.setBackground(new java.awt.Color(0, 153, 255));
-        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        submitJButton.setText("Submit Result");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        submitJBtn.setBackground(new java.awt.Color(0, 153, 255));
+        submitJBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        submitJBtn.setText("Submit Result");
+        submitJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                submitJBtnActionPerformed(evt);
             }
         });
-        add(submitJButton);
-        submitJButton.setBounds(270, 170, 111, 36);
+        add(submitJBtn);
+        submitJBtn.setBounds(270, 170, 122, 36);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Result");
         add(jLabel1);
         jLabel1.setBounds(193, 135, 39, 15);
-        add(resultJTextField);
-        resultJTextField.setBounds(242, 128, 160, 30);
+        add(rsltJTxtField);
+        rsltJTxtField.setBounds(242, 128, 160, 30);
 
         backJButton.setBackground(new java.awt.Color(0, 153, 255));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -76,7 +76,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(10, 11, 81, 23);
+        backJButton.setBounds(10, 11, 93, 29);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Lab Test Results");
@@ -95,13 +95,13 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
         LabAssistantWorkAreaJPanel dwjp = (LabAssistantWorkAreaJPanel) component;
-        dwjp.populateTable();
+        dwjp.popLabAsstTbl();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-        String labResult = resultJTextField.getText().trim();
+    private void submitJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJBtnActionPerformed
+        String labResult = rsltJTxtField.getText().trim();
         if (labResult.equals("")) {
             JOptionPane.showMessageDialog(null, "Result is mandatory");
             return;
@@ -111,21 +111,21 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
                 patientTreatmentWorkRequest.setLabRslt(labResult);
                 patientTreatmentWorkRequest.setStatus("Lab Test Completed");
                 JOptionPane.showMessageDialog(null, "Result submitted successfully");
-                resultJTextField.setText("");
-                submitJButton.setEnabled(false);
+                rsltJTxtField.setText("");
+                submitJBtn.setEnabled(false);
             }
 
         }
 
 
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_submitJBtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField resultJTextField;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JTextField rsltJTxtField;
+    private javax.swing.JButton submitJBtn;
     // End of variables declaration//GEN-END:variables
 }
