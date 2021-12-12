@@ -28,22 +28,22 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
     /**
      * Creates new form ProcessWorkRequestJPanel
      */
-    private JPanel jPanel;
-    private Enterprise enterprise;
-    private UserAccount userAccount;
-    private NGOFundRequest ngoFundRequest;
-    private OfficerWorkAreaJPanel officerWorkAreaJPanel;
+    private JPanel jPnl;
+    private Enterprise ent;
+    private UserAccount usrAcc;
+    private NGOFundRequest ngoFndReq;
+    private OfficerWorkAreaJPanel offrWrkAreaJPnl;
 
     public NGOAdministratorProcessWorkRequestJPanel(JPanel jPanel, UserAccount userAccount, NGOFundRequest fundRequest, Enterprise enterprise) {
         initComponents();
 
-        this.jPanel = jPanel;
-        this.enterprise = enterprise;
-        this.userAccount = userAccount;
-        this.ngoFundRequest = fundRequest;
-        amountNeededTxt.setText(String.valueOf(ngoFundRequest.getNeededamtreq()));
-        hospitalNameTxt.setText(ngoFundRequest.getHospname());
-        hospitalAddressTxt.setText(String.valueOf(ngoFundRequest.getHospaddress()));
+        this.jPnl = jPanel;
+        this.ent = enterprise;
+        this.usrAcc = userAccount;
+        this.ngoFndReq = fundRequest;
+        amountNeededTxt.setText(String.valueOf(ngoFndReq.getNeededamtreq()));
+        hospitalNameTxt.setText(ngoFndReq.getHospname());
+        hospitalAddressTxt.setText(String.valueOf(ngoFndReq.getHospaddress()));
     }
 
     /**
@@ -200,13 +200,13 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
-        jPanel.remove(this);
-        Component[] componentArray = jPanel.getComponents();
+        jPnl.remove(this);
+        Component[] componentArray = jPnl.getComponents();
         Component component = componentArray[componentArray.length - 1];
         NGOAdministratorWorkAreaPanel ngoAdministratorWorkAreaJPanel = (NGOAdministratorWorkAreaPanel) component;
         ngoAdministratorWorkAreaJPanel.populateRequestTable();
-        CardLayout layout = (CardLayout) jPanel.getLayout();
-        layout.previous(jPanel);
+        CardLayout layout = (CardLayout) jPnl.getLayout();
+        layout.previous(jPnl);
     }//GEN-LAST:event_backBtnActionPerformed
 
     private void sendRequestToDirectoryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendRequestToDirectoryBtnActionPerformed
@@ -217,25 +217,25 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-            ngoFundRequest.setWrMsg(message);
+            ngoFndReq.setWrMsg(message);
 
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
 
             if (dialogResult == JOptionPane.YES_OPTION) {
 
-                ngoFundRequest.setSender(userAccount);
-                ngoFundRequest.setStatus("Sent to Director");
+                ngoFndReq.setSender(usrAcc);
+                ngoFndReq.setStatus("Sent to Director");
 
                 Organization org = null;
-                for (Organization organization : enterprise.getOrgDir().getOrganizations()) {
+                for (Organization organization : ent.getOrgDir().getOrganizations()) {
                     if (organization instanceof NGODirectorOrganization) {
                         org = organization;
                         break;
                     }
                 }
                 if (org != null) {
-                    org.getWrkQ().getWorkRequests().add(ngoFundRequest);
-                    userAccount.getWrkQ().getWorkRequests().add(ngoFundRequest);
+                    org.getWrkQ().getWorkRequests().add(ngoFndReq);
+                    usrAcc.getWrkQ().getWorkRequests().add(ngoFndReq);
                 }
                 JOptionPane.showMessageDialog(null, "Request to Director Successful!!!");
                 messageTxt.setText("");
@@ -253,11 +253,11 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-            ngoFundRequest.setWrMsg(message);
+            ngoFndReq.setWrMsg(message);
             int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
 
             if (dialogResult == JOptionPane.YES_OPTION) {
-                ngoFundRequest.setStatus("Rejected");
+                ngoFndReq.setStatus("Rejected");
                 messageTxt.setText("");
                 btnReject.setEnabled(false);
                 sendRequestToDirectoryBtn.setEnabled(false);

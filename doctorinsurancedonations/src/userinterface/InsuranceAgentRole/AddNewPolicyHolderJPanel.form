@@ -53,12 +53,12 @@
                                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                              <Component id="txtPolicyNumber" min="-2" pref="190" max="-2" attributes="0"/>
+                                              <Component id="plcyNumTxt" min="-2" pref="190" max="-2" attributes="0"/>
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="txtSSN" min="-2" pref="136" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooserDob" min="-2" pref="137" max="-2" attributes="0"/>
-                                                      <Component id="txtFirstName" alignment="1" min="-2" pref="137" max="-2" attributes="0"/>
+                                                      <Component id="ssnTxt" min="-2" pref="136" max="-2" attributes="0"/>
+                                                      <Component id="dobJDateChooser" min="-2" pref="137" max="-2" attributes="0"/>
+                                                      <Component id="frstNmTxt" alignment="1" min="-2" pref="137" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
@@ -67,14 +67,14 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtLastName" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtPhone" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="cmbGender" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
+                                          <Component id="lstNmTxt" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="phnTxt" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="gndrCmb" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                      <Component id="txtAddress" min="-2" pref="379" max="-2" attributes="0"/>
+                                      <Component id="adrsTxt" min="-2" pref="379" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -93,14 +93,14 @@
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="cmbInsuranceName" min="-2" pref="138" max="-2" attributes="0"/>
+                              <Component id="insrNmCmb" min="-2" pref="138" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="txtInsuranceCoverage" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="insrCvgTxt" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="btnAddCustomer" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="addCustBtn" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -139,14 +139,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtPolicyNumber" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="plcyNumTxt" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtLastName" alignment="0" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="lstNmTxt" alignment="0" min="-2" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtFirstName" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="frstNmTxt" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -160,12 +160,12 @@
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="cmbInsuranceName" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="insrNmCmb" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtInsuranceCoverage" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="insrCvgTxt" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -174,31 +174,31 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="cmbGender" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                              <Component id="gndrCmb" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                               <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <Component id="jDateChooserDob" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="dobJDateChooser" min="-2" pref="27" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtPhone" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                          <Component id="txtSSN" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="phnTxt" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="ssnTxt" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="btnAddCustomer" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="addCustBtn" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtAddress" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="adrsTxt" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="32767" attributes="0"/>
               <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
@@ -234,7 +234,7 @@
         <Property name="text" type="java.lang.String" value="Policy Number "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPolicyNumber">
+    <Component class="javax.swing.JTextField" name="plcyNumTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -247,7 +247,7 @@
         <Property name="text" type="java.lang.String" value="First Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtFirstName">
+    <Component class="javax.swing.JTextField" name="frstNmTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -260,7 +260,7 @@
         <Property name="text" type="java.lang.String" value="Last Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtLastName">
+    <Component class="javax.swing.JTextField" name="lstNmTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
@@ -273,7 +273,7 @@
         <Property name="text" type="java.lang.String" value="SSN"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtSSN">
+    <Component class="javax.swing.JTextField" name="ssnTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
@@ -286,7 +286,7 @@
         <Property name="text" type="java.lang.String" value="Date of birth"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtAddress">
+    <Component class="javax.swing.JTextField" name="adrsTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
@@ -321,18 +321,18 @@
         <Property name="text" type="java.lang.String" value="Insurance Policy Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cmbInsuranceName">
+    <Component class="javax.swing.JComboBox" name="insrNmCmb">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="0"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="cmbInsuranceNameFocusGained"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbInsuranceNameActionPerformed"/>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="insrNmCmbFocusGained"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insrNmCmbActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAddCustomer">
+    <Component class="javax.swing.JButton" name="addCustBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -343,10 +343,10 @@
         <Property name="text" type="java.lang.String" value="Add Customer"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddCustomerActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addCustBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooserDob">
+    <Component class="com.toedter.calendar.JDateChooser" name="dobJDateChooser">
       <Properties>
         <Property name="maxSelectableDate" type="java.util.Date" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="Calendar.getInstance().getTime()" type="code"/>
@@ -386,7 +386,7 @@
         <Property name="text" type="java.lang.String" value="Phone"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPhone">
+    <Component class="javax.swing.JTextField" name="phnTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel15">
       <Properties>
@@ -399,9 +399,9 @@
         <Property name="text" type="java.lang.String" value="Insurance Coverage %"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtInsuranceCoverage">
+    <Component class="javax.swing.JTextField" name="insrCvgTxt">
     </Component>
-    <Component class="javax.swing.JComboBox" name="cmbGender">
+    <Component class="javax.swing.JComboBox" name="gndrCmb">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
@@ -419,7 +419,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tblCustomer">
+        <Component class="javax.swing.JTable" name="custJTable">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="0" type="rgb"/>

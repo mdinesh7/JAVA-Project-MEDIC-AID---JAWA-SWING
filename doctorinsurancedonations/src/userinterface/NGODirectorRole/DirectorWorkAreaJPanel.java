@@ -29,17 +29,17 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form TreasurerWorkAreaJPanel
      */
-    private JPanel jPanel;
-    private UserAccount userAccount;
-    private NGODirectorOrganization ngoDirectorOrganization;
-    private Enterprise enterprise;
+    private JPanel jPnl;
+    private UserAccount usrAcc;
+    private NGODirectorOrganization ngoDirOrg;
+    private Enterprise ent;
 
     public DirectorWorkAreaJPanel(JPanel jpanel, UserAccount userAccount, Organization organization, Enterprise enterprise) {
         initComponents();
-        this.enterprise = enterprise;
-        this.jPanel = jpanel;
-        this.ngoDirectorOrganization = (NGODirectorOrganization) organization;
-        this.userAccount = userAccount;
+        this.ent = enterprise;
+        this.jPnl = jpanel;
+        this.ngoDirOrg = (NGODirectorOrganization) organization;
+        this.usrAcc = userAccount;
 
         populateTable();
     }
@@ -55,18 +55,19 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        btnAssign = new javax.swing.JButton();
-        processRequestBtn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+
+        dirWrkReqTbl = new javax.swing.JTable();
+        btnAss = new javax.swing.JButton();
+        processReqBtn = new javax.swing.JButton();
+
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Director Work Area ");
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        dirWrkReqTbl.setBackground(new java.awt.Color(0, 153, 255));
+        dirWrkReqTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -92,23 +93,23 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(dirWrkReqTbl);
 
-        btnAssign.setBackground(new java.awt.Color(0, 153, 255));
-        btnAssign.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnAssign.setText("Assign To Me");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        btnAss.setBackground(new java.awt.Color(0, 153, 255));
+        btnAss.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAss.setText("Assign To Me");
+        btnAss.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                btnAssActionPerformed(evt);
             }
         });
 
-        processRequestBtn.setBackground(new java.awt.Color(0, 153, 255));
-        processRequestBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        processRequestBtn.setText("Process Request");
-        processRequestBtn.addActionListener(new java.awt.event.ActionListener() {
+        processReqBtn.setBackground(new java.awt.Color(0, 153, 255));
+        processReqBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        processReqBtn.setText("Process Request");
+        processReqBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processRequestBtnActionPerformed(evt);
+                processReqBtnActionPerformed(evt);
             }
         });
 
@@ -126,9 +127,9 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
                         .addGap(214, 214, 214))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 734, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnAssign)
+                        .addComponent(btnAss)
                         .addGap(77, 77, 77)
-                        .addComponent(processRequestBtn)
+                        .addComponent(processReqBtn)
                         .addGap(212, 212, 212)))
                 .addContainerGap(557, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -145,23 +146,23 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(processRequestBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+
+                    .addComponent(btnAss, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(processReqBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(187, Short.MAX_VALUE))
+
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+    private void btnAssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssActionPerformed
+        int selectedRow = dirWrkReqTbl.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
             return;
         } else {
-            WorkRequest request = (NGOFundRequest) workRequestJTable.getValueAt(selectedRow, 5);
+            WorkRequest request = (NGOFundRequest) dirWrkReqTbl.getValueAt(selectedRow, 5);
             if (request.getStatus().equals("Sent to Director")) {
-                request.setReceiver(userAccount);
+                request.setReceiver(usrAcc);
                 request.setStatus("Pending on " + request.getReceiver().getEmp().getEmpName());
                 populateTable();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
@@ -170,16 +171,16 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
             }
         }
 
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_btnAssActionPerformed
 
-    private void processRequestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processRequestBtnActionPerformed
+    private void processReqBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processReqBtnActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = dirWrkReqTbl.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
             return;
         } else {
-            NGOFundRequest request = (NGOFundRequest) workRequestJTable.getValueAt(selectedRow, 5);
+            NGOFundRequest request = (NGOFundRequest) dirWrkReqTbl.getValueAt(selectedRow, 5);
             if (request.getStatus().equalsIgnoreCase("Sent to Director")) {
                 JOptionPane.showMessageDialog(null, "Please assign selected request first");
                 return;
@@ -188,15 +189,15 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Request already completed", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (!userAccount.equals(request.getReceiver())) {
+            if (!usrAcc.equals(request.getReceiver())) {
                 JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (!userAccount.equals(request.getReceiver())) {
+            if (!usrAcc.equals(request.getReceiver())) {
                 JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (!userAccount.getEmp().equals(request.getReceiver().getEmp())) {
+            if (!usrAcc.getEmp().equals(request.getReceiver().getEmp())) {
                 JOptionPane.showMessageDialog(null, "Request assigned to other Officer", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
@@ -205,18 +206,18 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
                 return;
             }
             //request.setStatus("Processing");
-            DirectorProcessWorkRequestJPanel directorProcessWorkRequestJPanel = new DirectorProcessWorkRequestJPanel(jPanel, request);
-            jPanel.add("TreasurerProcessWorkRequestJPanel", directorProcessWorkRequestJPanel);
-            CardLayout layout = (CardLayout) jPanel.getLayout();
-            layout.next(jPanel);
+            DirectorProcessWorkRequestJPanel directorProcessWorkRequestJPanel = new DirectorProcessWorkRequestJPanel(jPnl, request);
+            jPnl.add("TreasurerProcessWorkRequestJPanel", directorProcessWorkRequestJPanel);
+            CardLayout layout = (CardLayout) jPnl.getLayout();
+            layout.next(jPnl);
         }
-    }//GEN-LAST:event_processRequestBtnActionPerformed
+    }//GEN-LAST:event_processReqBtnActionPerformed
 
     public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) dirWrkReqTbl.getModel();
         model.setRowCount(0);
 
-        for (WorkRequest request : ngoDirectorOrganization.getWrkQ().getWorkRequests()) {
+        for (WorkRequest request : ngoDirOrg.getWrkQ().getWorkRequests()) {
             String status = request.getStatus();
             Object[] row = new Object[6];
             row[0] = request.getSender().getEmp().getEmpName();
@@ -234,15 +235,15 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        workRequestJTable.setRowSorter(sorter);
+        dirWrkReqTbl.setRowSorter(sorter);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
+    private javax.swing.JButton btnAss;
+    private javax.swing.JTable dirWrkReqTbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processRequestBtn;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JButton processReqBtn;
     // End of variables declaration//GEN-END:variables
 }

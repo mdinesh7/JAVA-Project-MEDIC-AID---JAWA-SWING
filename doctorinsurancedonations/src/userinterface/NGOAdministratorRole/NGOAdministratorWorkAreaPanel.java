@@ -29,21 +29,21 @@ import userinterface.HealthcareOfficerRole.OfficerProcessWorkRequestJPanel;
  */
 public class NGOAdministratorWorkAreaPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private UserAccount userAccount;
-    private EcoSystem ecoSystem;
-    private Enterprise enterprise;
-    private NGOAdminOrganization ngoAdminOrganization;
+    private JPanel usrCnter;
+    private UserAccount usrAcc;
+    private EcoSystem ecoSys;
+    private Enterprise ent;
+    private NGOAdminOrganization ngoAdmOrg;
 
     /**
      * Creates new form NGOAdministratorWorkAreaPanel
      */
     public NGOAdministratorWorkAreaPanel(JPanel userProcessContainer, UserAccount userAccount, Organization organization, Enterprise enterprise) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.ngoAdminOrganization = (NGOAdminOrganization) organization;
-        this.userAccount = userAccount;
-        this.enterprise = enterprise;
+        this.usrCnter = userProcessContainer;
+        this.ngoAdmOrg = (NGOAdminOrganization) organization;
+        this.usrAcc = userAccount;
+        this.ent = enterprise;
         populateRequestTable();
     }
 
@@ -186,7 +186,7 @@ public class NGOAdministratorWorkAreaPanel extends javax.swing.JPanel {
         } else {
             WorkRequest request = (NGOFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
             if (request.getStatus().equals("Sent")) {
-                request.setReceiver(userAccount);
+                request.setReceiver(usrAcc);
                 request.setStatus("Pending on " + request.getReceiver().getEmp().getEmpName());
                 populateRequestTable();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
@@ -219,20 +219,20 @@ public class NGOAdministratorWorkAreaPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Assign the request first");
                 return;
             }
-            if (!userAccount.equals(request.getReceiver())) {
+            if (!usrAcc.equals(request.getReceiver())) {
                 JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
 
-            if (!userAccount.getEmp().equals(request.getReceiver().getEmp())) {
+            if (!usrAcc.getEmp().equals(request.getReceiver().getEmp())) {
                 JOptionPane.showMessageDialog(null, "Request assigned to other Officer", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             } else {
 
-                NGOAdministratorProcessWorkRequestJPanel panel = new NGOAdministratorProcessWorkRequestJPanel(userProcessContainer, userAccount, request, enterprise);
-                userProcessContainer.add("OfficerProcessWorkRequestJPanel", panel);
-                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-                layout.next(userProcessContainer);
+                NGOAdministratorProcessWorkRequestJPanel panel = new NGOAdministratorProcessWorkRequestJPanel(usrCnter, usrAcc, request, ent);
+                usrCnter.add("OfficerProcessWorkRequestJPanel", panel);
+                CardLayout layout = (CardLayout) usrCnter.getLayout();
+                layout.next(usrCnter);
 
             }
     }
@@ -240,10 +240,10 @@ public class NGOAdministratorWorkAreaPanel extends javax.swing.JPanel {
 
     private void mapBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mapBtnActionPerformed
         // TODO add your handling code here:
-        MapJPanel mapJPanel = new MapJPanel(userProcessContainer);
-        userProcessContainer.add("mapJPanel",mapJPanel);
-        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        MapJPanel mapJPanel = new MapJPanel(usrCnter);
+        usrCnter.add("mapJPanel",mapJPanel);
+        CardLayout layout=(CardLayout)usrCnter.getLayout();
+        layout.next(usrCnter);
     }//GEN-LAST:event_mapBtnActionPerformed
 
 
@@ -263,7 +263,7 @@ public class NGOAdministratorWorkAreaPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (WorkRequest request : ngoAdminOrganization.getWrkQ().getWorkRequests()) {
+        for (WorkRequest request : ngoAdmOrg.getWrkQ().getWorkRequests()) {
             Object[] row = new Object[5];
             String status = request.getStatus();
             row[0] = ((NGOFundRequest) request);

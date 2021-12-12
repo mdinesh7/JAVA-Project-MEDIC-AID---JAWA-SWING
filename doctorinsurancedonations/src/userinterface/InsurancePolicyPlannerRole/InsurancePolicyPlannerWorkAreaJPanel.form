@@ -46,22 +46,22 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="txtPolicyName" min="-2" pref="158" max="-2" attributes="0"/>
+                                      <Component id="plcyNmTxt" min="-2" pref="158" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="txtPolicyCoverage" min="-2" pref="158" max="-2" attributes="0"/>
+                                      <Component id="plcyCvgTxt" min="-2" pref="158" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="txtMonthlyPrem" min="-2" pref="158" max="-2" attributes="0"/>
+                                      <Component id="mnthPrmTxt" min="-2" pref="158" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="txtPolicyTC" min="-2" pref="158" max="-2" attributes="0"/>
+                                      <Component id="plcyTCTxt" min="-2" pref="158" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -69,7 +69,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
-                              <Component id="btnCreatePolicy" min="-2" max="-2" attributes="0"/>
+                              <Component id="crtPlcyBtn" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -99,27 +99,29 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtPolicyName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="plcyNmTxt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtPolicyCoverage" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="plcyCvgTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtMonthlyPrem" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mnthPrmTxt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtPolicyTC" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="plcyTCTxt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnCreatePolicy" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+
+              <Component id="crtPlcyBtn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="136" max="32767" attributes="0"/>
+
           </Group>
       </Group>
     </DimensionLayout>
@@ -141,9 +143,9 @@
         <Property name="text" type="java.lang.String" value="Policy Name: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPolicyName">
+    <Component class="javax.swing.JTextField" name="plcyNmTxt">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPolicyCoverage">
+    <Component class="javax.swing.JTextField" name="plcyCvgTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -153,7 +155,7 @@
         <Property name="text" type="java.lang.String" value="Policy Coverage (in %): "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPolicyTC">
+    <Component class="javax.swing.JTextField" name="plcyTCTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -189,7 +191,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tblPolicies">
+        <Component class="javax.swing.JTable" name="plcysJTable">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -233,7 +235,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnCreatePolicy">
+    <Component class="javax.swing.JButton" name="crtPlcyBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -244,7 +246,7 @@
         <Property name="text" type="java.lang.String" value="Create Policy"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreatePolicyActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crtPlcyBtnActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
@@ -255,7 +257,7 @@
         <Property name="text" type="java.lang.String" value="Monthly Premium(USD):"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtMonthlyPrem">
+    <Component class="javax.swing.JTextField" name="mnthPrmTxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>

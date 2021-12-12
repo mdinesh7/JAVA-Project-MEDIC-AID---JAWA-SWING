@@ -20,11 +20,9 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
-<<<<<<< HEAD
- * @author dineshmurugesan
-=======
+
  * @author bunty
->>>>>>> aef6537 (added insurance agent)
+
  */
 
 public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
@@ -32,18 +30,18 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
     /**
      * Creates new form AllInsuranceRequestsJPanel
      */
-    private JPanel userProcessContainer;
-    private UserAccount userAccount;
-    private Enterprise enterprise;
-    private InsuranceAgentOrganization insuranceAgentOrganization;
+    private JPanel jPanel;
+    private UserAccount usrAcnt;
+    private Enterprise entrpz;
+    private InsuranceAgentOrganization insrAgntOrg;
 
     public AllInsuranceRequestsJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise, InsuranceAgentOrganization insuranceAgentOrganization) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.userAccount = userAccount;
-        this.enterprise = enterprise;
-        this.insuranceAgentOrganization = insuranceAgentOrganization;
-        populateTable();
+        this.jPanel = userProcessContainer;
+        this.usrAcnt = userAccount;
+        this.entrpz = enterprise;
+        this.insrAgntOrg = insuranceAgentOrganization;
+        pplTbl();
     }
 
     /**
@@ -57,19 +55,19 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblInsuranceWorkTable = new javax.swing.JTable();
-        btnProcessRequest = new javax.swing.JButton();
+        insrWrReqJTable = new javax.swing.JTable();
+        prcsBtn = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        btnAssign = new javax.swing.JButton();
+        asgnToMeBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Process Requests");
 
-        tblInsuranceWorkTable.setBackground(new java.awt.Color(0, 153, 255));
-
-        tblInsuranceWorkTable.setModel(new javax.swing.table.DefaultTableModel(
+        insrWrReqJTable.setBackground(new java.awt.Color(0, 153, 255));
+        insrWrReqJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -101,22 +99,18 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblInsuranceWorkTable);
+        jScrollPane1.setViewportView(insrWrReqJTable);
 
-
-        btnProcessRequest.setBackground(new java.awt.Color(0, 153, 255));
-
-        btnProcessRequest.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnProcessRequest.setText("Process Request");
-        btnProcessRequest.addActionListener(new java.awt.event.ActionListener() {
+        prcsBtn.setBackground(new java.awt.Color(0, 153, 255));
+        prcsBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        prcsBtn.setText("Process Request");
+        prcsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProcessRequestActionPerformed(evt);
+                prcsBtnActionPerformed(evt);
             }
         });
 
-
         btnBack.setBackground(new java.awt.Color(0, 153, 255));
-
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -125,14 +119,12 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
             }
         });
 
-
-        btnAssign.setBackground(new java.awt.Color(0, 153, 255));
-
-        btnAssign.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnAssign.setText("Assign To Me");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        asgnToMeBtn.setBackground(new java.awt.Color(0, 153, 255));
+        asgnToMeBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        asgnToMeBtn.setText("Assign To Me");
+        asgnToMeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                asgnToMeBtnActionPerformed(evt);
             }
         });
 
@@ -143,16 +135,15 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-
                         .addGap(23, 23, 23)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 959, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(322, 322, 322)
-                                .addComponent(btnAssign)
+                                .addComponent(asgnToMeBtn)
                                 .addGap(61, 61, 61)
-                                .addComponent(btnProcessRequest))
+                                .addComponent(prcsBtn))
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(btnBack)
@@ -160,12 +151,10 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
                                 .addComponent(jLabel1)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(23, 23, 23))
-
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
@@ -177,114 +166,113 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnProcessRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(prcsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(asgnToMeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(190, Short.MAX_VALUE))
-
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnProcessRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessRequestActionPerformed
-        int selectedRow = tblInsuranceWorkTable.getSelectedRow();
-        InsuranceWorkRequest insuranceWorkRequest;
+    private void prcsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prcsBtnActionPerformed
+        int selRow = insrWrReqJTable.getSelectedRow();
+        InsuranceWorkRequest isnrWrkReq;
 
-        if (selectedRow < 0) {
+        if (selRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row");
             return;
         } else {
-            insuranceWorkRequest = (InsuranceWorkRequest) tblInsuranceWorkTable.getValueAt(selectedRow, 0);
+            isnrWrkReq = (InsuranceWorkRequest) insrWrReqJTable.getValueAt(selRow, 0);
 
-            if (insuranceWorkRequest.getStatus().equals("Rejected")) {
+            if (isnrWrkReq.getStatus().equals("Rejected")) {
                 JOptionPane.showMessageDialog(null, "Cannot process a Rejected Request", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (insuranceWorkRequest.getStatus().equalsIgnoreCase("Sent to Secretary")) {
+            if (isnrWrkReq.getStatus().equalsIgnoreCase("Sent to Secretary")) {
                 JOptionPane.showMessageDialog(null, "Request already processed", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (insuranceWorkRequest.getStatus().equalsIgnoreCase("Sent")) {
+            if (isnrWrkReq.getStatus().equalsIgnoreCase("Sent")) {
                 JOptionPane.showMessageDialog(null, "Assign the request first");
                 return;
             }
-            if (insuranceWorkRequest.getStatus().equalsIgnoreCase("Sent to Finance Department")) {
+            if (isnrWrkReq.getStatus().equalsIgnoreCase("Sent to Finance Department")) {
                 JOptionPane.showMessageDialog(null, "Request already sent to Finance department");
                 return;
             }
-            if (insuranceWorkRequest.getStatus().equalsIgnoreCase("Insurance Claim Approved")) {
+            if (isnrWrkReq.getStatus().equalsIgnoreCase("Insurance Claim Approved")) {
                 JOptionPane.showMessageDialog(null, "Insurance Claim is already Approved");
                 return;
             }
 
-            if (!userAccount.equals(insuranceWorkRequest.getReceiver())) {
+            if (!usrAcnt.equals(isnrWrkReq.getReceiver())) {
                 JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             } else {
 
-                CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-                userProcessContainer.add("ProcessRequestJPanel", new ProcessRequestJPanel(userProcessContainer, userAccount, enterprise, insuranceWorkRequest));
-                cardLayout.next(userProcessContainer);
+                CardLayout cardLayout = (CardLayout) jPanel.getLayout();
+                jPanel.add("ProcessRequestJPanel", new ProcessRequestJPanel(jPanel, usrAcnt, entrpz, isnrWrkReq));
+                cardLayout.next(jPanel);
             }
         }
 
-    }//GEN-LAST:event_btnProcessRequestActionPerformed
+    }//GEN-LAST:event_prcsBtnActionPerformed
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
-        int selectedRow = tblInsuranceWorkTable.getSelectedRow();
-        if (selectedRow < 0) {
+    private void asgnToMeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asgnToMeBtnActionPerformed
+        int selRow = insrWrReqJTable.getSelectedRow();
+        if (selRow < 0) {
             JOptionPane.showMessageDialog(null, "Please Select a Row");
             return;
         } else {
-            InsuranceWorkRequest insuranceWorkRequest = (InsuranceWorkRequest) tblInsuranceWorkTable.getValueAt(selectedRow, 0);
-            if (insuranceWorkRequest.getStatus().equals("Sent")) {
-                insuranceWorkRequest.setReceiver(userAccount);
-                insuranceWorkRequest.setStatus("Pending on Agent: " + userAccount.getEmp().getEmpName());
-                populateTable();
+            InsuranceWorkRequest insrWrkReq = (InsuranceWorkRequest) insrWrReqJTable.getValueAt(selRow, 0);
+            if (insrWrkReq.getStatus().equals("Sent")) {
+                insrWrkReq.setReceiver(usrAcnt);
+                insrWrkReq.setStatus("Pending on Agent: " + usrAcnt.getEmp().getEmpName());
+                pplTbl();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
             } else {
-                JOptionPane.showMessageDialog(null, "Can't assign this request, as it is in " + insuranceWorkRequest.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Can't assign this request, as it is in " + insrWrkReq.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_asgnToMeBtnActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        jPanel.remove(this);
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.previous(jPanel);
     }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
+    private javax.swing.JButton asgnToMeBtn;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnProcessRequest;
+    private javax.swing.JTable insrWrReqJTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblInsuranceWorkTable;
+    private javax.swing.JButton prcsBtn;
     // End of variables declaration//GEN-END:variables
 
-    public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) tblInsuranceWorkTable.getModel();
+    public void pplTbl() {
+        DefaultTableModel model = (DefaultTableModel) insrWrReqJTable.getModel();
 
         model.setRowCount(0);
 
-        for (WorkRequest request : insuranceAgentOrganization.getWrkQ().getWorkRequests()) {
+        for (WorkRequest req : insrAgntOrg.getWrkQ().getWorkRequests()) {
             Object[] row = new Object[8];
-            String status = request.getStatus();
-            row[0] = ((InsuranceWorkRequest) request);
-            row[1] = ((InsuranceWorkRequest) request).getInsCust().getCustFrstNm() + " " + ((InsuranceWorkRequest) request).getInsCust().getCustLstNme();
-            row[2] = ((InsuranceWorkRequest) request).getHealthCtr();
+            String status = req.getStatus();
+            row[0] = ((InsuranceWorkRequest) req);
+            row[1] = ((InsuranceWorkRequest) req).getInsCust().getCustFrstNm() + " " + ((InsuranceWorkRequest) req).getInsCust().getCustLstNme();
+            row[2] = ((InsuranceWorkRequest) req).getHealthCtr();
 
-            row[3] = request.getSender().getEmp().getEmpName();
-            row[4] = request.getReceiver();
+            row[3] = req.getSender().getEmp().getEmpName();
+            row[4] = req.getReceiver();
 
-            row[5] = ((InsuranceWorkRequest) request).getBillAmt();
+            row[5] = ((InsuranceWorkRequest) req).getBillAmt();
 
-            row[6] = ((InsuranceWorkRequest) request).getClaimAmt();
-            row[7] = request.getStatus();
+            row[6] = ((InsuranceWorkRequest) req).getClaimAmt();
+            row[7] = req.getStatus();
 
             model.addRow(row);
         }
     TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        tblInsuranceWorkTable.setRowSorter(sorter);
+        insrWrReqJTable.setRowSorter(sorter);
     }
 }

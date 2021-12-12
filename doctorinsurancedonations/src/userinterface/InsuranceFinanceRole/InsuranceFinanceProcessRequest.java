@@ -19,26 +19,26 @@ import javax.swing.JPanel;
  */
 public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private Enterprise enterprise;
-    private UserAccount userAccount;
-    private InsuranceWorkRequest insuranceWorkRequest;
+    private JPanel jPanel;
+    private Enterprise entrpz;
+    private UserAccount usrAcnt;
+    private InsuranceWorkRequest isnrWrReq;
 
     /**
      * Creates new form InsuranceFinanceProcessRequest
      */
     InsuranceFinanceProcessRequest(JPanel userProcessContainer, UserAccount userAccount, InsuranceWorkRequest insuranceWorkRequest, Enterprise enterprise) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.enterprise = enterprise;
-        this.userAccount = userAccount;
-        this.insuranceWorkRequest = insuranceWorkRequest;
-        txtPolicyNumber.setText(insuranceWorkRequest.getPlcyNo());
-        txtSSN.setText(insuranceWorkRequest.getSsn());
-        txtPolicyName.setText(insuranceWorkRequest.getPlcyNm());
-        txtClaimAmount.setText(String.valueOf(insuranceWorkRequest.getClaimAmt()));
-        txtBillingAmount.setText(String.valueOf(insuranceWorkRequest.getBillAmt()));
-        txtCoverage.setText(String.valueOf(insuranceWorkRequest.getInsCust().getIns().getCvrg()));
+        this.jPanel = userProcessContainer;
+        this.entrpz = enterprise;
+        this.usrAcnt = userAccount;
+        this.isnrWrReq = insuranceWorkRequest;
+        plcyNumTxt.setText(insuranceWorkRequest.getPlcyNo());
+        ssnTxt.setText(insuranceWorkRequest.getSsn());
+        plcyNmTxt.setText(insuranceWorkRequest.getPlcyNm());
+        clmAmntTxt.setText(String.valueOf(insuranceWorkRequest.getClaimAmt()));
+        billingAmntTxt.setText(String.valueOf(insuranceWorkRequest.getBillAmt()));
+        cvgTxt.setText(String.valueOf(insuranceWorkRequest.getInsCust().getIns().getCvrg()));
     }
 
     /**
@@ -50,48 +50,54 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnDisburse = new javax.swing.JButton();
-        btnReject = new javax.swing.JButton();
+        disbrAmntBtn = new javax.swing.JButton();
+        rejBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         backBtn = new javax.swing.JButton();
-        txtPolicyNumber = new javax.swing.JTextField();
-        txtPolicyName = new javax.swing.JTextField();
+        plcyNumTxt = new javax.swing.JTextField();
+        plcyNmTxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        txtBillingAmount = new javax.swing.JTextField();
+        billingAmntTxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        txtClaimAmount = new javax.swing.JTextField();
+        clmAmntTxt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtSSN = new javax.swing.JTextField();
+        ssnTxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        txtCoverage = new javax.swing.JTextField();
+        cvgTxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        btnDisburse.setBackground(new java.awt.Color(0, 153, 255));
-        btnDisburse.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnDisburse.setText("Disburse Amount");
-        btnDisburse.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisburseActionPerformed(evt);
-            }
-        });
-        add(btnDisburse);
-        btnDisburse.setBounds(130, 316, 129, 32);
 
-        btnReject.setBackground(new java.awt.Color(0, 153, 255));
-        btnReject.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnReject.setText("Reject Claim");
-        btnReject.addActionListener(new java.awt.event.ActionListener() {
+        disbrAmntBtn.setBackground(new java.awt.Color(0, 153, 255));
+        disbrAmntBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        disbrAmntBtn.setText("Disburse Amount");
+        disbrAmntBtn.addActionListener(new java.awt.event.ActionListener() {
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRejectActionPerformed(evt);
+                disbrAmntBtnActionPerformed(evt);
             }
         });
-        add(btnReject);
-        btnReject.setBounds(291, 316, 103, 32);
+
+        add(disbrAmntBtn);
+        disbrAmntBtn.setBounds(130, 316, 140, 32);
+
+        rejBtn.setBackground(new java.awt.Color(0, 153, 255));
+        rejBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        rejBtn.setText("Reject Claim");
+        rejBtn.addActionListener(new java.awt.event.ActionListener() {
+
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rejBtnActionPerformed(evt);
+            }
+        });
+
+        add(rejBtn);
+        rejBtn.setBounds(291, 316, 114, 32);
+
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setText("Insurance Finance Request Process area ");
@@ -102,7 +108,9 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(0, 0, 204));
         jLabel4.setText("Policy Number");
         add(jLabel4);
-        jLabel4.setBounds(154, 91, 86, 15);
+
+        jLabel4.setBounds(154, 91, 88, 15);
+
 
         backBtn.setBackground(new java.awt.Color(0, 153, 255));
         backBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -113,66 +121,85 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
             }
         });
         add(backBtn);
-        backBtn.setBounds(10, 23, 77, 29);
 
-        txtPolicyNumber.setEditable(false);
-        add(txtPolicyNumber);
-        txtPolicyNumber.setBounds(278, 86, 116, 23);
+        backBtn.setBounds(10, 23, 90, 29);
 
-        txtPolicyName.setEditable(false);
-        add(txtPolicyName);
-        txtPolicyName.setBounds(278, 209, 116, 23);
+        plcyNumTxt.setEditable(false);
+        add(plcyNumTxt);
+        plcyNumTxt.setBounds(278, 86, 116, 23);
+
+        plcyNmTxt.setEditable(false);
+        add(plcyNmTxt);
+        plcyNmTxt.setBounds(278, 209, 116, 23);
+
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 204));
         jLabel1.setText("policyName");
         add(jLabel1);
-        jLabel1.setBounds(172, 211, 68, 15);
 
-        txtBillingAmount.setEditable(false);
-        add(txtBillingAmount);
-        txtBillingAmount.setBounds(278, 247, 116, 23);
+        jLabel1.setBounds(172, 211, 70, 15);
+
+        billingAmntTxt.setEditable(false);
+        billingAmntTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                billingAmntTxtActionPerformed(evt);
+            }
+        });
+        add(billingAmntTxt);
+        billingAmntTxt.setBounds(278, 247, 116, 23);
+
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 204));
         jLabel6.setText("Billing Amount");
         add(jLabel6);
-        jLabel6.setBounds(150, 249, 90, 15);
 
-        txtClaimAmount.setEditable(false);
-        txtClaimAmount.addActionListener(new java.awt.event.ActionListener() {
+        jLabel6.setBounds(150, 249, 91, 15);
+
+        clmAmntTxt.setEditable(false);
+        clmAmntTxt.addActionListener(new java.awt.event.ActionListener() {
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtClaimAmountActionPerformed(evt);
+                clmAmntTxtActionPerformed(evt);
             }
         });
-        add(txtClaimAmount);
-        txtClaimAmount.setBounds(278, 285, 116, 23);
+
+        add(clmAmntTxt);
+        clmAmntTxt.setBounds(278, 285, 116, 23);
+
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 204));
         jLabel7.setText("Claim Amount");
         add(jLabel7);
-        jLabel7.setBounds(154, 287, 86, 15);
+
+        jLabel7.setBounds(154, 287, 85, 15);
+
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 204));
         jLabel8.setText("SSN");
         add(jLabel8);
-        jLabel8.setBounds(216, 129, 24, 15);
 
-        txtSSN.setEditable(false);
-        add(txtSSN);
-        txtSSN.setBounds(278, 124, 116, 23);
+        jLabel8.setBounds(216, 129, 25, 15);
+
+        ssnTxt.setEditable(false);
+        add(ssnTxt);
+        ssnTxt.setBounds(278, 124, 116, 23);
+
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 204));
         jLabel9.setText("Conerage%");
         add(jLabel9);
-        jLabel9.setBounds(168, 176, 72, 15);
 
-        txtCoverage.setEditable(false);
-        add(txtCoverage);
-        txtCoverage.setBounds(278, 171, 116, 23);
+        jLabel9.setBounds(168, 176, 71, 15);
+
+        cvgTxt.setEditable(false);
+        add(cvgTxt);
+        cvgTxt.setBounds(278, 171, 116, 23);
+
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/financier request.gif"))); // NOI18N
@@ -181,49 +208,55 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         jLabel2.setBounds(0, 0, 790, 540);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnDisburseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisburseActionPerformed
+    private void disbrAmntBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disbrAmntBtnActionPerformed
 
-        btnDisburse.setEnabled(true);
+        disbrAmntBtn.setEnabled(true);
         int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
         if (dialogResult == JOptionPane.YES_OPTION) {
-            insuranceWorkRequest.setStatus("Insurance Claim Approved");
+            isnrWrReq.setStatus("Insurance Claim Approved");
             JOptionPane.showMessageDialog(null, "Claim Approved Successfully!!!");
-            btnDisburse.setEnabled(false);
-            btnReject.setEnabled(false);
+            disbrAmntBtn.setEnabled(false);
+            rejBtn.setEnabled(false);
         }
-    }//GEN-LAST:event_btnDisburseActionPerformed
+    }//GEN-LAST:event_disbrAmntBtnActionPerformed
 
-    private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
+    private void rejBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejBtnActionPerformed
 
         int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
         if (dialogResult == JOptionPane.YES_OPTION) {
-            insuranceWorkRequest.setStatus("Insurance Claim Rejected");
-            btnReject.setEnabled(false);
-            btnDisburse.setEnabled(false);
+            isnrWrReq.setStatus("Insurance Claim Rejected");
+            rejBtn.setEnabled(false);
+            disbrAmntBtn.setEnabled(false);
         }
 
-    }//GEN-LAST:event_btnRejectActionPerformed
+    }//GEN-LAST:event_rejBtnActionPerformed
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
+        jPanel.remove(this);
+        Component[] componentArray = jPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         InsuranceFinanceWorkAreaJPanel iwjp = (InsuranceFinanceWorkAreaJPanel) component;
-        iwjp.populateTable();
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        iwjp.pplTabl();
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.previous(jPanel);
     }//GEN-LAST:event_backBtnActionPerformed
 
-    private void txtClaimAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClaimAmountActionPerformed
+    private void clmAmntTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clmAmntTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtClaimAmountActionPerformed
+    }//GEN-LAST:event_clmAmntTxtActionPerformed
+
+    private void billingAmntTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billingAmntTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_billingAmntTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
-    private javax.swing.JButton btnDisburse;
-    private javax.swing.JButton btnReject;
+    private javax.swing.JTextField billingAmntTxt;
+    private javax.swing.JTextField clmAmntTxt;
+    private javax.swing.JTextField cvgTxt;
+    private javax.swing.JButton disbrAmntBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -232,11 +265,9 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txtBillingAmount;
-    private javax.swing.JTextField txtClaimAmount;
-    private javax.swing.JTextField txtCoverage;
-    private javax.swing.JTextField txtPolicyName;
-    private javax.swing.JTextField txtPolicyNumber;
-    private javax.swing.JTextField txtSSN;
+    private javax.swing.JTextField plcyNmTxt;
+    private javax.swing.JTextField plcyNumTxt;
+    private javax.swing.JButton rejBtn;
+    private javax.swing.JTextField ssnTxt;
     // End of variables declaration//GEN-END:variables
 }
