@@ -22,21 +22,21 @@ import javax.swing.table.TableRowSorter;
  */
 public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private UserAccount userAccount;
-    private InsuranceFinanceOrganization insuranceFinanceOrganization;
-    private Enterprise enterprise;
+    private JPanel jPanel;
+    private UserAccount usrAcnt;
+    private InsuranceFinanceOrganization insrFincOrg;
+    private Enterprise entrpz;
 
     /**
      * Creates new form InsuranceFinanceWorkAreaJPanel
      */
     public InsuranceFinanceWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, InsuranceFinanceOrganization insuranceFinanceOrganization, Enterprise enterprise) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.userAccount = account;
-        this.insuranceFinanceOrganization = insuranceFinanceOrganization;
-        this.enterprise = enterprise;
-        populateTable();
+        this.jPanel = userProcessContainer;
+        this.usrAcnt = account;
+        this.insrFincOrg = insuranceFinanceOrganization;
+        this.entrpz = enterprise;
+        pplTabl();
     }
 
     /**
@@ -50,19 +50,17 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblFinance = new javax.swing.JTable();
-        btnAssign = new javax.swing.JButton();
-        processRequestBtn2 = new javax.swing.JButton();
-
+        financJTable = new javax.swing.JTable();
+        asgnToMeBtn = new javax.swing.JButton();
+        prcsBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Insurance Finance Work Area");
 
-        tblFinance.setBackground(new java.awt.Color(0, 153, 255));
-
-        tblFinance.setModel(new javax.swing.table.DefaultTableModel(
+        financJTable.setBackground(new java.awt.Color(0, 153, 255));
+        financJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -81,27 +79,23 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblFinance);
+        jScrollPane1.setViewportView(financJTable);
 
-
-        btnAssign.setBackground(new java.awt.Color(0, 153, 255));
-
-        btnAssign.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnAssign.setText("Assign To Me");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        asgnToMeBtn.setBackground(new java.awt.Color(0, 153, 255));
+        asgnToMeBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        asgnToMeBtn.setText("Assign To Me");
+        asgnToMeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                asgnToMeBtnActionPerformed(evt);
             }
         });
 
-
-        processRequestBtn2.setBackground(new java.awt.Color(0, 153, 255));
-
-        processRequestBtn2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        processRequestBtn2.setText("Process Request");
-        processRequestBtn2.addActionListener(new java.awt.event.ActionListener() {
+        prcsBtn.setBackground(new java.awt.Color(0, 153, 255));
+        prcsBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        prcsBtn.setText("Process Request");
+        prcsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processRequestBtn2ActionPerformed(evt);
+                prcsBtnActionPerformed(evt);
             }
         });
 
@@ -112,22 +106,20 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(202, 202, 202)
                                 .addComponent(jLabel1))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(264, 264, 264)
-                                .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(asgnToMeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(processRequestBtn2)))
+                                .addComponent(prcsBtn)))
                         .addGap(0, 303, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1)))
                 .addContainerGap())
-
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,102 +130,100 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-
-                    .addComponent(processRequestBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(prcsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(asgnToMeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(268, Short.MAX_VALUE))
-
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
-        int selectedRow = tblFinance.getSelectedRow();
+    private void asgnToMeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asgnToMeBtnActionPerformed
+        int selectedRow = financJTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
             return;
         } else {
-            WorkRequest request = (InsuranceWorkRequest) tblFinance.getValueAt(selectedRow, 0);
-            if (request.getStatus().equals("Sent To Finance Department")) {
-                request.setReceiver(userAccount);
-                request.setStatus("Pending on " + request.getReceiver().getEmp().getEmpName());
-                populateTable();
+            WorkRequest req = (InsuranceWorkRequest) financJTable.getValueAt(selectedRow, 0);
+            if (req.getStatus().equals("Sent To Finance Department")) {
+                req.setReceiver(usrAcnt);
+                req.setStatus("Pending on " + req.getReceiver().getEmp().getEmpName());
+                pplTabl();
                 JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you");
             } else {
-                JOptionPane.showMessageDialog(null, "Can't assign this work request, as the work request is in " + request.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Can't assign this work request, as the work request is in " + req.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_asgnToMeBtnActionPerformed
 
-    private void processRequestBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processRequestBtn2ActionPerformed
+    private void prcsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prcsBtnActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblFinance.getSelectedRow();
-        if (selectedRow < 0) {
+        int selRow = financJTable.getSelectedRow();
+        if (selRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
             return;
         } else {
 
-            InsuranceWorkRequest insuranceWorkRequest = (InsuranceWorkRequest) tblFinance.getValueAt(selectedRow, 0);
-            if (insuranceWorkRequest.getStatus().equalsIgnoreCase("Sent To Finance Department")) {
+            InsuranceWorkRequest insrWrReq = (InsuranceWorkRequest) financJTable.getValueAt(selRow, 0);
+            if (insrWrReq.getStatus().equalsIgnoreCase("Sent To Finance Department")) {
                 JOptionPane.showMessageDialog(null, "Assign the request first");
                 return;
             }
-            if (insuranceWorkRequest.getStatus().equalsIgnoreCase("Insurance Claim Approved")) {
+            if (insrWrReq.getStatus().equalsIgnoreCase("Insurance Claim Approved")) {
                 JOptionPane.showMessageDialog(null, "Request already Completed", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (!userAccount.equals(insuranceWorkRequest.getReceiver())) {
+            if (!usrAcnt.equals(insrWrReq.getReceiver())) {
                 JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (!userAccount.getEmp().equals(insuranceWorkRequest.getReceiver().getEmp())) {
+            if (!usrAcnt.getEmp().equals(insrWrReq.getReceiver().getEmp())) {
                 JOptionPane.showMessageDialog(null, "Request assigned to other Officer", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (insuranceWorkRequest.getStatus().equals("Insurance Claim Rejected")) {
+            if (insrWrReq.getStatus().equals("Insurance Claim Rejected")) {
                 JOptionPane.showMessageDialog(null, "Cannot process a Rejected Request", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             } else {
 
-                InsuranceFinanceProcessRequest panel = new InsuranceFinanceProcessRequest(userProcessContainer, userAccount, insuranceWorkRequest, enterprise);
-                userProcessContainer.add("OfficerProcessWorkRequestJPanel", panel);
-                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-                layout.next(userProcessContainer);
+                InsuranceFinanceProcessRequest panel = new InsuranceFinanceProcessRequest(jPanel, usrAcnt, insrWrReq, entrpz);
+                jPanel.add("OfficerProcessWorkRequestJPanel", panel);
+                CardLayout layout = (CardLayout) jPanel.getLayout();
+                layout.next(jPanel);
 
             }
         }
-    }//GEN-LAST:event_processRequestBtn2ActionPerformed
+    }//GEN-LAST:event_prcsBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
+    private javax.swing.JButton asgnToMeBtn;
+    private javax.swing.JTable financJTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processRequestBtn2;
-    private javax.swing.JTable tblFinance;
+    private javax.swing.JButton prcsBtn;
     // End of variables declaration//GEN-END:variables
 
-    public void populateTable() {
+    public void pplTabl() {
 
-        DefaultTableModel model = (DefaultTableModel) tblFinance.getModel();
+        DefaultTableModel model = (DefaultTableModel) financJTable.getModel();
         model.setRowCount(0);
 
-        for (WorkRequest workRequest : insuranceFinanceOrganization.getWrkQ().getWorkRequests()) {
-            InsuranceWorkRequest insuranceworkRequest = ((InsuranceWorkRequest) workRequest);
+        for (WorkRequest workRequest : insrFincOrg.getWrkQ().getWorkRequests()) {
+            InsuranceWorkRequest insrWkReq = ((InsuranceWorkRequest) workRequest);
             Object[] row = new Object[8];
-            row[0] = insuranceworkRequest;
-            row[1] = insuranceworkRequest.getPlcyNm();
-            row[2] = insuranceworkRequest.getInsCust().getIns().getCvrg();
-            row[3] = insuranceworkRequest.getClaimAmt();
-            row[4] = insuranceworkRequest.getBillAmt();
-            row[5] = insuranceworkRequest.getStatus();
-            row[6] = insuranceworkRequest.getInsCmpny();
-            row[7] = insuranceworkRequest.getReceiver() == null ? "" : insuranceworkRequest.getReceiver().getEmp().getEmpName();
+            row[0] = insrWkReq;
+            row[1] = insrWkReq.getPlcyNm();
+            row[2] = insrWkReq.getInsCust().getIns().getCvrg();
+            row[3] = insrWkReq.getClaimAmt();
+            row[4] = insrWkReq.getBillAmt();
+            row[5] = insrWkReq.getStatus();
+            row[6] = insrWkReq.getInsCmpny();
+            row[7] = insrWkReq.getReceiver() == null ? "" : insrWkReq.getReceiver().getEmp().getEmpName();
 
             model.addRow(row);
         }
         
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        tblFinance.setRowSorter(sorter);
+        financJTable.setRowSorter(sorter);
     }
 
 }
