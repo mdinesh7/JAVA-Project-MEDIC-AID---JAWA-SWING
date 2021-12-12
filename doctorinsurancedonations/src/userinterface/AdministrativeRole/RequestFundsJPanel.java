@@ -47,16 +47,16 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
         double totalFunds = 0;
         model.setRowCount(0);
-        for (WorkRequest request : userAccount.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : userAccount.getWrkQ().getWorkRequests()) {
             if(request instanceof GovernmentFundRequest){
             Object[] row = new Object[4];
             row[0] = String.valueOf(((GovernmentFundRequest) request).getLocation());
             row[1] = request.getReceiver();
             row[2] = request.getStatus();
-            row[3] = String.valueOf(((GovernmentFundRequest) request).getRequestAmount());
+            row[3] = String.valueOf(((GovernmentFundRequest) request).getReqAmt());
             model.addRow(row);
             if (request.getStatus().equalsIgnoreCase("Accepted")) {
-                totalFunds += ((GovernmentFundRequest) request).getRequestAmount();
+                totalFunds += ((GovernmentFundRequest) request).getReqAmt();
             }
             }
         }
@@ -253,7 +253,7 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
 
             for (Network network : networks) {
 
-                List<Enterprise> enterprises = network.getEnterpriseDirectory().getEnterpriseList();
+                List<Enterprise> enterprises = network.getEntDir().getEntList();
                 for (Enterprise enterprise : enterprises) {
                     List<Organization> organizations = enterprise.getOrgDir().getOrganizations();
                     for (Organization organization : organizations) {
@@ -266,8 +266,8 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
             }
 
             if (org != null) {
-                org.getWorkQueue().getWorkRequests().add(governmentFundRequest);
-                userAccount.getWorkQueue().getWorkRequests().add(governmentFundRequest);
+                org.getWrkQ().getWorkRequests().add(governmentFundRequest);
+                userAccount.getWrkQ().getWorkRequests().add(governmentFundRequest);
             }
             populateRequestTable();
         }

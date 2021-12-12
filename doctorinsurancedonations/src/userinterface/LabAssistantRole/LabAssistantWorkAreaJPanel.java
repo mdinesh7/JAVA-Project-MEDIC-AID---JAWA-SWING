@@ -46,14 +46,14 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (WorkRequest request : labOrganization.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : labOrganization.getWrkQ().getWorkRequests()) {
             Object[] row = new Object[7];
             row[0] = request;
-            row[1] = request.getSender().getEmployee().getEmpName();
-            row[2] = ((PatientTreatmentWorkRequest) request).getLabAssistant();
+            row[1] = request.getSender().getEmp().getEmpName();
+            row[2] = ((PatientTreatmentWorkRequest) request).getLabAst();
             row[3] = request.getStatus();
-            row[4] = ((PatientTreatmentWorkRequest) request).getPatient().getPatientFirstName() + " " + ((PatientTreatmentWorkRequest) request).getPatient().getPatientLastName();
-            row[5] = ((PatientTreatmentWorkRequest) request).getPatient().getPatientId();
+            row[4] = ((PatientTreatmentWorkRequest) request).getPat().getPatFrstNm() + " " + ((PatientTreatmentWorkRequest) request).getPat().getPatLstNm();
+            row[5] = ((PatientTreatmentWorkRequest) request).getPat().getPatId();
             row[6] = ((PatientTreatmentWorkRequest) request).getTestType();
             model.addRow(row);
         }
@@ -184,9 +184,9 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         }
 
         PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
-        if (request.getLabAssistant() == null) {
+        if (request.getLabAst() == null) {
             if (request.getStatus().equalsIgnoreCase("SentToLab")) {
-                request.setLabAssistant(userAccount);
+                request.setLabAst(userAccount);
                 request.setStatus("Pending on Lab Assistant");
                 //  request.setReceiver(userAccount);
                 populateTable();
@@ -197,7 +197,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         }
         else
         {
-            if(userAccount.equals(request.getLabAssistant()))
+            if(userAccount.equals(request.getLabAst()))
             {
                 JOptionPane.showMessageDialog(null,"Request is already assigned to you");
             }
@@ -222,8 +222,8 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
 
        // request.setStatus("Processing");
         ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, request);
-        if (request.getLabAssistant() != null) {
-            if (userAccount.equals(request.getLabAssistant())) {
+        if (request.getLabAst() != null) {
+            if (userAccount.equals(request.getLabAst())) {
                 if (request.getStatus().equalsIgnoreCase("Pending on Lab Assistant")) {
 
                     userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
@@ -252,7 +252,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         }
 
         PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
-        if(userAccount.equals(request.getLabAssistant()))
+        if(userAccount.equals(request.getLabAst()))
             {   
                 if(request.getStatus().equalsIgnoreCase("Pending on Lab Assistant")){
                     request.setTestType("Blood Test");
@@ -277,7 +277,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         }
 
         PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
-        if(userAccount.equals(request.getLabAssistant()))
+        if(userAccount.equals(request.getLabAst()))
             {   
                 if(request.getStatus().equalsIgnoreCase("Pending on Lab Assistant")){
                     request.setTestType("MRI Scan");
@@ -301,7 +301,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         }
 
         PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
-        if(userAccount.equals(request.getLabAssistant()))
+        if(userAccount.equals(request.getLabAst()))
             {   
                 if(request.getStatus().equalsIgnoreCase("Pending on Lab Assistant")){
                     request.setTestType("X Ray");

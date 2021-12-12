@@ -15,19 +15,19 @@ import Business.Patient.Patient;
  */
 public class AccountantBillingRequest extends WorkRequest {
 
-    private double billingAmount;
+    private double billingAmt;
 
-    private boolean hasInsurance;
-    private boolean isInsuranceClaimSettled;
+    private boolean hasIns;
+    private boolean isInsClmSettled;
 
     Patient patient;
 
-    public double getBillingAmount() {
-        return billingAmount;
+    public double getBillingAmt() {
+        return billingAmt;
     }
 
-    public void setBillingAmount(double billingAmount) {
-        this.billingAmount = billingAmount;
+    public void setBillingAmt(double billingAmt) {
+        this.billingAmt = billingAmt;
     }
 
     public Patient getPatient() {
@@ -38,25 +38,25 @@ public class AccountantBillingRequest extends WorkRequest {
         this.patient = patient;
     }
 
-    public boolean isHasInsurance() {
-        return hasInsurance;
+    public boolean isHasIns() {
+        return hasIns;
     }
 
-    public void setHasInsurance(boolean hasInsurance) {
-        this.hasInsurance = hasInsurance;
+    public void setHasIns(boolean hasIns) {
+        this.hasIns = hasIns;
     }
 
-    public boolean isIsInsuranceClaimSettled() {
-        return isInsuranceClaimSettled;
+    public boolean isIsInsClmSettled() {
+        return isInsClmSettled;
     }
 
-    public void setIsInsuranceClaimSettled(boolean isInsuranceClaimSettled) {
-        this.isInsuranceClaimSettled = isInsuranceClaimSettled;
+    public void setIsInsClmSettled(boolean isInsClmSettled) {
+        this.isInsClmSettled = isInsClmSettled;
     }
 
     @Override
     public String toString() {
-        return String.valueOf(billingAmount);
+        return String.valueOf(billingAmt);
     }
 
 }

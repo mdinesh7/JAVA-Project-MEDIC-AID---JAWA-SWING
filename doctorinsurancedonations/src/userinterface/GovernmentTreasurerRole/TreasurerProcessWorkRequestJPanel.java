@@ -27,9 +27,9 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
         initComponents();
         this.jPanel = jPanel;
         this.governmentFundRequest = fundRequest;
-        amountTxt.setText(String.valueOf(governmentFundRequest.getRequestAmount()));
+        amountTxt.setText(String.valueOf(governmentFundRequest.getReqAmt()));
         locationTxt.setText(governmentFundRequest.getLocation());
-        populationTxt.setText(String.valueOf(governmentFundRequest.getPopulation()));
+        populationTxt.setText(String.valueOf(governmentFundRequest.getPop()));
 
     }
 
@@ -191,7 +191,7 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
         }
         else
         {
-        governmentFundRequest.setMessage(message);
+        governmentFundRequest.setWrMsg(message);
          int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
          if (dialogResult == JOptionPane.YES_OPTION) {
         governmentFundRequest.setStatus("Accepted");
@@ -222,7 +222,7 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
         } else {
-        governmentFundRequest.setMessage(message);
+        governmentFundRequest.setWrMsg(message);
         int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
             
             

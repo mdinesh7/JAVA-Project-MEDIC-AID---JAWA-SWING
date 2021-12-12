@@ -155,8 +155,8 @@ public class BloodBankRequestJPanel extends javax.swing.JPanel {
             }
         }
         if (org != null) {
-            org.getWorkQueue().getWorkRequests().add(patientTreatmentWorkRequest);
-            userAccount.getWorkQueue().getWorkRequests().add(patientTreatmentWorkRequest);
+            org.getWrkQ().getWorkRequests().add(patientTreatmentWorkRequest);
+            userAccount.getWrkQ().getWorkRequests().add(patientTreatmentWorkRequest);
             JOptionPane.showMessageDialog(null, "Blood Bank request sent");
             txtLabMessage.setText("");
             txtLabType.setText("");

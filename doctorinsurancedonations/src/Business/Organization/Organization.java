@@ -13,12 +13,12 @@ import java.util.ArrayList;
 
 public abstract class Organization {
 
-    private String organizationName;
-    private WorkQueue workQueue;
-    private EmployeeDirectory employeeDirectory;
-    private UserAccountDirectory userAccountDirectory;
-    private int organizationID;
-    private static int counter = 0;
+    private String orgNm;
+    private WorkQueue wrkQ;
+    private EmployeeDirectory empDir;
+    private UserAccountDirectory usrAccDir;
+    private int orgID;
+    private static int cntr = 0;
     
 
     public enum Type {
@@ -45,47 +45,47 @@ public abstract class Organization {
     }
 
     public Organization(String name) {
-        this.organizationName = name;
-        workQueue = new WorkQueue();
-        employeeDirectory = new EmployeeDirectory();
-        userAccountDirectory = new UserAccountDirectory();
-        organizationID = counter;
-        ++counter;
+        this.orgNm = name;
+        wrkQ = new WorkQueue();
+        empDir = new EmployeeDirectory();
+        usrAccDir = new UserAccountDirectory();
+        orgID = cntr;
+        ++cntr;
     }
 
     public abstract ArrayList<Role> getSupportedRole();
 
-    public UserAccountDirectory getUserAccountDirectory() {
-        return userAccountDirectory;
+    public UserAccountDirectory getUsrAccDir() {
+        return usrAccDir;
     }
 
-    public int getOrganizationID() {
-        return organizationID;
+    public int getOrgID() {
+        return orgID;
     }
 
-    public EmployeeDirectory getEmployeeDirectory() {
-        return employeeDirectory;
+    public EmployeeDirectory getEmpDir() {
+        return empDir;
     }
 
     public String getName() {
-        return organizationName;
+        return orgNm;
     }
 
-    public WorkQueue getWorkQueue() {
-        return workQueue;
+    public WorkQueue getWrkQ() {
+        return wrkQ;
     }
 
     public void setName(String name) {
-        this.organizationName = name;
+        this.orgNm = name;
     }
 
-    public void setWorkQueue(WorkQueue workQueue) {
-        this.workQueue = workQueue;
+    public void setWrkQ(WorkQueue wrkQ) {
+        this.wrkQ = wrkQ;
     }
 
     @Override
     public String toString() {
-        return organizationName;
+        return orgNm;
     }
 
 }

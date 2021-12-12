@@ -141,11 +141,11 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
             return;
         }
         try {
-            SendMail(accountBillingRequest.getPatient().getPatientEmail(), text);
+            SendMail(accountBillingRequest.getPatient().getPatmail(), text);
         } catch (MessagingException ex) {
             Logger.getLogger(EmailBillingInformationToPatient.class.getName()).log(Level.SEVERE, null, ex);
         }
-        JOptionPane.showMessageDialog(null, "Billing information sent to " + accountBillingRequest.getPatient().getPatientFirstName());
+        JOptionPane.showMessageDialog(null, "Billing information sent to " + accountBillingRequest.getPatient().getPatFrstNm());
         accountBillingRequest.setStatus("Patient Transaction Completed");
     }//GEN-LAST:event_btnSendEmailActionPerformed
 

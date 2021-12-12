@@ -65,7 +65,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (Employee employee : organization.getEmployeeDirectory().getEmpList()) {
+        for (Employee employee : organization.getEmpDir().getEmpList()) {
             Object[] row = new Object[2];
             row[0] = employee.getEmpId();
             row[1] = employee.getEmpName();
@@ -249,7 +249,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Name Cannot be empty!");
             return;
         }
-        organization.getEmployeeDirectory().createEmployee(name);
+        organization.getEmpDir().createEmployee(name);
         populateTable(organization);
         nameJTextField.setText("");
 

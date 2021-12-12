@@ -187,7 +187,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         ArrayList<Network> networkList = ecosystem.getNetworks();
         ArrayList<String> networkNames = new ArrayList<>();
         for (Network network : networkList) {
-            networkNames.add(network.getName());
+            networkNames.add(network.getNetwrkNm());
         }
         if (networkNames.contains(name)) {
             JOptionPane.showMessageDialog(null, "Network already exists!!");
@@ -199,7 +199,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                 return;
             } else {
                 Network network = ecosystem.createAndAddNetwork();
-                network.setName(name);
+                network.setNetwrkNm(name);
                 JOptionPane.showMessageDialog(null, "New Network is added");
                 nameJTextField.setText("");
                 populateNetworkTable();

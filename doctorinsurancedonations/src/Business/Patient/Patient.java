@@ -13,33 +13,33 @@ import Business.InsuranceCustomer.InsuranceCustomer;
  */
 public class Patient {
 
-    private String patientId;
-    private String patientLastName;
-    private String patientFirstName;
-    private String socialSecurityNumber;
-    private String patientAge;
-    private String contactNumber;
+    private String patId;
+    private String patLstNm;
+    private String patFrstNm;
+    private String ssn;
+    private String patAge;
+    private String cntctNo;
     private String address;
     private String gender;
-    private boolean isTreatmentFinished;
-    private String appointmentDate;
-    private String patientEmail;
-    private String doctorType;
+    private boolean isTrtmntdone;
+    private String aptDt;
+    private String patmail;
+    private String docType;
 
-    public String getDoctorType() {
-        return doctorType;
+    public String getDocType() {
+        return docType;
     }
 
-    public void setDoctorType(String doctorType) {
-        this.doctorType = doctorType;
+    public void setDocType(String docType) {
+        this.docType = docType;
     }
 
-    public String getPatientEmail() {
-        return patientEmail;
+    public String getPatmail() {
+        return patmail;
     }
 
-    public void setPatientEmail(String patientEmail) {
-        this.patientEmail = patientEmail;
+    public void setPatmail(String patmail) {
+        this.patmail = patmail;
     }
 
     private InsuranceCustomer insuranceCustomer;
@@ -48,28 +48,28 @@ public class Patient {
 
     }
 
-    public String getPatientLastName() {
-        return patientLastName;
+    public String getPatLstNm() {
+        return patLstNm;
     }
 
-    public void setSocialSecurityNumber(String socialSecurityNumber) {
-        this.socialSecurityNumber = socialSecurityNumber;
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
     }
 
-    public String getPatientAge() {
-        return patientAge;
+    public String getPatAge() {
+        return patAge;
     }
 
-    public void setPatientAge(String patientAge) {
-        this.patientAge = patientAge;
+    public void setPatAge(String patAge) {
+        this.patAge = patAge;
     }
 
-    public String getContactNumber() {
-        return contactNumber;
+    public String getCntctNo() {
+        return cntctNo;
     }
 
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
+    public void setCntctNo(String cntctNo) {
+        this.cntctNo = cntctNo;
     }
 
     public String getAddress() {
@@ -88,8 +88,8 @@ public class Patient {
         this.insuranceCustomer = insuranceCustomer;
     }
 
-    public String getPatientId() {
-        return patientId;
+    public String getPatId() {
+        return patId;
     }
 
     public String getGender() {
@@ -100,46 +100,46 @@ public class Patient {
         this.gender = gender;
     }
 
-    public void setPatientFirstName(String patientFirstName) {
-        this.patientFirstName = patientFirstName;
+    public void setPatFrstNm(String patFrstNm) {
+        this.patFrstNm = patFrstNm;
     }
 
-    public String getSocialSecurityNumber() {
-        return socialSecurityNumber;
+    public String getSsn() {
+        return ssn;
     }
 
     @Override
     public String toString() {
-        return String.valueOf(patientId);
+        return String.valueOf(patId);
     }
 
-    public void setPatientId(String patientId) {
-        this.patientId = patientId;
+    public void setPatId(String patId) {
+        this.patId = patId;
     }
 
-    public boolean isIsTreatmentFinished() {
-        return isTreatmentFinished;
+    public boolean isIsTrtmntdone() {
+        return isTrtmntdone;
     }
 
-    public void setIsTreatmentFinished(boolean isTreatmentFinished) {
-        this.isTreatmentFinished = isTreatmentFinished;
+    public void setIsTrtmntdone(boolean isTrtmntdone) {
+        this.isTrtmntdone = isTrtmntdone;
     }
 
-    public String getAppointmentDate() {
-        return appointmentDate;
+    public String getAptDt() {
+        return aptDt;
     }
 
-    public void setAppointmentDate(String appointmentDate) {
-        this.appointmentDate = appointmentDate;
+    public void setAptDt(String aptDt) {
+        this.aptDt = aptDt;
     }
 
-    public void setPatientLastName(String patientLastName) {
-        this.patientLastName = patientLastName;
+    public void setPatLstNm(String patLstNm) {
+        this.patLstNm = patLstNm;
     }
 
-    public String getPatientFirstName() {
+    public String getPatFrstNm() {
 
-        return patientFirstName;
+        return patFrstNm;
 
     }
 

@@ -13,23 +13,23 @@ import Business.InsuranceCustomer.InsuranceCustomer;
  */
 public class InsuranceWorkRequest extends WorkRequest {
 
-    private String policyNumber;
+    private String plcyNo;
     private String ssn;
-    private String policyName;
-    private String insuranceCompany;
-    private double claimAmount;
+    private String plcyNm;
+    private String insCmpny;
+    private double claimAmt;
     private String agent;
     private String financer;
-    private double billAmount;
-    private InsuranceCustomer insuranceCustomer;
-    private String healthCenter;
+    private double billAmt;
+    private InsuranceCustomer insCust;
+    private String healthCtr;
 
-    public String getPolicyNumber() {
-        return policyNumber;
+    public String getPlcyNo() {
+        return plcyNo;
     }
 
-    public void setPolicyNumber(String policyNumber) {
-        this.policyNumber = policyNumber;
+    public void setPlcyNo(String plcyNo) {
+        this.plcyNo = plcyNo;
     }
 
     public String getSsn() {
@@ -40,33 +40,33 @@ public class InsuranceWorkRequest extends WorkRequest {
         this.ssn = ssn;
     }
 
-    public String getPolicyName() {
-        return policyName;
+    public String getPlcyNm() {
+        return plcyNm;
     }
 
-    public void setPolicyName(String policyType) {
-        this.policyName = policyType;
+    public void setPlcyNm(String policyType) {
+        this.plcyNm = policyType;
     }
 
-    public String getInsuranceCompany() {
-        return insuranceCompany;
+    public String getInsCmpny() {
+        return insCmpny;
     }
 
-    public void setInsuranceCompany(String insuranceCompany) {
-        this.insuranceCompany = insuranceCompany;
+    public void setInsCmpny(String insCmpny) {
+        this.insCmpny = insCmpny;
     }
 
-    public double getClaimAmount() {
-        return claimAmount;
+    public double getClaimAmt() {
+        return claimAmt;
     }
 
-    public void setClaimAmount(double claimAmount) {
-        this.claimAmount = claimAmount;
+    public void setClaimAmt(double claimAmt) {
+        this.claimAmt = claimAmt;
     }
 
     @Override
     public String toString() {
-        return policyNumber;
+        return plcyNo;
     }
 
     public String getAgent() {
@@ -85,28 +85,28 @@ public class InsuranceWorkRequest extends WorkRequest {
         this.financer = financer;
     }
 
-    public double getBillAmount() {
-        return billAmount;
+    public double getBillAmt() {
+        return billAmt;
     }
 
-    public void setBillAmount(double billAmount) {
-        this.billAmount = billAmount;
+    public void setBillAmt(double billAmt) {
+        this.billAmt = billAmt;
     }
 
-    public InsuranceCustomer getInsuranceCustomer() {
-        return insuranceCustomer;
+    public InsuranceCustomer getInsCust() {
+        return insCust;
     }
 
-    public void setInsuranceCustomer(InsuranceCustomer insuranceCustomer) {
-        this.insuranceCustomer = insuranceCustomer;
+    public void setInsCust(InsuranceCustomer insCust) {
+        this.insCust = insCust;
     }
 
-    public String getHealthCenter() {
-        return healthCenter;
+    public String getHealthCtr() {
+        return healthCtr;
     }
 
-    public void setHealthCenter(String healthCenter) {
-        this.healthCenter = healthCenter;
+    public void setHealthCtr(String healthCtr) {
+        this.healthCtr = healthCtr;
     }
 
 }

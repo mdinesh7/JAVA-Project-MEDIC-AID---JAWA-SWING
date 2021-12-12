@@ -12,27 +12,27 @@ import Business.Enterprise.EnterpriseDirectory;
  * @author dineshmurugesan
  */
 public class Network {
-    private String name;
-    private EnterpriseDirectory enterpriseDirectory;
+    private String netwrkNm;
+    private EnterpriseDirectory entDir;
     
     public Network(){
-        enterpriseDirectory=new EnterpriseDirectory();
+        entDir=new EnterpriseDirectory();
     }
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public String getNetwrkNm() {
+        return netwrkNm;
     }
 
-    public EnterpriseDirectory getEnterpriseDirectory() {
-        return enterpriseDirectory;
+    public void setNetwrkNm(String netwrkNm) {
+        this.netwrkNm = netwrkNm;
+    }
+
+    public EnterpriseDirectory getEntDir() {
+        return entDir;
     }
     
     @Override
     public String toString(){
-        return name;
+        return netwrkNm;
     }
     
 }

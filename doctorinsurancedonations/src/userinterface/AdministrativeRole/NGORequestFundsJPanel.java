@@ -236,7 +236,7 @@ public class NGORequestFundsJPanel extends javax.swing.JPanel {
 
             for (Network network : networks) {
 
-                List<Enterprise> enterprises = network.getEnterpriseDirectory().getEnterpriseList();
+                List<Enterprise> enterprises = network.getEntDir().getEntList();
                 for (Enterprise enterprise : enterprises) {
                     List<Organization> organizations = enterprise.getOrgDir().getOrganizations();
                     for (Organization organization : organizations) {
@@ -249,8 +249,8 @@ public class NGORequestFundsJPanel extends javax.swing.JPanel {
             }
 
             if (org != null) {
-                org.getWorkQueue().getWorkRequests().add(ngoFundRequest);
-                userAccount.getWorkQueue().getWorkRequests().add(ngoFundRequest);
+                org.getWrkQ().getWorkRequests().add(ngoFundRequest);
+                userAccount.getWrkQ().getWorkRequests().add(ngoFundRequest);
             }
             populateNGORequestTable();
         }
@@ -279,7 +279,7 @@ public class NGORequestFundsJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) NGORequestJTable.getModel();
         int totalreqFunds = 0;
         model.setRowCount(0);
-        for (WorkRequest request : userAccount.getWorkQueue().getWorkRequests()) {
+        for (WorkRequest request : userAccount.getWrkQ().getWorkRequests()) {
             if(request instanceof NGOFundRequest){
             Object[] row = new Object[4];
             row[0] = String.valueOf(((NGOFundRequest) request).getHospname());

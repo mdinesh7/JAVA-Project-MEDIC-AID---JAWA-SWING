@@ -12,13 +12,13 @@ package Business.WorkQueue;
 public class GovernmentFundRequest extends WorkRequest {
 
     private String location;
-    private int population;
-    private double requestAmount;
+    private int pop;
+    private double reqAmt;
 
     public GovernmentFundRequest(String location, int population, double requestAmount) {
         this.location = location;
-        this.population = population;
-        this.requestAmount = requestAmount;
+        this.pop = population;
+        this.reqAmt = requestAmount;
 
     }
 
@@ -35,20 +35,20 @@ public class GovernmentFundRequest extends WorkRequest {
         this.location = location;
     }
 
-    public int getPopulation() {
-        return population;
+    public int getPop() {
+        return pop;
     }
 
-    public void setPopulation(int population) {
-        this.population = population;
+    public void setPop(int pop) {
+        this.pop = pop;
     }
 
-    public double getRequestAmount() {
-        return requestAmount;
+    public double getReqAmt() {
+        return reqAmt;
     }
 
-    public void setRequestAmount(double requestAmount) {
-        this.requestAmount = requestAmount;
+    public void setReqAmt(double reqAmt) {
+        this.reqAmt = reqAmt;
     }
 
 }
