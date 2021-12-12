@@ -7,6 +7,7 @@ package userinterface.AdministrativeRole;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.WorkQueue.NGOFundRequest;
+import Business.WorkQueue.*;
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -279,6 +280,7 @@ public class NGORequestFundsJPanel extends javax.swing.JPanel {
         int totalreqFunds = 0;
         model.setRowCount(0);
         for (WorkRequest request : userAccount.getWorkQueue().getWorkRequests()) {
+            if(request instanceof NGOFundRequest){
             Object[] row = new Object[4];
             row[0] = String.valueOf(((NGOFundRequest) request).getHospname());
             row[1] = String.valueOf(((NGOFundRequest) request).getHospaddress());
@@ -287,6 +289,7 @@ public class NGORequestFundsJPanel extends javax.swing.JPanel {
             model.addRow(row);
             if (request.getStatus().equalsIgnoreCase("Accepted")) {
                 totalreqFunds += ((NGOFundRequest) request).getNeededamtreq();
+            }
             }
         }
 

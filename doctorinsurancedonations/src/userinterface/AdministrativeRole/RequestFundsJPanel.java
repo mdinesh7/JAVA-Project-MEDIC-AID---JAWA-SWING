@@ -48,6 +48,7 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         double totalFunds = 0;
         model.setRowCount(0);
         for (WorkRequest request : userAccount.getWorkQueue().getWorkRequests()) {
+            if(request instanceof GovernmentFundRequest){
             Object[] row = new Object[4];
             row[0] = String.valueOf(((GovernmentFundRequest) request).getLocation());
             row[1] = request.getReceiver();
@@ -56,6 +57,7 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
             model.addRow(row);
             if (request.getStatus().equalsIgnoreCase("Accepted")) {
                 totalFunds += ((GovernmentFundRequest) request).getRequestAmount();
+            }
             }
         }
 
