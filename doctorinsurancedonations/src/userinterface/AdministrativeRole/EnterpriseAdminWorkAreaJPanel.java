@@ -16,30 +16,30 @@ import javax.swing.JPanel;
  */
 public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
 
-    JPanel userProcessContainer;
-    Enterprise enterprise;
-    UserAccount userAccount;
-    EcoSystem ecoSystem;
+    JPanel jPanel;
+    Enterprise entrpz;
+    UserAccount usrAc;
+    EcoSystem ecosystem;
 
     /**
      * Creates new form AdminWorkAreaJPanel
      */
     public EnterpriseAdminWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, UserAccount userAccount, EcoSystem ecoSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.enterprise = enterprise;
-        this.userAccount = userAccount;
-        this.ecoSystem = ecoSystem;
+        this.jPanel = userProcessContainer;
+        this.entrpz = enterprise;
+        this.usrAc = userAccount;
+        this.ecosystem = ecoSystem;
         valueLabel.setText(enterprise.getName());
 
         if (enterprise instanceof GovernmentEnterprise || enterprise instanceof InsuranceCompanyEnterprise
             || enterprise instanceof NGOEnterprise ) {
-            btnRequestFunds.setVisible(false);
+            btnGovtFundReq.setVisible(false);
         }
         
         if (enterprise instanceof GovernmentEnterprise || enterprise instanceof InsuranceCompanyEnterprise
             || enterprise instanceof NGOEnterprise ) {
-            btnRequestFunds1.setVisible(false);
+            btnNGOFundReq.setVisible(false);
         }
     }
 
@@ -52,44 +52,44 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        userJButton = new javax.swing.JButton();
-        manageEmployeeJButton = new javax.swing.JButton();
-        manageOrganizationJButton = new javax.swing.JButton();
+        mnguserJButton = new javax.swing.JButton();
+        mngEmpJButton = new javax.swing.JButton();
+        mngOrgJButton = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
-        btnRequestFunds = new javax.swing.JButton();
+        btnGovtFundReq = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        btnRequestFunds1 = new javax.swing.JButton();
+        btnNGOFundReq = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("My Work Area -Adminstrative Role");
 
-        userJButton.setBackground(new java.awt.Color(0, 153, 255));
-        userJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        userJButton.setText("Manage User");
-        userJButton.addActionListener(new java.awt.event.ActionListener() {
+        mnguserJButton.setBackground(new java.awt.Color(0, 153, 255));
+        mnguserJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        mnguserJButton.setText("Manage User");
+        mnguserJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userJButtonActionPerformed(evt);
+                mnguserJButtonActionPerformed(evt);
             }
         });
 
-        manageEmployeeJButton.setBackground(new java.awt.Color(0, 153, 255));
-        manageEmployeeJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        manageEmployeeJButton.setText("Manage Employee");
-        manageEmployeeJButton.addActionListener(new java.awt.event.ActionListener() {
+        mngEmpJButton.setBackground(new java.awt.Color(0, 153, 255));
+        mngEmpJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        mngEmpJButton.setText("Manage Employee");
+        mngEmpJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageEmployeeJButtonActionPerformed(evt);
+                mngEmpJButtonActionPerformed(evt);
             }
         });
 
-        manageOrganizationJButton.setBackground(new java.awt.Color(0, 153, 255));
-        manageOrganizationJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        manageOrganizationJButton.setText("Manage Organization");
-        manageOrganizationJButton.addActionListener(new java.awt.event.ActionListener() {
+        mngOrgJButton.setBackground(new java.awt.Color(0, 153, 255));
+        mngOrgJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        mngOrgJButton.setText("Manage Organization");
+        mngOrgJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageOrganizationJButtonActionPerformed(evt);
+                mngOrgJButtonActionPerformed(evt);
             }
         });
 
@@ -98,23 +98,23 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
-        btnRequestFunds.setBackground(new java.awt.Color(0, 153, 255));
-        btnRequestFunds.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnRequestFunds.setText("Request Funds from Government");
-        btnRequestFunds.addActionListener(new java.awt.event.ActionListener() {
+        btnGovtFundReq.setBackground(new java.awt.Color(0, 153, 255));
+        btnGovtFundReq.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnGovtFundReq.setText("Request Funds from Government");
+        btnGovtFundReq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRequestFundsActionPerformed(evt);
+                btnGovtFundReqActionPerformed(evt);
             }
         });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hospital.gif"))); // NOI18N
 
-        btnRequestFunds1.setBackground(new java.awt.Color(0, 153, 255));
-        btnRequestFunds1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnRequestFunds1.setText("Request Funds from NGO");
-        btnRequestFunds1.addActionListener(new java.awt.event.ActionListener() {
+        btnNGOFundReq.setBackground(new java.awt.Color(0, 153, 255));
+        btnNGOFundReq.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnNGOFundReq.setText("Request Funds from NGO");
+        btnNGOFundReq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRequestFunds1ActionPerformed(evt);
+                btnNGOFundReqActionPerformed(evt);
             }
         });
 
@@ -135,11 +135,11 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
                         .addGap(0, 310, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(userJButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(manageEmployeeJButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(manageOrganizationJButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnRequestFunds, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnRequestFunds1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(mnguserJButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(mngEmpJButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(mngOrgJButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnGovtFundReq, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnNGOFundReq, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
         );
@@ -155,15 +155,15 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(manageOrganizationJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(mngOrgJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(11, 11, 11)
-                        .addComponent(manageEmployeeJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(mngEmpJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(11, 11, 11)
-                        .addComponent(userJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(mnguserJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnRequestFunds, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGovtFundReq, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(11, 11, 11)
-                        .addComponent(btnRequestFunds1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnNGOFundReq, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -171,56 +171,60 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed
+    private void mnguserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnguserJButtonActionPerformed
         // TODO add your handling code here:
-        ManageUserAccountJPanel muajp = new ManageUserAccountJPanel(userProcessContainer, enterprise);
-        userProcessContainer.add("ManageUserAccountJPanel", muajp);
+        ManageUserAccountJPanel muajp = new ManageUserAccountJPanel(jPanel, entrpz);
+        jPanel.add("ManageUserAccountJPanel", muajp);
 
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_userJButtonActionPerformed
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.next(jPanel);
+    }//GEN-LAST:event_mnguserJButtonActionPerformed
 
-    private void manageEmployeeJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployeeJButtonActionPerformed
+    private void mngEmpJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngEmpJButtonActionPerformed
 
-        ManageEmployeeJPanel manageEmployeeJPanel = new ManageEmployeeJPanel(userProcessContainer, enterprise.getOrgDir());
-        userProcessContainer.add("manageEmployeeJPanel", manageEmployeeJPanel);
 
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageEmployeeJPanel manageEmployeeJPanel = new ManageEmployeeJPanel(jPanel, entrpz.getOrganizationDirectory());
+        jPanel.add("manageEmployeeJPanel", manageEmployeeJPanel);
 
-    }//GEN-LAST:event_manageEmployeeJButtonActionPerformed
 
-    private void manageOrganizationJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButtonActionPerformed
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.next(jPanel);
 
-        ManageOrganizationJPanel manageOrganizationJPanel = new ManageOrganizationJPanel(userProcessContainer, enterprise.getOrgDir(), enterprise);
-        userProcessContainer.add("manageOrganizationJPanel", manageOrganizationJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
+    }//GEN-LAST:event_mngEmpJButtonActionPerformed
 
-    private void btnRequestFundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestFundsActionPerformed
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("RequestFundsJPanel", new RequestFundsJPanel(userProcessContainer, enterprise, userAccount, ecoSystem));
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnRequestFundsActionPerformed
+    private void mngOrgJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngOrgJButtonActionPerformed
 
-    private void btnRequestFunds1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestFunds1ActionPerformed
+
+        ManageOrganizationJPanel manageOrganizationJPanel = new ManageOrganizationJPanel(jPanel, entrpz.getOrganizationDirectory(), entrpz);
+        jPanel.add("manageOrganizationJPanel", manageOrganizationJPanel);
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.next(jPanel);
+    }//GEN-LAST:event_mngOrgJButtonActionPerformed
+
+
+    private void btnGovtFundReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGovtFundReqActionPerformed
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        jPanel.add("RequestFundsJPanel", new RequestFundsJPanel(jPanel, entrpz, usrAc, ecosystem));
+        layout.next(jPanel);
+    }//GEN-LAST:event_btnGovtFundReqActionPerformed
+
+    private void btnNGOFundReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNGOFundReqActionPerformed
         // TODO add your handling code here:
-       CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("NGORequestFundsJPanel", new NGORequestFundsJPanel(userProcessContainer, enterprise, userAccount, ecoSystem));
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnRequestFunds1ActionPerformed
+       CardLayout layout = (CardLayout) jPanel.getLayout();
+        jPanel.add("NGORequestFundsJPanel", new NGORequestFundsJPanel(jPanel, entrpz, usrAc, ecosystem));
+        layout.next(jPanel);
+    }//GEN-LAST:event_btnNGOFundReqActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnRequestFunds;
-    private javax.swing.JButton btnRequestFunds1;
+    private javax.swing.JButton btnGovtFundReq;
+    private javax.swing.JButton btnNGOFundReq;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton manageEmployeeJButton;
-    private javax.swing.JButton manageOrganizationJButton;
-    private javax.swing.JButton userJButton;
+    private javax.swing.JButton mngEmpJButton;
+    private javax.swing.JButton mngOrgJButton;
+    private javax.swing.JButton mnguserJButton;
     private javax.swing.JLabel valueLabel;
     // End of variables declaration//GEN-END:variables
 

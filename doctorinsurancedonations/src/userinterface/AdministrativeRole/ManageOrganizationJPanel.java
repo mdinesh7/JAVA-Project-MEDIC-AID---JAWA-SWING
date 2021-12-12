@@ -21,9 +21,9 @@ import javax.swing.table.TableRowSorter;
  */
 public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
-    private OrganizationDirectory directory;
-    private JPanel userProcessContainer;
-    private Enterprise enterprise;
+    private OrganizationDirectory dir;
+    private JPanel jPanel;
+    private Enterprise entrpz;
 
     /**
      * Creates new form ManageOrganizationJPanel
@@ -31,31 +31,31 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
     public ManageOrganizationJPanel(JPanel userProcessContainer, OrganizationDirectory directory,
             Enterprise enterprise) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.directory = directory;
-        this.enterprise = enterprise;
+        this.jPanel = userProcessContainer;
+        this.dir = directory;
+        this.entrpz = enterprise;
 
-        populateTable();
-        populateCombo();
+        pplTbl();
+        pplCmbx();
     }
 
-    private void populateCombo() {
+    private void pplCmbx() {
         organizationJComboBox.removeAllItems();
         // for (Type type : Organization.Type.values()){
         // if (!type.getValue().equals(Type.Admin.getValue()))
         // organizationJComboBox.addItem(type);
         // }
-        for (Type orgType : enterprise.getAllOrganizationTypes()) {
+        for (Type orgType : entrpz.getAllOrganizationTypes()) {
             organizationJComboBox.addItem(orgType);
         }
     }
 
-    private void populateTable() {
+    private void pplTbl() {
         DefaultTableModel model = (DefaultTableModel) organizationJTable.getModel();
 
         model.setRowCount(0);
 
-        for (Organization organization : directory.getOrganizations()) {
+        for (Organization organization : dir.getOrganizations()) {
             Object[] row = new Object[2];
             row[0] = organization.getOrgID();
             row[1] = organization;
@@ -248,18 +248,18 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Organization already exists!! ");
             return;
         } else {
-            directory.createOrganization(type);
+            dir.createOrganization(type);
         }
 
-        populateTable();
+        pplTbl();
 
     }// GEN-LAST:event_addJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_backJButtonActionPerformed
 
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        jPanel.remove(this);
+        CardLayout layout = (CardLayout) jPanel.getLayout();
+        layout.previous(jPanel);
     }// GEN-LAST:event_backJButtonActionPerformed
 
     private void btnDeleteOrgActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnDeleteOrgActionPerformed
@@ -271,8 +271,10 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             return;
         } else {
             Organization organization = (Organization) organizationJTable.getValueAt(selectedRow, 1);
-            enterprise.getOrgDir().getOrganizations().remove(organization);
-            populateTable();
+
+            entrpz.getOrganizationDirectory().getOrganizations().remove(organization);
+            pplTbl();
+
         }
 
     }// GEN-LAST:event_btnDeleteOrgActionPerformed
