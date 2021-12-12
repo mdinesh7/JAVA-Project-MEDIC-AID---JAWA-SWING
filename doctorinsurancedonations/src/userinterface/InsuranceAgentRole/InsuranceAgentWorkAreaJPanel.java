@@ -49,7 +49,6 @@ public class InsuranceAgentWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-
         btnAddNewUser = new javax.swing.JButton();
         btnProcessInsuranceRequests = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -59,34 +58,29 @@ public class InsuranceAgentWorkAreaJPanel extends javax.swing.JPanel {
 
         btnAddNewUser.setBackground(new java.awt.Color(0, 153, 255));
         btnAddNewUser.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-
         btnAddNewUser.setText("Add New Customer");
         btnAddNewUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddNewUserActionPerformed(evt);
             }
         });
-
         add(btnAddNewUser);
         btnAddNewUser.setBounds(0, 10, 184, 41);
 
         btnProcessInsuranceRequests.setBackground(new java.awt.Color(0, 153, 255));
         btnProcessInsuranceRequests.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-
         btnProcessInsuranceRequests.setText("Process Insurance Requests");
         btnProcessInsuranceRequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProcessInsuranceRequestsActionPerformed(evt);
             }
         });
-
         add(btnProcessInsuranceRequests);
-        btnProcessInsuranceRequests.setBounds(490, 380, 200, 39);
+        btnProcessInsuranceRequests.setBounds(700, 550, 200, 39);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/health insurance.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/policy planner.web.gif"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(1, 5, 690, 430);
-
+        jLabel2.setBounds(1, 5, 1130, 530);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewUserActionPerformed
@@ -108,8 +102,6 @@ public class InsuranceAgentWorkAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddNewUser;
     private javax.swing.JButton btnProcessInsuranceRequests;
-
     private javax.swing.JLabel jLabel2;
-
     // End of variables declaration//GEN-END:variables
 }

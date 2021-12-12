@@ -154,9 +154,9 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(10, 11, 81, 25);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/insurance claim.gif"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/insurance agent.jpg"))); // NOI18N
         add(jLabel7);
-        jLabel7.setBounds(-30, -50, 800, 600);
+        jLabel7.setBounds(220, -50, 800, 600);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMessageActionPerformed

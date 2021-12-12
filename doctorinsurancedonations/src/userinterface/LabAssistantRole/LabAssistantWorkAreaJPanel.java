@@ -78,6 +78,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         assignJBtn2 = new javax.swing.JButton();
         assignJBtn1 = new javax.swing.JButton();
         assignJBtn3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
@@ -136,9 +137,9 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         add(prcssJBtn);
         prcssJBtn.setBounds(600, 130, 140, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/scanner.gif"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(10, 180, 740, 360);
+        jLabel2.setBounds(10, 180, 710, 370);
 
         assignJBtn2.setBackground(new java.awt.Color(0, 153, 255));
         assignJBtn2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -172,6 +173,10 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(assignJBtn3);
         assignJBtn3.setBounds(290, 130, 140, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab test request.gif"))); // NOI18N
+        add(jLabel1);
+        jLabel1.setBounds(741, 200, 580, 360);
     }// </editor-fold>//GEN-END:initComponents
 
     private void assignJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJBtnActionPerformed
@@ -319,6 +324,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton assignJBtn1;
     private javax.swing.JButton assignJBtn2;
     private javax.swing.JButton assignJBtn3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton prcssJBtn;

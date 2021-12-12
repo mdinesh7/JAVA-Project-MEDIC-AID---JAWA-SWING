@@ -67,8 +67,10 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         txtCoverage = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
+
         btnDisburse.setBackground(new java.awt.Color(0, 153, 255));
         btnDisburse.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnDisburse.setText("Disburse Amount");
@@ -79,8 +81,7 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         });
         add(btnDisburse);
         btnDisburse.setBounds(130, 316, 129, 32);
-        add(btnDisburse);
-        btnDisburse.setBounds(130, 316, 129, 32);
+
         btnReject.setBackground(new java.awt.Color(0, 153, 255));
         btnReject.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnReject.setText("Reject Claim");
@@ -91,18 +92,18 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         });
         add(btnReject);
         btnReject.setBounds(291, 316, 103, 32);
-        add(btnReject);
-        btnReject.setBounds(291, 316, 103, 32);
+
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setText("Insurance Finance Request Process area ");
         add(jLabel3);
         jLabel3.setBounds(130, 17, 488, 29);
+
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 204));
         jLabel4.setText("Policy Number");
         add(jLabel4);
         jLabel4.setBounds(154, 91, 86, 15);
-        backBtn.setBackground(new java.awt.Color(0, 153, 255));
+
         backBtn.setBackground(new java.awt.Color(0, 153, 255));
         backBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         backBtn.setText("<<Back");
@@ -113,16 +114,12 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         });
         add(backBtn);
         backBtn.setBounds(10, 23, 77, 29);
+
         txtPolicyNumber.setEditable(false);
         add(txtPolicyNumber);
         txtPolicyNumber.setBounds(278, 86, 116, 23);
+
         txtPolicyName.setEditable(false);
-        add(txtPolicyName);
-        txtPolicyName.setBounds(278, 209, 116, 23);
-        add(backBtn);
-        backBtn.setBounds(10, 23, 77, 29);
-        add(txtPolicyNumber);
-        txtPolicyNumber.setBounds(278, 86, 116, 23);
         add(txtPolicyName);
         txtPolicyName.setBounds(278, 209, 116, 23);
 
@@ -131,14 +128,17 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         jLabel1.setText("policyName");
         add(jLabel1);
         jLabel1.setBounds(172, 211, 68, 15);
+
         txtBillingAmount.setEditable(false);
         add(txtBillingAmount);
         txtBillingAmount.setBounds(278, 247, 116, 23);
+
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 204));
         jLabel6.setText("Billing Amount");
         add(jLabel6);
         jLabel6.setBounds(150, 249, 90, 15);
+
         txtClaimAmount.setEditable(false);
         txtClaimAmount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,32 +147,38 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         });
         add(txtClaimAmount);
         txtClaimAmount.setBounds(278, 285, 116, 23);
+
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 204));
         jLabel7.setText("Claim Amount");
         add(jLabel7);
         jLabel7.setBounds(154, 287, 86, 15);
+
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 204));
         jLabel8.setText("SSN");
         add(jLabel8);
         jLabel8.setBounds(216, 129, 24, 15);
+
         txtSSN.setEditable(false);
         add(txtSSN);
         txtSSN.setBounds(278, 124, 116, 23);
+
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 204));
         jLabel9.setText("Conerage%");
         add(jLabel9);
         jLabel9.setBounds(168, 176, 72, 15);
+
         txtCoverage.setEditable(false);
         add(txtCoverage);
         txtCoverage.setBounds(278, 171, 116, 23);
+
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/insurance finance.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/financier request.gif"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 720, 440);
+        jLabel2.setBounds(0, 0, 790, 540);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDisburseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisburseActionPerformed

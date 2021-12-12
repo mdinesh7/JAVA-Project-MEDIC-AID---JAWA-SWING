@@ -104,7 +104,7 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Location: ");
         add(jLabel1);
-        jLabel1.setBounds(67, 69, 59, 15);
+        jLabel1.setBounds(67, 69, 61, 15);
 
         txtLocation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,7 +117,7 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Population:");
         add(jLabel2);
-        jLabel2.setBounds(67, 107, 70, 15);
+        jLabel2.setBounds(67, 107, 71, 15);
 
         txtpopulation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,7 +130,7 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Amount:");
         add(jLabel3);
-        jLabel3.setBounds(67, 145, 51, 15);
+        jLabel3.setBounds(67, 145, 54, 15);
 
         txtAmount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,17 +181,17 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(workRequestJTable);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(37, 296, 592, 97);
+        jScrollPane1.setBounds(40, 360, 592, 97);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("All Funds Requests");
         add(jLabel4);
-        jLabel4.setBounds(265, 254, 124, 36);
+        jLabel4.setBounds(270, 310, 124, 36);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Total Funds Received :");
         add(jLabel5);
-        jLabel5.setBounds(67, 225, 138, 15);
+        jLabel5.setBounds(67, 225, 137, 15);
 
         txtFundsReceived.setEditable(false);
         add(txtFundsReceived);
@@ -206,11 +206,11 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(10, 11, 93, 29);
+        backJButton.setBounds(10, 11, 81, 23);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Funds.gif"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Government secretary.gif"))); // NOI18N
         add(jLabel6);
-        jLabel6.setBounds(30, 0, 630, 290);
+        jLabel6.setBounds(30, 0, 630, 310);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtLocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLocationActionPerformed

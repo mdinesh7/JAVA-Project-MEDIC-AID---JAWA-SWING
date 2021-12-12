@@ -78,7 +78,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
             }
         });
 
-        wrkReqJTable.setBackground(new java.awt.Color(0, 153, 255));
+        wrkReqJTable.setBackground(new java.awt.Color(255, 0, 51));
         wrkReqJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -142,7 +142,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Receptionist: Patient Billing Area");
 
-        insrTbl.setBackground(new java.awt.Color(0, 153, 255));
+        insrTbl.setBackground(new java.awt.Color(255, 0, 0));
         insrTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -212,7 +212,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                                 .addComponent(asgnToMeBtn)
                                 .addGap(69, 69, 69)
                                 .addComponent(prcsReqBtn)))
-                        .addGap(0, 255, Short.MAX_VALUE))
+                        .addGap(0, 306, Short.MAX_VALUE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2))
                 .addContainerGap())
