@@ -55,9 +55,11 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
+
         dirWrkReqTbl = new javax.swing.JTable();
         btnAss = new javax.swing.JButton();
         processReqBtn = new javax.swing.JButton();
+
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -111,6 +113,8 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage user - 2.gif"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -127,7 +131,11 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
                         .addGap(77, 77, 77)
                         .addComponent(processReqBtn)
                         .addGap(212, 212, 212)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(557, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,9 +146,11 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+
                     .addComponent(btnAss, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(processReqBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(187, Short.MAX_VALUE))
+
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -232,6 +242,7 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAss;
     private javax.swing.JTable dirWrkReqTbl;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton processReqBtn;
     // End of variables declaration//GEN-END:variables

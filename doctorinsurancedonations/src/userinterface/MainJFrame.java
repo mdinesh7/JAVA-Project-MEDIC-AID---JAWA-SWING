@@ -62,7 +62,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(128, 0, 0));
         jPanel1.setFocusable(false);
         jPanel1.setRequestFocusEnabled(false);
 
@@ -101,7 +101,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel2.setText("User Account Login ");
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/healthcare logo2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/heart.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -154,7 +154,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(loginJButton)
                 .addGap(18, 18, 18)
                 .addComponent(logoutJButton)
-                .addContainerGap(871, Short.MAX_VALUE))
+                .addContainerGap(868, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -165,7 +165,7 @@ public class MainJFrame extends javax.swing.JFrame {
         imageLbl.setBackground(new java.awt.Color(255, 255, 255));
         imageLbl.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         imageLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ezgif.com-resize.gif"))); // NOI18N
+        imageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/7BZb.gif"))); // NOI18N
         imageLbl.setToolTipText("");
         imageLbl.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         imageLbl.setMaximumSize(new java.awt.Dimension(500, 500));
