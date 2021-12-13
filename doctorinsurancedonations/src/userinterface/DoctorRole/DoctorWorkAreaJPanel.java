@@ -97,9 +97,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         bloodBankReqJButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(248, 51, 51));
 
-        wrkReqJTable.setBackground(new java.awt.Color(0, 153, 255));
+        wrkReqJTable.setBackground(new java.awt.Color(204, 204, 204));
         wrkReqJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -128,7 +128,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(wrkReqJTable);
 
         reqTestJButton.setBackground(new java.awt.Color(0, 153, 255));
-        reqTestJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        reqTestJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         reqTestJButton.setText("Request Lab Test");
         reqTestJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,17 +136,17 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        enterpriseLabel.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         enterpriseLabel.setText("Enterprise :");
 
-        valueLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        valueLabel.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         valueLabel.setText("<value>");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Medical Test Work Queue");
 
-        AsngToMeBtn.setBackground(new java.awt.Color(0, 153, 255));
-        AsngToMeBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        AsngToMeBtn.setBackground(new java.awt.Color(51, 213, 51));
+        AsngToMeBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         AsngToMeBtn.setText("Assign To Me");
         AsngToMeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,7 +155,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         prvdPrescrptnBtn.setBackground(new java.awt.Color(0, 153, 255));
-        prvdPrescrptnBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        prvdPrescrptnBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         prvdPrescrptnBtn.setText("Provide Prescription");
         prvdPrescrptnBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +164,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         cmpltBtn.setBackground(new java.awt.Color(0, 153, 255));
-        cmpltBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        cmpltBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         cmpltBtn.setText("Complete Treatment");
         cmpltBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,8 +172,8 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        ViewPntBtn.setBackground(new java.awt.Color(0, 153, 255));
-        ViewPntBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        ViewPntBtn.setBackground(new java.awt.Color(204, 204, 204));
+        ViewPntBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         ViewPntBtn.setText("View Patient");
         ViewPntBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,11 +181,11 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel2.setText("Doctor Work Area");
 
         bloodBankReqJButton.setBackground(new java.awt.Color(0, 153, 255));
-        bloodBankReqJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        bloodBankReqJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         bloodBankReqJButton.setText("Blood Bank Request");
         bloodBankReqJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,37 +202,40 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(384, 384, 384)
-                        .addComponent(bloodBankReqJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(241, 241, 241)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel2)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(19, 19, 19)
-                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(enterpriseLabel)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(384, 384, 384)
+                                .addComponent(bloodBankReqJButton))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(406, 406, 406)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(19, 19, 19)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(332, 332, 332))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 798, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(ViewPntBtn)
-                                .addGap(29, 29, 29)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(AsngToMeBtn)
                                 .addGap(31, 31, 31)
                                 .addComponent(reqTestJButton)
                                 .addGap(30, 30, 30)
                                 .addComponent(prvdPrescrptnBtn)
                                 .addGap(18, 18, 18)
-                                .addComponent(cmpltBtn)))))
+                                .addComponent(cmpltBtn))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(enterpriseLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 555, Short.MAX_VALUE)
-                .addGap(27, 27, 27))
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -258,8 +261,8 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
                             .addComponent(cmpltBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(bloodBankReqJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(482, Short.MAX_VALUE))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
