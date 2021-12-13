@@ -190,6 +190,7 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
     private void sbmtJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sbmtJButtonActionPerformed
         sbmtJButton.setEnabled(true);
         String message = msgTxt.getText();
+        
         if (message.equals("")) {
             JOptionPane.showMessageDialog(null, "Message is mandatory!");
             return;
