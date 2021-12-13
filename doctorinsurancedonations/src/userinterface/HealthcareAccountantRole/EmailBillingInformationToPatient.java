@@ -60,9 +60,9 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(236, 51, 51));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Email Billing Information to Patient");
 
         emailTxtFiled.setColumns(20);
@@ -70,7 +70,7 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
         jScrollPane1.setViewportView(emailTxtFiled);
 
         btnSendEmail.setBackground(new java.awt.Color(0, 153, 255));
-        btnSendEmail.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnSendEmail.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnSendEmail.setText("Send Email");
         btnSendEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +79,7 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
         });
 
         btnClearText.setBackground(new java.awt.Color(0, 153, 255));
-        btnClearText.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnClearText.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnClearText.setText("Clear");
         btnClearText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,7 +88,7 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
         });
 
         btnBack.setBackground(new java.awt.Color(0, 153, 255));
-        btnBack.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnBack.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,9 +107,9 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 287, Short.MAX_VALUE)
+                        .addGap(0, 359, Short.MAX_VALUE)
                         .addComponent(jLabel1)
-                        .addGap(0, 316, Short.MAX_VALUE))
+                        .addGap(0, 387, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)

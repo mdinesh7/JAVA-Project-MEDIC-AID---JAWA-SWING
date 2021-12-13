@@ -69,7 +69,7 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
         reportBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(244, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,7 +77,7 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setText("Patient Details");
 
         createAppmnt.setBackground(new java.awt.Color(0, 153, 255));
-        createAppmnt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        createAppmnt.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         createAppmnt.setText("Create Appointment");
         createAppmnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +86,7 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         prcsMedclBillingsBtn.setBackground(new java.awt.Color(0, 153, 255));
-        prcsMedclBillingsBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        prcsMedclBillingsBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         prcsMedclBillingsBtn.setText("Process Medical Billings");
         prcsMedclBillingsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +94,8 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        allPntsTbl.setBackground(new java.awt.Color(0, 153, 255));
+        allPntsTbl.setBackground(new java.awt.Color(204, 204, 204));
+        allPntsTbl.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         allPntsTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -130,7 +131,7 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(allPntsTbl);
 
         reportBtn.setBackground(new java.awt.Color(0, 153, 255));
-        reportBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        reportBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         reportBtn.setText("Show Patient Report");
         reportBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +139,7 @@ public class AccountantWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel3.setText("Receptionist Work Area");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

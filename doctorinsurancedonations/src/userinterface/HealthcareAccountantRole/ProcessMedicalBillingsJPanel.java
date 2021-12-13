@@ -69,8 +69,8 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        prcsReqBtn.setBackground(new java.awt.Color(0, 153, 255));
-        prcsReqBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        prcsReqBtn.setBackground(new java.awt.Color(204, 204, 204));
+        prcsReqBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         prcsReqBtn.setText("Process Request");
         prcsReqBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +78,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
             }
         });
 
-        wrkReqJTable.setBackground(new java.awt.Color(255, 0, 51));
+        wrkReqJTable.setBackground(new java.awt.Color(204, 204, 204));
         wrkReqJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -121,8 +121,8 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(wrkReqJTable);
 
-        asgnToMeBtn.setBackground(new java.awt.Color(0, 153, 255));
-        asgnToMeBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        asgnToMeBtn.setBackground(new java.awt.Color(204, 204, 204));
+        asgnToMeBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         asgnToMeBtn.setText("AssignToMe");
         asgnToMeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,19 +130,19 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
             }
         });
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backJButton.setText("<<Back");
+        backJButton.setBackground(new java.awt.Color(204, 204, 204));
+        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setText("Receptionist: Patient Billing Area");
 
-        insrTbl.setBackground(new java.awt.Color(255, 0, 0));
+        insrTbl.setBackground(new java.awt.Color(204, 204, 204));
         insrTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -185,10 +185,10 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(insrTbl);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Insurance Claim Status Table");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Patient Billing Table");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -212,7 +212,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                                 .addComponent(asgnToMeBtn)
                                 .addGap(69, 69, 69)
                                 .addComponent(prcsReqBtn)))
-                        .addGap(0, 306, Short.MAX_VALUE))
+                        .addGap(0, 351, Short.MAX_VALUE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2))
                 .addContainerGap())
@@ -243,7 +243,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(228, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
