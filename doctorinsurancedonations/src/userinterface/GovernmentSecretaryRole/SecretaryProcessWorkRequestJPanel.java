@@ -65,13 +65,13 @@ public class SecretaryProcessWorkRequestJPanel extends javax.swing.JPanel {
         btnReject = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(102, 255, 102));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setText("Secretary Request Process area ");
 
         sendRequestToTreasurerBtn.setBackground(new java.awt.Color(0, 153, 255));
-        sendRequestToTreasurerBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        sendRequestToTreasurerBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         sendRequestToTreasurerBtn.setText("Send Request to Treasurer to disburse funds");
         sendRequestToTreasurerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,33 +79,37 @@ public class SecretaryProcessWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel4.setText("Location");
 
-        backBtn.setBackground(new java.awt.Color(0, 153, 255));
-        backBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backBtn.setText("<<Back");
+        backBtn.setBackground(new java.awt.Color(204, 204, 204));
+        backBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
 
+        locationTxt.setBackground(new java.awt.Color(204, 204, 204));
         locationTxt.setEnabled(false);
 
+        populationTxt.setBackground(new java.awt.Color(204, 204, 204));
         populationTxt.setEnabled(false);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setText("Population");
 
+        amountTxt.setBackground(new java.awt.Color(204, 204, 204));
         amountTxt.setEnabled(false);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Amount");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Message");
 
+        messageTxt.setBackground(new java.awt.Color(204, 204, 204));
         messageTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 messageTxtActionPerformed(evt);
@@ -113,7 +117,7 @@ public class SecretaryProcessWorkRequestJPanel extends javax.swing.JPanel {
         });
 
         btnReject.setBackground(new java.awt.Color(0, 153, 255));
-        btnReject.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnReject.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnReject.setText("Reject");
         btnReject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,7 +165,7 @@ public class SecretaryProcessWorkRequestJPanel extends javax.swing.JPanel {
                         .addComponent(backBtn)))
                 .addGap(10, 10, 10)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

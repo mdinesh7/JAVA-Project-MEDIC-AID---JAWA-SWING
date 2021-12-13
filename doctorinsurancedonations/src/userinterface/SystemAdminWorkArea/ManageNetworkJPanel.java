@@ -63,9 +63,10 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         btnDlt = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(153, 153, 255));
 
-        ntwrkJTbl.setBackground(new java.awt.Color(102, 153, 255));
+        ntwrkJTbl.setBackground(new java.awt.Color(204, 204, 204));
+        ntwrkJTbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         ntwrkJTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
@@ -109,9 +110,12 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
             }
         });
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
+        nmJTxtField.setBackground(new java.awt.Color(204, 204, 204));
+        nmJTxtField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+
+        backJButton.setBackground(new java.awt.Color(204, 204, 204));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backJButton.setText("<< Back");
+        backJButton.setText(" Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
@@ -122,7 +126,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         jLabel2.setText("Manage Network");
 
         btnDlt.setBackground(new java.awt.Color(0, 153, 255));
-        btnDlt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnDlt.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnDlt.setText("Delete");
         btnDlt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,17 +148,19 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
-                                .addComponent(nmJTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(sbmtJBtn)
-                                .addGap(49, 49, 49)
-                                .addComponent(btnDlt))
+                                .addComponent(nmJTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addComponent(backJButton)
-                        .addGap(105, 105, 105)
-                        .addComponent(jLabel2)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(sbmtJBtn)
+                                .addGap(142, 142, 142)
+                                .addComponent(btnDlt))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(backJButton)
+                                .addGap(105, 105, 105)
+                                .addComponent(jLabel2)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 159, Short.MAX_VALUE)
@@ -173,11 +179,20 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(sbmtJBtn)
-                    .addComponent(nmJTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDlt))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 487, Short.MAX_VALUE))
+                    .addComponent(nmJTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 488, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(sbmtJBtn))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(btnDlt)))
+                        .addGap(0, 447, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 

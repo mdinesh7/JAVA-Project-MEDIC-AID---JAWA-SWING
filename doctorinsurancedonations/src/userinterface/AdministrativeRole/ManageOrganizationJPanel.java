@@ -86,9 +86,10 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         btnDeleteOrg = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(51, 51, 255));
 
-        organizationJTable.setBackground(new java.awt.Color(0, 153, 255));
+        organizationJTable.setBackground(new java.awt.Color(204, 204, 204));
+        organizationJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -121,8 +122,8 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             organizationJTable.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        addJButton.setBackground(new java.awt.Color(0, 153, 255));
-        addJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        addJButton.setBackground(new java.awt.Color(204, 204, 204));
+        addJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         addJButton.setText("Add Organization");
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,9 +131,12 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             }
         });
 
+        organizationJComboBox.setBackground(new java.awt.Color(204, 204, 204));
+        organizationJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Organization Type ");
 
         backJButton.setBackground(new java.awt.Color(0, 153, 255));
@@ -147,8 +151,8 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         lblHeaderManageOrg.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblHeaderManageOrg.setText("Manage Organizations");
 
-        btnDeleteOrg.setBackground(new java.awt.Color(0, 153, 255));
-        btnDeleteOrg.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnDeleteOrg.setBackground(new java.awt.Color(204, 204, 204));
+        btnDeleteOrg.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnDeleteOrg.setText("Delete");
         btnDeleteOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

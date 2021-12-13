@@ -99,9 +99,10 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(153, 255, 255));
 
-        organizationJTable.setBackground(new java.awt.Color(0, 153, 255));
+        organizationJTable.setBackground(new java.awt.Color(204, 204, 204));
+        organizationJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -135,7 +136,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         }
 
         addJButton.setBackground(new java.awt.Color(0, 153, 255));
-        addJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        addJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         addJButton.setText("Create Employee");
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,21 +151,26 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Organization");
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backJButton.setText("<< Back");
+        backJButton.setBackground(new java.awt.Color(204, 204, 204));
+        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backJButton.setText(" Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Name");
 
+        nameJTextField.setBackground(new java.awt.Color(204, 204, 204));
+        nameJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+
+        orgEmpJComboBox.setBackground(new java.awt.Color(204, 204, 204));
+        orgEmpJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         orgEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         orgEmpJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,7 +178,8 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Organization");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N

@@ -60,12 +60,13 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
         mapBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(153, 223, 153));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Government Health Officer Work Area");
 
-        workRequestJTable.setBackground(new java.awt.Color(255, 0, 51));
+        workRequestJTable.setBackground(new java.awt.Color(204, 204, 204));
+        workRequestJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -95,7 +96,7 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(workRequestJTable);
 
         btnAssign.setBackground(new java.awt.Color(0, 153, 255));
-        btnAssign.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAssign.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnAssign.setText("Assign To Me");
         btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,7 +105,7 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         processRequestBtn.setBackground(new java.awt.Color(0, 153, 255));
-        processRequestBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        processRequestBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         processRequestBtn.setText("Process Request");
         processRequestBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +113,7 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        mapBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         mapBtn.setText("Verification on Map");
         mapBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,14 +135,16 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jScrollPane1))
             .addGroup(layout.createSequentialGroup()
-                .addGap(210, 210, 210)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(processRequestBtn)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
                         .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)
-                        .addComponent(mapBtn)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(171, 171, 171)
+                        .addComponent(mapBtn))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(208, 208, 208)
+                        .addComponent(processRequestBtn)))
+                .addGap(50, 50, 50)
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(59, 59, 59))
         );
@@ -157,7 +161,7 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(mapBtn))
-                        .addGap(27, 27, 27)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(processRequestBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 562, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(27, Short.MAX_VALUE))

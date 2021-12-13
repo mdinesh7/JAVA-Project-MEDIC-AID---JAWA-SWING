@@ -88,10 +88,11 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(153, 204, 255));
         setPreferredSize(new java.awt.Dimension(850, 820));
 
-        entJTbl.setBackground(new java.awt.Color(102, 153, 255));
+        entJTbl.setBackground(new java.awt.Color(204, 204, 204));
+        entJTbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         entJTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -113,6 +114,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(entJTbl);
 
+        netwrkJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         netwrkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         netwrkJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,12 +122,17 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Name");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        nameJTextField.setBackground(new java.awt.Color(204, 204, 204));
+        nameJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Enterprise Type");
 
+        entTypeJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         entTypeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         submitJBtn.setBackground(new java.awt.Color(0, 153, 255));
@@ -137,9 +144,9 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             }
         });
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
+        backJButton.setBackground(new java.awt.Color(204, 204, 204));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backJButton.setText("<< Back");
+        backJButton.setText(" Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
@@ -161,7 +168,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel4.setText("Network");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N

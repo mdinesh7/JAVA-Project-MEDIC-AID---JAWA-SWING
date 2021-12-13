@@ -56,10 +56,10 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(102, 255, 102));
 
         sbmtJButton.setBackground(new java.awt.Color(0, 153, 255));
-        sbmtJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        sbmtJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         sbmtJButton.setText("Disburse Amount");
         sbmtJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,8 +68,8 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
         });
 
         backJButton.setBackground(new java.awt.Color(0, 153, 255));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backJButton.setText("<<Back");
+        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
@@ -77,7 +77,7 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
         });
 
         rejBtn.setBackground(new java.awt.Color(0, 153, 255));
-        rejBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        rejBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         rejBtn.setText("Reject");
         rejBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,22 +85,27 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Message");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        msgTxt.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel4.setText("Location");
 
+        locTxt.setBackground(new java.awt.Color(204, 204, 204));
         locTxt.setEnabled(false);
 
+        popuTxt.setBackground(new java.awt.Color(204, 204, 204));
         popuTxt.setEnabled(false);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setText("Population");
 
+        amntTxt.setBackground(new java.awt.Color(204, 204, 204));
         amntTxt.setEnabled(false);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Amount");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -141,7 +146,7 @@ public class TreasurerProcessWorkRequestJPanel extends javax.swing.JPanel {
                         .addComponent(jLabel1)))
                 .addGap(40, 40, 40)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
