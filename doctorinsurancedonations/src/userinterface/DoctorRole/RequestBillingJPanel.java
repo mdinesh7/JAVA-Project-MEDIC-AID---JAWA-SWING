@@ -169,7 +169,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         add(miscChrgTxt);
         miscChrgTxt.setBounds(410, 490, 82, 23);
 
-        sndBillReqBtn.setBackground(new java.awt.Color(0, 153, 255));
+        sndBillReqBtn.setBackground(new java.awt.Color(102, 204, 0));
         sndBillReqBtn.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         sndBillReqBtn.setText("Send Billing Request");
         sndBillReqBtn.addActionListener(new java.awt.event.ActionListener() {

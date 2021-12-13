@@ -115,7 +115,7 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(10, 20, 730, 90);
 
-        asgnJButton.setBackground(new java.awt.Color(0, 153, 255));
+        asgnJButton.setBackground(new java.awt.Color(102, 204, 0));
         asgnJButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         asgnJButton.setText("Assign to me");
         asgnJButton.addActionListener(new java.awt.event.ActionListener() {
