@@ -46,11 +46,11 @@ public class BloodProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(236, 0, 0));
         setLayout(null);
 
         sbmtJButton.setBackground(new java.awt.Color(0, 153, 255));
-        sbmtJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        sbmtJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         sbmtJButton.setText("Submit Result");
         sbmtJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,15 +58,15 @@ public class BloodProcessWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
         add(sbmtJButton);
-        sbmtJButton.setBounds(270, 170, 111, 36);
+        sbmtJButton.setBounds(420, 120, 131, 36);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Message");
         add(jLabel1);
-        jLabel1.setBounds(172, 135, 60, 15);
+        jLabel1.setBounds(330, 90, 60, 17);
         add(rsltMsgJTextField);
-        rsltMsgJTextField.setBounds(242, 128, 160, 30);
+        rsltMsgJTextField.setBounds(410, 80, 160, 30);
 
         backJButton.setBackground(new java.awt.Color(0, 153, 255));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -77,17 +77,17 @@ public class BloodProcessWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(10, 11, 63, 23);
+        backJButton.setBounds(20, 20, 75, 29);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel2.setText("Blood Bank");
         add(jLabel2);
-        jLabel2.setBounds(250, 20, 195, 29);
+        jLabel2.setBounds(250, 30, 195, 29);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab test results.jpg"))); // NOI18N
         add(jLabel3);
-        jLabel3.setBounds(240, 30, 740, 450);
+        jLabel3.setBounds(-110, 10, 730, 440);
     }// </editor-fold>//GEN-END:initComponents
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
