@@ -55,18 +55,18 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-
         dirWrkReqTbl = new javax.swing.JTable();
         btnAss = new javax.swing.JButton();
         processReqBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Director Work Area ");
 
-        dirWrkReqTbl.setBackground(new java.awt.Color(0, 153, 255));
+        dirWrkReqTbl.setBackground(new java.awt.Color(204, 204, 204));
+        dirWrkReqTbl.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         dirWrkReqTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -95,8 +95,8 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(dirWrkReqTbl);
 
-        btnAss.setBackground(new java.awt.Color(0, 153, 255));
-        btnAss.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAss.setBackground(new java.awt.Color(102, 255, 153));
+        btnAss.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnAss.setText("Assign To Me");
         btnAss.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,8 +104,8 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        processReqBtn.setBackground(new java.awt.Color(0, 153, 255));
-        processReqBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        processReqBtn.setBackground(new java.awt.Color(255, 102, 102));
+        processReqBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         processReqBtn.setText("Process Request");
         processReqBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,11 +146,11 @@ public class DirectorWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-
                     .addComponent(btnAss, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(processReqBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(187, Short.MAX_VALUE))
-
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

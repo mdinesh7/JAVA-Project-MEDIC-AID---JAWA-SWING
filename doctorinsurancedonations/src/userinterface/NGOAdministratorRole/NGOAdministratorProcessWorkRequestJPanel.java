@@ -69,49 +69,49 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
         btnReject = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(0, 153, 153));
 
         amountNeededTxt.setEnabled(false);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Amount Needed:");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Message:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setText("NGO Admin Request Process area ");
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel3.setText("NGO Admin Request Process work Area ");
 
-        sendRequestToDirectoryBtn.setBackground(new java.awt.Color(0, 153, 255));
-        sendRequestToDirectoryBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        sendRequestToDirectoryBtn.setText("Send Request to Director to approve");
+        sendRequestToDirectoryBtn.setBackground(new java.awt.Color(153, 255, 153));
+        sendRequestToDirectoryBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        sendRequestToDirectoryBtn.setText("Send to Director for approval");
         sendRequestToDirectoryBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sendRequestToDirectoryBtnActionPerformed(evt);
             }
         });
 
-        backBtn.setBackground(new java.awt.Color(0, 153, 255));
-        backBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backBtn.setText("<<Back");
+        backBtn.setBackground(new java.awt.Color(204, 204, 204));
+        backBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel4.setText("Hospital Name:");
 
         hospitalNameTxt.setEnabled(false);
 
         hospitalAddressTxt.setEnabled(false);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setText("Hospital Address:");
 
-        btnReject.setBackground(new java.awt.Color(0, 153, 255));
-        btnReject.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnReject.setBackground(new java.awt.Color(255, 51, 51));
+        btnReject.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnReject.setText("Reject");
         btnReject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +160,7 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
                                 .addComponent(sendRequestToDirectoryBtn)
                                 .addGap(39, 39, 39)
                                 .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,7 +171,7 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
                 .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
+                        .addGap(53, 53, 53)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel4)
                             .addComponent(hospitalNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -194,7 +194,7 @@ public class NGOAdministratorProcessWorkRequestJPanel extends javax.swing.JPanel
                     .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
