@@ -49,7 +49,7 @@ public class BloodProcessWorkRequestJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(236, 0, 0));
         setLayout(null);
 
-        sbmtJButton.setBackground(new java.awt.Color(0, 153, 255));
+        sbmtJButton.setBackground(new java.awt.Color(0, 204, 51));
         sbmtJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         sbmtJButton.setText("Submit Result");
         sbmtJButton.addActionListener(new java.awt.event.ActionListener() {
