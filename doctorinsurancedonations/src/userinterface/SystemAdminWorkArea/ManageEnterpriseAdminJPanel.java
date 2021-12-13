@@ -118,10 +118,11 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         entuname = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(153, 204, 255));
         setLayout(null);
 
-        entJTable.setBackground(new java.awt.Color(0, 153, 255));
+        entJTable.setBackground(new java.awt.Color(204, 204, 204));
+        entJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         entJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -146,10 +147,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(26, 62, 671, 88);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Network");
         add(jLabel1);
-        jLabel1.setBounds(88, 168, 52, 15);
+        jLabel1.setBounds(88, 168, 52, 17);
 
         netwrkJCmboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         netwrkJCmboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -160,23 +161,25 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(netwrkJCmboBox);
         netwrkJCmboBox.setBounds(182, 166, 136, 22);
 
-        usernameJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        usernameJLabel.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         usernameJLabel.setText("Username");
         add(usernameJLabel);
-        usernameJLabel.setBounds(81, 232, 59, 15);
+        usernameJLabel.setBounds(70, 232, 70, 17);
+
+        unmJTxtField.setBackground(new java.awt.Color(204, 204, 204));
         add(unmJTxtField);
         unmJTxtField.setBounds(182, 228, 136, 25);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Enterprise");
         add(jLabel3);
-        jLabel3.setBounds(81, 199, 62, 15);
+        jLabel3.setBounds(73, 199, 70, 17);
 
         entJCmboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(entJCmboBox);
         entJCmboBox.setBounds(182, 197, 136, 22);
 
-        submitJBtn.setBackground(new java.awt.Color(0, 153, 255));
+        submitJBtn.setBackground(new java.awt.Color(204, 204, 204));
         submitJBtn.setText("Submit");
         submitJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,36 +189,45 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(submitJBtn);
         submitJBtn.setBounds(182, 375, 80, 25);
 
-        passwordJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        passwordJLabel.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         passwordJLabel.setText("Password");
         add(passwordJLabel);
-        passwordJLabel.setBounds(84, 268, 59, 15);
+        passwordJLabel.setBounds(84, 268, 56, 17);
+
+        nmJTxtField.setBackground(new java.awt.Color(204, 204, 204));
+        nmJTxtField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         add(nmJTxtField);
         nmJTxtField.setBounds(182, 341, 136, 28);
 
-        nameJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        nameJLabel.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         nameJLabel.setText("Name");
         add(nameJLabel);
-        nameJLabel.setBounds(110, 347, 33, 15);
+        nameJLabel.setBounds(93, 347, 50, 17);
+
+        entpwdJPwdField.setBackground(new java.awt.Color(204, 204, 204));
         add(entpwdJPwdField);
         entpwdJPwdField.setBounds(182, 264, 136, 25);
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
-        backJButton.setText("<< Back");
+        backJButton.setBackground(new java.awt.Color(204, 204, 204));
+        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
         add(backJButton);
-        backJButton.setBounds(10, 11, 81, 25);
+        backJButton.setBounds(10, 11, 90, 25);
+
+        rePwdJPwdField.setBackground(new java.awt.Color(204, 204, 204));
+        rePwdJPwdField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         add(rePwdJPwdField);
         rePwdJPwdField.setBounds(182, 300, 136, 29);
 
-        rePasswordJLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        rePasswordJLabel.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         rePasswordJLabel.setText("re-enter Password");
         add(rePasswordJLabel);
-        rePasswordJLabel.setBounds(30, 306, 113, 15);
+        rePasswordJLabel.setBounds(30, 306, 111, 17);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Manage Enterprise Admin");

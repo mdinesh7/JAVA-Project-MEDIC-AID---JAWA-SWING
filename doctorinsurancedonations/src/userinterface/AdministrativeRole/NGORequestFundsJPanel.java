@@ -69,9 +69,11 @@ public class NGORequestFundsJPanel extends javax.swing.JPanel {
         NGORequestJTable = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backJButton.setText("<< Back");
+        setBackground(new java.awt.Color(51, 255, 51));
+
+        backJButton.setBackground(new java.awt.Color(204, 204, 204));
+        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
@@ -81,20 +83,36 @@ public class NGORequestFundsJPanel extends javax.swing.JPanel {
         lblRequestFunds.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblRequestFunds.setText("Request Funds from NGO");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setText("Total Contributions Received :");
 
         txtNgoFundsReceived.setEditable(false);
+        txtNgoFundsReceived.setBackground(new java.awt.Color(204, 204, 204));
+        txtNgoFundsReceived.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("All Contributions Requests");
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Hospital Address");
 
+        hospitalAddr.setBackground(new java.awt.Color(204, 204, 204));
+        hospitalAddr.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setText("Hospital's required Amount");
 
+        hospitalAmt.setBackground(new java.awt.Color(204, 204, 204));
+        hospitalAmt.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+
+        hospitalName.setBackground(new java.awt.Color(204, 204, 204));
+        hospitalName.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Hospital Name");
 
+        requestbutton.setBackground(new java.awt.Color(204, 204, 204));
+        requestbutton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         requestbutton.setText("Request Funds from NGO");
         requestbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +120,8 @@ public class NGORequestFundsJPanel extends javax.swing.JPanel {
             }
         });
 
-        NGORequestJTable.setBackground(new java.awt.Color(0, 153, 255));
+        NGORequestJTable.setBackground(new java.awt.Color(204, 204, 204));
+        NGORequestJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         NGORequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

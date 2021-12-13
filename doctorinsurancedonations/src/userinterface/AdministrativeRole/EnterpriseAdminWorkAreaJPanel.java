@@ -61,13 +61,13 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         btnNGOFundReq = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(153, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("My Work Area -Adminstrative Role");
 
-        mnguserJButton.setBackground(new java.awt.Color(0, 153, 255));
-        mnguserJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        mnguserJButton.setBackground(new java.awt.Color(204, 204, 204));
+        mnguserJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         mnguserJButton.setText("Manage User");
         mnguserJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,8 +75,8 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        mngEmpJButton.setBackground(new java.awt.Color(0, 153, 255));
-        mngEmpJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        mngEmpJButton.setBackground(new java.awt.Color(204, 204, 204));
+        mngEmpJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         mngEmpJButton.setText("Manage Employee");
         mngEmpJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,8 +84,8 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        mngOrgJButton.setBackground(new java.awt.Color(0, 153, 255));
-        mngOrgJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        mngOrgJButton.setBackground(new java.awt.Color(204, 204, 204));
+        mngOrgJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         mngOrgJButton.setText("Manage Organization");
         mngOrgJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,8 +98,8 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
-        btnGovtFundReq.setBackground(new java.awt.Color(0, 153, 255));
-        btnGovtFundReq.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnGovtFundReq.setBackground(new java.awt.Color(204, 204, 204));
+        btnGovtFundReq.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnGovtFundReq.setText("Request Funds from Government");
         btnGovtFundReq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,8 +109,8 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hospital.gif"))); // NOI18N
 
-        btnNGOFundReq.setBackground(new java.awt.Color(0, 153, 255));
-        btnNGOFundReq.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnNGOFundReq.setBackground(new java.awt.Color(204, 204, 204));
+        btnNGOFundReq.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnNGOFundReq.setText("Request Funds from NGO");
         btnNGOFundReq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -93,7 +93,7 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         backJButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(153, 255, 153));
         setLayout(null);
 
         lblRequestFunds.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -101,11 +101,13 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         add(lblRequestFunds);
         lblRequestFunds.setBounds(236, 11, 228, 50);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Location: ");
         add(jLabel1);
-        jLabel1.setBounds(67, 69, 61, 15);
+        jLabel1.setBounds(67, 69, 70, 17);
 
+        txtLocation.setBackground(new java.awt.Color(204, 204, 204));
+        txtLocation.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         txtLocation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLocationActionPerformed(evt);
@@ -114,11 +116,12 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         add(txtLocation);
         txtLocation.setBounds(165, 67, 141, 23);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Population:");
         add(jLabel2);
-        jLabel2.setBounds(67, 107, 71, 15);
+        jLabel2.setBounds(67, 107, 70, 17);
 
+        txtpopulation.setBackground(new java.awt.Color(204, 204, 204));
         txtpopulation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtpopulationActionPerformed(evt);
@@ -127,11 +130,13 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         add(txtpopulation);
         txtpopulation.setBounds(165, 105, 143, 23);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Amount:");
         add(jLabel3);
-        jLabel3.setBounds(67, 145, 54, 15);
+        jLabel3.setBounds(67, 145, 60, 17);
 
+        txtAmount.setBackground(new java.awt.Color(204, 204, 204));
+        txtAmount.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         txtAmount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAmountActionPerformed(evt);
@@ -140,8 +145,8 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         add(txtAmount);
         txtAmount.setBounds(165, 143, 143, 23);
 
-        btnSendFundRequest.setBackground(new java.awt.Color(0, 153, 255));
-        btnSendFundRequest.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnSendFundRequest.setBackground(new java.awt.Color(204, 204, 204));
+        btnSendFundRequest.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnSendFundRequest.setText("Send Fund Request");
         btnSendFundRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,9 +154,10 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
             }
         });
         add(btnSendFundRequest);
-        btnSendFundRequest.setBounds(165, 174, 143, 38);
+        btnSendFundRequest.setBounds(148, 174, 160, 38);
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
+        workRequestJTable.setBackground(new java.awt.Color(204, 204, 204));
+        workRequestJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -194,19 +200,21 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         jLabel5.setBounds(67, 225, 137, 15);
 
         txtFundsReceived.setEditable(false);
+        txtFundsReceived.setBackground(new java.awt.Color(204, 204, 204));
+        txtFundsReceived.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         add(txtFundsReceived);
         txtFundsReceived.setBounds(208, 223, 143, 23);
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backJButton.setText("<< Back");
+        backJButton.setBackground(new java.awt.Color(204, 204, 204));
+        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backJButton.setText(" Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
         add(backJButton);
-        backJButton.setBounds(10, 11, 81, 23);
+        backJButton.setBounds(30, 20, 90, 23);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Government secretary.gif"))); // NOI18N
         add(jLabel6);

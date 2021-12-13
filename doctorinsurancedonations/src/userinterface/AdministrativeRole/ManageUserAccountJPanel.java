@@ -121,10 +121,10 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         doctorTypeJComboBox1 = new javax.swing.JComboBox();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(153, 255, 255));
 
-        createUserJButton.setBackground(new java.awt.Color(0, 153, 255));
-        createUserJButton.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        createUserJButton.setBackground(new java.awt.Color(204, 204, 204));
+        createUserJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         createUserJButton.setText("Create");
         createUserJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,16 +132,19 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
 
+        nameJTextField.setBackground(new java.awt.Color(204, 204, 204));
+        nameJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         nameJTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameJTextFieldActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("User Name");
 
-        userJTable.setBackground(new java.awt.Color(0, 153, 255));
+        userJTable.setBackground(new java.awt.Color(204, 204, 204));
+        userJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         userJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -171,12 +174,14 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             userJTable.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Password");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Employee");
 
+        employeeJComboBox.setBackground(new java.awt.Color(204, 204, 204));
+        employeeJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         employeeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         employeeJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,18 +189,20 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
 
-        backjButton1.setBackground(new java.awt.Color(0, 153, 255));
-        backjButton1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        backjButton1.setText("<< Back");
+        backjButton1.setBackground(new java.awt.Color(204, 204, 204));
+        backjButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backjButton1.setText(" Back");
         backjButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backjButton1ActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setText("Organization");
 
+        organizationJComboBox.setBackground(new java.awt.Color(204, 204, 204));
+        organizationJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,9 +210,11 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel4.setText("Role");
 
+        roleJComboBox.setBackground(new java.awt.Color(204, 204, 204));
+        roleJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         roleJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,17 +222,24 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        passwordJTextField.setBackground(new java.awt.Color(204, 204, 204));
+        passwordJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setText("re-enter Password");
+
+        rePasswordJTextField.setBackground(new java.awt.Color(204, 204, 204));
+        rePasswordJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel7.setText("Manage User Account");
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage user - 2.gif"))); // NOI18N
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
         jLabel9.setText("Doctor Type");
 
+        doctorTypeJComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         doctorTypeJComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Physician", "Neurologist", "Pediatrician", "Orthopedic" }));
         doctorTypeJComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -312,7 +328,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nameJTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                            .addComponent(nameJTextField)
                             .addComponent(jLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

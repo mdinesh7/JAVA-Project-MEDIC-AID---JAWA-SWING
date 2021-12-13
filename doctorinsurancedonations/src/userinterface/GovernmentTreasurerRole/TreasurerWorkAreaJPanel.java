@@ -57,12 +57,13 @@ public class TreasurerWorkAreaJPanel extends javax.swing.JPanel {
         reqGovtSecBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(102, 255, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Treasurer Work Area ");
 
-        wrkReqJPanel.setBackground(new java.awt.Color(0, 153, 255));
+        wrkReqJPanel.setBackground(new java.awt.Color(204, 204, 204));
+        wrkReqJPanel.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         wrkReqJPanel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -92,7 +93,7 @@ public class TreasurerWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(wrkReqJPanel);
 
         asgnBtn.setBackground(new java.awt.Color(0, 153, 255));
-        asgnBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        asgnBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         asgnBtn.setText("Assign To Me");
         asgnBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +102,7 @@ public class TreasurerWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         reqGovtSecBtn.setBackground(new java.awt.Color(0, 153, 255));
-        reqGovtSecBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        reqGovtSecBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         reqGovtSecBtn.setText("Process Request");
         reqGovtSecBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

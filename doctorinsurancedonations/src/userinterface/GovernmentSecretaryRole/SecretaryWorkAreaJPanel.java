@@ -57,9 +57,11 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(102, 255, 102));
+        setForeground(new java.awt.Color(255, 255, 255));
 
-        wrkReJqTable.setBackground(new java.awt.Color(0, 153, 255));
+        wrkReJqTable.setBackground(new java.awt.Color(204, 204, 204));
+        wrkReJqTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         wrkReJqTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
