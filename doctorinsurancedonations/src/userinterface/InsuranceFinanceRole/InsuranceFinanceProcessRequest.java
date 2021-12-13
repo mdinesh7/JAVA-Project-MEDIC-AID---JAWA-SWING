@@ -68,61 +68,51 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         cvgTxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(102, 153, 255));
         setLayout(null);
 
-
-        disbrAmntBtn.setBackground(new java.awt.Color(0, 153, 255));
-        disbrAmntBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        disbrAmntBtn.setBackground(new java.awt.Color(102, 255, 153));
+        disbrAmntBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         disbrAmntBtn.setText("Disburse Amount");
         disbrAmntBtn.addActionListener(new java.awt.event.ActionListener() {
-
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 disbrAmntBtnActionPerformed(evt);
             }
         });
-
         add(disbrAmntBtn);
-        disbrAmntBtn.setBounds(130, 316, 140, 32);
+        disbrAmntBtn.setBounds(110, 340, 150, 32);
 
-        rejBtn.setBackground(new java.awt.Color(0, 153, 255));
-        rejBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        rejBtn.setBackground(new java.awt.Color(255, 102, 102));
+        rejBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         rejBtn.setText("Reject Claim");
         rejBtn.addActionListener(new java.awt.event.ActionListener() {
-
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rejBtnActionPerformed(evt);
             }
         });
-
         add(rejBtn);
-        rejBtn.setBounds(291, 316, 114, 32);
+        rejBtn.setBounds(290, 340, 114, 32);
 
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel3.setText("Insurance Finance Request Process area ");
         add(jLabel3);
-        jLabel3.setBounds(130, 17, 488, 29);
+        jLabel3.setBounds(130, 17, 420, 29);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel4.setText("Policy Number");
         add(jLabel4);
+        jLabel4.setBounds(150, 90, 91, 17);
 
-        jLabel4.setBounds(154, 91, 88, 15);
-
-
-        backBtn.setBackground(new java.awt.Color(0, 153, 255));
-        backBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backBtn.setText("<<Back");
+        backBtn.setBackground(new java.awt.Color(204, 204, 204));
+        backBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
         add(backBtn);
-
-        backBtn.setBounds(10, 23, 90, 29);
+        backBtn.setBounds(10, 23, 75, 29);
 
         plcyNumTxt.setEditable(false);
         add(plcyNumTxt);
@@ -132,13 +122,10 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         add(plcyNmTxt);
         plcyNmTxt.setBounds(278, 209, 116, 23);
 
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 204));
-        jLabel1.setText("policyName");
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setText("Policy Name");
         add(jLabel1);
-
-        jLabel1.setBounds(172, 211, 70, 15);
+        jLabel1.setBounds(160, 210, 90, 17);
 
         billingAmntTxt.setEditable(false);
         billingAmntTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -149,57 +136,42 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         add(billingAmntTxt);
         billingAmntTxt.setBounds(278, 247, 116, 23);
 
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setText("Billing Amount");
         add(jLabel6);
-
-        jLabel6.setBounds(150, 249, 91, 15);
+        jLabel6.setBounds(140, 250, 110, 17);
 
         clmAmntTxt.setEditable(false);
         clmAmntTxt.addActionListener(new java.awt.event.ActionListener() {
-
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clmAmntTxtActionPerformed(evt);
             }
         });
-
         add(clmAmntTxt);
         clmAmntTxt.setBounds(278, 285, 116, 23);
 
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel7.setText("Claim Amount");
         add(jLabel7);
+        jLabel7.setBounds(140, 290, 100, 17);
 
-        jLabel7.setBounds(154, 287, 85, 15);
-
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel8.setText("SSN");
         add(jLabel8);
-
-        jLabel8.setBounds(216, 129, 25, 15);
+        jLabel8.setBounds(210, 130, 50, 17);
 
         ssnTxt.setEditable(false);
         add(ssnTxt);
         ssnTxt.setBounds(278, 124, 116, 23);
 
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel9.setText("Conerage%");
         add(jLabel9);
-
-        jLabel9.setBounds(168, 176, 71, 15);
+        jLabel9.setBounds(170, 177, 71, 20);
 
         cvgTxt.setEditable(false);
         add(cvgTxt);
         cvgTxt.setBounds(278, 171, 116, 23);
-
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/financier request.gif"))); // NOI18N

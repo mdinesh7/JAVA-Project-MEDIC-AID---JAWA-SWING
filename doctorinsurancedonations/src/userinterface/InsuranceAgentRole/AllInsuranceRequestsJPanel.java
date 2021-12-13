@@ -60,13 +60,13 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         asgnToMeBtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(102, 153, 255));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setText("Process Requests");
 
-        insrWrReqJTable.setBackground(new java.awt.Color(0, 153, 255));
+        insrWrReqJTable.setBackground(new java.awt.Color(204, 204, 204));
+        insrWrReqJTable.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         insrWrReqJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -101,8 +101,8 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(insrWrReqJTable);
 
-        prcsBtn.setBackground(new java.awt.Color(0, 153, 255));
-        prcsBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        prcsBtn.setBackground(new java.awt.Color(255, 102, 102));
+        prcsBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         prcsBtn.setText("Process Request");
         prcsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,17 +110,17 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnBack.setBackground(new java.awt.Color(0, 153, 255));
-        btnBack.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnBack.setText("<< Back");
+        btnBack.setBackground(new java.awt.Color(204, 204, 204));
+        btnBack.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
 
-        asgnToMeBtn.setBackground(new java.awt.Color(0, 153, 255));
-        asgnToMeBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        asgnToMeBtn.setBackground(new java.awt.Color(102, 255, 153));
+        asgnToMeBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         asgnToMeBtn.setText("Assign To Me");
         asgnToMeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +140,7 @@ public class AllInsuranceRequestsJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(322, 322, 322)
+                                .addGap(334, 334, 334)
                                 .addComponent(asgnToMeBtn)
                                 .addGap(61, 61, 61)
                                 .addComponent(prcsBtn))
