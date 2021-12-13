@@ -57,7 +57,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
         for (Organization organization : dir.getOrganizations()) {
             Object[] row = new Object[2];
-            row[0] = organization.getOrgID();
+            row[0] = organization.getOrgID()-4;
             row[1] = organization;
 
             model.addRow(row);
