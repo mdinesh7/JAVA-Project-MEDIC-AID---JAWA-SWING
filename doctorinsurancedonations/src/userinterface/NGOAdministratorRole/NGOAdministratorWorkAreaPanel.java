@@ -65,7 +65,9 @@ public class NGOAdministratorWorkAreaPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
+        setBackground(new java.awt.Color(0, 153, 153));
+
+        workRequestJTable.setBackground(new java.awt.Color(204, 204, 204));
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -94,8 +96,8 @@ public class NGOAdministratorWorkAreaPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(workRequestJTable);
 
-        btnAssign.setBackground(new java.awt.Color(0, 153, 255));
-        btnAssign.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAssign.setBackground(new java.awt.Color(102, 255, 153));
+        btnAssign.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnAssign.setText("Assign To Me");
         btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,8 +105,8 @@ public class NGOAdministratorWorkAreaPanel extends javax.swing.JPanel {
             }
         });
 
-        processRequestBtn.setBackground(new java.awt.Color(0, 153, 255));
-        processRequestBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        processRequestBtn.setBackground(new java.awt.Color(255, 102, 102));
+        processRequestBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         processRequestBtn.setText("Process Request");
         processRequestBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,10 +114,12 @@ public class NGOAdministratorWorkAreaPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("NGO Admin Panel");
 
+        mapBtn.setBackground(new java.awt.Color(102, 102, 255));
+        mapBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         mapBtn.setText("Verification on Map");
         mapBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,14 +140,13 @@ public class NGOAdministratorWorkAreaPanel extends javax.swing.JPanel {
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(219, 219, 219)
+                .addGap(231, 231, 231)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(processRequestBtn))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(mapBtn)
                         .addGap(61, 61, 61)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)

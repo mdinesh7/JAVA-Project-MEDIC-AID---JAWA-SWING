@@ -80,10 +80,10 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
         prcsJButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(230, 51, 0));
         setLayout(null);
 
-        wrkReqJTable.setBackground(new java.awt.Color(0, 153, 255));
+        wrkReqJTable.setBackground(new java.awt.Color(204, 204, 204));
         wrkReqJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -116,7 +116,7 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1.setBounds(10, 20, 730, 90);
 
         asgnJButton.setBackground(new java.awt.Color(0, 153, 255));
-        asgnJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        asgnJButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         asgnJButton.setText("Assign to me");
         asgnJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,10 +124,10 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(asgnJButton);
-        asgnJButton.setBounds(10, 130, 140, 40);
+        asgnJButton.setBounds(190, 130, 140, 40);
 
         prcsJButton.setBackground(new java.awt.Color(0, 153, 255));
-        prcsJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        prcsJButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         prcsJButton.setText("Process");
         prcsJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,11 +135,11 @@ public class BloodBankManagerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(prcsJButton);
-        prcsJButton.setBounds(600, 130, 140, 40);
+        prcsJButton.setBounds(370, 130, 140, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blood bank request.gif"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(340, 190, 630, 400);
+        jLabel2.setBounds(100, 190, 630, 400);
     }// </editor-fold>//GEN-END:initComponents
 
     private void asgnJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asgnJButtonActionPerformed

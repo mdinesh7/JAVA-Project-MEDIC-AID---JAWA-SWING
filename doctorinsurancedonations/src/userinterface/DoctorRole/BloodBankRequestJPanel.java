@@ -63,7 +63,7 @@ public class BloodBankRequestJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(237, 51, 51));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         requestTestJButton.setBackground(new java.awt.Color(0, 153, 255));
@@ -74,16 +74,16 @@ public class BloodBankRequestJPanel extends javax.swing.JPanel {
                 requestTestJButtonActionPerformed(evt);
             }
         });
-        add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 130, 30));
+        add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 130, 30));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Message:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 70, -1));
-        add(txtLabMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 130, 30));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 100, -1));
+        add(txtLabMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 130, 30));
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backJButton.setText("<<Back");
+        backJButton.setBackground(new java.awt.Color(204, 204, 204));
+        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
@@ -91,26 +91,26 @@ public class BloodBankRequestJPanel extends javax.swing.JPanel {
         });
         add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 30));
 
-        valueLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        valueLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 130, 20));
+        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 130, 20));
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        enterpriseLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         enterpriseLabel.setText("Enterprise :");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 70, 20));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 110, 20));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("Units of Blood:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, -1, -1));
-        add(txtLabType, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 130, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 140, -1));
+        add(txtLabType, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 130, 30));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel3.setText("Blood Bank Request ");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blood bank request.gif"))); // NOI18N
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 510, 400));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 490, 320));
     }// </editor-fold>//GEN-END:initComponents
 
     private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
