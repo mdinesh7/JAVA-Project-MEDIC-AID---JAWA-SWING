@@ -80,10 +80,10 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         assignJBtn3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 51, 51));
         setLayout(null);
 
-        wrkReqJTbl.setBackground(new java.awt.Color(0, 153, 255));
+        wrkReqJTbl.setBackground(new java.awt.Color(204, 204, 204));
         wrkReqJTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -116,7 +116,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1.setBounds(10, 20, 730, 90);
 
         assignJBtn.setBackground(new java.awt.Color(0, 153, 255));
-        assignJBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        assignJBtn.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         assignJBtn.setText("Assign to me");
         assignJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +127,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         assignJBtn.setBounds(10, 130, 140, 40);
 
         prcssJBtn.setBackground(new java.awt.Color(0, 153, 255));
-        prcssJBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        prcssJBtn.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         prcssJBtn.setText("Process");
         prcssJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,7 +142,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         jLabel2.setBounds(10, 180, 710, 370);
 
         assignJBtn2.setBackground(new java.awt.Color(0, 153, 255));
-        assignJBtn2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        assignJBtn2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         assignJBtn2.setText("Blood Test");
         assignJBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,7 +153,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         assignJBtn2.setBounds(150, 130, 140, 40);
 
         assignJBtn1.setBackground(new java.awt.Color(0, 153, 255));
-        assignJBtn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        assignJBtn1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         assignJBtn1.setText("MRI scan");
         assignJBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +164,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         assignJBtn1.setBounds(450, 130, 140, 40);
 
         assignJBtn3.setBackground(new java.awt.Color(0, 153, 255));
-        assignJBtn3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        assignJBtn3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         assignJBtn3.setText("X Ray");
         assignJBtn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
