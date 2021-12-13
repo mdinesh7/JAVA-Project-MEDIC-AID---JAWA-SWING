@@ -23,6 +23,7 @@ import javax.swing.table.TableRowSorter;
 public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel jPanel;
+    
     private UserAccount usrAcnt;
     private InsuranceFinanceOrganization insrFincOrg;
     private Enterprise entrpz;
@@ -50,21 +51,19 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-
         financJTable = new javax.swing.JTable();
         asgnToMeBtn = new javax.swing.JButton();
         prcsBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(102, 153, 255));
 
-        setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setText("Insurance Finance Work Area");
 
-
-        financJTable.setBackground(new java.awt.Color(0, 153, 255));
+        financJTable.setBackground(new java.awt.Color(204, 204, 204));
+        financJTable.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         financJTable.setModel(new javax.swing.table.DefaultTableModel(
-
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -83,25 +82,21 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-
         jScrollPane1.setViewportView(financJTable);
 
-        asgnToMeBtn.setBackground(new java.awt.Color(0, 153, 255));
-        asgnToMeBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        asgnToMeBtn.setBackground(new java.awt.Color(102, 255, 153));
+        asgnToMeBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         asgnToMeBtn.setText("Assign To Me");
         asgnToMeBtn.addActionListener(new java.awt.event.ActionListener() {
-
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 asgnToMeBtnActionPerformed(evt);
             }
         });
 
-
-        prcsBtn.setBackground(new java.awt.Color(0, 153, 255));
-        prcsBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        prcsBtn.setBackground(new java.awt.Color(255, 102, 102));
+        prcsBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         prcsBtn.setText("Process Request");
         prcsBtn.addActionListener(new java.awt.event.ActionListener() {
-
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prcsBtnActionPerformed(evt);
             }
@@ -116,39 +111,36 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(202, 202, 202)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(264, 264, 264)
-                                .addComponent(asgnToMeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(prcsBtn)))
-                        .addGap(0, 303, Short.MAX_VALUE))
-
+                        .addGap(324, 324, 324)
+                        .addComponent(asgnToMeBtn)
+                        .addGap(57, 57, 57)
+                        .addComponent(prcsBtn))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1)))
-                .addContainerGap())
-
-
+                        .addGap(257, 257, 257)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1085, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 851, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(129, 129, 129)))))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(14, 14, 14)
                 .addComponent(jLabel1)
-                .addGap(36, 36, 36)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(prcsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(asgnToMeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(268, Short.MAX_VALUE))
-
+                    .addComponent(asgnToMeBtn)
+                    .addComponent(prcsBtn))
+                .addGap(16, 16, 16)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(379, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
